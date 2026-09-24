@@ -7,15 +7,16 @@
  *   Prompt          typeface, same as the build configurator
  *   #F4D969         gold, primary action
  *   #414042         body copy
- *   #69727D         muted copy
+ *   #7B8591         muted copy
  *   #6C93B7         blue band behind "The Papago"
  *   #303C47         footer navy, and the navy the configurator already uses
  *
  * Four deliberate differences from the agency's staging site:
  *   1. The hero is a still rather than a video loop.
  *   2. Staging's five-stat bar under the hero is gone.
- *   3. "Build Your Van One of Three Ways" takes its place, splitting buyers
- *      between Signature, Tailored and Bespoke.
+ *   3. "Two Ways To Build Your Van" takes its place. Tailored hands off to the
+ *      configurator; Bespoke goes to /bespoke/. Signature Pre-Build was dropped
+ *      when the company settled on two ways to buy rather than three.
  *   4. A "Build Your Van Online" band points at build.papagovans.com.
  *
  * Copy marked Lorem Ipsum is the agency's placeholder, carried over verbatim
@@ -49,46 +50,38 @@ const builds = [
 ];
 
 /*
- * Three ways to buy. The ladder is deliberate: each step down trades speed for
- * control, and the price rises with it, so the order reads as a decision rather
- * than a menu. "Tailored" is the configurator tier; it sits between Signature
- * (fixed) and Bespoke (from scratch) in both senses.
+ * Two ways to buy. The axis is where the build starts, not how much of it is
+ * custom: Tailored starts from a floor plan we have built before, Bespoke
+ * starts from nothing. Everything else, the price and the timeline included,
+ * falls out of that one difference, which is why the cards lead with it.
  */
 const paths = [
   {
-    name: "Signature Pre-Build",
-    kicker: "Fastest to the road",
-    timing: "Keys in your hand: 10 weeks",
-    copy: "Layouts we designed ourselves after years of building vans, then refined over and over. Floor plan and cabinetry are set, which is exactly why they cost less and ship soonest. Pick your finishes and go.",
-    range: "$180,000 – $240,000",
-    cta: "Explore Signature Builds",
-    href: "/signature",
-    featured: false,
-  },
-  {
     name: "Tailored",
-    kicker: "Build your van online",
+    kicker: "Start from a proven floor plan",
     timing: "Keys in your hand: 14 weeks",
-    copy: "Start from a signature floor plan and configure every system yourself: power, water, heat, kitchen, storage, finishes. Watch the price move as you go, then download your Build Sheet. Second fastest way to get your van.",
-    range: "$190,000 – $250,000",
-    cta: "Start Building",
+    copy: "Pick one of the five layouts we have built dozens of times, then decide every system in it yourself: power, water, heat, kitchen, storage, finishes. The price moves as you choose, so nothing is a surprise. Download your Build Sheet when you are done.",
+    range: "$180,000 - $250,000",
+    cta: "Start Your Build",
     href: BUILD_APP,
+    external: true,
     featured: true,
   },
   {
     name: "Bespoke",
-    kicker: "Built from scratch",
+    kicker: "Start from an empty van",
     timing: "Keys in your hand: 9-14 months",
-    copy: "A blank van and a designer. Your layout, your cabinetry, your ideas. Nearly anything is on the table. It costs more and it is the long way round, and for the right owner it is worth every week of it.",
-    range: "$200,000 – $300,000",
-    cta: "Talk to a Designer",
-    href: "#",
+    copy: "No floor plan, no starting point, just a blank Sprinter and a designer who draws it around how you actually live. Your layout, your cabinetry, your ideas. It costs more and takes the long way round, and for the right owner it is worth every week of it.",
+    range: "$200,000 - $300,000",
+    cta: "How Bespoke Works",
+    href: "/bespoke/",
+    external: false,
     featured: false,
   },
 ];
 
 const steps = [
-  { n: "1", img: "image-2.webp", title: "Choose Your Layout", copy: "Browse your signature models and pick a layout that fits your lifestyle." },
+  { n: "1", img: "image-2.webp", title: "Choose Your Layout", copy: "Browse our five floor plans and pick the layout that fits how you travel." },
   { n: "2", img: "image-4.webp", title: "Customize Your Build", copy: "Select your base chassis and personalize everything from power systems to storage and upgrades." },
   { n: "3", img: "image-2-2.webp", title: "We Build, You Travel", copy: "Our expert team builds your van with precision, updating you at every stage until delivery day." },
 ];
@@ -122,17 +115,18 @@ export default function Home() {
             </p>
           </div>
           <div className="hero-ctas">
-            <a href="#three-ways" className="btn btn-gold">Get Started <span className="arw">&#8853;</span></a>
+            <a href="#two-ways" className="btn btn-gold">Get Started <span className="arw">&#8853;</span></a>
           </div>
         </div>
       </section>
 
-      <section className="paths" id="three-ways">
+      <section className="paths" id="two-ways">
         <div className="wrap">
-          <h2 className="section-title">Build Your Van One of Three Ways</h2>
+          <h2 className="section-title">Two Ways To Build Your Van</h2>
           <p className="section-lede">
-            Every Papago is built by hand in Mesa, Arizona. The only question is how much
-            of it you want to decide. Every price includes the Mercedes-Benz Sprinter.
+            Every Papago is built by hand in Mesa, Arizona. The difference is where you
+            start: from a floor plan we have already built dozens of times, or from an
+            empty van and a drawing board. Every price includes the Mercedes-Benz Sprinter.
           </p>
           <div className="paths-grid">
             {paths.map((p) => (
@@ -147,8 +141,8 @@ export default function Home() {
                   <p className="path-range">{p.range}</p>
                   <a
                     href={p.href}
-                    target="_blank"
-                    rel="noopener"
+                    target={p.external ? "_blank" : undefined}
+                    rel={p.external ? "noopener" : undefined}
                     className={p.featured ? "btn btn-gold btn-block" : "btn btn-outline btn-block"}
                   >
                     {p.cta} <span className="arw">&#8853;</span>
@@ -182,11 +176,11 @@ export default function Home() {
 
       <section className="builds">
         <div className="wrap">
-          <h2 className="section-title">Explore Our Signature Builds</h2>
+          <h2 className="section-title">Explore Our Floor Plans</h2>
           <p className="section-lede">
-            Each layout is crafted with precision for different travel lifestyles. Whether
-            you&rsquo;re off-roading, remote working, or traveling with your dog &mdash; we have a
-            van for that.
+            Five layouts, each drawn for a different way of travelling. Off-roading,
+            remote working, or bringing the dog. Every Tailored build starts from one
+            of these.
           </p>
         </div>
         <div className="wrap builds-rail">
@@ -327,7 +321,7 @@ export default function Home() {
           <div>
             <h2 className="section-title left">Real Travelers. Real Adventures.</h2>
             <p className="section-lede left">
-              Hear from our community &mdash; solo travelers, couples, families &mdash; on how
+              Hear from our community of solo travelers, couples and families on how
               Papago Vans helped them create a life on the move.
             </p>
           </div>

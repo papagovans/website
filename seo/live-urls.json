@@ -2006,13 +2006,15 @@
     {
       "path": "/van-conversion-build-tiers/",
       "type": "page",
-      "status": "todo",
+      "status": "redirect",
       "seo": {
         "wpId": 407,
         "title": "Van Conversion Build Tiers - Papago Vans",
         "canonical": "/van-conversion-build-tiers/",
         "index": "index"
-      }
+      },
+      "to": "https://build.papagovans.com",
+      "note": "Owner decision 2026-09-24: send this to the Tailored builder. See the traffic note in seo/README.md before reversing."
     },
     {
       "path": "/van-life-build-gallery/",
