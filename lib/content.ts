@@ -76,6 +76,8 @@ export async function listProjectCards(): Promise<ProjectCard[]> {
       thumb_avif: p.gallery[0].md_avif,
       thumb_webp: p.gallery[0].md_webp,
       alt: p.gallery[0].alt,
+      w: p.gallery[0].w,
+      h: p.gallery[0].h,
     }))
     .sort((a, b) => a.title.localeCompare(b.title));
 }

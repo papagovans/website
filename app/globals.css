@@ -398,7 +398,19 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 .collage-grid {
 	column-count: 5;
 	column-gap: 12px;
-	padding: 0 12px 12px;
+	padding: 0 12px;
+}
+
+/* Columns balance to roughly equal heights but never exactly, so the wall ends
+   in a ragged edge with navy showing through. Rather than chase that, feed it
+   more photos than fit and clip to a straight line.
+
+   The clip has to live on a wrapper. Putting a height on the multicol element
+   itself does not crop it, it makes the columns flow sideways instead, which
+   turned five columns into thirteen running off the right of the page. */
+.collage-clip {
+	height: clamp(620px, 96vh, 1480px);
+	overflow: hidden;
 }
 @media (max-width: 1100px) { .collage-grid { column-count: 4; } }
 @media (max-width: 860px)  { .collage-grid { column-count: 3; } }

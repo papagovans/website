@@ -24,7 +24,10 @@ import { listProjectCards } from "@/lib/content";
 
 const BUILD_APP = "https://build.papagovans.com";
 const CALENDAR_URL = "https://calendly.com/jeremy-papago/30min";
-const COLLAGE_COUNT = 24;
+/* Enough to fill five columns several rows deep at desktop width, and to stay
+   full when the wall drops to two columns on a phone. Drawn from 114 distinct
+   galleries, so nothing repeats. */
+const COLLAGE_COUNT = 45;
 
 const builds = [
   {
@@ -210,7 +213,8 @@ export default async function Home() {
             Try Our Van Builder <span className="arw">&#8853;</span>
           </a>
         </div>
-        <div className="collage-grid">
+        <div className="collage-clip">
+          <div className="collage-grid">
           {collage.map((c) => (
             <a className="collage-cell" href={c.path} key={c.slug}>
               <picture>
@@ -226,7 +230,8 @@ export default async function Home() {
                 />
               </picture>
             </a>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
