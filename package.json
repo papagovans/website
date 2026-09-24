@@ -7,7 +7,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "urls:fetch": "node scripts/fetch-live-urls.mjs",
+    "urls:check": "node scripts/check-urls.mjs",
+    "urls:launch": "node scripts/check-urls.mjs --strict"
   },
   "dependencies": {
     "next": "16.3.5",

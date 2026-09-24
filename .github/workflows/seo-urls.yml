@@ -1,0 +1,26 @@
+# Holds every pull request to the URL contract in seo/live-urls.json.
+#
+# Green while pages are still `todo`, red the moment a URL that was already
+# migrated stops resolving. The strict run, which fails on anything still
+# outstanding, is the launch gate and is meant to be turned on by hand when
+# we are ready to cut over.
+name: SEO URLs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  urls:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Every migrated URL still resolves
+        run: npm run urls:check

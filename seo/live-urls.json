@@ -1,0 +1,972 @@
+{
+  "source": "https://papagovans.com",
+  "generated": "2026-09-24",
+  "total": 186,
+  "counts": {
+    "done": 1,
+    "todo": 174,
+    "redirect": 11
+  },
+  "urls": [
+    {
+      "path": "/",
+      "type": "page",
+      "status": "done",
+      "note": "ported from the Astro mockup"
+    },
+    {
+      "path": "/about-us/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/6-reasons-to-use-havelock-wool-in-a-van-conversion/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/agm-vs-lithium-batteries-for-van-life/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/best-camper-van-layouts-travel-vanlife/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/best-campervan-toliets/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/best-off-grid-camper-van-upgrades-2025/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/custom-camper-van-build-cost-2025-guide/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/hidden-gems-for-van-life/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/how-to-choose-between-a-new-or-used-van-for-your-conversion/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/how-to-insure-a-camper-van-in-2025-understanding-rvia-certifications-impact-on-your-coverage/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/how-to-prevent-squeaks-in-a-campervan/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/is-the-ram-promaster-the-best-van-for-tall-people/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/planning-a-passenger-van-conversion-for-travel-group-transport-or-business-use/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/rvia-certification-campgrounds-benefits/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/the-best-awning-for-vanlife/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/the-best-cooling-options-for-custom-camper-vans/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/the-most-important-feature-in-any-custom-camper-van/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/top-10-vanlife-travel-destinations-of-2024/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/van-life-myths-truths-surprises/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/van-life-newbie-custom-camper-van/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/what-wheel-base-is-best-for-van-life/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/wheelchair-accessible-vans-essential-features-for-safer-and-more-comfortable-mobility/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/where-can-i-park-my-campervan-an-introduction-to-ioverlander/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/blog/working-with-a-van-conversion-company/",
+      "type": "post",
+      "status": "todo"
+    },
+    {
+      "path": "/build/aubreyjacob/",
+      "type": "build",
+      "status": "todo"
+    },
+    {
+      "path": "/build/johndoe/",
+      "type": "build",
+      "status": "todo"
+    },
+    {
+      "path": "/build/rob-champion/",
+      "type": "build",
+      "status": "todo"
+    },
+    {
+      "path": "/ccpa/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/contact-us/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/el-capitan-luxury-van-build-old/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/el-capitan-luxury-van-build/",
+      "note": "duplicate competing with its own live counterpart"
+    },
+    {
+      "path": "/el-capitan-luxury-van-build/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/elementor-10246/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/",
+      "note": "page-builder artefact"
+    },
+    {
+      "path": "/faq/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/financing-old/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/financing/",
+      "note": "duplicate competing with its own live counterpart"
+    },
+    {
+      "path": "/financing/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/ford-transit/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/login/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/",
+      "note": "WordPress login, no equivalent"
+    },
+    {
+      "path": "/mammoth-old/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/mammoth/",
+      "note": "duplicate competing with its own live counterpart"
+    },
+    {
+      "path": "/mammoth/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/mercedes-sprinter/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/newsletter/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/olympus-old/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/olympus/",
+      "note": "duplicate competing with its own live counterpart"
+    },
+    {
+      "path": "/olympus/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/our-process-old/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/our-process/",
+      "note": "duplicate competing with its own live counterpart"
+    },
+    {
+      "path": "/our-process/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/privacy-policy/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/2024-mercedes-sprinter-144-awd-el-capitan-conversion/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/2025-mercedes-sprinter-170-awd-el-capitan-conversion/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/2025-mercedes-sprinter-170-awd-ext-el-capitan-conversion/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/2025-mercedes-sprinter-170-awd-olympus-build/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/aarons-mammoth-build/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/blue-dolphin-custom-sprinter-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/brinkman-van-2025-mercedes-sprinter-awd-170-el-capitan/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/byers-van-mercedes-sprinter-170-awd-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/cabin-fever-sprinter-van-build/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/camo-crusader/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/canyon-runner-4x4-sprinter-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/cascade-cruiser/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/cherry-van-2025-mercedes-sprinter-awd-170-dually-el-capitan/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/classic-camper/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/clubhouse-cruiser-4x4-sprinter-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/cozy-cabin-cruiser/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/cozy-cruiser/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/crouch-van-mercedes-sprinter-170-awd-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/custom-camper-van-off-grid-comfort-adventure/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/custom-campervan/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/custom-ford-transit-148-ext-camper-van-build/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/custom-mercedes-sprinter-170-awd-camper-van-build-2/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/custom-mercedes-sprinter-170-awd-camper-van-build/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/custom-mercedes-sprinter-170-awd-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/custom-mercedes-sprinter-alpine-voyager-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/custom-mercedes-sprinter-camper-van-build/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/custom-minimalist-escape-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/custom-sprinter-170-awd-camper-van-conversion/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/custom-sprinter-van-build-el-capitan/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/cyan-caravan/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/davis-van-mercedes-sprinter-170-awd-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/deluxe-drifter/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/diebag-van-mercedes-sprinter-170-awd-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/donatini-van-mercedes-sprinter-170-awd-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/dually-deluxe-camper/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/east-coast-beach-camper-van-light-blue-cabinets/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/echelon-explorer-luxury-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/empty-nester-luxury-custom-sprinter-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/ford-etransit-campervan/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/ford-transit-trail-camper-van-conversion/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/four-peaks-overlander-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/freedom-wagon/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/freelancers-freedom-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/gomez-van-mercedes-sprinter-170-awd-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/grand-vista-villa/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/jan-van-custom-camper-van-ultimate-van-life-adventure/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/lavish-explorer/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/luxe-wanderer/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/luxury-camper-van-remote-work/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/mercedes-sprinter-144-awd-camper-van-conversion/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/mercedes-sprinter-170-awd-camper-van-conversion-2/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/mercedes-sprinter-170-awd-camper-van-conversion-3/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/mercedes-sprinter-campervan/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/modern-off-road-camper-van-dark-green-cabinets/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/moonlit-meadow/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/nomad-nook/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/northwest-nest/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/obsidian-overlander-4x4-sprinter-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/overland-oasis/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/party-in-front/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/pearl-voyager/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/pet-friendly-pioneer/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/quad-quarters-camper-4peaks-package/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/ram-promaster-campervan/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/regal-rover/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/ridge-warden-custom-off-road-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/rocky-rover/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/rollin-with-bodhi-custom-sprinter-van-build/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/rooftop-rover/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/royal-retreat/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/sarracino/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/scoots-custom-sprinter-van-build/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/serene-sleeper/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/shadowwood-voyager/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/simplicity-sprinter/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/sprinter-170-awd-camper-van-pop-top-tent/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/summit-ascend-custom-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/summit-overlander-custom-off-grid-camper/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/sweeney-van-mercedes-sprinter-170-awd-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/tailgate-titan/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-arnold-ford-transit-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-aschbacher-mercedes-sprinter-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-cozy-canine-cruiser/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-fife-sprinter-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-garner-sprinter-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-hutchison-sprinter-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-king-van-ford-transit-camper-an/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-lacovino-sprinter-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-laverty-sprinter-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-nixon-mercedes-sprinter-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-northrop-sprinter-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-offenhauser-mercedes-sprinter-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-offpost-mercedes-sprinter-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-remote-retreat/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-roving-bronco/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-royal-van-sprinter-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-ruff-traveler/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-sapphire-sojourner/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-sentinel-mercedes-sprinter-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-sunderland-mercedes-sprinter-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-trout-trekker/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/the-versatile-voyager/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/timber-traveler/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/trail-trekker/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/valley-vista-voyager/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/veteran-voyager/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/waley-van-mercedes-sprinter-144-awd-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/white-peak-rover-4x4-sprinter-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/white-pine-voyager/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/wien-van-ford-transit-148-ext-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/wild-wanderer/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/projects/young-van-mercedes-sprinter-144-awd-camper-van/",
+      "type": "projects",
+      "status": "todo"
+    },
+    {
+      "path": "/quiz/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/rainier-old/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/rainier/",
+      "note": "duplicate competing with its own live counterpart"
+    },
+    {
+      "path": "/rainier/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/ram-promaster/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/service-department/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/service-work-request/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/terms-conditions/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/test/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/",
+      "note": "scratch page, indexed by accident"
+    },
+    {
+      "path": "/thank-you-2/",
+      "type": "page",
+      "status": "todo",
+      "note": "must ship noindex"
+    },
+    {
+      "path": "/thank-you-landing-pages/",
+      "type": "page",
+      "status": "todo",
+      "note": "must ship noindex"
+    },
+    {
+      "path": "/thank-you-newsletter/",
+      "type": "page",
+      "status": "todo",
+      "note": "must ship noindex"
+    },
+    {
+      "path": "/thank-you-quiz-no-sale/",
+      "type": "page",
+      "status": "todo",
+      "note": "must ship noindex"
+    },
+    {
+      "path": "/thank-you-quiz/",
+      "type": "page",
+      "status": "todo",
+      "note": "must ship noindex"
+    },
+    {
+      "path": "/thank-you-service-work/",
+      "type": "page",
+      "status": "todo",
+      "note": "must ship noindex"
+    },
+    {
+      "path": "/thank-you/",
+      "type": "page",
+      "status": "todo",
+      "note": "must ship noindex"
+    },
+    {
+      "path": "/the-commandant-mercedes-170-build/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/the-sentinel-mercedes-sprinter-144/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/van-conversion-build-tiers/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/van-life-build-gallery/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/which-adventure-van-style-fits-you-cloned-10193/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/which-adventure-van-style-fits-you/",
+      "note": "duplicate of the quiz"
+    },
+    {
+      "path": "/which-adventure-van-style-fits-you/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/work-at-papago-vans/",
+      "type": "page",
+      "status": "todo"
+    },
+    {
+      "path": "/zion-old/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/zion/",
+      "note": "duplicate competing with its own live counterpart"
+    },
+    {
+      "path": "/zion/",
+      "type": "page",
+      "status": "todo"
+    }
+  ]
+}
