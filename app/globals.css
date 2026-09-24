@@ -389,46 +389,61 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 .collage-head { text-align: center; color: #fff; padding-bottom: 48px; }
 .collage-head h2 { font-size: clamp(28px, 4vw, 46px); }
 .collage-head p { margin: 16px auto 28px; max-width: 560px; color: rgba(255,255,255,0.72); font-size: 17px; line-height: 1.6; }
-/* Masonry. CSS columns rather than grid, because a grid forces every cell to
-   one aspect ratio and the wall reads as a spreadsheet. Here each photo keeps
-   its own proportions, columns end at different heights, and the stagger is a
-   consequence of the photography rather than something faked with nth-child.
-   The intrinsic width and height on each img are what stop it reflowing as the
-   images arrive. */
-.collage-grid {
-	column-count: 5;
-	column-gap: 12px;
-	padding: 0 12px;
-}
-
-/* Columns balance to roughly equal heights but never exactly, so the wall ends
-   in a ragged edge with navy showing through. Rather than chase that, feed it
-   more photos than fit and clip to a straight line.
-
-   The clip has to live on a wrapper. Putting a height on the multicol element
-   itself does not crop it, it makes the columns flow sideways instead, which
-   turned five columns into thirteen running off the right of the page. */
+/* The wall carries more photos than fit and is cropped to a straight edge, so
+   it never ends in a ragged line with navy showing through. The clip has to
+   live on this wrapper rather than on the grid itself. */
 .collage-clip {
 	height: clamp(620px, 96vh, 1480px);
 	overflow: hidden;
 }
-@media (max-width: 1100px) { .collage-grid { column-count: 4; } }
-@media (max-width: 860px)  { .collage-grid { column-count: 3; } }
-@media (max-width: 560px)  { .collage-grid { column-count: 2; } }
 
-.collage-cell {
-	display: block;
-	break-inside: avoid;
-	/* The same 12px as column-gap, so horizontal and vertical spacing match. */
-	margin-bottom: 12px;
+/* Photo wall.
+   CSS grid rather than columns. Columns gave nicer natural proportions, but
+   they flow items automatically and there is no way to say "this photo goes
+   top right". A grid can be told exactly that, which is what the feature cell
+   needs. Cells are 4:3, matching the shape most of the gallery photography
+   already is, so the crop is slight.
+
+   grid-auto-flow: dense lets the smaller photos backfill around the feature
+   instead of leaving a hole beside it. */
+.collage-grid {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-auto-rows: 200px;
+	grid-auto-flow: dense;
+	gap: 12px;
+	padding: 0 12px;
 }
-.collage-cell img {
+
+/* The feature replaces what were four cells in the top right corner. */
+.collage-feature {
+	grid-column: 4 / 6;
+	grid-row: 1 / 3;
+}
+
+@media (max-width: 1100px) {
+	.collage-grid { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 180px; }
+	.collage-feature { grid-column: 3 / 5; }
+}
+@media (max-width: 860px) {
+	.collage-grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 165px; }
+	.collage-feature { grid-column: 2 / 4; }
+}
+@media (max-width: 560px) {
+	.collage-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 140px; }
+	.collage-feature { grid-column: 1 / 3; }
+}
+
+.collage-cell img,
+.collage-feature img {
 	width: 100%;
-	height: auto;
+	height: 100%;
+	object-fit: cover;
 	border-radius: 6px;
 	transition: 0.2s ease;
 }
-.collage-cell:hover img { opacity: 0.82; }
+.collage-cell:hover img,
+.collage-feature:hover img { opacity: 0.82; }
 
 /* Your van journey starts here. */
 .journey { padding: 88px 0 96px; text-align: center; }

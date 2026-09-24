@@ -239,6 +239,21 @@ export default async function Home() {
         </div>
         <div className="collage-clip">
           <div className="collage-grid">
+            <div className="collage-feature">
+              <picture>
+                <source srcSet="/home/collage-feature.avif" type="image/avif" />
+                <source srcSet="/home/collage-feature.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/home/collage-feature.webp"
+                  alt="Three children eating breakfast at the dinette of a Papago van, back doors open onto pine forest"
+                  width={1200}
+                  height={900}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
           {collage.map((c) => (
             <a className="collage-cell" href={c.path} key={c.slug}>
               <picture>
