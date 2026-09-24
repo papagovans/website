@@ -84,10 +84,32 @@ const paths = [
   },
 ];
 
+/* Verbatim from the Customer Stories section of the live site. The two cards
+ * that used to sit here were the same placeholder quote printed twice under
+ * the same invented name. */
 const reviews = [
-  { id: "popowich", name: "Yale Popowich", meta: "Full-time van lifers, 2+ years on the road" },
-  { id: "second", name: "Yale Popowich", meta: "Full-time van lifers, 2+ years on the road" },
+  { name: "Dr. Julie M.", quote: "I LOVE THESE HUMANS AND MY VAN SO MUCH! Get your van converted by them, I've researched everywhere and they are hands down the BEST!" },
+  { name: "Debi L.", quote: "I was very anxious since I was not in the same state, but they went above and beyond my wildest dreams and created an absolutely stunning van for me. I encourage anyone considering a build to reach out to Papago Vans!" },
+  { name: "Nai S.", quote: "The team truly listened to my needs and made them a reality. From a custom book shelf to smaller detailed preferences, these guys really honored my dreams from start to finish." },
+  { name: "Mike and Melanie", quote: "There is absolutely no way that we could have found a better company to build out our custom dream van to see the USA. Hands down, they're the best in the business. We give our highest recommendation (10+ stars)." },
+  { name: "Danielle M.", quote: "To say it has been a pleasure to work with EVERYONE at Papago would be an understatement. They created my custom camper van better than I even imagined. The attention to detail and the little things meant the most!" },
+  { name: "Brian L.", quote: "There are a handful of van conversion companies in the Phoenix area but Papago is unique. If I ever plan to do another van conversion, I can't imagine doing it anywhere else." },
+  { name: "Wendy F.", quote: "We have been 100% happy right from our beginning inquiry phone call to waving goodbye as we drove our newly finished custom van out the driveway." },
+  { name: "Nicole P.", quote: "They listened to my wants and needs and helped me every step of the way to design my campervan exactly how I wanted it." },
+  { name: "Michael V.", quote: "Great van conversion place. Veteran owned. Quality service, and they build things to last." },
 ];
+
+function Stars() {
+  return (
+    <div className="stars" aria-label="Five out of five stars">
+      {Array.from({ length: 5 }, (_, i) => (
+        <svg key={i} viewBox="0 0 20 19" width="15" height="14" aria-hidden="true">
+          <path d="M10 0l2.6 6.3 6.8.5-5.2 4.4 1.6 6.6L10 14.3 4.2 17.8l1.6-6.6L.6 6.8l6.8-.5z" />
+        </svg>
+      ))}
+    </div>
+  );
+}
 
 export default async function Home() {
   const cards = await listProjectCards();
@@ -290,36 +312,21 @@ export default async function Home() {
       </section>
 
       <section className="reviews">
-        <div className="wrap stories-head">
-          <div>
-            <h2 className="section-title left">Real Travelers. Real Adventures.</h2>
-            <p className="section-lede left">
-              Hear from our community of solo travelers, couples and families on how
-              Papago Vans helped them create a life on the move.
-            </p>
+        <div className="wrap">
+          <h2 className="section-title">Real Travelers. Real Adventures.</h2>
+          <p className="section-lede">
+            Hear from our community of solo travelers, couples and families on how
+            Papago Vans helped them create a life on the move.
+          </p>
+          <div className="review-grid">
+            {reviews.map((r) => (
+              <blockquote className="review" key={r.name}>
+                <Stars />
+                <p>{r.quote}</p>
+                <cite>{r.name}</cite>
+              </blockquote>
+            ))}
           </div>
-          <a href="#" className="btn btn-outline btn-sm">Read More Stories <span className="arw">&#8853;</span></a>
-        </div>
-        <div className="wrap review-grid">
-          {reviews.map((r) => (
-            <blockquote className="review" key={r.id}>
-              <img src="/home/Frame-39.svg" alt="5 out of 5 stars" width="120" height="22" />
-              <p>
-                If I could give 6 stars, I would. This is a professional outfit all the way.
-                From helping me source my van, to helping select the perfect options for my
-                needs, they never disappointed. The components they use are all first class.
-                The weekly photo updates of my build were also so greatly appreciated, kept me
-                in the loop during the entire build.
-              </p>
-              <footer>
-                <img src="/home/image-1-1.webp" alt="" width="48" height="48" />
-                <div>
-                  <cite>{r.name}</cite>
-                  <span>{r.meta}</span>
-                </div>
-              </footer>
-            </blockquote>
-          ))}
         </div>
       </section>
 
