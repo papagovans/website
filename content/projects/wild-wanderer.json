@@ -1,0 +1,42 @@
+{
+  "slug": "wild-wanderer",
+  "path": "/projects/wild-wanderer/",
+  "title": "Wild Wanderer",
+  "date": "2024-01-25",
+  "excerpt": "",
+  "body": [],
+  "gallery": [
+    {
+      "lg_avif": "/projects/wild-wanderer/00-lg.avif",
+      "lg_webp": "/projects/wild-wanderer/00-lg.webp",
+      "md_avif": "/projects/wild-wanderer/00-md.avif",
+      "md_webp": "/projects/wild-wanderer/00-md.webp",
+      "alt": "Wild Wanderer",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/wild-wanderer/01-md.avif",
+      "md_webp": "/projects/wild-wanderer/01-md.webp",
+      "alt": "Wild Wanderer",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/wild-wanderer/02-md.avif",
+      "md_webp": "/projects/wild-wanderer/02-md.webp",
+      "alt": "Wild Wanderer",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/wild-wanderer/03-md.avif",
+      "md_webp": "/projects/wild-wanderer/03-md.webp",
+      "alt": "144 Wheel Base Sprinter Van",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/wild-wanderer/04-md.avif",
+      "md_webp": "/projects/wild-wanderer/04-md.webp",
+      "alt": "Wild Wanderer",
+      "portrait": true
+    }
+  ]
+}

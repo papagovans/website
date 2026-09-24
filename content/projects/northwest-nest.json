@@ -1,0 +1,123 @@
+{
+  "slug": "northwest-nest",
+  "path": "/projects/northwest-nest/",
+  "title": "Northwest Nest",
+  "date": "2023-09-12",
+  "excerpt": "Zion Build Tier",
+  "body": [
+    "Crafted meticulously for our Pacific Northwest (PNW) client, this custom camper van from our Zion build tier flawlessly caters to their every requirement. Ideal for those seeking a weekend escape amidst the refreshing PNW climate, this custom camper van design smartly foregoes an AC unit. Instead, it integrates two Max Air fans, efficiently powered by AGM batteries and 400 Watts of solar energy. One of the standout features of this van is its abundant storage, thanks to the tailored cabinets.",
+    "Adventure enthusiasts will appreciate the outdoor shower, offering both cold and hot water, conveniently attached to the back door. Complementing its exterior, the van boasts an automatic awning and a weboost, ensuring consistent cell signal on every journey."
+  ],
+  "gallery": [
+    {
+      "lg_avif": "/projects/northwest-nest/00-lg.avif",
+      "lg_webp": "/projects/northwest-nest/00-lg.webp",
+      "md_avif": "/projects/northwest-nest/00-md.avif",
+      "md_webp": "/projects/northwest-nest/00-md.webp",
+      "alt": "Northwest Nest",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/northwest-nest/01-md.avif",
+      "md_webp": "/projects/northwest-nest/01-md.webp",
+      "alt": "Northwest Nest",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/northwest-nest/02-md.avif",
+      "md_webp": "/projects/northwest-nest/02-md.webp",
+      "alt": "Northwest Nest",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/northwest-nest/03-md.avif",
+      "md_webp": "/projects/northwest-nest/03-md.webp",
+      "alt": "Northwest Nest",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/northwest-nest/04-md.avif",
+      "md_webp": "/projects/northwest-nest/04-md.webp",
+      "alt": "Northwest Nest",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/northwest-nest/05-md.avif",
+      "md_webp": "/projects/northwest-nest/05-md.webp",
+      "alt": "Northwest Nest",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/northwest-nest/06-md.avif",
+      "md_webp": "/projects/northwest-nest/06-md.webp",
+      "alt": "Northwest Nest",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/northwest-nest/07-md.avif",
+      "md_webp": "/projects/northwest-nest/07-md.webp",
+      "alt": "Northwest Nest",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/northwest-nest/08-md.avif",
+      "md_webp": "/projects/northwest-nest/08-md.webp",
+      "alt": "Northwest Nest",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/northwest-nest/09-md.avif",
+      "md_webp": "/projects/northwest-nest/09-md.webp",
+      "alt": "Northwest Nest",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/northwest-nest/10-md.avif",
+      "md_webp": "/projects/northwest-nest/10-md.webp",
+      "alt": "Northwest Nest",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/northwest-nest/11-md.avif",
+      "md_webp": "/projects/northwest-nest/11-md.webp",
+      "alt": "Northwest Nest",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/northwest-nest/12-md.avif",
+      "md_webp": "/projects/northwest-nest/12-md.webp",
+      "alt": "Northwest Nest",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/northwest-nest/13-md.avif",
+      "md_webp": "/projects/northwest-nest/13-md.webp",
+      "alt": "Northwest Nest",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/northwest-nest/14-md.avif",
+      "md_webp": "/projects/northwest-nest/14-md.webp",
+      "alt": "Northwest Nest",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/northwest-nest/15-md.avif",
+      "md_webp": "/projects/northwest-nest/15-md.webp",
+      "alt": "Northwest Nest",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/northwest-nest/16-md.avif",
+      "md_webp": "/projects/northwest-nest/16-md.webp",
+      "alt": "Northwest Nest",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/northwest-nest/17-md.avif",
+      "md_webp": "/projects/northwest-nest/17-md.webp",
+      "alt": "Northwest Nest",
+      "portrait": false
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "slug": "the-cozy-canine-cruiser",
+  "path": "/projects/the-cozy-canine-cruiser/",
+  "title": "Cozy Canine Cruiser",
+  "date": "2024-07-17",
+  "excerpt": "Meet The Cozy Canine Cruiser, a custom-built camper van designed for adventurers and their furry companions. This unique conversion features a spacious interior with two dog crates, a light wood aesthetic, and all the co",
+  "body": [
+    "Meet The Cozy Canine Cruiser, a custom-built camper van designed for adventurers and their furry companions. This unique conversion features a spacious interior with two dog crates, a light wood aesthetic, and all the comforts of home. It boasts a luxurious queen bed, an indoor shower with a wet-bath style toilet, and an outdoor shower for rinsing off after a day of exploration.",
+    "The kitchen is equipped with a double burner induction cooktop, a stainless steel sink, and a large fridge/freezer, making meal prep a breeze. The van ensures year-round comfort with premium insulation, a diesel-powered cabin heater, and a 12v AC unit.",
+    "With ample storage, including overhead hanging bags and under-counter cabinets, plus convenient amenities like recessed LED lights, a smart TV, and a swivel table, The Cozy Canine Cruiser showcases the perfect blend of style and functionality for an adventurous lifestyle."
+  ],
+  "gallery": [
+    {
+      "lg_avif": "/projects/the-cozy-canine-cruiser/00-lg.avif",
+      "lg_webp": "/projects/the-cozy-canine-cruiser/00-lg.webp",
+      "md_avif": "/projects/the-cozy-canine-cruiser/00-md.avif",
+      "md_webp": "/projects/the-cozy-canine-cruiser/00-md.webp",
+      "alt": "Cozy Canine Cruiser",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/the-cozy-canine-cruiser/01-md.avif",
+      "md_webp": "/projects/the-cozy-canine-cruiser/01-md.webp",
+      "alt": "Cozy Canine Cruiser",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/the-cozy-canine-cruiser/02-md.avif",
+      "md_webp": "/projects/the-cozy-canine-cruiser/02-md.webp",
+      "alt": "Cozy Canine Cruiser",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/the-cozy-canine-cruiser/03-md.avif",
+      "md_webp": "/projects/the-cozy-canine-cruiser/03-md.webp",
+      "alt": "Cozy Canine Cruiser",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/the-cozy-canine-cruiser/04-md.avif",
+      "md_webp": "/projects/the-cozy-canine-cruiser/04-md.webp",
+      "alt": "Cozy Canine Cruiser",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/the-cozy-canine-cruiser/05-md.avif",
+      "md_webp": "/projects/the-cozy-canine-cruiser/05-md.webp",
+      "alt": "Cozy Canine Cruiser",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/the-cozy-canine-cruiser/06-md.avif",
+      "md_webp": "/projects/the-cozy-canine-cruiser/06-md.webp",
+      "alt": "Cozy Canine Cruiser",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/the-cozy-canine-cruiser/07-md.avif",
+      "md_webp": "/projects/the-cozy-canine-cruiser/07-md.webp",
+      "alt": "Cozy Canine Cruiser",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/the-cozy-canine-cruiser/08-md.avif",
+      "md_webp": "/projects/the-cozy-canine-cruiser/08-md.webp",
+      "alt": "Cozy Canine Cruiser",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/the-cozy-canine-cruiser/09-md.avif",
+      "md_webp": "/projects/the-cozy-canine-cruiser/09-md.webp",
+      "alt": "Cozy Canine Cruiser",
+      "portrait": true
+    }
+  ]
+}

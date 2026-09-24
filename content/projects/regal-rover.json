@@ -1,0 +1,78 @@
+{
+  "slug": "regal-rover",
+  "path": "/projects/regal-rover/",
+  "title": "Regal Rover",
+  "date": "2024-01-25",
+  "excerpt": "",
+  "body": [],
+  "gallery": [
+    {
+      "lg_avif": "/projects/regal-rover/00-lg.avif",
+      "lg_webp": "/projects/regal-rover/00-lg.webp",
+      "md_avif": "/projects/regal-rover/00-md.avif",
+      "md_webp": "/projects/regal-rover/00-md.webp",
+      "alt": "Regal Rover",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/regal-rover/01-md.avif",
+      "md_webp": "/projects/regal-rover/01-md.webp",
+      "alt": "Regal Rover",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/regal-rover/02-md.avif",
+      "md_webp": "/projects/regal-rover/02-md.webp",
+      "alt": "Regal Rover",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/regal-rover/03-md.avif",
+      "md_webp": "/projects/regal-rover/03-md.webp",
+      "alt": "Regal Rover",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/regal-rover/04-md.avif",
+      "md_webp": "/projects/regal-rover/04-md.webp",
+      "alt": "Regal Rover",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/regal-rover/05-md.avif",
+      "md_webp": "/projects/regal-rover/05-md.webp",
+      "alt": "Regal Rover",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/regal-rover/06-md.avif",
+      "md_webp": "/projects/regal-rover/06-md.webp",
+      "alt": "Regal Rover",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/regal-rover/07-md.avif",
+      "md_webp": "/projects/regal-rover/07-md.webp",
+      "alt": "Regal Rover",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/regal-rover/08-md.avif",
+      "md_webp": "/projects/regal-rover/08-md.webp",
+      "alt": "Regal Rover",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/regal-rover/09-md.avif",
+      "md_webp": "/projects/regal-rover/09-md.webp",
+      "alt": "Regal Rover",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/regal-rover/10-md.avif",
+      "md_webp": "/projects/regal-rover/10-md.webp",
+      "alt": "Regal Rover",
+      "portrait": true
+    }
+  ]
+}

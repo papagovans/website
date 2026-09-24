@@ -48,3 +48,28 @@ export async function listProjectSlugs(): Promise<string[]> {
   const files = await readdir(DIR).catch(() => [] as string[]);
   return files.filter((f) => f.endsWith(".json")).map((f) => f.replace(/\.json$/, ""));
 }
+
+export type ProjectCard = Pick<Project, "slug" | "path" | "title" | "excerpt"> & {
+  thumb_avif: string;
+  thumb_webp: string;
+  alt: string;
+};
+
+/* Index listing. Reads every project doc once at build time and keeps only the
+ * hero, so the gallery page never loads 2,138 images worth of JSON. */
+export async function listProjectCards(): Promise<ProjectCard[]> {
+  const slugs = await listProjectSlugs();
+  const cards = await Promise.all(slugs.map((s) => getProject(s)));
+  return cards
+    .filter((p): p is Project => !!p && p.gallery.length > 0)
+    .map((p) => ({
+      slug: p.slug,
+      path: p.path,
+      title: p.title,
+      excerpt: p.excerpt,
+      thumb_avif: p.gallery[0].md_avif,
+      thumb_webp: p.gallery[0].md_webp,
+      alt: p.gallery[0].alt,
+    }))
+    .sort((a, b) => a.title.localeCompare(b.title));
+}

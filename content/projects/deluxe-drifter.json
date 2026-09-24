@@ -1,0 +1,71 @@
+{
+  "slug": "deluxe-drifter",
+  "path": "/projects/deluxe-drifter/",
+  "title": "Deluxe Drifter",
+  "date": "2024-01-25",
+  "excerpt": "Zion Build Tier",
+  "body": [
+    "This stunning Ram Promaster 159  camper van was designed for comfort, functionality, and adventure. This unique build features Clarita Clove flooring, light gray cabinets, and smoke gray stained wood, creating a sleek and modern interior that is both inviting and stylish.",
+    "One of the standout features of this custom camper van is the one-of-a-kind bunk bed design, accommodating two full-size mattresses. This innovative layout maximizes space and comfort, making it perfect for families or groups of friends on the road.",
+    "The kitchen area is equipped with a fridge and freezer combo, providing ample storage for all your food and beverages. The luxurious sink and sprayer, supported by dual water tanks, ensure you have all the conveniences of home at your fingertips. For added convenience, a hidden cassette toilet is discreetly integrated into the design.",
+    "This Ram Promaster 159 is also outfitted with an ARB onboard air compressor, ensuring you are ready for any adventure, whether it's inflating tires or powering air tools. The build includes many other thoughtful features designed to enhance the customers travel experience."
+  ],
+  "gallery": [
+    {
+      "lg_avif": "/projects/deluxe-drifter/00-lg.avif",
+      "lg_webp": "/projects/deluxe-drifter/00-lg.webp",
+      "md_avif": "/projects/deluxe-drifter/00-md.avif",
+      "md_webp": "/projects/deluxe-drifter/00-md.webp",
+      "alt": "Deluxe Drifter",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/deluxe-drifter/01-md.avif",
+      "md_webp": "/projects/deluxe-drifter/01-md.webp",
+      "alt": "Deluxe Drifter",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/deluxe-drifter/02-md.avif",
+      "md_webp": "/projects/deluxe-drifter/02-md.webp",
+      "alt": "Deluxe Drifter",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/deluxe-drifter/03-md.avif",
+      "md_webp": "/projects/deluxe-drifter/03-md.webp",
+      "alt": "Deluxe Drifter",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/deluxe-drifter/04-md.avif",
+      "md_webp": "/projects/deluxe-drifter/04-md.webp",
+      "alt": "Deluxe Drifter",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/deluxe-drifter/05-md.avif",
+      "md_webp": "/projects/deluxe-drifter/05-md.webp",
+      "alt": "Deluxe Drifter",
+      "portrait": false
+    },
+    {
+      "md_avif": "/projects/deluxe-drifter/06-md.avif",
+      "md_webp": "/projects/deluxe-drifter/06-md.webp",
+      "alt": "Deluxe Drifter",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/deluxe-drifter/07-md.avif",
+      "md_webp": "/projects/deluxe-drifter/07-md.webp",
+      "alt": "Deluxe Drifter",
+      "portrait": true
+    },
+    {
+      "md_avif": "/projects/deluxe-drifter/08-md.avif",
+      "md_webp": "/projects/deluxe-drifter/08-md.webp",
+      "alt": "Deluxe Drifter",
+      "portrait": true
+    }
+  ]
+}
