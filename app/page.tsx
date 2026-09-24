@@ -15,15 +15,14 @@
  * action), Van Platforms We Work With, and Custom Builds Real Stories (the
  * collage replaced it). Git history has all five if any need to come back.
  *
- * Two open items are marked TODO below: the shop photography does not exist
- * yet, and the scheduling link is a placeholder.
+ * One open item is marked TODO below: the shop photography does not exist yet,
+ * so Why Papago runs finished-van shots in its place.
  */
 
 import { listProjectCards } from "@/lib/content";
 
 const BUILD_APP = "https://build.papagovans.com";
-/* Placeholder. Needs Jeremy's real scheduling link before launch. */
-const CALENDAR_URL = "https://calendly.com/papagovans";
+const CALENDAR_URL = "https://calendly.com/jeremy-papagovans/30min";
 const COLLAGE_COUNT = 15;
 
 const builds = [
@@ -239,7 +238,6 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* TODO: CALENDAR_URL is a placeholder. Needs Jeremy's real booking link. */}
       <section className="journey">
         <div className="wrap journey-inner">
           <h2>Your Van Journey Starts Here</h2>
