@@ -101,7 +101,28 @@ export default async function Home() {
       {/* Hero. Full viewport, header sits transparent on top of it. */}
       <section className="hero-full">
         <div className="hero-media">
-          <img src="/home/On-the-Brink-Van-9-Large.jpeg" alt="A Papago Vans Sprinter conversion parked on desert flats below the Four Peaks" fetchPriority="high" />
+          {/* LCP image: eager, high priority, three widths. Never lazy-load this. */}
+          <picture>
+            <source
+              srcSet="/home/hero-md.avif 900w, /home/hero-lg.avif 1600w, /home/hero-xl.avif 1920w"
+              sizes="100vw"
+              type="image/avif"
+            />
+            <source
+              srcSet="/home/hero-md.webp 900w, /home/hero-lg.webp 1600w"
+              sizes="100vw"
+              type="image/webp"
+            />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/home/hero-lg.webp"
+              alt="A Papago Vans Sprinter with its pop-top raised at a pine forest campsite, a family around the fire at dusk"
+              width={1920}
+              height={1080}
+              fetchPriority="high"
+              decoding="async"
+            />
+          </picture>
         </div>
         <div className="wrap hero-full-inner">
           <h1>Camper Vans<br />Built To Explore</h1>
