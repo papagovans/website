@@ -12,43 +12,57 @@
       "md_avif": "/projects/the-ruff-traveler/00-md.avif",
       "md_webp": "/projects/the-ruff-traveler/00-md.webp",
       "alt": "Ruff Traveler",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-ruff-traveler/01-md.avif",
       "md_webp": "/projects/the-ruff-traveler/01-md.webp",
       "alt": "Ruff Traveler",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-ruff-traveler/02-md.avif",
       "md_webp": "/projects/the-ruff-traveler/02-md.webp",
       "alt": "Ruff Traveler",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     },
     {
       "md_avif": "/projects/the-ruff-traveler/03-md.avif",
       "md_webp": "/projects/the-ruff-traveler/03-md.webp",
       "alt": "Ruff Traveler",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-ruff-traveler/04-md.avif",
       "md_webp": "/projects/the-ruff-traveler/04-md.webp",
       "alt": "Ruff Traveler",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     },
     {
       "md_avif": "/projects/the-ruff-traveler/05-md.avif",
       "md_webp": "/projects/the-ruff-traveler/05-md.webp",
       "alt": "Ruff Traveler",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     },
     {
       "md_avif": "/projects/the-ruff-traveler/06-md.avif",
       "md_webp": "/projects/the-ruff-traveler/06-md.webp",
       "alt": "Ruff Traveler",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     }
   ]
 }

@@ -12,73 +12,97 @@
       "md_avif": "/projects/royal-retreat/00-md.avif",
       "md_webp": "/projects/royal-retreat/00-md.webp",
       "alt": "Royal Retreat",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/royal-retreat/01-md.avif",
       "md_webp": "/projects/royal-retreat/01-md.webp",
       "alt": "Royal Retreat",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/royal-retreat/02-md.avif",
       "md_webp": "/projects/royal-retreat/02-md.webp",
       "alt": "Royal Retreat",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/royal-retreat/03-md.avif",
       "md_webp": "/projects/royal-retreat/03-md.webp",
       "alt": "Royal Retreat",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/royal-retreat/04-md.avif",
       "md_webp": "/projects/royal-retreat/04-md.webp",
       "alt": "Royal Retreat",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/royal-retreat/05-md.avif",
       "md_webp": "/projects/royal-retreat/05-md.webp",
       "alt": "Royal Retreat",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/royal-retreat/06-md.avif",
       "md_webp": "/projects/royal-retreat/06-md.webp",
       "alt": "Royal Retreat",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/royal-retreat/07-md.avif",
       "md_webp": "/projects/royal-retreat/07-md.webp",
       "alt": "Royal Retreat",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/royal-retreat/08-md.avif",
       "md_webp": "/projects/royal-retreat/08-md.webp",
       "alt": "Royal Retreat",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/royal-retreat/09-md.avif",
       "md_webp": "/projects/royal-retreat/09-md.webp",
       "alt": "Royal Retreat",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/royal-retreat/10-md.avif",
       "md_webp": "/projects/royal-retreat/10-md.webp",
       "alt": "Royal Retreat",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/royal-retreat/11-md.avif",
       "md_webp": "/projects/royal-retreat/11-md.webp",
       "alt": "Royal Retreat",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     }
   ]
 }

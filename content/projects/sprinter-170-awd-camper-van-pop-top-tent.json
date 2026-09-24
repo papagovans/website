@@ -18,49 +18,65 @@
       "md_avif": "/projects/sprinter-170-awd-camper-van-pop-top-tent/00-md.avif",
       "md_webp": "/projects/sprinter-170-awd-camper-van-pop-top-tent/00-md.webp",
       "alt": "Skyline Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/sprinter-170-awd-camper-van-pop-top-tent/01-md.avif",
       "md_webp": "/projects/sprinter-170-awd-camper-van-pop-top-tent/01-md.webp",
       "alt": "Skyline Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/sprinter-170-awd-camper-van-pop-top-tent/02-md.avif",
       "md_webp": "/projects/sprinter-170-awd-camper-van-pop-top-tent/02-md.webp",
       "alt": "Skyline Roamer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/sprinter-170-awd-camper-van-pop-top-tent/03-md.avif",
       "md_webp": "/projects/sprinter-170-awd-camper-van-pop-top-tent/03-md.webp",
       "alt": "Skyline Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/sprinter-170-awd-camper-van-pop-top-tent/04-md.avif",
       "md_webp": "/projects/sprinter-170-awd-camper-van-pop-top-tent/04-md.webp",
       "alt": "Skyline Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/sprinter-170-awd-camper-van-pop-top-tent/05-md.avif",
       "md_webp": "/projects/sprinter-170-awd-camper-van-pop-top-tent/05-md.webp",
       "alt": "Skyline Roamer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     },
     {
       "md_avif": "/projects/sprinter-170-awd-camper-van-pop-top-tent/06-md.avif",
       "md_webp": "/projects/sprinter-170-awd-camper-van-pop-top-tent/06-md.webp",
       "alt": "Skyline Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 480
     },
     {
       "md_avif": "/projects/sprinter-170-awd-camper-van-pop-top-tent/07-md.avif",
       "md_webp": "/projects/sprinter-170-awd-camper-van-pop-top-tent/07-md.webp",
       "alt": "Skyline Roamer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     }
   ]
 }

@@ -17,61 +17,81 @@
       "md_avif": "/projects/overland-oasis/00-md.avif",
       "md_webp": "/projects/overland-oasis/00-md.webp",
       "alt": "Overland Oasis",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/overland-oasis/01-md.avif",
       "md_webp": "/projects/overland-oasis/01-md.webp",
       "alt": "Overland Oasis",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/overland-oasis/02-md.avif",
       "md_webp": "/projects/overland-oasis/02-md.webp",
       "alt": "Overland Oasis",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/overland-oasis/03-md.avif",
       "md_webp": "/projects/overland-oasis/03-md.webp",
       "alt": "Overland Oasis",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     },
     {
       "md_avif": "/projects/overland-oasis/04-md.avif",
       "md_webp": "/projects/overland-oasis/04-md.webp",
       "alt": "Overland Oasis",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/overland-oasis/05-md.avif",
       "md_webp": "/projects/overland-oasis/05-md.webp",
       "alt": "Overland Oasis",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/overland-oasis/06-md.avif",
       "md_webp": "/projects/overland-oasis/06-md.webp",
       "alt": "Overland Oasis",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     },
     {
       "md_avif": "/projects/overland-oasis/07-md.avif",
       "md_webp": "/projects/overland-oasis/07-md.webp",
       "alt": "Overland Oasis",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/overland-oasis/08-md.avif",
       "md_webp": "/projects/overland-oasis/08-md.webp",
       "alt": "Overland Oasis",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/overland-oasis/09-md.avif",
       "md_webp": "/projects/overland-oasis/09-md.webp",
       "alt": "Overland Oasis",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     }
   ]
 }

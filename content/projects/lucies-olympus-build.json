@@ -16,187 +16,249 @@
       "md_avif": "/projects/lucies-olympus-build/00-md.avif",
       "md_webp": "/projects/lucies-olympus-build/00-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/01-md.avif",
       "md_webp": "/projects/lucies-olympus-build/01-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/02-md.avif",
       "md_webp": "/projects/lucies-olympus-build/02-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/03-md.avif",
       "md_webp": "/projects/lucies-olympus-build/03-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/04-md.avif",
       "md_webp": "/projects/lucies-olympus-build/04-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/05-md.avif",
       "md_webp": "/projects/lucies-olympus-build/05-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/06-md.avif",
       "md_webp": "/projects/lucies-olympus-build/06-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/07-md.avif",
       "md_webp": "/projects/lucies-olympus-build/07-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/08-md.avif",
       "md_webp": "/projects/lucies-olympus-build/08-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/09-md.avif",
       "md_webp": "/projects/lucies-olympus-build/09-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/10-md.avif",
       "md_webp": "/projects/lucies-olympus-build/10-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/lucies-olympus-build/11-md.avif",
       "md_webp": "/projects/lucies-olympus-build/11-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/lucies-olympus-build/12-md.avif",
       "md_webp": "/projects/lucies-olympus-build/12-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/13-md.avif",
       "md_webp": "/projects/lucies-olympus-build/13-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/14-md.avif",
       "md_webp": "/projects/lucies-olympus-build/14-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/lucies-olympus-build/15-md.avif",
       "md_webp": "/projects/lucies-olympus-build/15-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/lucies-olympus-build/16-md.avif",
       "md_webp": "/projects/lucies-olympus-build/16-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/17-md.avif",
       "md_webp": "/projects/lucies-olympus-build/17-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/18-md.avif",
       "md_webp": "/projects/lucies-olympus-build/18-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/19-md.avif",
       "md_webp": "/projects/lucies-olympus-build/19-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/20-md.avif",
       "md_webp": "/projects/lucies-olympus-build/20-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/21-md.avif",
       "md_webp": "/projects/lucies-olympus-build/21-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/22-md.avif",
       "md_webp": "/projects/lucies-olympus-build/22-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/lucies-olympus-build/23-md.avif",
       "md_webp": "/projects/lucies-olympus-build/23-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/lucies-olympus-build/24-md.avif",
       "md_webp": "/projects/lucies-olympus-build/24-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/lucies-olympus-build/25-md.avif",
       "md_webp": "/projects/lucies-olympus-build/25-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/26-md.avif",
       "md_webp": "/projects/lucies-olympus-build/26-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/lucies-olympus-build/27-md.avif",
       "md_webp": "/projects/lucies-olympus-build/27-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/28-md.avif",
       "md_webp": "/projects/lucies-olympus-build/28-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/lucies-olympus-build/29-md.avif",
       "md_webp": "/projects/lucies-olympus-build/29-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/lucies-olympus-build/30-md.avif",
       "md_webp": "/projects/lucies-olympus-build/30-md.webp",
       "alt": "The Sapphire Sojourner",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     }
   ]
 }

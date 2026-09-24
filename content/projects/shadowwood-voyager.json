@@ -18,61 +18,81 @@
       "md_avif": "/projects/shadowwood-voyager/00-md.avif",
       "md_webp": "/projects/shadowwood-voyager/00-md.webp",
       "alt": "Shadowwood Voyager",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/shadowwood-voyager/01-md.avif",
       "md_webp": "/projects/shadowwood-voyager/01-md.webp",
       "alt": "Shadowwood Voyager",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1259
     },
     {
       "md_avif": "/projects/shadowwood-voyager/02-md.avif",
       "md_webp": "/projects/shadowwood-voyager/02-md.webp",
       "alt": "Shadowwood Voyager",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/shadowwood-voyager/03-md.avif",
       "md_webp": "/projects/shadowwood-voyager/03-md.webp",
       "alt": "Shadowwood Voyager",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/shadowwood-voyager/04-md.avif",
       "md_webp": "/projects/shadowwood-voyager/04-md.webp",
       "alt": "Shadowwood Voyager",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 572
     },
     {
       "md_avif": "/projects/shadowwood-voyager/05-md.avif",
       "md_webp": "/projects/shadowwood-voyager/05-md.webp",
       "alt": "Shadowwood Voyager",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/shadowwood-voyager/06-md.avif",
       "md_webp": "/projects/shadowwood-voyager/06-md.webp",
       "alt": "Shadowwood Voyager",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/shadowwood-voyager/07-md.avif",
       "md_webp": "/projects/shadowwood-voyager/07-md.webp",
       "alt": "Shadowwood Voyager",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 570
     },
     {
       "md_avif": "/projects/shadowwood-voyager/08-md.avif",
       "md_webp": "/projects/shadowwood-voyager/08-md.webp",
       "alt": "Shadowwood Voyager",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/shadowwood-voyager/09-md.avif",
       "md_webp": "/projects/shadowwood-voyager/09-md.webp",
       "alt": "Shadowwood Voyager",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     }
   ]
 }

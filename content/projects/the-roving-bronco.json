@@ -18,121 +18,161 @@
       "md_avif": "/projects/the-roving-bronco/00-md.avif",
       "md_webp": "/projects/the-roving-bronco/00-md.webp",
       "alt": "Roving Bronco",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-roving-bronco/01-md.avif",
       "md_webp": "/projects/the-roving-bronco/01-md.webp",
       "alt": "Roving Bronco",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/the-roving-bronco/02-md.avif",
       "md_webp": "/projects/the-roving-bronco/02-md.webp",
       "alt": "Roving Bronco",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/the-roving-bronco/03-md.avif",
       "md_webp": "/projects/the-roving-bronco/03-md.webp",
       "alt": "Roving Bronco",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/the-roving-bronco/04-md.avif",
       "md_webp": "/projects/the-roving-bronco/04-md.webp",
       "alt": "Roving Bronco",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-roving-bronco/05-md.avif",
       "md_webp": "/projects/the-roving-bronco/05-md.webp",
       "alt": "Roving Bronco",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-roving-bronco/06-md.avif",
       "md_webp": "/projects/the-roving-bronco/06-md.webp",
       "alt": "Roving Bronco",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-roving-bronco/07-md.avif",
       "md_webp": "/projects/the-roving-bronco/07-md.webp",
       "alt": "Roving Bronco",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-roving-bronco/08-md.avif",
       "md_webp": "/projects/the-roving-bronco/08-md.webp",
       "alt": "Roving Bronco",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-roving-bronco/09-md.avif",
       "md_webp": "/projects/the-roving-bronco/09-md.webp",
       "alt": "Roving Bronco",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-roving-bronco/10-md.avif",
       "md_webp": "/projects/the-roving-bronco/10-md.webp",
       "alt": "Roving Bronco",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-roving-bronco/11-md.avif",
       "md_webp": "/projects/the-roving-bronco/11-md.webp",
       "alt": "Roving Bronco",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-roving-bronco/12-md.avif",
       "md_webp": "/projects/the-roving-bronco/12-md.webp",
       "alt": "Roving Bronco",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-roving-bronco/13-md.avif",
       "md_webp": "/projects/the-roving-bronco/13-md.webp",
       "alt": "Roving Bronco",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-roving-bronco/14-md.avif",
       "md_webp": "/projects/the-roving-bronco/14-md.webp",
       "alt": "Roving Bronco",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-roving-bronco/15-md.avif",
       "md_webp": "/projects/the-roving-bronco/15-md.webp",
       "alt": "Roving Bronco",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-roving-bronco/16-md.avif",
       "md_webp": "/projects/the-roving-bronco/16-md.webp",
       "alt": "Roving Bronco",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-roving-bronco/17-md.avif",
       "md_webp": "/projects/the-roving-bronco/17-md.webp",
       "alt": "Roving Bronco",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-roving-bronco/18-md.avif",
       "md_webp": "/projects/the-roving-bronco/18-md.webp",
       "alt": "Roving Bronco",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-roving-bronco/19-md.avif",
       "md_webp": "/projects/the-roving-bronco/19-md.webp",
       "alt": "Roving Bronco",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     }
   ]
 }

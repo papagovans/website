@@ -20,103 +20,137 @@
       "md_avif": "/projects/sarracino/00-md.avif",
       "md_webp": "/projects/sarracino/00-md.webp",
       "alt": "Desert Studio",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 600
     },
     {
       "md_avif": "/projects/sarracino/01-md.avif",
       "md_webp": "/projects/sarracino/01-md.webp",
       "alt": "Desert Studio",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 600
     },
     {
       "md_avif": "/projects/sarracino/02-md.avif",
       "md_webp": "/projects/sarracino/02-md.webp",
       "alt": "Desert Studio",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 600
     },
     {
       "md_avif": "/projects/sarracino/03-md.avif",
       "md_webp": "/projects/sarracino/03-md.webp",
       "alt": "Desert Studio",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 600
     },
     {
       "md_avif": "/projects/sarracino/04-md.avif",
       "md_webp": "/projects/sarracino/04-md.webp",
       "alt": "Desert Studio",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 600
     },
     {
       "md_avif": "/projects/sarracino/05-md.avif",
       "md_webp": "/projects/sarracino/05-md.webp",
       "alt": "Desert Studio",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 600
     },
     {
       "md_avif": "/projects/sarracino/06-md.avif",
       "md_webp": "/projects/sarracino/06-md.webp",
       "alt": "Desert Studio",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 600
     },
     {
       "md_avif": "/projects/sarracino/07-md.avif",
       "md_webp": "/projects/sarracino/07-md.webp",
       "alt": "Desert Studio",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 600
     },
     {
       "md_avif": "/projects/sarracino/08-md.avif",
       "md_webp": "/projects/sarracino/08-md.webp",
       "alt": "Desert Studio",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 600
     },
     {
       "md_avif": "/projects/sarracino/09-md.avif",
       "md_webp": "/projects/sarracino/09-md.webp",
       "alt": "Desert Studio",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 600
     },
     {
       "md_avif": "/projects/sarracino/10-md.avif",
       "md_webp": "/projects/sarracino/10-md.webp",
       "alt": "Desert Studio",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 600
     },
     {
       "md_avif": "/projects/sarracino/11-md.avif",
       "md_webp": "/projects/sarracino/11-md.webp",
       "alt": "Desert Studio",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 600
     },
     {
       "md_avif": "/projects/sarracino/12-md.avif",
       "md_webp": "/projects/sarracino/12-md.webp",
       "alt": "Desert Studio",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 600
     },
     {
       "md_avif": "/projects/sarracino/13-md.avif",
       "md_webp": "/projects/sarracino/13-md.webp",
       "alt": "Desert Studio",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 600
     },
     {
       "md_avif": "/projects/sarracino/14-md.avif",
       "md_webp": "/projects/sarracino/14-md.webp",
       "alt": "Desert Studio",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 600
     },
     {
       "md_avif": "/projects/sarracino/15-md.avif",
       "md_webp": "/projects/sarracino/15-md.webp",
       "alt": "Desert Studio",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 600
     },
     {
       "md_avif": "/projects/sarracino/16-md.avif",
       "md_webp": "/projects/sarracino/16-md.webp",
       "alt": "Desert Studio",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 600
     }
   ]
 }

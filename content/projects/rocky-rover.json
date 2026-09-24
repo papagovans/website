@@ -17,79 +17,105 @@
       "md_avif": "/projects/rocky-rover/00-md.avif",
       "md_webp": "/projects/rocky-rover/00-md.webp",
       "alt": "Rocky Rover",
-      "portrait": true
+      "portrait": true,
+      "w": 640,
+      "h": 962
     },
     {
       "md_avif": "/projects/rocky-rover/01-md.avif",
       "md_webp": "/projects/rocky-rover/01-md.webp",
       "alt": "Rocky Rover",
-      "portrait": true
+      "portrait": true,
+      "w": 532,
+      "h": 800
     },
     {
       "md_avif": "/projects/rocky-rover/02-md.avif",
       "md_webp": "/projects/rocky-rover/02-md.webp",
       "alt": "Rocky Rover",
-      "portrait": true
+      "portrait": true,
+      "w": 600,
+      "h": 800
     },
     {
       "md_avif": "/projects/rocky-rover/03-md.avif",
       "md_webp": "/projects/rocky-rover/03-md.webp",
       "alt": "Rocky Rover",
-      "portrait": true
+      "portrait": true,
+      "w": 640,
+      "h": 962
     },
     {
       "md_avif": "/projects/rocky-rover/04-md.avif",
       "md_webp": "/projects/rocky-rover/04-md.webp",
       "alt": "Rocky Rover",
-      "portrait": true
+      "portrait": true,
+      "w": 640,
+      "h": 962
     },
     {
       "md_avif": "/projects/rocky-rover/05-md.avif",
       "md_webp": "/projects/rocky-rover/05-md.webp",
       "alt": "Rocky Rover",
-      "portrait": true
+      "portrait": true,
+      "w": 640,
+      "h": 1015
     },
     {
       "md_avif": "/projects/rocky-rover/06-md.avif",
       "md_webp": "/projects/rocky-rover/06-md.webp",
       "alt": "Rocky Rover",
-      "portrait": true
+      "portrait": true,
+      "w": 640,
+      "h": 962
     },
     {
       "md_avif": "/projects/rocky-rover/07-md.avif",
       "md_webp": "/projects/rocky-rover/07-md.webp",
       "alt": "Rocky Rover",
-      "portrait": true
+      "portrait": true,
+      "w": 640,
+      "h": 962
     },
     {
       "md_avif": "/projects/rocky-rover/08-md.avif",
       "md_webp": "/projects/rocky-rover/08-md.webp",
       "alt": "Rocky Rover",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/rocky-rover/09-md.avif",
       "md_webp": "/projects/rocky-rover/09-md.webp",
       "alt": "Rocky Rover",
-      "portrait": true
+      "portrait": true,
+      "w": 640,
+      "h": 962
     },
     {
       "md_avif": "/projects/rocky-rover/10-md.avif",
       "md_webp": "/projects/rocky-rover/10-md.webp",
       "alt": "Rocky Rover",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/rocky-rover/11-md.avif",
       "md_webp": "/projects/rocky-rover/11-md.webp",
       "alt": "Rocky Rover",
-      "portrait": true
+      "portrait": true,
+      "w": 640,
+      "h": 962
     },
     {
       "md_avif": "/projects/rocky-rover/12-md.avif",
       "md_webp": "/projects/rocky-rover/12-md.webp",
       "alt": "Rocky Rover",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 619
     }
   ]
 }

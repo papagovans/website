@@ -12,55 +12,73 @@
       "md_avif": "/projects/serene-sleeper/00-md.avif",
       "md_webp": "/projects/serene-sleeper/00-md.webp",
       "alt": "Serene Sleeper",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/serene-sleeper/01-md.avif",
       "md_webp": "/projects/serene-sleeper/01-md.webp",
       "alt": "Serene Sleeper",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/serene-sleeper/02-md.avif",
       "md_webp": "/projects/serene-sleeper/02-md.webp",
       "alt": "Serene Sleeper",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/serene-sleeper/03-md.avif",
       "md_webp": "/projects/serene-sleeper/03-md.webp",
       "alt": "Serene Sleeper",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     },
     {
       "md_avif": "/projects/serene-sleeper/04-md.avif",
       "md_webp": "/projects/serene-sleeper/04-md.webp",
       "alt": "Serene Sleeper",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/serene-sleeper/05-md.avif",
       "md_webp": "/projects/serene-sleeper/05-md.webp",
       "alt": "Serene Sleeper",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     },
     {
       "md_avif": "/projects/serene-sleeper/06-md.avif",
       "md_webp": "/projects/serene-sleeper/06-md.webp",
       "alt": "Serene Sleeper",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     },
     {
       "md_avif": "/projects/serene-sleeper/07-md.avif",
       "md_webp": "/projects/serene-sleeper/07-md.webp",
       "alt": "Serene Sleeper",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     },
     {
       "md_avif": "/projects/serene-sleeper/08-md.avif",
       "md_webp": "/projects/serene-sleeper/08-md.webp",
       "alt": "Serene Sleeper",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     }
   ]
 }

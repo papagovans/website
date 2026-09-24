@@ -16,103 +16,137 @@
       "md_avif": "/projects/moonlit-meadow/00-md.avif",
       "md_webp": "/projects/moonlit-meadow/00-md.webp",
       "alt": "Moonlit Meadow",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1199
     },
     {
       "md_avif": "/projects/moonlit-meadow/01-md.avif",
       "md_webp": "/projects/moonlit-meadow/01-md.webp",
       "alt": "Moonlit Meadow",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/moonlit-meadow/02-md.avif",
       "md_webp": "/projects/moonlit-meadow/02-md.webp",
       "alt": "Moonlit Meadow",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/moonlit-meadow/03-md.avif",
       "md_webp": "/projects/moonlit-meadow/03-md.webp",
       "alt": "Moonlit Meadow",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/moonlit-meadow/04-md.avif",
       "md_webp": "/projects/moonlit-meadow/04-md.webp",
       "alt": "Moonlit Meadow",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/moonlit-meadow/05-md.avif",
       "md_webp": "/projects/moonlit-meadow/05-md.webp",
       "alt": "Moonlit Meadow",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/moonlit-meadow/06-md.avif",
       "md_webp": "/projects/moonlit-meadow/06-md.webp",
       "alt": "Moonlit Meadow",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/moonlit-meadow/07-md.avif",
       "md_webp": "/projects/moonlit-meadow/07-md.webp",
       "alt": "Moonlit Meadow",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 534
     },
     {
       "md_avif": "/projects/moonlit-meadow/08-md.avif",
       "md_webp": "/projects/moonlit-meadow/08-md.webp",
       "alt": "Moonlit Meadow",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1199
     },
     {
       "md_avif": "/projects/moonlit-meadow/09-md.avif",
       "md_webp": "/projects/moonlit-meadow/09-md.webp",
       "alt": "Moonlit Meadow",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/moonlit-meadow/10-md.avif",
       "md_webp": "/projects/moonlit-meadow/10-md.webp",
       "alt": "Moonlit Meadow",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/moonlit-meadow/11-md.avif",
       "md_webp": "/projects/moonlit-meadow/11-md.webp",
       "alt": "Moonlit Meadow",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/moonlit-meadow/12-md.avif",
       "md_webp": "/projects/moonlit-meadow/12-md.webp",
       "alt": "Moonlit Meadow",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/moonlit-meadow/13-md.avif",
       "md_webp": "/projects/moonlit-meadow/13-md.webp",
       "alt": "Moonlit Meadow",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/moonlit-meadow/14-md.avif",
       "md_webp": "/projects/moonlit-meadow/14-md.webp",
       "alt": "Moonlit Meadow",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/moonlit-meadow/15-md.avif",
       "md_webp": "/projects/moonlit-meadow/15-md.webp",
       "alt": "Moonlit Meadow",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/moonlit-meadow/16-md.avif",
       "md_webp": "/projects/moonlit-meadow/16-md.webp",
       "alt": "Moonlit Meadow",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1199
     }
   ]
 }

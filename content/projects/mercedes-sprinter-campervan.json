@@ -16,151 +16,201 @@
       "md_avif": "/projects/mercedes-sprinter-campervan/00-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/00-md.webp",
       "alt": "Custom Adventure Van",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/01-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/01-md.webp",
       "alt": "Mercedes Sprinter Campervan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/02-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/02-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/03-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/03-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/04-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/04-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/05-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/05-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/06-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/06-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/07-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/07-md.webp",
       "alt": "Campervan shower",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/08-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/08-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/09-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/09-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/10-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/10-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 656
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/11-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/11-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/12-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/12-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/13-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/13-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/14-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/14-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/15-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/15-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/16-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/16-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/17-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/17-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/18-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/18-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/19-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/19-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/20-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/20-md.webp",
       "alt": "Custom Campervan Build",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/21-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/21-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/22-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/22-md.webp",
       "alt": "Papago Vans",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/23-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/23-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/mercedes-sprinter-campervan/24-md.avif",
       "md_webp": "/projects/mercedes-sprinter-campervan/24-md.webp",
       "alt": "Aqua Adventure Van",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     }
   ]
 }

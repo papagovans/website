@@ -23,7 +23,7 @@ import { listProjectCards } from "@/lib/content";
 
 const BUILD_APP = "https://build.papagovans.com";
 const CALENDAR_URL = "https://calendly.com/jeremy-papagovans/30min";
-const COLLAGE_COUNT = 15;
+const COLLAGE_COUNT = 24;
 
 const builds = [
   {
@@ -197,7 +197,14 @@ export default async function Home() {
               <picture>
                 <source srcSet={c.thumb_avif} type="image/avif" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={c.thumb_webp} alt={c.alt} loading="lazy" decoding="async" />
+                <img
+                  src={c.thumb_webp}
+                  alt={c.alt}
+                  width={c.w}
+                  height={c.h}
+                  loading="lazy"
+                  decoding="async"
+                />
               </picture>
             </a>
           ))}

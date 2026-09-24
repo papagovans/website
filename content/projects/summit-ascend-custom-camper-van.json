@@ -18,43 +18,57 @@
       "md_avif": "/projects/summit-ascend-custom-camper-van/00-md.avif",
       "md_webp": "/projects/summit-ascend-custom-camper-van/00-md.webp",
       "alt": "Summit Ascend",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/summit-ascend-custom-camper-van/01-md.avif",
       "md_webp": "/projects/summit-ascend-custom-camper-van/01-md.webp",
       "alt": "Summit Ascend",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/summit-ascend-custom-camper-van/02-md.avif",
       "md_webp": "/projects/summit-ascend-custom-camper-van/02-md.webp",
       "alt": "Summit Ascend",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/summit-ascend-custom-camper-van/03-md.avif",
       "md_webp": "/projects/summit-ascend-custom-camper-van/03-md.webp",
       "alt": "Summit Ascend",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/summit-ascend-custom-camper-van/04-md.avif",
       "md_webp": "/projects/summit-ascend-custom-camper-van/04-md.webp",
       "alt": "Summit Ascend",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/summit-ascend-custom-camper-van/05-md.avif",
       "md_webp": "/projects/summit-ascend-custom-camper-van/05-md.webp",
       "alt": "Summit Ascend",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/summit-ascend-custom-camper-van/06-md.avif",
       "md_webp": "/projects/summit-ascend-custom-camper-van/06-md.webp",
       "alt": "Summit Ascend",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     }
   ]
 }

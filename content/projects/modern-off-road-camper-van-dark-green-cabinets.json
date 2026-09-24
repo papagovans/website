@@ -18,67 +18,89 @@
       "md_avif": "/projects/modern-off-road-camper-van-dark-green-cabinets/00-md.avif",
       "md_webp": "/projects/modern-off-road-camper-van-dark-green-cabinets/00-md.webp",
       "alt": "Off-Road Artisan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 523
     },
     {
       "md_avif": "/projects/modern-off-road-camper-van-dark-green-cabinets/01-md.avif",
       "md_webp": "/projects/modern-off-road-camper-van-dark-green-cabinets/01-md.webp",
       "alt": "Off-Road Artisan",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/modern-off-road-camper-van-dark-green-cabinets/02-md.avif",
       "md_webp": "/projects/modern-off-road-camper-van-dark-green-cabinets/02-md.webp",
       "alt": "Off-Road Artisan",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     },
     {
       "md_avif": "/projects/modern-off-road-camper-van-dark-green-cabinets/03-md.avif",
       "md_webp": "/projects/modern-off-road-camper-van-dark-green-cabinets/03-md.webp",
       "alt": "Off-Road Artisan",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     },
     {
       "md_avif": "/projects/modern-off-road-camper-van-dark-green-cabinets/04-md.avif",
       "md_webp": "/projects/modern-off-road-camper-van-dark-green-cabinets/04-md.webp",
       "alt": "Off-Road Artisan",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/modern-off-road-camper-van-dark-green-cabinets/05-md.avif",
       "md_webp": "/projects/modern-off-road-camper-van-dark-green-cabinets/05-md.webp",
       "alt": "Off-Road Artisan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/modern-off-road-camper-van-dark-green-cabinets/06-md.avif",
       "md_webp": "/projects/modern-off-road-camper-van-dark-green-cabinets/06-md.webp",
       "alt": "Off-Road Artisan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 450
     },
     {
       "md_avif": "/projects/modern-off-road-camper-van-dark-green-cabinets/07-md.avif",
       "md_webp": "/projects/modern-off-road-camper-van-dark-green-cabinets/07-md.webp",
       "alt": "Off-Road Artisan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/modern-off-road-camper-van-dark-green-cabinets/08-md.avif",
       "md_webp": "/projects/modern-off-road-camper-van-dark-green-cabinets/08-md.webp",
       "alt": "Off-Road Artisan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/modern-off-road-camper-van-dark-green-cabinets/09-md.avif",
       "md_webp": "/projects/modern-off-road-camper-van-dark-green-cabinets/09-md.webp",
       "alt": "Off-Road Artisan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 573
     },
     {
       "md_avif": "/projects/modern-off-road-camper-van-dark-green-cabinets/10-md.avif",
       "md_webp": "/projects/modern-off-road-camper-van-dark-green-cabinets/10-md.webp",
       "alt": "Off-Road Artisan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     }
   ]
 }

@@ -18,163 +18,217 @@
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/00-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/00-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/01-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/01-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/02-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/02-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/03-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/03-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/04-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/04-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/05-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/05-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/06-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/06-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/07-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/07-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/08-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/08-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/09-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/09-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/10-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/10-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/11-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/11-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/12-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/12-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/13-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/13-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/14-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/14-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/15-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/15-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/16-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/16-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/17-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/17-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/18-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/18-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/19-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/19-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/20-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/20-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/21-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/21-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/22-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/22-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/23-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/23-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/24-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/24-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/25-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/25-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/26-md.avif",
       "md_webp": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/26-md.webp",
       "alt": "Starlit Roamer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     }
   ]
 }

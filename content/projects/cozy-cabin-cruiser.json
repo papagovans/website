@@ -12,91 +12,121 @@
       "md_avif": "/projects/cozy-cabin-cruiser/00-md.avif",
       "md_webp": "/projects/cozy-cabin-cruiser/00-md.webp",
       "alt": "Cozy Cabin Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1204
     },
     {
       "md_avif": "/projects/cozy-cabin-cruiser/01-md.avif",
       "md_webp": "/projects/cozy-cabin-cruiser/01-md.webp",
       "alt": "Cozy Cabin Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1204
     },
     {
       "md_avif": "/projects/cozy-cabin-cruiser/02-md.avif",
       "md_webp": "/projects/cozy-cabin-cruiser/02-md.webp",
       "alt": "Cozy Cabin Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1204
     },
     {
       "md_avif": "/projects/cozy-cabin-cruiser/03-md.avif",
       "md_webp": "/projects/cozy-cabin-cruiser/03-md.webp",
       "alt": "Cozy Cabin Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 531
     },
     {
       "md_avif": "/projects/cozy-cabin-cruiser/04-md.avif",
       "md_webp": "/projects/cozy-cabin-cruiser/04-md.webp",
       "alt": "Cozy Cabin Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 531
     },
     {
       "md_avif": "/projects/cozy-cabin-cruiser/05-md.avif",
       "md_webp": "/projects/cozy-cabin-cruiser/05-md.webp",
       "alt": "Cozy Cabin Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1204
     },
     {
       "md_avif": "/projects/cozy-cabin-cruiser/06-md.avif",
       "md_webp": "/projects/cozy-cabin-cruiser/06-md.webp",
       "alt": "Cozy Cabin Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 531
     },
     {
       "md_avif": "/projects/cozy-cabin-cruiser/07-md.avif",
       "md_webp": "/projects/cozy-cabin-cruiser/07-md.webp",
       "alt": "Cozy Cabin Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1204
     },
     {
       "md_avif": "/projects/cozy-cabin-cruiser/08-md.avif",
       "md_webp": "/projects/cozy-cabin-cruiser/08-md.webp",
       "alt": "Cozy Cabin Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 531
     },
     {
       "md_avif": "/projects/cozy-cabin-cruiser/09-md.avif",
       "md_webp": "/projects/cozy-cabin-cruiser/09-md.webp",
       "alt": "Cozy Cabin Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1204
     },
     {
       "md_avif": "/projects/cozy-cabin-cruiser/10-md.avif",
       "md_webp": "/projects/cozy-cabin-cruiser/10-md.webp",
       "alt": "Cozy Cabin Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1204
     },
     {
       "md_avif": "/projects/cozy-cabin-cruiser/11-md.avif",
       "md_webp": "/projects/cozy-cabin-cruiser/11-md.webp",
       "alt": "Cozy Cabin Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1204
     },
     {
       "md_avif": "/projects/cozy-cabin-cruiser/12-md.avif",
       "md_webp": "/projects/cozy-cabin-cruiser/12-md.webp",
       "alt": "Cozy Cabin Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 531
     },
     {
       "md_avif": "/projects/cozy-cabin-cruiser/13-md.avif",
       "md_webp": "/projects/cozy-cabin-cruiser/13-md.webp",
       "alt": "Cozy Cabin Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1204
     },
     {
       "md_avif": "/projects/cozy-cabin-cruiser/14-md.avif",
       "md_webp": "/projects/cozy-cabin-cruiser/14-md.webp",
       "alt": "Cozy Cabin Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1204
     }
   ]
 }

@@ -17,55 +17,73 @@
       "md_avif": "/projects/deluxe-drifter/00-md.avif",
       "md_webp": "/projects/deluxe-drifter/00-md.webp",
       "alt": "Deluxe Drifter",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/deluxe-drifter/01-md.avif",
       "md_webp": "/projects/deluxe-drifter/01-md.webp",
       "alt": "Deluxe Drifter",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/deluxe-drifter/02-md.avif",
       "md_webp": "/projects/deluxe-drifter/02-md.webp",
       "alt": "Deluxe Drifter",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/deluxe-drifter/03-md.avif",
       "md_webp": "/projects/deluxe-drifter/03-md.webp",
       "alt": "Deluxe Drifter",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/deluxe-drifter/04-md.avif",
       "md_webp": "/projects/deluxe-drifter/04-md.webp",
       "alt": "Deluxe Drifter",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/deluxe-drifter/05-md.avif",
       "md_webp": "/projects/deluxe-drifter/05-md.webp",
       "alt": "Deluxe Drifter",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/deluxe-drifter/06-md.avif",
       "md_webp": "/projects/deluxe-drifter/06-md.webp",
       "alt": "Deluxe Drifter",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/deluxe-drifter/07-md.avif",
       "md_webp": "/projects/deluxe-drifter/07-md.webp",
       "alt": "Deluxe Drifter",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/deluxe-drifter/08-md.avif",
       "md_webp": "/projects/deluxe-drifter/08-md.webp",
       "alt": "Deluxe Drifter",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     }
   ]
 }

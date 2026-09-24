@@ -18,37 +18,49 @@
       "md_avif": "/projects/custom-mercedes-sprinter-camper-van-build/00-md.avif",
       "md_webp": "/projects/custom-mercedes-sprinter-camper-van-build/00-md.webp",
       "alt": "Trailblazer’s Nook",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/custom-mercedes-sprinter-camper-van-build/01-md.avif",
       "md_webp": "/projects/custom-mercedes-sprinter-camper-van-build/01-md.webp",
       "alt": "Trailblazer’s Nook",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     },
     {
       "md_avif": "/projects/custom-mercedes-sprinter-camper-van-build/02-md.avif",
       "md_webp": "/projects/custom-mercedes-sprinter-camper-van-build/02-md.webp",
       "alt": "Trailblazer’s Nook",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/custom-mercedes-sprinter-camper-van-build/03-md.avif",
       "md_webp": "/projects/custom-mercedes-sprinter-camper-van-build/03-md.webp",
       "alt": "Trailblazer’s Nook",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/custom-mercedes-sprinter-camper-van-build/04-md.avif",
       "md_webp": "/projects/custom-mercedes-sprinter-camper-van-build/04-md.webp",
       "alt": "Trailblazer’s Nook",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/custom-mercedes-sprinter-camper-van-build/05-md.avif",
       "md_webp": "/projects/custom-mercedes-sprinter-camper-van-build/05-md.webp",
       "alt": "Trailblazer’s Nook",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     }
   ]
 }

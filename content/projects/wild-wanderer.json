@@ -12,31 +12,41 @@
       "md_avif": "/projects/wild-wanderer/00-md.avif",
       "md_webp": "/projects/wild-wanderer/00-md.webp",
       "alt": "Wild Wanderer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/wild-wanderer/01-md.avif",
       "md_webp": "/projects/wild-wanderer/01-md.webp",
       "alt": "Wild Wanderer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/wild-wanderer/02-md.avif",
       "md_webp": "/projects/wild-wanderer/02-md.webp",
       "alt": "Wild Wanderer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     },
     {
       "md_avif": "/projects/wild-wanderer/03-md.avif",
       "md_webp": "/projects/wild-wanderer/03-md.webp",
       "alt": "144 Wheel Base Sprinter Van",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/wild-wanderer/04-md.avif",
       "md_webp": "/projects/wild-wanderer/04-md.webp",
       "alt": "Wild Wanderer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     }
   ]
 }

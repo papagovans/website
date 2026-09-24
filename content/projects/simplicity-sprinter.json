@@ -15,103 +15,137 @@
       "md_avif": "/projects/simplicity-sprinter/00-md.avif",
       "md_webp": "/projects/simplicity-sprinter/00-md.webp",
       "alt": "Simplicity Sprinter",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/simplicity-sprinter/01-md.avif",
       "md_webp": "/projects/simplicity-sprinter/01-md.webp",
       "alt": "Simplicity Sprinter",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 534
     },
     {
       "md_avif": "/projects/simplicity-sprinter/02-md.avif",
       "md_webp": "/projects/simplicity-sprinter/02-md.webp",
       "alt": "Simplicity Sprinter",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 534
     },
     {
       "md_avif": "/projects/simplicity-sprinter/03-md.avif",
       "md_webp": "/projects/simplicity-sprinter/03-md.webp",
       "alt": "Simplicity Sprinter",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 534
     },
     {
       "md_avif": "/projects/simplicity-sprinter/04-md.avif",
       "md_webp": "/projects/simplicity-sprinter/04-md.webp",
       "alt": "Simplicity Sprinter",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 534
     },
     {
       "md_avif": "/projects/simplicity-sprinter/05-md.avif",
       "md_webp": "/projects/simplicity-sprinter/05-md.webp",
       "alt": "Simplicity Sprinter",
-      "portrait": true
+      "portrait": true,
+      "w": 547,
+      "h": 820
     },
     {
       "md_avif": "/projects/simplicity-sprinter/06-md.avif",
       "md_webp": "/projects/simplicity-sprinter/06-md.webp",
       "alt": "Simplicity Sprinter",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 534
     },
     {
       "md_avif": "/projects/simplicity-sprinter/07-md.avif",
       "md_webp": "/projects/simplicity-sprinter/07-md.webp",
       "alt": "Simplicity Sprinter",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 534
     },
     {
       "md_avif": "/projects/simplicity-sprinter/08-md.avif",
       "md_webp": "/projects/simplicity-sprinter/08-md.webp",
       "alt": "Simplicity Sprinter",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 534
     },
     {
       "md_avif": "/projects/simplicity-sprinter/09-md.avif",
       "md_webp": "/projects/simplicity-sprinter/09-md.webp",
       "alt": "Simplicity Sprinter",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 534
     },
     {
       "md_avif": "/projects/simplicity-sprinter/10-md.avif",
       "md_webp": "/projects/simplicity-sprinter/10-md.webp",
       "alt": "Simplicity Sprinter",
-      "portrait": true
+      "portrait": true,
+      "w": 547,
+      "h": 820
     },
     {
       "md_avif": "/projects/simplicity-sprinter/11-md.avif",
       "md_webp": "/projects/simplicity-sprinter/11-md.webp",
       "alt": "Simplicity Sprinter",
-      "portrait": true
+      "portrait": true,
+      "w": 547,
+      "h": 820
     },
     {
       "md_avif": "/projects/simplicity-sprinter/12-md.avif",
       "md_webp": "/projects/simplicity-sprinter/12-md.webp",
       "alt": "Simplicity Sprinter",
-      "portrait": true
+      "portrait": true,
+      "w": 547,
+      "h": 820
     },
     {
       "md_avif": "/projects/simplicity-sprinter/13-md.avif",
       "md_webp": "/projects/simplicity-sprinter/13-md.webp",
       "alt": "Simplicity Sprinter",
-      "portrait": true
+      "portrait": true,
+      "w": 547,
+      "h": 820
     },
     {
       "md_avif": "/projects/simplicity-sprinter/14-md.avif",
       "md_webp": "/projects/simplicity-sprinter/14-md.webp",
       "alt": "Simplicity Sprinter",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 534
     },
     {
       "md_avif": "/projects/simplicity-sprinter/15-md.avif",
       "md_webp": "/projects/simplicity-sprinter/15-md.webp",
       "alt": "Simplicity Sprinter",
-      "portrait": true
+      "portrait": true,
+      "w": 547,
+      "h": 820
     },
     {
       "md_avif": "/projects/simplicity-sprinter/16-md.avif",
       "md_webp": "/projects/simplicity-sprinter/16-md.webp",
       "alt": "Simplicity Sprinter",
-      "portrait": true
+      "portrait": true,
+      "w": 547,
+      "h": 820
     }
   ]
 }

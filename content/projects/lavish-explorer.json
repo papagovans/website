@@ -17,127 +17,169 @@
       "md_avif": "/projects/lavish-explorer/00-md.avif",
       "md_webp": "/projects/lavish-explorer/00-md.webp",
       "alt": "Custom Campervan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/lavish-explorer/01-md.avif",
       "md_webp": "/projects/lavish-explorer/01-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/lavish-explorer/02-md.avif",
       "md_webp": "/projects/lavish-explorer/02-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/lavish-explorer/03-md.avif",
       "md_webp": "/projects/lavish-explorer/03-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/lavish-explorer/04-md.avif",
       "md_webp": "/projects/lavish-explorer/04-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/lavish-explorer/05-md.avif",
       "md_webp": "/projects/lavish-explorer/05-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/lavish-explorer/06-md.avif",
       "md_webp": "/projects/lavish-explorer/06-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/lavish-explorer/07-md.avif",
       "md_webp": "/projects/lavish-explorer/07-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/lavish-explorer/08-md.avif",
       "md_webp": "/projects/lavish-explorer/08-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/lavish-explorer/09-md.avif",
       "md_webp": "/projects/lavish-explorer/09-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/lavish-explorer/10-md.avif",
       "md_webp": "/projects/lavish-explorer/10-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/lavish-explorer/11-md.avif",
       "md_webp": "/projects/lavish-explorer/11-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/lavish-explorer/12-md.avif",
       "md_webp": "/projects/lavish-explorer/12-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/lavish-explorer/13-md.avif",
       "md_webp": "/projects/lavish-explorer/13-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/lavish-explorer/14-md.avif",
       "md_webp": "/projects/lavish-explorer/14-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/lavish-explorer/15-md.avif",
       "md_webp": "/projects/lavish-explorer/15-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/lavish-explorer/16-md.avif",
       "md_webp": "/projects/lavish-explorer/16-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/lavish-explorer/17-md.avif",
       "md_webp": "/projects/lavish-explorer/17-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/lavish-explorer/18-md.avif",
       "md_webp": "/projects/lavish-explorer/18-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/lavish-explorer/19-md.avif",
       "md_webp": "/projects/lavish-explorer/19-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/lavish-explorer/20-md.avif",
       "md_webp": "/projects/lavish-explorer/20-md.webp",
       "alt": "Lavish Explorer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     }
   ]
 }

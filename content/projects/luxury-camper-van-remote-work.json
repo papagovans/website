@@ -20,79 +20,105 @@
       "md_avif": "/projects/luxury-camper-van-remote-work/00-md.avif",
       "md_webp": "/projects/luxury-camper-van-remote-work/00-md.webp",
       "alt": "Executive Explorer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/luxury-camper-van-remote-work/01-md.avif",
       "md_webp": "/projects/luxury-camper-van-remote-work/01-md.webp",
       "alt": "Executive Explorer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/luxury-camper-van-remote-work/02-md.avif",
       "md_webp": "/projects/luxury-camper-van-remote-work/02-md.webp",
       "alt": "Executive Explorer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/luxury-camper-van-remote-work/03-md.avif",
       "md_webp": "/projects/luxury-camper-van-remote-work/03-md.webp",
       "alt": "Executive Explorer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/luxury-camper-van-remote-work/04-md.avif",
       "md_webp": "/projects/luxury-camper-van-remote-work/04-md.webp",
       "alt": "Executive Explorer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/luxury-camper-van-remote-work/05-md.avif",
       "md_webp": "/projects/luxury-camper-van-remote-work/05-md.webp",
       "alt": "Executive Explorer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 579
     },
     {
       "md_avif": "/projects/luxury-camper-van-remote-work/06-md.avif",
       "md_webp": "/projects/luxury-camper-van-remote-work/06-md.webp",
       "alt": "Executive Explorer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/luxury-camper-van-remote-work/07-md.avif",
       "md_webp": "/projects/luxury-camper-van-remote-work/07-md.webp",
       "alt": "Executive Explorer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/luxury-camper-van-remote-work/08-md.avif",
       "md_webp": "/projects/luxury-camper-van-remote-work/08-md.webp",
       "alt": "Executive Explorer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/luxury-camper-van-remote-work/09-md.avif",
       "md_webp": "/projects/luxury-camper-van-remote-work/09-md.webp",
       "alt": "Executive Explorer",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/luxury-camper-van-remote-work/10-md.avif",
       "md_webp": "/projects/luxury-camper-van-remote-work/10-md.webp",
       "alt": "Executive Explorer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/luxury-camper-van-remote-work/11-md.avif",
       "md_webp": "/projects/luxury-camper-van-remote-work/11-md.webp",
       "alt": "Executive Explorer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/luxury-camper-van-remote-work/12-md.avif",
       "md_webp": "/projects/luxury-camper-van-remote-work/12-md.webp",
       "alt": "Executive Explorer",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     }
   ]
 }

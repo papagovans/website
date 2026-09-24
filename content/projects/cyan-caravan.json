@@ -16,127 +16,169 @@
       "md_avif": "/projects/cyan-caravan/00-md.avif",
       "md_webp": "/projects/cyan-caravan/00-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cyan-caravan/01-md.avif",
       "md_webp": "/projects/cyan-caravan/01-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cyan-caravan/02-md.avif",
       "md_webp": "/projects/cyan-caravan/02-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/cyan-caravan/03-md.avif",
       "md_webp": "/projects/cyan-caravan/03-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cyan-caravan/04-md.avif",
       "md_webp": "/projects/cyan-caravan/04-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cyan-caravan/05-md.avif",
       "md_webp": "/projects/cyan-caravan/05-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cyan-caravan/06-md.avif",
       "md_webp": "/projects/cyan-caravan/06-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/cyan-caravan/07-md.avif",
       "md_webp": "/projects/cyan-caravan/07-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cyan-caravan/08-md.avif",
       "md_webp": "/projects/cyan-caravan/08-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cyan-caravan/09-md.avif",
       "md_webp": "/projects/cyan-caravan/09-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cyan-caravan/10-md.avif",
       "md_webp": "/projects/cyan-caravan/10-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cyan-caravan/11-md.avif",
       "md_webp": "/projects/cyan-caravan/11-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cyan-caravan/12-md.avif",
       "md_webp": "/projects/cyan-caravan/12-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cyan-caravan/13-md.avif",
       "md_webp": "/projects/cyan-caravan/13-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/cyan-caravan/14-md.avif",
       "md_webp": "/projects/cyan-caravan/14-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cyan-caravan/15-md.avif",
       "md_webp": "/projects/cyan-caravan/15-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cyan-caravan/16-md.avif",
       "md_webp": "/projects/cyan-caravan/16-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cyan-caravan/17-md.avif",
       "md_webp": "/projects/cyan-caravan/17-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cyan-caravan/18-md.avif",
       "md_webp": "/projects/cyan-caravan/18-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cyan-caravan/19-md.avif",
       "md_webp": "/projects/cyan-caravan/19-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/cyan-caravan/20-md.avif",
       "md_webp": "/projects/cyan-caravan/20-md.webp",
       "alt": "Cyan Caravan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     }
   ]
 }

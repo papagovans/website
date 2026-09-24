@@ -15,55 +15,73 @@
       "md_avif": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/00-md.avif",
       "md_webp": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/00-md.webp",
       "alt": "Agua Caliente",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/01-md.avif",
       "md_webp": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/01-md.webp",
       "alt": "Agua Caliente",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/02-md.avif",
       "md_webp": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/02-md.webp",
       "alt": "Agua Caliente",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/03-md.avif",
       "md_webp": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/03-md.webp",
       "alt": "Agua Caliente",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/04-md.avif",
       "md_webp": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/04-md.webp",
       "alt": "Agua Caliente",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/05-md.avif",
       "md_webp": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/05-md.webp",
       "alt": "Agua Caliente",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/06-md.avif",
       "md_webp": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/06-md.webp",
       "alt": "Agua Caliente",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/07-md.avif",
       "md_webp": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/07-md.webp",
       "alt": "Agua Caliente",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/08-md.avif",
       "md_webp": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/08-md.webp",
       "alt": "Agua Caliente",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     }
   ]
 }

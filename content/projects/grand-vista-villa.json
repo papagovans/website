@@ -12,85 +12,113 @@
       "md_avif": "/projects/grand-vista-villa/00-md.avif",
       "md_webp": "/projects/grand-vista-villa/00-md.webp",
       "alt": "Grand Vista Villa",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/grand-vista-villa/01-md.avif",
       "md_webp": "/projects/grand-vista-villa/01-md.webp",
       "alt": "Grand Vista Villa",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/grand-vista-villa/02-md.avif",
       "md_webp": "/projects/grand-vista-villa/02-md.webp",
       "alt": "Grand Vista Villa",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/grand-vista-villa/03-md.avif",
       "md_webp": "/projects/grand-vista-villa/03-md.webp",
       "alt": "Grand Vista Villa",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/grand-vista-villa/04-md.avif",
       "md_webp": "/projects/grand-vista-villa/04-md.webp",
       "alt": "Grand Vista Villa",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/grand-vista-villa/05-md.avif",
       "md_webp": "/projects/grand-vista-villa/05-md.webp",
       "alt": "Grand Vista Villa",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/grand-vista-villa/06-md.avif",
       "md_webp": "/projects/grand-vista-villa/06-md.webp",
       "alt": "Grand Vista Villa",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/grand-vista-villa/07-md.avif",
       "md_webp": "/projects/grand-vista-villa/07-md.webp",
       "alt": "Grand Vista Villa",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/grand-vista-villa/08-md.avif",
       "md_webp": "/projects/grand-vista-villa/08-md.webp",
       "alt": "Grand Vista Villa",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/grand-vista-villa/09-md.avif",
       "md_webp": "/projects/grand-vista-villa/09-md.webp",
       "alt": "Grand Vista Villa",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/grand-vista-villa/10-md.avif",
       "md_webp": "/projects/grand-vista-villa/10-md.webp",
       "alt": "Grand Vista Villa",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/grand-vista-villa/11-md.avif",
       "md_webp": "/projects/grand-vista-villa/11-md.webp",
       "alt": "Grand Vista Villa",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/grand-vista-villa/12-md.avif",
       "md_webp": "/projects/grand-vista-villa/12-md.webp",
       "alt": "Grand Vista Villa",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/grand-vista-villa/13-md.avif",
       "md_webp": "/projects/grand-vista-villa/13-md.webp",
       "alt": "Grand Vista Villa",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     }
   ]
 }

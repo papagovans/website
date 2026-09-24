@@ -15,109 +15,145 @@
       "md_avif": "/projects/northwest-nest/00-md.avif",
       "md_webp": "/projects/northwest-nest/00-md.webp",
       "alt": "Northwest Nest",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/northwest-nest/01-md.avif",
       "md_webp": "/projects/northwest-nest/01-md.webp",
       "alt": "Northwest Nest",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/northwest-nest/02-md.avif",
       "md_webp": "/projects/northwest-nest/02-md.webp",
       "alt": "Northwest Nest",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/northwest-nest/03-md.avif",
       "md_webp": "/projects/northwest-nest/03-md.webp",
       "alt": "Northwest Nest",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/northwest-nest/04-md.avif",
       "md_webp": "/projects/northwest-nest/04-md.webp",
       "alt": "Northwest Nest",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/northwest-nest/05-md.avif",
       "md_webp": "/projects/northwest-nest/05-md.webp",
       "alt": "Northwest Nest",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/northwest-nest/06-md.avif",
       "md_webp": "/projects/northwest-nest/06-md.webp",
       "alt": "Northwest Nest",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/northwest-nest/07-md.avif",
       "md_webp": "/projects/northwest-nest/07-md.webp",
       "alt": "Northwest Nest",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/northwest-nest/08-md.avif",
       "md_webp": "/projects/northwest-nest/08-md.webp",
       "alt": "Northwest Nest",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/northwest-nest/09-md.avif",
       "md_webp": "/projects/northwest-nest/09-md.webp",
       "alt": "Northwest Nest",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/northwest-nest/10-md.avif",
       "md_webp": "/projects/northwest-nest/10-md.webp",
       "alt": "Northwest Nest",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/northwest-nest/11-md.avif",
       "md_webp": "/projects/northwest-nest/11-md.webp",
       "alt": "Northwest Nest",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/northwest-nest/12-md.avif",
       "md_webp": "/projects/northwest-nest/12-md.webp",
       "alt": "Northwest Nest",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/northwest-nest/13-md.avif",
       "md_webp": "/projects/northwest-nest/13-md.webp",
       "alt": "Northwest Nest",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/northwest-nest/14-md.avif",
       "md_webp": "/projects/northwest-nest/14-md.webp",
       "alt": "Northwest Nest",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/northwest-nest/15-md.avif",
       "md_webp": "/projects/northwest-nest/15-md.webp",
       "alt": "Northwest Nest",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/northwest-nest/16-md.avif",
       "md_webp": "/projects/northwest-nest/16-md.webp",
       "alt": "Northwest Nest",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/northwest-nest/17-md.avif",
       "md_webp": "/projects/northwest-nest/17-md.webp",
       "alt": "Northwest Nest",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     }
   ]
 }

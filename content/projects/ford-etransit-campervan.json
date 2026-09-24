@@ -16,199 +16,265 @@
       "md_avif": "/projects/ford-etransit-campervan/00-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/00-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/01-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/01-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/02-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/02-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/03-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/03-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/04-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/04-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/05-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/05-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/06-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/06-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/07-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/07-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/08-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/08-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/09-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/09-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/10-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/10-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/11-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/11-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/12-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/12-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/13-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/13-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/14-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/14-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/15-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/15-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/16-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/16-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/17-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/17-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/18-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/18-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/19-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/19-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/20-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/20-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/21-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/21-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/22-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/22-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/23-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/23-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/24-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/24-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/25-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/25-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/26-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/26-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/27-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/27-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/28-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/28-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/29-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/29-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/30-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/30-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/31-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/31-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/ford-etransit-campervan/32-md.avif",
       "md_webp": "/projects/ford-etransit-campervan/32-md.webp",
       "alt": "The Bike Basecamp",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     }
   ]
 }

@@ -22,55 +22,73 @@
       "md_avif": "/projects/the-offenhauser-mercedes-sprinter-camper-van/00-md.avif",
       "md_webp": "/projects/the-offenhauser-mercedes-sprinter-camper-van/00-md.webp",
       "alt": "Lilac Haven",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1422
     },
     {
       "md_avif": "/projects/the-offenhauser-mercedes-sprinter-camper-van/01-md.avif",
       "md_webp": "/projects/the-offenhauser-mercedes-sprinter-camper-van/01-md.webp",
       "alt": "Lilac Haven",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1422
     },
     {
       "md_avif": "/projects/the-offenhauser-mercedes-sprinter-camper-van/02-md.avif",
       "md_webp": "/projects/the-offenhauser-mercedes-sprinter-camper-van/02-md.webp",
       "alt": "Lilac Haven",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1422
     },
     {
       "md_avif": "/projects/the-offenhauser-mercedes-sprinter-camper-van/03-md.avif",
       "md_webp": "/projects/the-offenhauser-mercedes-sprinter-camper-van/03-md.webp",
       "alt": "Lilac Haven",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1422
     },
     {
       "md_avif": "/projects/the-offenhauser-mercedes-sprinter-camper-van/04-md.avif",
       "md_webp": "/projects/the-offenhauser-mercedes-sprinter-camper-van/04-md.webp",
       "alt": "Lilac Haven",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1422
     },
     {
       "md_avif": "/projects/the-offenhauser-mercedes-sprinter-camper-van/05-md.avif",
       "md_webp": "/projects/the-offenhauser-mercedes-sprinter-camper-van/05-md.webp",
       "alt": "Lilac Haven",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1422
     },
     {
       "md_avif": "/projects/the-offenhauser-mercedes-sprinter-camper-van/06-md.avif",
       "md_webp": "/projects/the-offenhauser-mercedes-sprinter-camper-van/06-md.webp",
       "alt": "Lilac Haven",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1422
     },
     {
       "md_avif": "/projects/the-offenhauser-mercedes-sprinter-camper-van/07-md.avif",
       "md_webp": "/projects/the-offenhauser-mercedes-sprinter-camper-van/07-md.webp",
       "alt": "Lilac Haven",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1422
     },
     {
       "md_avif": "/projects/the-offenhauser-mercedes-sprinter-camper-van/08-md.avif",
       "md_webp": "/projects/the-offenhauser-mercedes-sprinter-camper-van/08-md.webp",
       "alt": "Lilac Haven",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1422
     }
   ]
 }

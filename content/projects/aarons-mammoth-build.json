@@ -16,61 +16,81 @@
       "md_avif": "/projects/aarons-mammoth-build/00-md.avif",
       "md_webp": "/projects/aarons-mammoth-build/00-md.webp",
       "alt": "The MotoVan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/aarons-mammoth-build/01-md.avif",
       "md_webp": "/projects/aarons-mammoth-build/01-md.webp",
       "alt": "The MotoVan",
-      "portrait": true
+      "portrait": true,
+      "w": 547,
+      "h": 820
     },
     {
       "md_avif": "/projects/aarons-mammoth-build/02-md.avif",
       "md_webp": "/projects/aarons-mammoth-build/02-md.webp",
       "alt": "The MotoVan",
-      "portrait": true
+      "portrait": true,
+      "w": 547,
+      "h": 820
     },
     {
       "md_avif": "/projects/aarons-mammoth-build/03-md.avif",
       "md_webp": "/projects/aarons-mammoth-build/03-md.webp",
       "alt": "The MotoVan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 534
     },
     {
       "md_avif": "/projects/aarons-mammoth-build/04-md.avif",
       "md_webp": "/projects/aarons-mammoth-build/04-md.webp",
       "alt": "The MotoVan",
-      "portrait": true
+      "portrait": true,
+      "w": 547,
+      "h": 820
     },
     {
       "md_avif": "/projects/aarons-mammoth-build/05-md.avif",
       "md_webp": "/projects/aarons-mammoth-build/05-md.webp",
       "alt": "The MotoVan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 534
     },
     {
       "md_avif": "/projects/aarons-mammoth-build/06-md.avif",
       "md_webp": "/projects/aarons-mammoth-build/06-md.webp",
       "alt": "The MotoVan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 534
     },
     {
       "md_avif": "/projects/aarons-mammoth-build/07-md.avif",
       "md_webp": "/projects/aarons-mammoth-build/07-md.webp",
       "alt": "The MotoVan",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/aarons-mammoth-build/08-md.avif",
       "md_webp": "/projects/aarons-mammoth-build/08-md.webp",
       "alt": "The MotoVan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 534
     },
     {
       "md_avif": "/projects/aarons-mammoth-build/09-md.avif",
       "md_webp": "/projects/aarons-mammoth-build/09-md.webp",
       "alt": "The MotoVan",
-      "portrait": true
+      "portrait": true,
+      "w": 547,
+      "h": 820
     }
   ]
 }

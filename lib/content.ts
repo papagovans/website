@@ -20,6 +20,10 @@ export type Shot = {
   md_webp: string;
   alt: string;
   portrait: boolean;
+  /* Intrinsic size, backfilled by scripts/add-dimensions.mjs. Lets a masonry
+   * wall reserve space before the image arrives instead of reflowing. */
+  w?: number;
+  h?: number;
 };
 
 export type Project = {
@@ -53,6 +57,8 @@ export type ProjectCard = Pick<Project, "slug" | "path" | "title" | "excerpt"> &
   thumb_avif: string;
   thumb_webp: string;
   alt: string;
+  w?: number;
+  h?: number;
 };
 
 /* Index listing. Reads every project doc once at build time and keeps only the

@@ -384,15 +384,33 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 .collage-head { text-align: center; color: #fff; padding-bottom: 48px; }
 .collage-head h2 { font-size: clamp(28px, 4vw, 46px); }
 .collage-head p { margin: 16px auto 28px; max-width: 560px; color: rgba(255,255,255,0.72); font-size: 17px; line-height: 1.6; }
+/* Masonry. CSS columns rather than grid, because a grid forces every cell to
+   one aspect ratio and the wall reads as a spreadsheet. Here each photo keeps
+   its own proportions, columns end at different heights, and the stagger is a
+   consequence of the photography rather than something faked with nth-child.
+   The intrinsic width and height on each img are what stop it reflowing as the
+   images arrive. */
 .collage-grid {
-	display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px;
-	padding: 0 10px 10px;
+	column-count: 5;
+	column-gap: 12px;
+	padding: 0 12px 12px;
 }
-@media (max-width: 900px) { .collage-grid { grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 560px) { .collage-grid { grid-template-columns: repeat(2, 1fr); } }
-.collage-cell img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 3; border-radius: 6px; transition: 0.2s ease; }
-/* Two cells run tall so the wall reads as a collage rather than a table. */
-.collage-cell:nth-child(3) img, .collage-cell:nth-child(10) img { aspect-ratio: 4 / 5; }
+@media (max-width: 1100px) { .collage-grid { column-count: 4; } }
+@media (max-width: 860px)  { .collage-grid { column-count: 3; } }
+@media (max-width: 560px)  { .collage-grid { column-count: 2; } }
+
+.collage-cell {
+	display: block;
+	break-inside: avoid;
+	/* The same 12px as column-gap, so horizontal and vertical spacing match. */
+	margin-bottom: 12px;
+}
+.collage-cell img {
+	width: 100%;
+	height: auto;
+	border-radius: 6px;
+	transition: 0.2s ease;
+}
 .collage-cell:hover img { opacity: 0.82; }
 
 /* Your van journey starts here. */

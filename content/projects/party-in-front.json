@@ -16,193 +16,257 @@
       "md_avif": "/projects/party-in-front/00-md.avif",
       "md_webp": "/projects/party-in-front/00-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/01-md.avif",
       "md_webp": "/projects/party-in-front/01-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/02-md.avif",
       "md_webp": "/projects/party-in-front/02-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/party-in-front/03-md.avif",
       "md_webp": "/projects/party-in-front/03-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/party-in-front/04-md.avif",
       "md_webp": "/projects/party-in-front/04-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 560
     },
     {
       "md_avif": "/projects/party-in-front/05-md.avif",
       "md_webp": "/projects/party-in-front/05-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/06-md.avif",
       "md_webp": "/projects/party-in-front/06-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/party-in-front/07-md.avif",
       "md_webp": "/projects/party-in-front/07-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/08-md.avif",
       "md_webp": "/projects/party-in-front/08-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/party-in-front/09-md.avif",
       "md_webp": "/projects/party-in-front/09-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/party-in-front/10-md.avif",
       "md_webp": "/projects/party-in-front/10-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/11-md.avif",
       "md_webp": "/projects/party-in-front/11-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/party-in-front/12-md.avif",
       "md_webp": "/projects/party-in-front/12-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/13-md.avif",
       "md_webp": "/projects/party-in-front/13-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 534
     },
     {
       "md_avif": "/projects/party-in-front/14-md.avif",
       "md_webp": "/projects/party-in-front/14-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/15-md.avif",
       "md_webp": "/projects/party-in-front/15-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/party-in-front/16-md.avif",
       "md_webp": "/projects/party-in-front/16-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/17-md.avif",
       "md_webp": "/projects/party-in-front/17-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/18-md.avif",
       "md_webp": "/projects/party-in-front/18-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/19-md.avif",
       "md_webp": "/projects/party-in-front/19-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/20-md.avif",
       "md_webp": "/projects/party-in-front/20-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/21-md.avif",
       "md_webp": "/projects/party-in-front/21-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/22-md.avif",
       "md_webp": "/projects/party-in-front/22-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/23-md.avif",
       "md_webp": "/projects/party-in-front/23-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/24-md.avif",
       "md_webp": "/projects/party-in-front/24-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/25-md.avif",
       "md_webp": "/projects/party-in-front/25-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/26-md.avif",
       "md_webp": "/projects/party-in-front/26-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/27-md.avif",
       "md_webp": "/projects/party-in-front/27-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/party-in-front/28-md.avif",
       "md_webp": "/projects/party-in-front/28-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/29-md.avif",
       "md_webp": "/projects/party-in-front/29-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": true
+      "portrait": true,
+      "w": 546,
+      "h": 820
     },
     {
       "md_avif": "/projects/party-in-front/30-md.avif",
       "md_webp": "/projects/party-in-front/30-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/party-in-front/31-md.avif",
       "md_webp": "/projects/party-in-front/31-md.webp",
       "alt": "Party in the Front, Shower in the Back",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 531
     }
   ]
 }

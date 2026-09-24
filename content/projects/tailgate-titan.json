@@ -18,43 +18,57 @@
       "md_avif": "/projects/tailgate-titan/00-md.avif",
       "md_webp": "/projects/tailgate-titan/00-md.webp",
       "alt": "Tailgate Titan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/tailgate-titan/01-md.avif",
       "md_webp": "/projects/tailgate-titan/01-md.webp",
       "alt": "Tailgate Titan",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/tailgate-titan/02-md.avif",
       "md_webp": "/projects/tailgate-titan/02-md.webp",
       "alt": "Tailgate Titan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/tailgate-titan/03-md.avif",
       "md_webp": "/projects/tailgate-titan/03-md.webp",
       "alt": "Tailgate Titan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/tailgate-titan/04-md.avif",
       "md_webp": "/projects/tailgate-titan/04-md.webp",
       "alt": "Tailgate Titan",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/tailgate-titan/05-md.avif",
       "md_webp": "/projects/tailgate-titan/05-md.webp",
       "alt": "Tailgate Titan",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/tailgate-titan/06-md.avif",
       "md_webp": "/projects/tailgate-titan/06-md.webp",
       "alt": "Tailgate Titan",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     }
   ]
 }

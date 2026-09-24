@@ -16,61 +16,81 @@
       "md_avif": "/projects/trail-trekker/00-md.avif",
       "md_webp": "/projects/trail-trekker/00-md.webp",
       "alt": "Trail Trekker",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/trail-trekker/01-md.avif",
       "md_webp": "/projects/trail-trekker/01-md.webp",
       "alt": "Trail Trekker",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/trail-trekker/02-md.avif",
       "md_webp": "/projects/trail-trekker/02-md.webp",
       "alt": "Trail Trekker",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/trail-trekker/03-md.avif",
       "md_webp": "/projects/trail-trekker/03-md.webp",
       "alt": "Trail Trekker",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/trail-trekker/04-md.avif",
       "md_webp": "/projects/trail-trekker/04-md.webp",
       "alt": "Trail Trekker",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/trail-trekker/05-md.avif",
       "md_webp": "/projects/trail-trekker/05-md.webp",
       "alt": "Trail Trekker",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/trail-trekker/06-md.avif",
       "md_webp": "/projects/trail-trekker/06-md.webp",
       "alt": "Trail Trekker",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/trail-trekker/07-md.avif",
       "md_webp": "/projects/trail-trekker/07-md.webp",
       "alt": "The interior view of the Papago Vans Trail Trekker build. Espresso stained wood with white cabinets and warm ambient lighting under the sink, illuminating the dark-toned wood floors. Fridge, sink, bed lift, and A/C are visible down the middle of the van.",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/trail-trekker/08-md.avif",
       "md_webp": "/projects/trail-trekker/08-md.webp",
       "alt": "Backside of Papago Vans custom Mercedes Sprinter build with a bed lift above storage room for a mountain bike with equipment storage cabinets and heavy duty pull out trays to easily access the bikes.",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     },
     {
       "md_avif": "/projects/trail-trekker/09-md.avif",
       "md_webp": "/projects/trail-trekker/09-md.webp",
       "alt": "Mercedes Sprinter 144' Papago Vans Custom Build",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1200
     }
   ]
 }

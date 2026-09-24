@@ -12,37 +12,49 @@
       "md_avif": "/projects/cascade-cruiser/00-md.avif",
       "md_webp": "/projects/cascade-cruiser/00-md.webp",
       "alt": "Cascade Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1204
     },
     {
       "md_avif": "/projects/cascade-cruiser/01-md.avif",
       "md_webp": "/projects/cascade-cruiser/01-md.webp",
       "alt": "Cascade Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1199
     },
     {
       "md_avif": "/projects/cascade-cruiser/02-md.avif",
       "md_webp": "/projects/cascade-cruiser/02-md.webp",
       "alt": "Cascade Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1199
     },
     {
       "md_avif": "/projects/cascade-cruiser/03-md.avif",
       "md_webp": "/projects/cascade-cruiser/03-md.webp",
       "alt": "Cascade Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1199
     },
     {
       "md_avif": "/projects/cascade-cruiser/04-md.avif",
       "md_webp": "/projects/cascade-cruiser/04-md.webp",
       "alt": "Cascade Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1067
     },
     {
       "md_avif": "/projects/cascade-cruiser/05-md.avif",
       "md_webp": "/projects/cascade-cruiser/05-md.webp",
       "alt": "Cascade Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1204
     }
   ]
 }

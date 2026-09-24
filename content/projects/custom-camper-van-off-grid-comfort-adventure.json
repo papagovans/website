@@ -17,61 +17,81 @@
       "md_avif": "/projects/custom-camper-van-off-grid-comfort-adventure/00-md.avif",
       "md_webp": "/projects/custom-camper-van-off-grid-comfort-adventure/00-md.webp",
       "alt": "Cozy Pine Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/custom-camper-van-off-grid-comfort-adventure/01-md.avif",
       "md_webp": "/projects/custom-camper-van-off-grid-comfort-adventure/01-md.webp",
       "alt": "Cozy Pine Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/custom-camper-van-off-grid-comfort-adventure/02-md.avif",
       "md_webp": "/projects/custom-camper-van-off-grid-comfort-adventure/02-md.webp",
       "alt": "Cozy Pine Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/custom-camper-van-off-grid-comfort-adventure/03-md.avif",
       "md_webp": "/projects/custom-camper-van-off-grid-comfort-adventure/03-md.webp",
       "alt": "Cozy Pine Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/custom-camper-van-off-grid-comfort-adventure/04-md.avif",
       "md_webp": "/projects/custom-camper-van-off-grid-comfort-adventure/04-md.webp",
       "alt": "Cozy Pine Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/custom-camper-van-off-grid-comfort-adventure/05-md.avif",
       "md_webp": "/projects/custom-camper-van-off-grid-comfort-adventure/05-md.webp",
       "alt": "Cozy Pine Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/custom-camper-van-off-grid-comfort-adventure/06-md.avif",
       "md_webp": "/projects/custom-camper-van-off-grid-comfort-adventure/06-md.webp",
       "alt": "Cozy Pine Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/custom-camper-van-off-grid-comfort-adventure/07-md.avif",
       "md_webp": "/projects/custom-camper-van-off-grid-comfort-adventure/07-md.webp",
       "alt": "Cozy Pine Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/custom-camper-van-off-grid-comfort-adventure/08-md.avif",
       "md_webp": "/projects/custom-camper-van-off-grid-comfort-adventure/08-md.webp",
       "alt": "Cozy Pine Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 600
     },
     {
       "md_avif": "/projects/custom-camper-van-off-grid-comfort-adventure/09-md.avif",
       "md_webp": "/projects/custom-camper-van-off-grid-comfort-adventure/09-md.webp",
       "alt": "Cozy Pine Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     }
   ]
 }

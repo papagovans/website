@@ -12,73 +12,97 @@
       "md_avif": "/projects/cozy-cruiser/00-md.avif",
       "md_webp": "/projects/cozy-cruiser/00-md.webp",
       "alt": "Cozy Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cozy-cruiser/01-md.avif",
       "md_webp": "/projects/cozy-cruiser/01-md.webp",
       "alt": "Cozy Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cozy-cruiser/02-md.avif",
       "md_webp": "/projects/cozy-cruiser/02-md.webp",
       "alt": "Cozy Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     },
     {
       "md_avif": "/projects/cozy-cruiser/03-md.avif",
       "md_webp": "/projects/cozy-cruiser/03-md.webp",
       "alt": "Cozy Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cozy-cruiser/04-md.avif",
       "md_webp": "/projects/cozy-cruiser/04-md.webp",
       "alt": "Cozy Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     },
     {
       "md_avif": "/projects/cozy-cruiser/05-md.avif",
       "md_webp": "/projects/cozy-cruiser/05-md.webp",
       "alt": "Cozy Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cozy-cruiser/06-md.avif",
       "md_webp": "/projects/cozy-cruiser/06-md.webp",
       "alt": "Cozy Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1202
     },
     {
       "md_avif": "/projects/cozy-cruiser/07-md.avif",
       "md_webp": "/projects/cozy-cruiser/07-md.webp",
       "alt": "Cozy Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cozy-cruiser/08-md.avif",
       "md_webp": "/projects/cozy-cruiser/08-md.webp",
       "alt": "Cozy Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cozy-cruiser/09-md.avif",
       "md_webp": "/projects/cozy-cruiser/09-md.webp",
       "alt": "Cozy Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cozy-cruiser/10-md.avif",
       "md_webp": "/projects/cozy-cruiser/10-md.webp",
       "alt": "Cozy Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/cozy-cruiser/11-md.avif",
       "md_webp": "/projects/cozy-cruiser/11-md.webp",
       "alt": "Cozy Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     }
   ]
 }

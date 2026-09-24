@@ -16,61 +16,81 @@
       "md_avif": "/projects/the-cozy-canine-cruiser/00-md.avif",
       "md_webp": "/projects/the-cozy-canine-cruiser/00-md.webp",
       "alt": "Cozy Canine Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-cozy-canine-cruiser/01-md.avif",
       "md_webp": "/projects/the-cozy-canine-cruiser/01-md.webp",
       "alt": "Cozy Canine Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 533
     },
     {
       "md_avif": "/projects/the-cozy-canine-cruiser/02-md.avif",
       "md_webp": "/projects/the-cozy-canine-cruiser/02-md.webp",
       "alt": "Cozy Canine Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 532
     },
     {
       "md_avif": "/projects/the-cozy-canine-cruiser/03-md.avif",
       "md_webp": "/projects/the-cozy-canine-cruiser/03-md.webp",
       "alt": "Cozy Canine Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/the-cozy-canine-cruiser/04-md.avif",
       "md_webp": "/projects/the-cozy-canine-cruiser/04-md.webp",
       "alt": "Cozy Canine Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/the-cozy-canine-cruiser/05-md.avif",
       "md_webp": "/projects/the-cozy-canine-cruiser/05-md.webp",
       "alt": "Cozy Canine Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/the-cozy-canine-cruiser/06-md.avif",
       "md_webp": "/projects/the-cozy-canine-cruiser/06-md.webp",
       "alt": "Cozy Canine Cruiser",
-      "portrait": false
+      "portrait": false,
+      "w": 800,
+      "h": 698
     },
     {
       "md_avif": "/projects/the-cozy-canine-cruiser/07-md.avif",
       "md_webp": "/projects/the-cozy-canine-cruiser/07-md.webp",
       "alt": "Cozy Canine Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1067
     },
     {
       "md_avif": "/projects/the-cozy-canine-cruiser/08-md.avif",
       "md_webp": "/projects/the-cozy-canine-cruiser/08-md.webp",
       "alt": "Cozy Canine Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1203
     },
     {
       "md_avif": "/projects/the-cozy-canine-cruiser/09-md.avif",
       "md_webp": "/projects/the-cozy-canine-cruiser/09-md.webp",
       "alt": "Cozy Canine Cruiser",
-      "portrait": true
+      "portrait": true,
+      "w": 800,
+      "h": 1067
     }
   ]
 }
