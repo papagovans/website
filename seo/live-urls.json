@@ -12,961 +12,2078 @@
       "path": "/",
       "type": "page",
       "status": "done",
-      "note": "ported from the Astro mockup"
+      "note": "ported from the Astro mockup",
+      "seo": {
+        "wpId": 6,
+        "title": "Custom Camper Van Conversions in Arizona | Papago Vans",
+        "canonical": "/",
+        "index": "index"
+      }
     },
     {
       "path": "/about-us/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 335,
+        "title": "About Papago Vans | Arizona Custom Campervan Builders",
+        "canonical": "/about-us/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 872,
+        "title": "Van Life Blogs | Conversion Tips, Travel & Gear Reviews",
+        "canonical": "/blog/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/6-reasons-to-use-havelock-wool-in-a-van-conversion/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 2698,
+        "title": "Havelock Wool Van Insulation: 6 Reasons to Use It",
+        "canonical": "/blog/6-reasons-to-use-havelock-wool-in-a-van-conversion/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/agm-vs-lithium-batteries-for-van-life/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4281,
+        "title": "AGM Vs Lithium Batteries for Van Life - Papago Vans",
+        "canonical": "/blog/agm-vs-lithium-batteries-for-van-life/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/best-camper-van-layouts-travel-vanlife/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 8324,
+        "title": "Best Camper Van Layouts & Floor Plans for Van Life",
+        "canonical": "/blog/best-camper-van-layouts-travel-vanlife/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/best-campervan-toliets/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 231,
+        "title": "Best Campervan Toilet: Dry Flush vs Composting vs Cassette",
+        "canonical": "/blog/best-campervan-toliets/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/best-off-grid-camper-van-upgrades-2025/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 9593,
+        "title": "Best Off-Grid Camper Van Upgrades (That Are Actually Worth It) - Papago Vans",
+        "canonical": "/blog/best-off-grid-camper-van-upgrades-2025/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/custom-camper-van-build-cost-2025-guide/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 6465,
+        "title": "How Much Does a Custom Camper Van Cost? 2026 Price Guide",
+        "canonical": "/blog/custom-camper-van-build-cost-2025-guide/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/hidden-gems-for-van-life/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 7079,
+        "title": "10 Hidden Gems for Van Life Adventures You’ve Never Thought About - Papago Vans",
+        "canonical": "/blog/hidden-gems-for-van-life/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/how-to-choose-between-a-new-or-used-van-for-your-conversion/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5597,
+        "title": "How to Choose Between a New or Used Van for Your Conversion - Papago Vans",
+        "canonical": "/blog/how-to-choose-between-a-new-or-used-van-for-your-conversion/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/how-to-insure-a-camper-van-in-2025-understanding-rvia-certifications-impact-on-your-coverage/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 8737,
+        "title": "How to Insure a Camper Van in 2025: Understanding RVIA Certification's Impact on Your Coverage - Papago Vans",
+        "canonical": "/blog/how-to-insure-a-camper-van-in-2025-understanding-rvia-certifications-impact-on-your-coverage/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/how-to-prevent-squeaks-in-a-campervan/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 2684,
+        "title": "How to Prevent Squeaks in a Campervan - Papago Vans",
+        "canonical": "/blog/how-to-prevent-squeaks-in-a-campervan/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/is-the-ram-promaster-the-best-van-for-tall-people/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4594,
+        "title": "Best Van for Tall People: ProMaster vs Sprinter vs Transit",
+        "canonical": "/blog/is-the-ram-promaster-the-best-van-for-tall-people/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/planning-a-passenger-van-conversion-for-travel-group-transport-or-business-use/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 19260,
+        "title": "Wheelchair Accessible Vans: Essential Safety Features",
+        "canonical": "/blog/planning-a-passenger-van-conversion-for-travel-group-transport-or-business-use/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/rvia-certification-campgrounds-benefits/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 8529,
+        "title": "RVIA Certified: What the RVIA Seal Means for Your Van",
+        "canonical": "/blog/rvia-certification-campgrounds-benefits/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/the-best-awning-for-vanlife/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 2694,
+        "title": "The Best Awning for Vanlife - Papago Vans",
+        "canonical": "/blog/the-best-awning-for-vanlife/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/the-best-cooling-options-for-custom-camper-vans/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5001,
+        "title": "The Best Cooling Options for Custom Camper Vans - Papago Vans",
+        "canonical": "/blog/the-best-cooling-options-for-custom-camper-vans/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/the-most-important-feature-in-any-custom-camper-van/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5186,
+        "title": "The Most Important Feature in Any Custom Camper Van - Papago Vans",
+        "canonical": "/blog/the-most-important-feature-in-any-custom-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/top-10-vanlife-travel-destinations-of-2024/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5621,
+        "title": "Top 10 Vanlife Travel Destinations of 2024 - Papago Vans",
+        "canonical": "/blog/top-10-vanlife-travel-destinations-of-2024/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/van-life-myths-truths-surprises/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5827,
+        "title": "What You Didn't Know About Van Life: Myths, Truths, and Surprises - Papago Vans",
+        "canonical": "/blog/van-life-myths-truths-surprises/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/van-life-newbie-custom-camper-van/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5831,
+        "title": "What Happens When You Give a Van Life Newbie the Keys to a Fully Custom Van? - Papago Vans",
+        "canonical": "/blog/van-life-newbie-custom-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/what-wheel-base-is-best-for-van-life/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5398,
+        "title": "What Wheel Base is Best for Van Life? - Papago Vans",
+        "canonical": "/blog/what-wheel-base-is-best-for-van-life/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/wheelchair-accessible-vans-essential-features-for-safer-and-more-comfortable-mobility/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 19263,
+        "title": "Wheelchair Accessible Vans: Essential Safety Features",
+        "canonical": "/blog/wheelchair-accessible-vans-essential-features-for-safer-and-more-comfortable-mobility/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/where-can-i-park-my-campervan-an-introduction-to-ioverlander/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4439,
+        "title": "Where to Park a Campervan Overnight: iOverlander Guide",
+        "canonical": "/blog/where-can-i-park-my-campervan-an-introduction-to-ioverlander/",
+        "index": "index"
+      }
     },
     {
       "path": "/blog/working-with-a-van-conversion-company/",
       "type": "post",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 2703,
+        "title": "Working with a Van Conversion Company - Papago Vans",
+        "canonical": "/blog/working-with-a-van-conversion-company/",
+        "index": "index"
+      }
     },
     {
       "path": "/build/aubreyjacob/",
       "type": "build",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5310,
+        "title": "New Sale- June /Aug - Papago Vans",
+        "canonical": "/build/aubreyjacob/",
+        "index": "index"
+      }
     },
     {
       "path": "/build/johndoe/",
       "type": "build",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5214,
+        "title": "John Doe - Papago Vans",
+        "canonical": "/build/johndoe/",
+        "index": "index"
+      }
     },
     {
       "path": "/build/rob-champion/",
       "type": "build",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 10432,
+        "title": "Rob Champion - Papago Vans",
+        "canonical": "/build/rob-champion/",
+        "index": "index"
+      }
     },
     {
       "path": "/ccpa/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 1468,
+        "title": "CCPA - Papago Vans",
+        "canonical": "/ccpa/",
+        "index": "index"
+      }
     },
     {
       "path": "/contact-us/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 768,
+        "title": "Contact Us - Papago Vans",
+        "canonical": "/contact-us/",
+        "index": "index"
+      }
     },
     {
       "path": "/el-capitan-luxury-van-build-old/",
       "type": "page",
       "status": "redirect",
       "to": "/el-capitan-luxury-van-build/",
-      "note": "duplicate competing with its own live counterpart"
+      "note": "duplicate competing with its own live counterpart",
+      "seo": {
+        "wpId": 594,
+        "title": "El Capitan Luxury Van Build-old - Papago Vans",
+        "canonical": "/el-capitan-luxury-van-build-old/",
+        "index": "index"
+      }
     },
     {
       "path": "/el-capitan-luxury-van-build/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 11698,
+        "title": "El Capitan Luxury Van Conversion Tier | Papago Vans",
+        "canonical": "/el-capitan-luxury-van-build/",
+        "index": "index"
+      }
     },
     {
       "path": "/elementor-10246/",
       "type": "page",
       "status": "redirect",
       "to": "/",
-      "note": "page-builder artefact"
+      "note": "page-builder artefact",
+      "seo": {
+        "wpId": 10246,
+        "title": "Elementor #10246 - Papago Vans",
+        "canonical": "/elementor-10246/",
+        "index": "index"
+      }
     },
     {
       "path": "/faq/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 798,
+        "title": "FAQ - Papago Vans",
+        "canonical": "/faq/",
+        "index": "index"
+      }
     },
     {
       "path": "/financing-old/",
       "type": "page",
       "status": "redirect",
       "to": "/financing/",
-      "note": "duplicate competing with its own live counterpart"
+      "note": "duplicate competing with its own live counterpart",
+      "seo": {
+        "wpId": 945,
+        "title": "Financing old - Papago Vans",
+        "canonical": "/financing-old/",
+        "index": "index"
+      }
     },
     {
       "path": "/financing/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 12055,
+        "title": "Camper Van Financing with Hearth | Papago Vans",
+        "canonical": "/financing/",
+        "index": "index"
+      }
     },
     {
       "path": "/ford-transit/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 11409,
+        "title": "Arizona Campervan Conversions - Papago Vans",
+        "canonical": "/ford-transit/",
+        "index": "index"
+      }
     },
     {
       "path": "/login/",
       "type": "page",
       "status": "redirect",
       "to": "/",
-      "note": "WordPress login, no equivalent"
+      "note": "WordPress login, no equivalent",
+      "seo": {
+        "wpId": 5235,
+        "title": "Login - Papago Vans",
+        "canonical": "/login/",
+        "index": "index"
+      }
     },
     {
       "path": "/mammoth-old/",
       "type": "page",
       "status": "redirect",
       "to": "/mammoth/",
-      "note": "duplicate competing with its own live counterpart"
+      "note": "duplicate competing with its own live counterpart",
+      "seo": {
+        "wpId": 1540,
+        "title": "Mammoth old Build Tier - Papago Vans",
+        "canonical": "/mammoth-old/",
+        "index": "index"
+      }
     },
     {
       "path": "/mammoth/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 11846,
+        "title": "Mammoth Camper Van Build Tier | Papago Vans",
+        "canonical": "/mammoth/",
+        "index": "index"
+      }
     },
     {
       "path": "/mercedes-sprinter/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 10908,
+        "title": "Arizona Campervan Conversions - Papago Vans",
+        "canonical": "/mercedes-sprinter/",
+        "index": "index"
+      }
     },
     {
       "path": "/newsletter/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 11182,
+        "title": "Newsletter - Papago Vans",
+        "canonical": "/newsletter/",
+        "index": "index"
+      }
     },
     {
       "path": "/olympus-old/",
       "type": "page",
       "status": "redirect",
       "to": "/olympus/",
-      "note": "duplicate competing with its own live counterpart"
+      "note": "duplicate competing with its own live counterpart",
+      "seo": {
+        "wpId": 1536,
+        "title": "Olympus old Build Tier - Papago Vans",
+        "canonical": "/olympus-old/",
+        "index": "index"
+      }
     },
     {
       "path": "/olympus/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 11769,
+        "title": "Olympus Off-Grid Van Build | Papago Vans",
+        "canonical": "/olympus/",
+        "index": "index"
+      }
     },
     {
       "path": "/our-process-old/",
       "type": "page",
       "status": "redirect",
       "to": "/our-process/",
-      "note": "duplicate competing with its own live counterpart"
+      "note": "duplicate competing with its own live counterpart",
+      "seo": {
+        "wpId": 7398,
+        "title": "Our Process old - Papago Vans",
+        "canonical": "/our-process-old/",
+        "index": "index"
+      }
     },
     {
       "path": "/our-process/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 12061,
+        "title": "Custom Van Build Process | Papago Vans",
+        "canonical": "/our-process/",
+        "index": "index"
+      }
     },
     {
       "path": "/privacy-policy/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 559,
+        "title": "Privacy Policy - Papago Vans",
+        "canonical": "/privacy-policy/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/2024-mercedes-sprinter-144-awd-el-capitan-conversion/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 18777,
+        "title": "Sky Lounge - Papago Vans",
+        "canonical": "/projects/2024-mercedes-sprinter-144-awd-el-capitan-conversion/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 16816,
+        "title": "Agua Caliente - Papago Vans",
+        "canonical": "/projects/2024-mercedes-sprinter-144-awd-olympus-build/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/2025-mercedes-sprinter-170-awd-el-capitan-conversion/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 18795,
+        "title": "Midnight Harbor - Papago Vans",
+        "canonical": "/projects/2025-mercedes-sprinter-170-awd-el-capitan-conversion/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/2025-mercedes-sprinter-170-awd-ext-el-capitan-conversion/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 18745,
+        "title": "The Greenhouse - Papago Vans",
+        "canonical": "/projects/2025-mercedes-sprinter-170-awd-ext-el-capitan-conversion/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/2025-mercedes-sprinter-170-awd-olympus-build/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 16826,
+        "title": "White Haven - Papago Vans",
+        "canonical": "/projects/2025-mercedes-sprinter-170-awd-olympus-build/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/aarons-mammoth-build/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 1764,
+        "title": "The MotoVan - Papago Vans",
+        "canonical": "/projects/aarons-mammoth-build/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/blue-dolphin-custom-sprinter-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 19127,
+        "title": "Blue Dolphin - Papago Vans",
+        "canonical": "/projects/blue-dolphin-custom-sprinter-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/brinkman-van-2025-mercedes-sprinter-awd-170-el-capitan/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 16090,
+        "title": "Saguaro Storm - Papago Vans",
+        "canonical": "/projects/brinkman-van-2025-mercedes-sprinter-awd-170-el-capitan/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/byers-van-mercedes-sprinter-170-awd-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 18875,
+        "title": "Orange Crush - Papago Vans",
+        "canonical": "/projects/byers-van-mercedes-sprinter-170-awd-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/cabin-fever-sprinter-van-build/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 19202,
+        "title": "Cabin Fever - Papago Vans",
+        "canonical": "/projects/cabin-fever-sprinter-van-build/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/camo-crusader/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5576,
+        "title": "Camo Crusader - Papago Vans",
+        "canonical": "/projects/camo-crusader/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/canyon-runner-4x4-sprinter-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 10795,
+        "title": "Canyon Runner - Papago Vans",
+        "canonical": "/projects/canyon-runner-4x4-sprinter-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/cascade-cruiser/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4952,
+        "title": "Cascade Cruiser - Papago Vans",
+        "canonical": "/projects/cascade-cruiser/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/cherry-van-2025-mercedes-sprinter-awd-170-dually-el-capitan/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 16073,
+        "title": "Sage Garden - Papago Vans",
+        "canonical": "/projects/cherry-van-2025-mercedes-sprinter-awd-170-dually-el-capitan/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/classic-camper/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 1766,
+        "title": "Classic Camper - Papago Vans",
+        "canonical": "/projects/classic-camper/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/clubhouse-cruiser-4x4-sprinter-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 10829,
+        "title": "Clubhouse Cruiser - Papago Vans",
+        "canonical": "/projects/clubhouse-cruiser-4x4-sprinter-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/cozy-cabin-cruiser/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4879,
+        "title": "Cozy Cabin Cruiser - Papago Vans",
+        "canonical": "/projects/cozy-cabin-cruiser/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/cozy-cruiser/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4939,
+        "title": "Cozy Cruiser - Papago Vans",
+        "canonical": "/projects/cozy-cruiser/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/crouch-van-mercedes-sprinter-170-awd-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 18913,
+        "title": "Golden Hour - Papago Vans",
+        "canonical": "/projects/crouch-van-mercedes-sprinter-170-awd-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/custom-camper-van-off-grid-comfort-adventure/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5846,
+        "title": "Cozy Pine Cruiser - Papago Vans",
+        "canonical": "/projects/custom-camper-van-off-grid-comfort-adventure/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/custom-campervan/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4362,
+        "title": "Quintessence Camper Van - Papago Vans",
+        "canonical": "/projects/custom-campervan/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/custom-ford-transit-148-ext-camper-van-build/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 7984,
+        "title": "Sagebrush Rover - Papago Vans",
+        "canonical": "/projects/custom-ford-transit-148-ext-camper-van-build/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/custom-mercedes-sprinter-170-awd-camper-van-build-2/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 16052,
+        "title": "Mocha Mesa - Papago Vans",
+        "canonical": "/projects/custom-mercedes-sprinter-170-awd-camper-van-build-2/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/custom-mercedes-sprinter-170-awd-camper-van-build/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 7466,
+        "title": "Midnight Marauder - Papago Vans",
+        "canonical": "/projects/custom-mercedes-sprinter-170-awd-camper-van-build/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/custom-mercedes-sprinter-170-awd-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 7967,
+        "title": "Savannah - Papago Vans",
+        "canonical": "/projects/custom-mercedes-sprinter-170-awd-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/custom-mercedes-sprinter-alpine-voyager-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 7479,
+        "title": "Alpine Voyager - Papago Vans",
+        "canonical": "/projects/custom-mercedes-sprinter-alpine-voyager-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/custom-mercedes-sprinter-camper-van-build/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5656,
+        "title": "Trailblazer’s Nook - Papago Vans",
+        "canonical": "/projects/custom-mercedes-sprinter-camper-van-build/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/custom-minimalist-escape-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5999,
+        "title": "Minimalist Escape - Papago Vans",
+        "canonical": "/projects/custom-minimalist-escape-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/custom-sprinter-170-awd-camper-van-conversion/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 9848,
+        "title": "Timberline Trekker - Papago Vans",
+        "canonical": "/projects/custom-sprinter-170-awd-camper-van-conversion/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/custom-sprinter-van-build-el-capitan/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5905,
+        "title": "Evergreen Explorer - Papago Vans",
+        "canonical": "/projects/custom-sprinter-van-build-el-capitan/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/cyan-caravan/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4688,
+        "title": "Cyan Caravan: Custom Sprinter Camper Van | Papago Vans",
+        "canonical": "/projects/cyan-caravan/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/davis-van-mercedes-sprinter-170-awd-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 19077,
+        "title": "Turquoise Tide - Papago Vans",
+        "canonical": "/projects/davis-van-mercedes-sprinter-170-awd-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/deluxe-drifter/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4981,
+        "title": "Deluxe Drifter - Papago Vans",
+        "canonical": "/projects/deluxe-drifter/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/diebag-van-mercedes-sprinter-170-awd-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 19046,
+        "title": "Desert Drift - Papago Vans",
+        "canonical": "/projects/diebag-van-mercedes-sprinter-170-awd-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/donatini-van-mercedes-sprinter-170-awd-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 18951,
+        "title": "Horizon House - Papago Vans",
+        "canonical": "/projects/donatini-van-mercedes-sprinter-170-awd-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/dually-deluxe-camper/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 3781,
+        "title": "Dually Deluxe Camper - Papago Vans",
+        "canonical": "/projects/dually-deluxe-camper/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/east-coast-beach-camper-van-light-blue-cabinets/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5875,
+        "title": "Seaside Escape - Papago Vans",
+        "canonical": "/projects/east-coast-beach-camper-van-light-blue-cabinets/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/echelon-explorer-luxury-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 7037,
+        "title": "Echelon Explorer - Papago Vans",
+        "canonical": "/projects/echelon-explorer-luxury-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/empty-nester-luxury-custom-sprinter-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 19182,
+        "title": "Empty Nester - Papago Vans",
+        "canonical": "/projects/empty-nester-luxury-custom-sprinter-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/ford-etransit-campervan/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 1777,
+        "title": "The Bike Basecamp - Papago Vans",
+        "canonical": "/projects/ford-etransit-campervan/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/ford-transit-trail-camper-van-conversion/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 8775,
+        "title": "Purring Pathfinder - Papago Vans",
+        "canonical": "/projects/ford-transit-trail-camper-van-conversion/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/four-peaks-overlander-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 7012,
+        "title": "Four Peaks Overlander - Papago Vans",
+        "canonical": "/projects/four-peaks-overlander-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/freedom-wagon/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4971,
+        "title": "Freedom Wagon - Papago Vans",
+        "canonical": "/projects/freedom-wagon/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/freelancers-freedom-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 985,
+        "title": "Freelancer’s Freedom Van - Papago Vans",
+        "canonical": "/projects/freelancers-freedom-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/gomez-van-mercedes-sprinter-170-awd-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 18995,
+        "title": "Iron Nomad - Papago Vans",
+        "canonical": "/projects/gomez-van-mercedes-sprinter-170-awd-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/grand-vista-villa/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4858,
+        "title": "Grand Vista Villa - Papago Vans",
+        "canonical": "/projects/grand-vista-villa/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/jan-van-custom-camper-van-ultimate-van-life-adventure/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5635,
+        "title": "Jan Van - Papago Vans",
+        "canonical": "/projects/jan-van-custom-camper-van-ultimate-van-life-adventure/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/lavish-explorer/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4509,
+        "title": "Lavish Explorer - Papago Vans",
+        "canonical": "/projects/lavish-explorer/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/luxe-wanderer/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4826,
+        "title": "Luxe Wanderer - Papago Vans",
+        "canonical": "/projects/luxe-wanderer/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/luxury-camper-van-remote-work/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 6997,
+        "title": "Executive Explorer - Papago Vans",
+        "canonical": "/projects/luxury-camper-van-remote-work/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/mercedes-sprinter-144-awd-camper-van-conversion/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 8791,
+        "title": "Sierra Roamer - Papago Vans",
+        "canonical": "/projects/mercedes-sprinter-144-awd-camper-van-conversion/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/mercedes-sprinter-170-awd-camper-van-conversion-2/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 8850,
+        "title": "Wildpaw Explorer - Papago Vans",
+        "canonical": "/projects/mercedes-sprinter-170-awd-camper-van-conversion-2/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/mercedes-sprinter-170-awd-camper-van-conversion-3/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 9865,
+        "title": "Havanna Ridge - Papago Vans",
+        "canonical": "/projects/mercedes-sprinter-170-awd-camper-van-conversion-3/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 8822,
+        "title": "Starlit Roamer - Papago Vans",
+        "canonical": "/projects/mercedes-sprinter-170-awd-camper-van-conversion/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/mercedes-sprinter-campervan/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 1784,
+        "title": "Aqua Adventure Van - Papago Vans",
+        "canonical": "/projects/mercedes-sprinter-campervan/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/modern-off-road-camper-van-dark-green-cabinets/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5888,
+        "title": "Off-Road Artisan - Papago Vans",
+        "canonical": "/projects/modern-off-road-camper-van-dark-green-cabinets/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/moonlit-meadow/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4907,
+        "title": "Moonlit Meadow - Papago Vans",
+        "canonical": "/projects/moonlit-meadow/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/nomad-nook/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4959,
+        "title": "Nomad Nook - Papago Vans",
+        "canonical": "/projects/nomad-nook/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/northwest-nest/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4668,
+        "title": "Northwest Nest - Papago Vans",
+        "canonical": "/projects/northwest-nest/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/obsidian-overlander-4x4-sprinter-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 10738,
+        "title": "Obsidian Overlander - Papago Vans",
+        "canonical": "/projects/obsidian-overlander-4x4-sprinter-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/overland-oasis/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5610,
+        "title": "Overland Oasis - Papago Vans",
+        "canonical": "/projects/overland-oasis/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/party-in-front/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 967,
+        "title": "Party in the Front, Shower in the Back - Papago Vans",
+        "canonical": "/projects/party-in-front/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/pearl-voyager/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4474,
+        "title": "Pearl Voyager - Papago Vans",
+        "canonical": "/projects/pearl-voyager/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/pet-friendly-pioneer/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 1779,
+        "title": "Pet-Friendly Pioneer - Papago Vans",
+        "canonical": "/projects/pet-friendly-pioneer/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/quad-quarters-camper-4peaks-package/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 1768,
+        "title": "Quad Quarters Camper (4Peaks Package) - Papago Vans",
+        "canonical": "/projects/quad-quarters-camper-4peaks-package/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/ram-promaster-campervan/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 3909,
+        "title": "Sunset Cruiser Van - Papago Vans",
+        "canonical": "/projects/ram-promaster-campervan/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/regal-rover/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4895,
+        "title": "Regal Rover - Papago Vans",
+        "canonical": "/projects/regal-rover/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/ridge-warden-custom-off-road-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 7059,
+        "title": "The Ridge Warden - Papago Vans",
+        "canonical": "/projects/ridge-warden-custom-off-road-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/rocky-rover/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5455,
+        "title": "Rocky Rover - Papago Vans",
+        "canonical": "/projects/rocky-rover/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/rollin-with-bodhi-custom-sprinter-van-build/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 19128,
+        "title": "Rollin' with Bodhi - Papago Vans",
+        "canonical": "/projects/rollin-with-bodhi-custom-sprinter-van-build/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/rooftop-rover/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4798,
+        "title": "Rooftop Rover - Papago Vans",
+        "canonical": "/projects/rooftop-rover/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/royal-retreat/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4925,
+        "title": "Royal Retreat - Papago Vans",
+        "canonical": "/projects/royal-retreat/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/sarracino/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 14150,
+        "title": "Desert Studio - Papago Vans",
+        "canonical": "/projects/sarracino/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/scoots-custom-sprinter-van-build/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 19225,
+        "title": "Scoots - Papago Vans",
+        "canonical": "/projects/scoots-custom-sprinter-van-build/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/serene-sleeper/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4848,
+        "title": "Serene Sleeper - Papago Vans",
+        "canonical": "/projects/serene-sleeper/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/shadowwood-voyager/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5563,
+        "title": "Shadowwood Voyager - Papago Vans",
+        "canonical": "/projects/shadowwood-voyager/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/simplicity-sprinter/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 1770,
+        "title": "Simplicity Sprinter - Papago Vans",
+        "canonical": "/projects/simplicity-sprinter/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/sprinter-170-awd-camper-van-pop-top-tent/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5754,
+        "title": "170 Sprinter AWD Camper Van with Pop-Top | Papago Vans",
+        "canonical": "/projects/sprinter-170-awd-camper-van-pop-top-tent/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/summit-ascend-custom-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 7029,
+        "title": "Summit Ascend - Papago Vans",
+        "canonical": "/projects/summit-ascend-custom-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/summit-overlander-custom-off-grid-camper/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 6014,
+        "title": "Summit Overlander - Papago Vans",
+        "canonical": "/projects/summit-overlander-custom-off-grid-camper/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/sweeney-van-mercedes-sprinter-170-awd-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 18969,
+        "title": "Canyon Pearl - Papago Vans",
+        "canonical": "/projects/sweeney-van-mercedes-sprinter-170-awd-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/tailgate-titan/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5626,
+        "title": "Tailgate Titan - Papago Vans",
+        "canonical": "/projects/tailgate-titan/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-arnold-ford-transit-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 15561,
+        "title": "Lemon Grove - Papago Vans",
+        "canonical": "/projects/the-arnold-ford-transit-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-aschbacher-mercedes-sprinter-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 14518,
+        "title": "Forest Glow - Papago Vans",
+        "canonical": "/projects/the-aschbacher-mercedes-sprinter-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-cozy-canine-cruiser/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5517,
+        "title": "Cozy Canine Cruiser - Papago Vans",
+        "canonical": "/projects/the-cozy-canine-cruiser/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-fife-sprinter-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 15571,
+        "title": "Regal Beagle - Papago Vans",
+        "canonical": "/projects/the-fife-sprinter-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-garner-sprinter-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 15211,
+        "title": "Soft Sky - Papago Vans",
+        "canonical": "/projects/the-garner-sprinter-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-hutchison-sprinter-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 15259,
+        "title": "Black Olive - Papago Vans",
+        "canonical": "/projects/the-hutchison-sprinter-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-king-van-ford-transit-camper-an/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 14830,
+        "title": "The Snowbird - Papago Vans",
+        "canonical": "/projects/the-king-van-ford-transit-camper-an/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-lacovino-sprinter-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 15235,
+        "title": "Honey Sky - Papago Vans",
+        "canonical": "/projects/the-lacovino-sprinter-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-laverty-sprinter-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 15293,
+        "title": "Rainy Retreat - Papago Vans",
+        "canonical": "/projects/the-laverty-sprinter-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-nixon-mercedes-sprinter-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 14640,
+        "title": "Coastal Slate - Papago Vans",
+        "canonical": "/projects/the-nixon-mercedes-sprinter-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-northrop-sprinter-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 15593,
+        "title": "Seaside Breeze - Papago Vans",
+        "canonical": "/projects/the-northrop-sprinter-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-offenhauser-mercedes-sprinter-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 14342,
+        "title": "Lilac Haven - Papago Vans",
+        "canonical": "/projects/the-offenhauser-mercedes-sprinter-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-offpost-mercedes-sprinter-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 10877,
+        "title": "The Offpost - Papago Vans",
+        "canonical": "/projects/the-offpost-mercedes-sprinter-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-remote-retreat/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5537,
+        "title": "Remote Retreat - Papago Vans",
+        "canonical": "/projects/the-remote-retreat/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-roving-bronco/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 6432,
+        "title": "Roving Bronco Van: Sprinter 170 AWD Build | Papago Vans",
+        "canonical": "/projects/the-roving-bronco/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-royal-van-sprinter-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 14976,
+        "title": "Verde Sol - Papago Vans",
+        "canonical": "/projects/the-royal-van-sprinter-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-ruff-traveler/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4840,
+        "title": "Ruff Traveler - Papago Vans",
+        "canonical": "/projects/the-ruff-traveler/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-sapphire-sojourner/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 1775,
+        "title": "The Sapphire Sojourner - Papago Vans",
+        "canonical": "/projects/the-sapphire-sojourner/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-sentinel-mercedes-sprinter-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 10852,
+        "title": "The Sentinel - Papago Vans",
+        "canonical": "/projects/the-sentinel-mercedes-sprinter-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-sunderland-mercedes-sprinter-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 14355,
+        "title": "Offroad Aquarium - Papago Vans",
+        "canonical": "/projects/the-sunderland-mercedes-sprinter-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-trout-trekker/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 989,
+        "title": "The Trout Trekker - Papago Vans",
+        "canonical": "/projects/the-trout-trekker/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/the-versatile-voyager/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 990,
+        "title": "The Versatile Voyager - Papago Vans",
+        "canonical": "/projects/the-versatile-voyager/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/timber-traveler/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5485,
+        "title": "Timber Traveler - Papago Vans",
+        "canonical": "/projects/timber-traveler/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/trail-trekker/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5456,
+        "title": "Trail Trekker - Papago Vans",
+        "canonical": "/projects/trail-trekker/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/valley-vista-voyager/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4816,
+        "title": "Valley Vista Voyager - Papago Vans",
+        "canonical": "/projects/valley-vista-voyager/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/veteran-voyager/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4656,
+        "title": "Veteran Voyager - Papago Vans",
+        "canonical": "/projects/veteran-voyager/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/waley-van-mercedes-sprinter-144-awd-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 18899,
+        "title": "Big Blue - Papago Vans",
+        "canonical": "/projects/waley-van-mercedes-sprinter-144-awd-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/white-peak-rover-4x4-sprinter-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 10761,
+        "title": "The White Peak Rover - Papago Vans",
+        "canonical": "/projects/white-peak-rover-4x4-sprinter-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/white-pine-voyager/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5810,
+        "title": "White Pine Voyager - Papago Vans",
+        "canonical": "/projects/white-pine-voyager/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/wien-van-ford-transit-148-ext-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 19028,
+        "title": "Alpine Paws - Papago Vans",
+        "canonical": "/projects/wien-van-ford-transit-148-ext-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/wild-wanderer/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 4873,
+        "title": "Wild Wanderer - Papago Vans",
+        "canonical": "/projects/wild-wanderer/",
+        "index": "index"
+      }
     },
     {
       "path": "/projects/young-van-mercedes-sprinter-144-awd-camper-van/",
       "type": "projects",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 18931,
+        "title": "Desert Lodge - Papago Vans",
+        "canonical": "/projects/young-van-mercedes-sprinter-144-awd-camper-van/",
+        "index": "index"
+      }
     },
     {
       "path": "/quiz/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 1980,
+        "title": "Build Tier Quiz - Papago Vans",
+        "canonical": "/quiz/",
+        "index": "index"
+      }
     },
     {
       "path": "/rainier-old/",
       "type": "page",
       "status": "redirect",
       "to": "/rainier/",
-      "note": "duplicate competing with its own live counterpart"
+      "note": "duplicate competing with its own live counterpart",
+      "seo": {
+        "wpId": 1538,
+        "title": "Rainier old Build Tier - Papago Vans",
+        "canonical": "/rainier-old/",
+        "index": "index"
+      }
     },
     {
       "path": "/rainier/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 11921,
+        "title": "Rainier Camper Van Build Tier | Papago Vans",
+        "canonical": "/rainier/",
+        "index": "index"
+      }
     },
     {
       "path": "/ram-promaster/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 11430,
+        "title": "Arizona Campervan Conversions - Papago Vans",
+        "canonical": "/ram-promaster/",
+        "index": "index"
+      }
     },
     {
       "path": "/service-department/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 1224,
+        "title": "Service Department - Papago Vans",
+        "canonical": "/service-department/",
+        "index": "index"
+      }
     },
     {
       "path": "/service-work-request/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 2234,
+        "title": "Service Work Request - Papago Vans",
+        "canonical": "/service-work-request/",
+        "index": "index"
+      }
     },
     {
       "path": "/terms-conditions/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 538,
+        "title": "Terms & Conditions - Papago Vans",
+        "canonical": "/terms-conditions/",
+        "index": "index"
+      }
     },
     {
       "path": "/test/",
       "type": "page",
       "status": "redirect",
       "to": "/",
-      "note": "scratch page, indexed by accident"
+      "note": "scratch page, indexed by accident",
+      "seo": {
+        "wpId": 7450,
+        "title": "Test - Papago Vans",
+        "canonical": "/test/",
+        "index": "index"
+      }
     },
     {
       "path": "/thank-you-2/",
       "type": "page",
       "status": "todo",
-      "note": "must ship noindex"
+      "note": "must ship noindex",
+      "seo": {
+        "wpId": 10460,
+        "title": "- Papago Vans",
+        "canonical": "/thank-you-2/",
+        "index": "index"
+      }
     },
     {
       "path": "/thank-you-landing-pages/",
       "type": "page",
       "status": "todo",
-      "note": "must ship noindex"
+      "note": "must ship noindex",
+      "seo": {
+        "wpId": 19268,
+        "title": "Thank you - Landing Pages - Papago Vans",
+        "canonical": "/thank-you-landing-pages/",
+        "index": "index"
+      }
     },
     {
       "path": "/thank-you-newsletter/",
       "type": "page",
       "status": "todo",
-      "note": "must ship noindex"
+      "note": "must ship noindex",
+      "seo": {
+        "wpId": 4600,
+        "title": "Thank You - Newsletter - Papago Vans",
+        "canonical": "/thank-you-newsletter/",
+        "index": "index"
+      }
     },
     {
       "path": "/thank-you-quiz-no-sale/",
       "type": "page",
       "status": "todo",
-      "note": "must ship noindex"
+      "note": "must ship noindex",
+      "seo": {
+        "wpId": 4744,
+        "title": "Thank you - Quiz - No Sale - Papago Vans",
+        "canonical": "/thank-you-quiz-no-sale/",
+        "index": "index"
+      }
     },
     {
       "path": "/thank-you-quiz/",
       "type": "page",
       "status": "todo",
-      "note": "must ship noindex"
+      "note": "must ship noindex",
+      "seo": {
+        "wpId": 3832,
+        "title": "Thank you - Quiz - Papago Vans",
+        "canonical": "/thank-you-quiz/",
+        "index": "index"
+      }
     },
     {
       "path": "/thank-you-service-work/",
       "type": "page",
       "status": "todo",
-      "note": "must ship noindex"
+      "note": "must ship noindex",
+      "seo": {
+        "wpId": 2438,
+        "title": "Thank you - Service Work - Papago Vans",
+        "canonical": "/thank-you-service-work/",
+        "index": "index"
+      }
     },
     {
       "path": "/thank-you/",
       "type": "page",
       "status": "todo",
-      "note": "must ship noindex"
+      "note": "must ship noindex",
+      "seo": {
+        "wpId": 524,
+        "title": "Thank you - Papago Vans",
+        "canonical": "/thank-you/",
+        "index": "index"
+      }
     },
     {
       "path": "/the-commandant-mercedes-170-build/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 10410,
+        "title": "The Commandant - Mercedes 170\" Build - Papago Vans",
+        "canonical": "/the-commandant-mercedes-170-build/",
+        "index": "index"
+      }
     },
     {
       "path": "/the-sentinel-mercedes-sprinter-144/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 8153,
+        "title": "The Sentinel - Mercedes 144\" Build - Papago Vans",
+        "canonical": "/the-sentinel-mercedes-sprinter-144/",
+        "index": "index"
+      }
     },
     {
       "path": "/van-conversion-build-tiers/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 407,
+        "title": "Van Conversion Build Tiers - Papago Vans",
+        "canonical": "/van-conversion-build-tiers/",
+        "index": "index"
+      }
     },
     {
       "path": "/van-life-build-gallery/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 974,
+        "title": "Van Life Build Gallery | Custom Campervan Interior Ideas",
+        "canonical": "/van-life-build-gallery/",
+        "index": "index"
+      }
     },
     {
       "path": "/which-adventure-van-style-fits-you-cloned-10193/",
       "type": "page",
       "status": "redirect",
       "to": "/which-adventure-van-style-fits-you/",
-      "note": "duplicate of the quiz"
+      "note": "duplicate of the quiz",
+      "seo": {
+        "wpId": 10241,
+        "title": "Which Adventure Van Style Fits You? - [Cloned #10193] - Papago Vans",
+        "canonical": "/which-adventure-van-style-fits-you-cloned-10193/",
+        "index": "index"
+      }
     },
     {
       "path": "/which-adventure-van-style-fits-you/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 10193,
+        "title": "Which Adventure Van Style Fits You? - Papago Vans",
+        "canonical": "/which-adventure-van-style-fits-you/",
+        "index": "index"
+      }
     },
     {
       "path": "/work-at-papago-vans/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 5272,
+        "title": "Work at Papago Vans - Papago Vans",
+        "canonical": "/work-at-papago-vans/",
+        "index": "index"
+      }
     },
     {
       "path": "/zion-old/",
       "type": "page",
       "status": "redirect",
       "to": "/zion/",
-      "note": "duplicate competing with its own live counterpart"
+      "note": "duplicate competing with its own live counterpart",
+      "seo": {
+        "wpId": 1542,
+        "title": "Zion old Build Tier - Papago Vans",
+        "canonical": "/zion-old/",
+        "index": "index"
+      }
     },
     {
       "path": "/zion/",
       "type": "page",
-      "status": "todo"
+      "status": "todo",
+      "seo": {
+        "wpId": 11881,
+        "title": "Zion Camper Van Build Tier | Papago Vans",
+        "canonical": "/zion/",
+        "index": "index"
+      }
     }
-  ]
+  ],
+  "enriched": "2026-09-24"
 }
