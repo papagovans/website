@@ -58,7 +58,12 @@ async function pullOne(slug) {
     const base = `${String(i).padStart(2, "0")}`;
     const meta = await sharp(buf).metadata();
     const variants = {};
-    for (const { w, suffix } of SIZES) {
+    /* Only the hero is ever displayed large. Grid thumbnails render around
+     * 380px wide, so the 800px copy already covers a 2x screen and the 1600px
+     * copy would be 2,000 files nobody downloads. Add lg back for the rest the
+     * day a lightbox exists. */
+    const sizes = i === 0 ? SIZES : SIZES.filter((s) => s.suffix === "md");
+    for (const { w, suffix } of sizes) {
       for (const fmt of ["avif", "webp"]) {
         const out = await sharp(buf).rotate().resize({ width: w, withoutEnlargement: true })
           [fmt](fmt === "avif" ? { quality: 55 } : { quality: 78 }).toBuffer();

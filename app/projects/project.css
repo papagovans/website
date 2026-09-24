@@ -6,49 +6,13 @@
  * wins, the losing blocks get deleted and nothing else changes.
  */
 
-/* --- A. Papago: the tokens already shipping on the homepage ------------- */
-:root,
-[data-theme="papago"] {
-	--pg-bg: #ffffff;
-	--pg-surface: #f8f8f8;
-	--pg-ink: #414042;
-	--pg-head: #303c47;
-	--pg-muted: #69727d;
-	--pg-line: #ededed;
-	--pg-accent: #303c47;
-	--pg-accent-ink: #f4d969;
-	--pg-radius: 30px;
-	--pg-radius-sm: 20px;
-	--pg-font: Prompt, sans-serif;
-	--pg-head-font: Prompt, sans-serif;
-	--pg-head-weight: 700;
-	--pg-head-transform: uppercase;
-	--pg-head-spacing: 0;
-	--pg-topo: block;
-}
-
-/* --- B. Geotrek: sampled from geotrekvans.com's own stylesheets --------- */
-[data-theme="geotrek"] {
-	--pg-bg: #f6f3ee;
-	--pg-surface: #e7e2d9;
-	--pg-ink: #343434;
-	--pg-head: #343434;
-	--pg-muted: #a19d95;
-	--pg-line: #e7e2d9;
-	--pg-accent: #ce5c08;
-	--pg-accent-ink: #ffffff;
-	--pg-radius: 4px;
-	--pg-radius-sm: 4px;
-	--pg-font: Inter, sans-serif;
-	--pg-head-font: Inter, sans-serif;
-	--pg-head-weight: 600;
-	--pg-head-transform: none;
-	--pg-head-spacing: -0.02em;
-	--pg-topo: none;
-}
-
-/* --- C. Hybrid: Geotrek's restraint, Papago's colours ------------------- */
-[data-theme="hybrid"] {
+/*
+ * Hybrid: Geotrek's restraint and warmth, Papago's colours. Chosen over a
+ * straight Geotrek port because their bone-and-orange pairing reads as theirs,
+ * and over the original Papago tokens because 30px radii and uppercase Prompt
+ * shout where these photographs should carry the page.
+ */
+:root {
 	--pg-bg: #fcfaf3;
 	--pg-surface: #f2ede1;
 	--pg-ink: #414042;
@@ -64,11 +28,8 @@
 	--pg-head-weight: 700;
 	--pg-head-transform: none;
 	--pg-head-spacing: -0.01em;
-	--pg-topo: none;
 }
 
-[data-theme] body { background: var(--pg-bg); color: var(--pg-ink); font-family: var(--pg-font); }
-[data-theme] body::before { display: var(--pg-topo); }
 
 .proj { font-family: var(--pg-font); color: var(--pg-ink); }
 .proj-hero { position: relative; margin-top: 12px; }
@@ -119,18 +80,3 @@
 	border-radius: var(--pg-radius-sm); padding: 14px 28px;
 	font-weight: 600; font-size: 15px; white-space: nowrap;
 }
-
-/* Theme switcher: development only, deleted once a direction is chosen. */
-.theme-switch {
-	position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%);
-	z-index: 50; display: flex; gap: 4px; padding: 5px;
-	background: rgba(20, 22, 25, 0.9); border-radius: 999px;
-	box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
-	font-family: Inter, system-ui, sans-serif;
-	backdrop-filter: blur(6px);
-}
-.theme-switch button {
-	border: 0; cursor: pointer; background: transparent; color: #c9cdd2;
-	padding: 8px 16px; border-radius: 999px; font-size: 13px; font-weight: 500;
-}
-.theme-switch button[data-on="true"] { background: #fff; color: #16181b; }
