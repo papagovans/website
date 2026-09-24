@@ -15,8 +15,9 @@
  * action), Van Platforms We Work With, and Custom Builds Real Stories (the
  * collage replaced it). Git history has all five if any need to come back.
  *
- * One open item is marked TODO below: the shop photography does not exist yet,
- * so Why Papago runs finished-van shots in its place.
+ * Why Papago leads on the one shop photograph either WordPress library holds.
+ * Everything else in both libraries is a finished van, so more shop and
+ * fabrication photography is worth shooting.
  */
 
 import { listProjectCards } from "@/lib/content";
@@ -148,9 +149,9 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Why Papago. TODO: the three images below are finished-van photography
-          standing in for shop and fabrication shots, which do not exist in
-          either WordPress media library. Replace before launch. */}
+      {/* Why Papago. The shop photograph is the only one of its kind in either
+          WordPress media library: everything else is finished vans. Worth more
+          shop and fabrication photography when someone has a camera in there. */}
       <section className="why">
         <div className="wrap why-inner">
           <div className="why-copy">
@@ -168,13 +169,31 @@ export default async function Home() {
             <a href="/bespoke/" className="btn btn-outline">Talk To A Designer <span className="arw">&#8853;</span></a>
           </div>
           <div className="why-shots">
-            {collage.slice(0, 3).map((c) => (
-              <picture key={c.slug}>
-                <source srcSet={c.thumb_avif} type="image/avif" />
+            <figure className="why-team">
+              <picture>
+                <source srcSet="/shop/team-lg.avif" type="image/avif" />
+                <source srcSet="/shop/team-lg.webp" type="image/webp" />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={c.thumb_webp} alt={c.alt} loading="lazy" decoding="async" />
+                <img
+                  src="/shop/team-lg.webp"
+                  alt="The Papago Vans crew in the Mesa shop, in front of a row of Sprinters under build"
+                  width={1600}
+                  height={843}
+                  loading="lazy"
+                  decoding="async"
+                />
               </picture>
-            ))}
+              <figcaption>The people who will build your van. Mesa, Arizona.</figcaption>
+            </figure>
+            <div className="why-pair">
+              {collage.slice(0, 2).map((c) => (
+                <picture key={c.slug}>
+                  <source srcSet={c.thumb_avif} type="image/avif" />
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={c.thumb_webp} alt={c.alt} width={c.w} height={c.h} loading="lazy" decoding="async" />
+                </picture>
+              ))}
+            </div>
           </div>
         </div>
       </section>

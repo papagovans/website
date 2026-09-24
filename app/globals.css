@@ -375,9 +375,14 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 .why-copy h2 { font-size: clamp(28px, 3.8vw, 44px); margin: 12px 0 20px; color: var(--footer); }
 .why-copy p { margin-bottom: 16px; font-size: 17px; line-height: 1.7; color: var(--muted); max-width: 520px; }
 .why-copy .btn { margin-top: 10px; }
-.why-shots { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 14px; height: 440px; }
-.why-shots picture:first-child { grid-row: span 2; }
-.why-shots img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--r-md); }
+/* The shop photograph leads, because it is the only one that shows the claim
+   the copy is making. The two beneath it are finished builds. */
+.why-shots { display: grid; gap: 14px; }
+.why-team { margin: 0; }
+.why-team img { width: 100%; height: auto; border-radius: var(--r-md); }
+.why-team figcaption { margin-top: 10px; font-size: 13px; color: var(--muted); }
+.why-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.why-pair img { width: 100%; height: 190px; object-fit: cover; border-radius: var(--r-md); }
 
 /* Photo collage, on the footer navy. */
 .collage { background: var(--footer); padding: 84px 0 0; margin-top: 24px; }
