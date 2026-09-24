@@ -83,7 +83,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 .main-nav { display: flex; gap: 34px; font-size: 15px; font-weight: 500; }
 .main-nav a:hover { color: var(--muted); }
 .header-actions { display: flex; align-items: center; gap: 16px; }
-.hamburger { width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 50%; background: var(--paper); display: grid; place-content: center; gap: 4px; cursor: pointer; }
+/* Hidden until the nav collapses, so the two never show at once. The width it
+   appears at is the same 1000px the nav disappears at, below. */
+.hamburger { display: none; width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 50%; background: var(--paper); place-content: center; gap: 4px; cursor: pointer; }
 .hamburger span { display: block; width: 16px; height: 2px; background: var(--ink); }
 
 /* Hero */
@@ -290,6 +292,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 @media (max-width: 1000px) {
 	.main-nav { display: none; }
+	.hamburger { display: grid; }
 	.buildapp-inner, .papago-inner, .process-inner { grid-template-columns: 1fr; }
 	.papago-card { margin-left: 0; margin-top: -30px; }
 	.builds-grid { grid-template-columns: 1fr; }
@@ -297,6 +300,17 @@ ul { margin: 0; padding: 0; list-style: none; }
 	.review-grid { grid-template-columns: 1fr; }
 	.footer-cols { grid-template-columns: repeat(2, 1fr); }
 	.step-row { grid-template-columns: 120px 1fr; }
+}
+/* Header on a phone: logo, then the one button worth tapping, then the menu.
+   The phone pill goes, because tel: is already the first thing in the menu and
+   three pills on a 375px row push the logo off the screen entirely. */
+@media (max-width: 720px) {
+	.hide-sm { display: none; }
+	.header-inner { gap: 10px; padding: 14px 0; }
+	.logo { flex: 0 0 auto; }
+	.logo img { width: 128px; height: auto; }
+	.header-actions { gap: 8px; }
+	.btn-expert { padding: 9px 14px; font-size: 13px; }
 }
 @media (max-width: 640px) {
 	.hero-inner { padding: 48px 4px; }
