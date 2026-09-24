@@ -125,10 +125,13 @@ export default async function Home() {
           </picture>
         </div>
         <div className="wrap hero-full-inner">
-          <h1>Camper Vans<br />Built To Explore</h1>
+          {/* The photograph already shows a family at a fire, so the line does not
+              describe it. It says the thing the picture cannot: that all of them
+              fit, and that the van is what ends the procrastinating. */}
+          <h1>Bring Everyone.<br />Go Anywhere.</h1>
           <p>
-            From weekend escapes to full-range adventures, Papago Vans delivers rugged,
-            high-performance conversions ready for any terrain.
+            Hand built in Mesa, Arizona. Sleeps four, handles the dirt road, and turns
+            the trip you keep talking about into one you take.
           </p>
           <div className="hero-full-ctas">
             <a href="#two-ways" className="btn btn-gold">Start Your Build <span className="arw">&#8853;</span></a>
