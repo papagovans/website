@@ -331,18 +331,21 @@ export default async function Home() {
       </section>
 
       <section className="journey">
-        <div className="wrap journey-inner">
-          <h2>Your Van Journey Starts Here</h2>
-          <p>
-            Fifteen minutes on the phone will tell you more than a week of reading. Pick a
-            time that suits you and we will talk through what you actually need.
-          </p>
-          <a href={CALENDAR_URL} target="_blank" rel="noopener" className="btn btn-gold">
-            Schedule A Call <span className="arw">&#8853;</span>
-          </a>
-          <p className="journey-alt">
-            Or call <a href="tel:+16023460331">+1 602-346-0331</a> and talk to someone now.
-          </p>
+        <div className="wrap">
+          <div className="journey-inner">
+            <p className="journey-eyebrow">Next Step</p>
+            <h2>Your Van Journey Starts Here</h2>
+            <p>
+              Fifteen minutes on the phone will tell you more than a week of reading. Pick
+              a time that suits you and we will talk through what you actually need.
+            </p>
+            <a href={CALENDAR_URL} target="_blank" rel="noopener" className="btn btn-gold">
+              Schedule A Call <span className="arw">&#8853;</span>
+            </a>
+            <p className="journey-alt">
+              Or call <a href="tel:+16023460331">+1 602-346-0331</a> and talk to someone now.
+            </p>
+          </div>
         </div>
       </section>
     </>

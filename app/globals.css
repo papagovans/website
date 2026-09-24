@@ -469,9 +469,23 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 .collage-feature:hover img,
 .collage-feature-2:hover img { opacity: 0.82; }
 
-/* Your van journey starts here. */
-.journey { padding: 88px 0 96px; text-align: center; }
-.journey-inner h2 { font-size: clamp(28px, 4vw, 46px); color: var(--footer); }
-.journey-inner > p { margin: 18px auto 30px; max-width: 540px; font-size: 17px; line-height: 1.65; color: var(--muted); }
-.journey-alt { margin-top: 20px; font-size: 15px; color: var(--muted); }
+/* Your van journey starts here.
+   The closing call to action, so it sits on a panel rather than as loose
+   centred text. Same surface, border and radius the Bespoke price block and
+   the project page CTA already use. */
+.journey { padding: 8px 0 88px; }
+.journey-inner {
+	background: var(--soft);
+	border: 1px solid var(--line);
+	border-radius: var(--r-lg);
+	padding: clamp(48px, 7vw, 76px) 32px;
+	text-align: center;
+}
+.journey-eyebrow {
+	font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+	color: var(--muted); font-weight: 600;
+}
+.journey-inner h2 { margin-top: 12px; font-size: clamp(28px, 4vw, 46px); color: var(--footer); }
+.journey-inner > p { margin: 18px auto 32px; max-width: 540px; font-size: 17px; line-height: 1.65; color: var(--muted); }
+.journey-alt { margin-top: 22px; font-size: 15px; color: var(--muted); }
 .journey-alt a { font-weight: 600; color: var(--footer); text-decoration: underline; }
