@@ -23,7 +23,7 @@
 import { listProjectCards } from "@/lib/content";
 
 const BUILD_APP = "https://build.papagovans.com";
-const CALENDAR_URL = "https://calendly.com/jeremy-papagovans/30min";
+const CALENDAR_URL = "https://calendly.com/jeremy-papago/30min";
 const COLLAGE_COUNT = 24;
 
 const builds = [
