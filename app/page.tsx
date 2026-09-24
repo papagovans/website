@@ -254,6 +254,21 @@ export default async function Home() {
                 />
               </picture>
             </div>
+            <div className="collage-feature-2">
+              <picture>
+                <source srcSet="/home/collage-feature-2.avif" type="image/avif" />
+                <source srcSet="/home/collage-feature-2.webp" type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/home/collage-feature-2.webp"
+                  alt="A couple sitting at the swivel-seat table of a Papago van, coffee in hand, side door open"
+                  width={1200}
+                  height={799}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </div>
           {collage.map((c) => (
             <a className="collage-cell" href={c.path} key={c.slug}>
               <picture>
