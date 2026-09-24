@@ -304,3 +304,86 @@ ul { margin: 0; padding: 0; list-style: none; }
 	.buildapp-copy { padding: 38px 26px; }
 	.story { flex-basis: 280px; }
 }
+
+/* ==========================================================================
+   Home page layout, owner's order set 2026-09-24.
+   ========================================================================== */
+
+/* Home is the only page with a full-bleed hero, so the header floats on it
+   there and stays solid everywhere else. :has() keeps that decision in CSS
+   rather than threading a prop from the page through the shared layout. */
+body:has(.hero-full) .site-header {
+	position: absolute; inset: 0 0 auto; z-index: 60;
+	background: transparent; border-bottom: 0;
+}
+body:has(.hero-full) .site-header .main-nav a { color: #fff; }
+body:has(.hero-full) .site-header .main-nav a:hover { color: rgba(255,255,255,0.72); }
+/* The logo is a dark SVG. Forcing it white beats shipping a second file. */
+body:has(.hero-full) .site-header .logo img { filter: brightness(0) invert(1); }
+/* The phone pill is gold-on-ink by default, which disappears against sky. */
+body:has(.hero-full) .site-header .btn-outline { border-color: rgba(255,255,255,0.6); color: #fff; }
+body:has(.hero-full) .site-header .btn-outline:hover { background: #fff; color: var(--ink); }
+body:has(.hero-full) .hamburger { background: transparent; border-color: rgba(255,255,255,0.5); }
+body:has(.hero-full) .hamburger span { background: #fff; }
+
+.btn-expert { background: var(--gold); color: var(--ink); border-radius: 999px; }
+.btn-expert:hover { background: var(--gold-deep); }
+
+/* Hero: full viewport. svh rather than vh so mobile browser chrome does not
+   push the CTAs below the fold. */
+.hero-full { position: relative; min-height: 100svh; display: flex; align-items: center; overflow: hidden; }
+.hero-full .hero-media { position: absolute; inset: 0; }
+.hero-full .hero-media img { width: 100%; height: 100%; object-fit: cover; }
+.hero-full .hero-media::after {
+	content: ""; position: absolute; inset: 0;
+	background: linear-gradient(180deg, rgba(18,20,22,0.62) 0%, rgba(18,20,22,0.28) 42%, rgba(18,20,22,0.66) 100%);
+}
+.hero-full-inner { position: relative; color: #fff; padding-top: 72px; }
+.hero-full-inner h1 { font-size: clamp(38px, 7vw, 76px); line-height: 1.02; }
+.hero-full-inner p { margin-top: 22px; max-width: 560px; font-size: clamp(17px, 2vw, 21px); line-height: 1.5; font-weight: 500; }
+.hero-full-ctas { margin-top: 34px; display: flex; flex-wrap: wrap; gap: 14px; }
+.btn-ghost { border: 1.5px solid rgba(255,255,255,0.75); color: #fff; background: transparent; }
+.btn-ghost:hover { background: #fff; color: var(--ink); border-color: #fff; }
+
+/* Two ways to build, on Geotrek's bone palette. */
+.paths { background: #f6f3ee; padding: 84px 0 88px; scroll-margin-top: 0; }
+.paths .section-title, .paths .path-name, .paths .path-timing { color: #343434; }
+.paths .section-lede { color: #6f6b64; }
+.paths .path-card { background: #fff; border-color: #e7e2d9; }
+.paths .path-card.is-featured { background: #fff; border-color: var(--gold); }
+.paths .path-copy { color: #6f6b64; }
+
+/* Why Papago. */
+.why { padding: 88px 0; }
+.why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+@media (max-width: 860px) { .why-inner { grid-template-columns: 1fr; gap: 36px; } }
+.why-eyebrow { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.why-copy h2 { font-size: clamp(28px, 3.8vw, 44px); margin: 12px 0 20px; color: var(--footer); }
+.why-copy p { margin-bottom: 16px; font-size: 17px; line-height: 1.7; color: var(--muted); max-width: 520px; }
+.why-copy .btn { margin-top: 10px; }
+.why-shots { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 14px; height: 440px; }
+.why-shots picture:first-child { grid-row: span 2; }
+.why-shots img { width: 100%; height: 100%; object-fit: cover; border-radius: var(--r-md); }
+
+/* Photo collage, on the footer navy. */
+.collage { background: var(--footer); padding: 84px 0 0; margin-top: 24px; }
+.collage-head { text-align: center; color: #fff; padding-bottom: 48px; }
+.collage-head h2 { font-size: clamp(28px, 4vw, 46px); }
+.collage-head p { margin: 16px auto 28px; max-width: 560px; color: rgba(255,255,255,0.72); font-size: 17px; line-height: 1.6; }
+.collage-grid {
+	display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px;
+	padding: 0 10px 10px;
+}
+@media (max-width: 900px) { .collage-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .collage-grid { grid-template-columns: repeat(2, 1fr); } }
+.collage-cell img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 3; border-radius: 6px; transition: 0.2s ease; }
+/* Two cells run tall so the wall reads as a collage rather than a table. */
+.collage-cell:nth-child(3) img, .collage-cell:nth-child(10) img { aspect-ratio: 4 / 5; }
+.collage-cell:hover img { opacity: 0.82; }
+
+/* Your van journey starts here. */
+.journey { padding: 88px 0 96px; text-align: center; }
+.journey-inner h2 { font-size: clamp(28px, 4vw, 46px); color: var(--footer); }
+.journey-inner > p { margin: 18px auto 30px; max-width: 540px; font-size: 17px; line-height: 1.65; color: var(--muted); }
+.journey-alt { margin-top: 20px; font-size: 15px; color: var(--muted); }
+.journey-alt a { font-weight: 600; color: var(--footer); text-decoration: underline; }

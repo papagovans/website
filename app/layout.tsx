@@ -55,7 +55,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <a href="#">View Recent Builds</a>
             </nav>
             <div className="header-actions">
-              <a href="#" className="btn btn-outline btn-sm">Call Now: {PHONE}</a>
+              <a href="/bespoke/" className="btn btn-expert btn-sm">
+                Talk To An Expert <span className="arw">&#8853;</span>
+              </a>
+              <a href={`tel:${PHONE.replace(/[^\d+]/g, "")}`} className="btn btn-outline btn-sm hide-sm">
+                {PHONE}
+              </a>
               <button className="hamburger" aria-label="Menu"><span /><span /><span /></button>
             </div>
           </div>
