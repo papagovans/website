@@ -28,9 +28,10 @@ const nextConfig: NextConfig = {
       .map((u) => ({
         source: u.path.replace(/\/$/, ""),
         destination: u.to!,
-        // 301. These are permanent: the old URL is never coming back, and we
-        // want the authority to move rather than be lent.
-        permanent: true,
+        // 301, set explicitly. Next's `permanent: true` emits 308, which Google
+        // treats identically, but every SEO tool and auditor looks for a 301.
+        // No reason to make anyone wonder.
+        statusCode: 301,
       }));
   },
 
