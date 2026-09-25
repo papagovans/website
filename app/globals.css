@@ -414,11 +414,17 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 .scene-copy p + p { margin-top: 14px; }
 .scene-copy p:not(.scene-eyebrow):not(.scene-sub) { font-size: 17px; line-height: 1.7; color: var(--muted); max-width: 540px; }
 
+/* A real photo sizes itself off its own dimensions, so the two scenes can carry
+   different crops without either being letterboxed. Only the placeholder needs
+   a ratio, and it borrows 3:2 from the photography that is already in. */
+.scene-shot { display: block; }
+.scene-shot img { width: 100%; height: auto; border-radius: var(--r-lg); }
+
 /* Placeholder, not art. It prints the filename it is waiting for so the photo
-   can be dropped in without anyone reading the source. Replace the div with a
-   <picture> and delete these three rules. */
-.scene-shot {
-	aspect-ratio: 4 / 3;
+   can be dropped in without anyone reading the source. Delete .is-empty and
+   the two label rules once both scenes have their photograph. */
+.scene-shot.is-empty {
+	aspect-ratio: 3 / 2;
 	border: 1px dashed var(--line);
 	border-radius: var(--r-lg);
 	background: var(--soft);

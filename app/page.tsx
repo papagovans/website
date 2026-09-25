@@ -82,8 +82,10 @@ const scenes = [
       "Bikes, skis and wet gear live in the garage under the bed, locked and drying, not strapped to a rack in the weather. The bed stayed made from the last trip.",
       "Lithium power, real heat and enough water for a hot shower after the ride mean days without a hookup. The snow and the trail set the plan, not the nearest campground with a plug.",
     ],
-    shot: "/home/scene-trailhead.webp",
-    alt: "Placeholder: owner at the trailhead, gear coming out of the rear garage at first light",
+    shot: "/home/scene-trailhead",
+    w: 1200,
+    h: 799,
+    alt: "A couple at a trailhead beside their Sprinter, rear doors open on a made bed, packs and boots on the ground",
   },
   {
     id: "open-calendar",
@@ -96,8 +98,8 @@ const scenes = [
       "A real bathroom and a hot shower. Heat and air that run without plugging into anything, so a cold morning in Utah and an August afternoon in Texas are both fine. Dinner cooked on your own counter instead of found off an exit ramp.",
       "Drawers that stay shut on the highway hold a week of clothes, the chairs and the dog's bed. Chairs out at a park you did not reserve a year ago, or your daughter's driveway with your own guest room attached.",
     ],
-    shot: "/home/scene-open-calendar.webp",
-    alt: "Placeholder: couple with chairs out beside the van, late afternoon, somewhere they stopped",
+    shot: "/home/scene-open-calendar",
+    alt: "Placeholder: cooking in the galley with the slider open on the trees",
   },
 ];
 
@@ -246,13 +248,29 @@ export default async function Home() {
       {scenes.map((s) => (
         <section className={s.flip ? "scene is-flipped" : "scene"} id={s.id} key={s.id}>
           <div className="wrap scene-inner">
-            <div className="scene-shot">
-              <span className="scene-shot-label">
-                Image placeholder
-                <em>{s.shot}</em>
-                {s.alt.replace(/^Placeholder: /, "")}
-              </span>
-            </div>
+            {s.w ? (
+              <picture className="scene-shot">
+                <source srcSet={`${s.shot}.avif`} type="image/avif" />
+                <source srcSet={`${s.shot}.webp`} type="image/webp" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`${s.shot}.webp`}
+                  alt={s.alt}
+                  width={s.w}
+                  height={s.h}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            ) : (
+              <div className="scene-shot is-empty">
+                <span className="scene-shot-label">
+                  Image placeholder
+                  <em>{s.shot}.webp</em>
+                  {s.alt.replace(/^Placeholder: /, "")}
+                </span>
+              </div>
+            )}
             <div className="scene-copy">
               <p className="scene-eyebrow">{s.eyebrow}</p>
               <h2>{s.title}</h2>
