@@ -70,6 +70,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <section className="keep-in-touch">
           <div className="wrap kit-inner">
+            <p className="kit-eyebrow">Newsletter</p>
             <h2>Let&rsquo;s Keep In Touch</h2>
             <p>Stay informed about our latest sale offers, upgrades and models.</p>
             <a href="#" className="btn btn-gold">Get Started <span className="arw">&#8853;</span></a>

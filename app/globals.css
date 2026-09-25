@@ -269,15 +269,24 @@ ul { margin: 0; padding: 0; list-style: none; }
    the site; every other section is flat white. */
 .keep-in-touch { margin: 72px auto 0; width: min(1200px, 100% - 48px); }
 .kit-inner {
-	background: #fbfbfb url("/home/CTA.webp") center / cover no-repeat;
+	/* multiply rather than a flat colour: CTA.webp is a near-white topographic
+	   texture, and laying it straight on cream washed the contours out. Blended
+	   against the warm surface it keeps the lines and loses the cold cast. */
+	background: var(--soft) url("/home/CTA.webp") center / cover no-repeat;
+	background-blend-mode: multiply;
+	border: 1px solid var(--line);
 	border-radius: var(--r-lg); text-align: center;
 	/* Deep bottom pad so the footer's peak can overlap into the band, the way
 	   staging does it. Pairs with the footer's negative top margin below. */
 	padding: 100px 24px clamp(150px, 18vw, 270px);
 	display: flex; flex-direction: column; align-items: center; gap: 14px;
 }
-.kit-inner h2 { font-size: clamp(30px, 4vw, 46px); }
-.kit-inner p { color: var(--muted); font-size: 15px; }
+.kit-eyebrow {
+	font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+	color: var(--muted); font-weight: 600;
+}
+.kit-inner h2 { font-size: clamp(30px, 4vw, 46px); color: var(--footer); }
+.kit-inner > p:not(.kit-eyebrow) { color: var(--muted); font-size: 16px; max-width: 460px; }
 .kit-inner .btn { margin-top: 12px; }
 
 /* Footer.
