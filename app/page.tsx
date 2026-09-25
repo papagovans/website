@@ -409,14 +409,30 @@ export default async function Home() {
             Hear from our community of solo travelers, couples and families on how
             Papago Vans helped them create a life on the move.
           </p>
-          <div className="review-grid">
-            {reviews.map((r) => (
-              <blockquote className="review" key={r.name}>
-                <Stars />
-                <p>{r.quote}</p>
-                <cite>{r.name}</cite>
-              </blockquote>
-            ))}
+        </div>
+        {/* One marquee row instead of a three-column wall. The list is rendered
+            twice into a single track, and the animation shifts the track by
+            exactly half its width, so the second copy is sitting where the
+            first was when it restarts and the loop has no seam.
+
+            The duplicate is aria-hidden: a screen reader reads nine reviews,
+            not eighteen. The row is outside .wrap so the cards run to both
+            edges and the mask fades them rather than cutting them off. */}
+        <div className="review-row">
+          <div className="review-track">
+            {[0, 1].map((copy) =>
+              reviews.map((r) => (
+                <blockquote
+                  className="review"
+                  key={`${copy}-${r.name}`}
+                  aria-hidden={copy === 1 || undefined}
+                >
+                  <Stars />
+                  <p>{r.quote}</p>
+                  <cite>{r.name}</cite>
+                </blockquote>
+              )),
+            )}
           </div>
         </div>
       </section>

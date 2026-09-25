@@ -238,27 +238,67 @@ ul { margin: 0; padding: 0; list-style: none; }
    CSS columns rather than a grid: these quotes run from fifteen words to
    fifty, and a grid would stretch every card to the height of the longest one
    in its row. Columns let each card be exactly as tall as its quote. */
-.reviews { padding: 84px 0 92px; }
+.reviews { padding: 56px 0 60px; }
 .reviews .section-title, .reviews .section-lede { text-align: center; }
 .reviews .section-lede { margin: 16px auto 0; max-width: 560px; }
-.review-grid { columns: 3; column-gap: 20px; margin-top: 46px; }
-@media (max-width: 1000px) { .review-grid { columns: 2; } }
-@media (max-width: 680px)  { .review-grid { columns: 1; } }
+
+/* The row masks its own edges instead of clipping them, so a card entering or
+   leaving fades rather than being sliced by an invisible line. */
+.review-row {
+	margin-top: 32px;
+	overflow: hidden;
+	-webkit-mask-image: linear-gradient(90deg, transparent, #000 90px, #000 calc(100% - 90px), transparent);
+	mask-image: linear-gradient(90deg, transparent, #000 90px, #000 calc(100% - 90px), transparent);
+}
+.review-track {
+	display: flex;
+	width: max-content;
+	animation: review-marquee 70s linear infinite;
+}
+/* Hovering stops it, so a quote someone started reading does not walk away. */
+.review-row:hover .review-track,
+.review-row:focus-within .review-track { animation-play-state: paused; }
+
+/* Exactly half the track is one full copy of the list, trailing margin
+   included, which is why the spacing is a margin on the card and not a gap on
+   the track. A gap would leave the last card short by half a gap and the loop
+   would visibly jump every lap. */
+@keyframes review-marquee {
+	from { transform: translateX(0); }
+	to   { transform: translateX(-50%); }
+}
 
 .review {
-	margin: 0 0 20px;
-	break-inside: avoid;
+	flex: 0 0 340px;
+	margin: 0 20px 0 0;
 	background: var(--paper);
 	border: 1px solid var(--line);
 	border-radius: var(--r-md);
-	padding: 26px 24px;
+	padding: 22px 22px;
+}
+
+/* 90px of fade is most of a phone's gutter, so the edges pull in on small
+   screens rather than eating the card behind them. */
+@media (max-width: 680px) {
+	.review-row {
+		-webkit-mask-image: linear-gradient(90deg, transparent, #000 32px, #000 calc(100% - 32px), transparent);
+		mask-image: linear-gradient(90deg, transparent, #000 32px, #000 calc(100% - 32px), transparent);
+	}
+	.review { flex-basis: 300px; }
+}
+
+/* Motion off: the row becomes an ordinary horizontal scroller, so every review
+   is still reachable. */
+@media (prefers-reduced-motion: reduce) {
+	.review-track { animation: none; }
+	.review-row { overflow-x: auto; }
 }
 /* 16px, not the 14 this ran at. These are the only words on the page written
    by a customer rather than by us, so they get read at a readable size and in
    ink rather than muted grey. */
-.review p { margin-top: 14px; font-size: 16px; line-height: 1.6; color: var(--ink); }
+.review p { margin-top: 12px; font-size: 15px; line-height: 1.6; color: var(--ink); }
 .review cite {
-	display: block; margin-top: 16px; font-style: normal;
+	display: block; margin-top: 14px; font-style: normal;
 	font-weight: 600; font-size: 14px; color: var(--footer);
 }
 .stars { display: flex; gap: 3px; }
