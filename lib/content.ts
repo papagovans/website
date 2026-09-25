@@ -81,3 +81,36 @@ export async function listProjectCards(): Promise<ProjectCard[]> {
     }))
     .sort((a, b) => a.title.localeCompare(b.title));
 }
+
+export type Page = {
+  type: "posts" | "pages";
+  slug: string;
+  path: string;
+  title: string;
+  date: string | null;
+  seoTitle: string | null;
+  description: string;
+  /* Sanitised HTML: semantic tags only, every attribute stripped except href
+   * and the image trio. Safe to render, and the extractor is the only writer. */
+  body: string;
+};
+
+const PAGE_DIR = join(process.cwd(), "content", "pages");
+
+export async function getPage(slug: string): Promise<Page | null> {
+  try {
+    return JSON.parse(await readFile(join(PAGE_DIR, `${slug}.json`), "utf8"));
+  } catch {
+    return null;
+  }
+}
+
+export async function listPages(type?: "posts" | "pages"): Promise<Page[]> {
+  const files = await readdir(PAGE_DIR).catch(() => [] as string[]);
+  const docs = await Promise.all(
+    files.filter((f) => f.endsWith(".json")).map((f) => getPage(f.replace(/\.json$/, ""))),
+  );
+  return docs
+    .filter((p): p is Page => !!p && (!type || p.type === type))
+    .sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""));
+}

@@ -23,7 +23,7 @@
     {
       "path": "/about-us/",
       "type": "page",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 335,
         "title": "About Papago Vans | Arizona Custom Campervan Builders",
@@ -67,7 +67,7 @@
     {
       "path": "/blog/best-camper-van-layouts-travel-vanlife/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 8324,
         "title": "Best Camper Van Layouts & Floor Plans for Van Life",
@@ -100,7 +100,7 @@
     {
       "path": "/blog/custom-camper-van-build-cost-2025-guide/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 6465,
         "title": "How Much Does a Custom Camper Van Cost? 2026 Price Guide",
@@ -176,7 +176,7 @@
     {
       "path": "/blog/is-the-ram-promaster-the-best-van-for-tall-people/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 4594,
         "title": "Best Van for Tall People: ProMaster vs Sprinter vs Transit",
@@ -210,7 +210,7 @@
     {
       "path": "/blog/rvia-certification-campgrounds-benefits/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 8529,
         "title": "RVIA Certified: What the RVIA Seal Means for Your Van",
@@ -413,7 +413,7 @@
     {
       "path": "/el-capitan-luxury-van-build/",
       "type": "page",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 11698,
         "title": "El Capitan Luxury Van Conversion Tier | Papago Vans",
@@ -437,7 +437,7 @@
     {
       "path": "/faq/",
       "type": "page",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 798,
         "title": "FAQ - Papago Vans",
@@ -2144,7 +2144,7 @@
     {
       "path": "/zion/",
       "type": "page",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 11881,
         "title": "Zion Camper Van Build Tier | Papago Vans",
