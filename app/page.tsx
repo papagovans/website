@@ -59,6 +59,48 @@ const builds = [
  * starts from nothing. Everything else, the price and the timeline included,
  * falls out of that one difference, which is why the cards lead with it.
  */
+/* Picture the experience. Two scenes, one per buyer, in the order the owner
+   ranked them: the trailhead buyer first, the open-calendar buyer second.
+   Alternating sides, so the page does not read as two of the same block.
+
+   Vocabulary is deliberate and comes from the avatar work. Scene one may say
+   trailhead, garage, gear and days without a hookup, and may not say luxury,
+   vanlife or glamping. Scene two may say your own bed, real bathroom, heat and
+   air and on your schedule, and may not say off-grid, boondocking, rugged or
+   anything that reads as old. Rewrite the copy, not the rules. */
+const scenes = [
+  {
+    id: "trailhead",
+    /* The two eyebrows are different on purpose, and they carry the real
+       difference between the buyers: one goes out for a weekend, the other
+       for a month. Two identical eyebrows 400px apart read as a mistake. */
+    eyebrow: "A Weekend In Yours",
+    title: "Wake Up At The Trailhead",
+    sub: "Built around the gear you already own.",
+    body: [
+      "Coffee on the burner while it is still grey outside, parked where you want to be instead of a hotel forty minutes down the valley.",
+      "Bikes, skis and wet gear live in the garage under the bed, locked and drying, not strapped to a rack in the weather. The bed stayed made from the last trip.",
+      "Lithium power, real heat and enough water for a hot shower after the ride mean days without a hookup. The snow and the trail set the plan, not the nearest campground with a plug.",
+    ],
+    shot: "/home/scene-trailhead.webp",
+    alt: "Placeholder: owner at the trailhead, gear coming out of the rear garage at first light",
+  },
+  {
+    id: "open-calendar",
+    flip: true,
+    eyebrow: "A Month In Yours",
+    title: "Leave Tuesday. Come Back When You Feel Like It.",
+    sub: "Your own bed and your own bathroom, parked wherever you stopped.",
+    body: [
+      "It is about the length of a crew-cab pickup and drives like one, so a long day on the interstate is just a long day. Pull in where you stopped. The bed is already made and never folds away.",
+      "A real bathroom and a hot shower. Heat and air that run without plugging into anything, so a cold morning in Utah and an August afternoon in Texas are both fine. Dinner cooked on your own counter instead of found off an exit ramp.",
+      "Drawers that stay shut on the highway hold a week of clothes, the chairs and the dog's bed. Chairs out at a park you did not reserve a year ago, or your daughter's driveway with your own guest room attached.",
+    ],
+    shot: "/home/scene-open-calendar.webp",
+    alt: "Placeholder: couple with chairs out beside the van, late afternoon, somewhere they stopped",
+  },
+];
+
 const paths = [
   {
     name: "Tailored",
@@ -197,6 +239,31 @@ export default async function Home() {
           </div>
         </div>
       </section>
+
+      {/* Picture the experience: one scene per buyer. Image placeholders until
+          the owner supplies photography; the file each one expects is printed
+          on the placeholder so the drop-in is unambiguous. */}
+      {scenes.map((s) => (
+        <section className={s.flip ? "scene is-flipped" : "scene"} id={s.id} key={s.id}>
+          <div className="wrap scene-inner">
+            <div className="scene-shot">
+              <span className="scene-shot-label">
+                Image placeholder
+                <em>{s.shot}</em>
+                {s.alt.replace(/^Placeholder: /, "")}
+              </span>
+            </div>
+            <div className="scene-copy">
+              <p className="scene-eyebrow">{s.eyebrow}</p>
+              <h2>{s.title}</h2>
+              <p className="scene-sub">{s.sub}</p>
+              {s.body.map((para) => (
+                <p key={para}>{para}</p>
+              ))}
+            </div>
+          </div>
+        </section>
+      ))}
 
       {/* Why Papago. The shop photograph is the only one of its kind in either
           WordPress media library: everything else is finished vans. Worth more
