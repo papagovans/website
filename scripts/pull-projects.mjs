@@ -42,12 +42,18 @@ async function pullOne(slug) {
   const [post] = await json(`${LIVE}/wp-json/wp/v2/projects?slug=${slug}&_fields=id,slug,title,link,content,excerpt,featured_media,date`);
   if (!post) return console.log(`  ${slug}: not found`);
 
+  /* The URL is the identity, not the WordPress slug. One project in 114 has a
+   * permalink that disagrees with its slug, and keying on the slug would have
+   * published it at a path nobody links to. */
+  const path = new URL(post.link).pathname;
+  const urlSlug = path.replace(/^\/projects\//, "").replace(/\/$/, "") || slug;
+
   const media = await json(`${LIVE}/wp-json/wp/v2/media?parent=${post.id}&per_page=100&_fields=id,source_url,alt_text,media_details,mime_type`);
   const imgs = media.filter((m) => /^image\//.test(m.mime_type ?? ""));
   /* Featured first, then the shot order the shop uploaded in. */
   imgs.sort((a, b) => (b.id === post.featured_media) - (a.id === post.featured_media));
 
-  const dir = new URL(`${slug}/`, OUT_IMG);
+  const dir = new URL(`${urlSlug}/`, OUT_IMG);
   await mkdir(dir, { recursive: true });
 
   let srcBytes = 0, outBytes = 0;
@@ -69,7 +75,7 @@ async function pullOne(slug) {
           [fmt](fmt === "avif" ? { quality: 55 } : { quality: 78 }).toBuffer();
         await writeFile(new URL(`${base}-${suffix}.${fmt}`, dir), out);
         outBytes += out.length;
-        variants[`${suffix}_${fmt}`] = `/projects/${slug}/${base}-${suffix}.${fmt}`;
+        variants[`${suffix}_${fmt}`] = `/projects/${urlSlug}/${base}-${suffix}.${fmt}`;
       }
     }
     gallery.push({
@@ -85,7 +91,7 @@ async function pullOne(slug) {
     .filter((p) => p.length > 60);
 
   const doc = {
-    slug, path: new URL(post.link).pathname,
+    slug: urlSlug, path,
     title: clean(post.title?.rendered),
     date: post.date?.slice(0, 10) ?? null,
     excerpt: clean((post.excerpt?.rendered ?? "").replace(/<[^>]+>/g, "")).slice(0, 220),
@@ -93,10 +99,10 @@ async function pullOne(slug) {
     gallery,
   };
   await mkdir(OUT_DOC, { recursive: true });
-  await writeFile(new URL(`${slug}.json`, OUT_DOC), JSON.stringify(doc, null, 2) + "\n");
+  await writeFile(new URL(`${urlSlug}.json`, OUT_DOC), JSON.stringify(doc, null, 2) + "\n");
 
   const pct = srcBytes ? (100 - (outBytes / srcBytes) * 100).toFixed(1) : "0";
-  console.log(`  ${slug.padEnd(28)} ${String(imgs.length).padStart(3)} imgs  ${(srcBytes/1048576).toFixed(1).padStart(5)} MB -> ${(outBytes/1048576).toFixed(2).padStart(5)} MB  (-${pct}%)  ${paras.length} paras`);
+  console.log(`  ${urlSlug.padEnd(28)} ${String(imgs.length).padStart(3)} imgs  ${(srcBytes/1048576).toFixed(1).padStart(5)} MB -> ${(outBytes/1048576).toFixed(2).padStart(5)} MB  (-${pct}%)  ${paras.length} paras`);
 }
 
 let slugs = process.argv.slice(2);

@@ -34,7 +34,7 @@
     {
       "path": "/blog/",
       "type": "page",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 872,
         "title": "Van Life Blogs | Conversion Tips, Travel & Gear Reviews",
@@ -45,7 +45,7 @@
     {
       "path": "/blog/6-reasons-to-use-havelock-wool-in-a-van-conversion/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 2698,
         "title": "Havelock Wool Van Insulation: 6 Reasons to Use It",
@@ -56,7 +56,7 @@
     {
       "path": "/blog/agm-vs-lithium-batteries-for-van-life/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 4281,
         "title": "AGM Vs Lithium Batteries for Van Life - Papago Vans",
@@ -78,7 +78,7 @@
     {
       "path": "/blog/best-campervan-toliets/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 231,
         "title": "Best Campervan Toilet: Dry Flush vs Composting vs Cassette",
@@ -89,7 +89,7 @@
     {
       "path": "/blog/best-off-grid-camper-van-upgrades-2025/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 9593,
         "title": "Best Off-Grid Camper Van Upgrades (That Are Actually Worth It) - Papago Vans",
@@ -118,7 +118,7 @@
     {
       "path": "/blog/hidden-gems-for-van-life/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 7079,
         "title": "10 Hidden Gems for Van Life Adventures You’ve Never Thought About - Papago Vans",
@@ -129,7 +129,7 @@
     {
       "path": "/blog/how-to-choose-between-a-new-or-used-van-for-your-conversion/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 5597,
         "title": "How to Choose Between a New or Used Van for Your Conversion - Papago Vans",
@@ -140,7 +140,7 @@
     {
       "path": "/blog/how-to-insure-a-camper-van-in-2025-understanding-rvia-certifications-impact-on-your-coverage/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 8737,
         "title": "How to Insure a Camper Van in 2025: Understanding RVIA Certification's Impact on Your Coverage - Papago Vans",
@@ -151,7 +151,7 @@
     {
       "path": "/blog/how-to-prevent-squeaks-in-a-campervan/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 2684,
         "title": "How to Prevent Squeaks in a Campervan - Papago Vans",
@@ -187,19 +187,21 @@
     {
       "path": "/blog/page/2/",
       "type": "page",
-      "status": "todo",
-      "note": "Blog pagination. 189 impressions. Added from Search Console, 2026-09-24."
+      "status": "redirect",
+      "note": "Blog pagination. 189 impressions. Added from Search Console, 2026-09-24.",
+      "to": "/blog/"
     },
     {
       "path": "/blog/page/3/",
       "type": "page",
-      "status": "todo",
-      "note": "Blog pagination. 121 impressions. Added from Search Console, 2026-09-24."
+      "status": "redirect",
+      "note": "Blog pagination. 121 impressions. Added from Search Console, 2026-09-24.",
+      "to": "/blog/"
     },
     {
       "path": "/blog/planning-a-passenger-van-conversion-for-travel-group-transport-or-business-use/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 19260,
         "title": "Wheelchair Accessible Vans: Essential Safety Features",
@@ -221,7 +223,7 @@
     {
       "path": "/blog/the-best-awning-for-vanlife/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 2694,
         "title": "The Best Awning for Vanlife - Papago Vans",
@@ -232,7 +234,7 @@
     {
       "path": "/blog/the-best-cooling-options-for-custom-camper-vans/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 5001,
         "title": "The Best Cooling Options for Custom Camper Vans - Papago Vans",
@@ -243,7 +245,7 @@
     {
       "path": "/blog/the-most-important-feature-in-any-custom-camper-van/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 5186,
         "title": "The Most Important Feature in Any Custom Camper Van - Papago Vans",
@@ -254,7 +256,7 @@
     {
       "path": "/blog/top-10-vanlife-travel-destinations-of-2024/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 5621,
         "title": "Top 10 Vanlife Travel Destinations of 2024 - Papago Vans",
@@ -265,7 +267,7 @@
     {
       "path": "/blog/van-life-myths-truths-surprises/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 5827,
         "title": "What You Didn't Know About Van Life: Myths, Truths, and Surprises - Papago Vans",
@@ -276,7 +278,7 @@
     {
       "path": "/blog/van-life-newbie-custom-camper-van/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 5831,
         "title": "What Happens When You Give a Van Life Newbie the Keys to a Fully Custom Van? - Papago Vans",
@@ -287,7 +289,7 @@
     {
       "path": "/blog/what-wheel-base-is-best-for-van-life/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 5398,
         "title": "What Wheel Base is Best for Van Life? - Papago Vans",
@@ -298,7 +300,7 @@
     {
       "path": "/blog/wheelchair-accessible-vans-essential-features-for-safer-and-more-comfortable-mobility/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 19263,
         "title": "Wheelchair Accessible Vans: Essential Safety Features",
@@ -309,7 +311,7 @@
     {
       "path": "/blog/where-can-i-park-my-campervan-an-introduction-to-ioverlander/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 4439,
         "title": "Where to Park a Campervan Overnight: iOverlander Guide",
@@ -320,7 +322,7 @@
     {
       "path": "/blog/working-with-a-van-conversion-company/",
       "type": "post",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 2703,
         "title": "Working with a Van Conversion Company - Papago Vans",
@@ -345,40 +347,43 @@
     {
       "path": "/build/aubreyjacob/",
       "type": "build",
-      "status": "todo",
+      "status": "drop",
       "seo": {
         "wpId": 5310,
         "title": "New Sale- June /Aug - Papago Vans",
         "canonical": "/build/aubreyjacob/",
         "index": "index"
-      }
+      },
+      "note": "Someone’s saved test build."
     },
     {
       "path": "/build/johndoe/",
       "type": "build",
-      "status": "todo",
+      "status": "drop",
       "seo": {
         "wpId": 5214,
         "title": "John Doe - Papago Vans",
         "canonical": "/build/johndoe/",
         "index": "index"
-      }
+      },
+      "note": "Someone’s saved test build."
     },
     {
       "path": "/build/rob-champion/",
       "type": "build",
-      "status": "todo",
+      "status": "drop",
       "seo": {
         "wpId": 10432,
         "title": "Rob Champion - Papago Vans",
         "canonical": "/build/rob-champion/",
         "index": "index"
-      }
+      },
+      "note": "Someone’s saved test build."
     },
     {
       "path": "/ccpa/",
       "type": "page",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 1468,
         "title": "CCPA - Papago Vans",
@@ -389,7 +394,7 @@
     {
       "path": "/contact-us/",
       "type": "page",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 768,
         "title": "Contact Us - Papago Vans",
@@ -461,18 +466,19 @@
     {
       "path": "/financing/",
       "type": "page",
-      "status": "todo",
+      "status": "drop",
       "seo": {
         "wpId": 12055,
         "title": "Camper Van Financing with Hearth | Papago Vans",
         "canonical": "/financing/",
         "index": "index"
-      }
+      },
+      "note": "Three words of content behind an embedded widget. Rebuild when there is something to say."
     },
     {
       "path": "/ford-transit/",
       "type": "page",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 11409,
         "title": "Arizona Campervan Conversions - Papago Vans",
@@ -515,7 +521,7 @@
     {
       "path": "/mammoth/",
       "type": "page",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 11846,
         "title": "Mammoth Camper Van Build Tier | Papago Vans",
@@ -526,7 +532,7 @@
     {
       "path": "/mercedes-sprinter/",
       "type": "page",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 10908,
         "title": "Arizona Campervan Conversions - Papago Vans",
@@ -537,13 +543,14 @@
     {
       "path": "/newsletter/",
       "type": "page",
-      "status": "todo",
+      "status": "drop",
       "seo": {
         "wpId": 11182,
         "title": "Newsletter - Papago Vans",
         "canonical": "/newsletter/",
         "index": "index"
-      }
+      },
+      "note": "Signup lives in the footer band now, not its own page."
     },
     {
       "path": "/olympus-old/",
@@ -561,7 +568,7 @@
     {
       "path": "/olympus/",
       "type": "page",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 11769,
         "title": "Olympus Off-Grid Van Build | Papago Vans",
@@ -585,7 +592,7 @@
     {
       "path": "/our-process/",
       "type": "page",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 12061,
         "title": "Custom Van Build Process | Papago Vans",
@@ -596,7 +603,7 @@
     {
       "path": "/privacy-policy/",
       "type": "page",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 559,
         "title": "Privacy Policy - Papago Vans",
@@ -1696,7 +1703,7 @@
     {
       "path": "/projects/the-sapphire-sojourner/",
       "type": "projects",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 1775,
         "title": "The Sapphire Sojourner - Papago Vans",
@@ -1861,13 +1868,14 @@
     {
       "path": "/quiz/",
       "type": "page",
-      "status": "todo",
+      "status": "redirect",
       "seo": {
         "wpId": 1980,
         "title": "Build Tier Quiz - Papago Vans",
         "canonical": "/quiz/",
         "index": "index"
-      }
+      },
+      "to": "https://build.papagovans.com"
     },
     {
       "path": "/rainier-old/",
@@ -1885,7 +1893,7 @@
     {
       "path": "/rainier/",
       "type": "page",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 11921,
         "title": "Rainier Camper Van Build Tier | Papago Vans",
@@ -1896,7 +1904,7 @@
     {
       "path": "/ram-promaster/",
       "type": "page",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 11430,
         "title": "Arizona Campervan Conversions - Papago Vans",
@@ -1914,7 +1922,7 @@
     {
       "path": "/service-department/",
       "type": "page",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 1224,
         "title": "Service Department - Papago Vans",
@@ -1925,18 +1933,19 @@
     {
       "path": "/service-work-request/",
       "type": "page",
-      "status": "todo",
+      "status": "drop",
       "seo": {
         "wpId": 2234,
         "title": "Service Work Request - Papago Vans",
         "canonical": "/service-work-request/",
         "index": "index"
-      }
+      },
+      "note": "Service is a later phase; the form will be a HubSpot form."
     },
     {
       "path": "/terms-conditions/",
       "type": "page",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 538,
         "title": "Terms & Conditions - Papago Vans",
@@ -1960,8 +1969,8 @@
     {
       "path": "/thank-you-2/",
       "type": "page",
-      "status": "todo",
-      "note": "must ship noindex",
+      "status": "drop",
+      "note": "Duplicate form confirmation.",
       "seo": {
         "wpId": 10460,
         "title": "- Papago Vans",
@@ -1972,8 +1981,8 @@
     {
       "path": "/thank-you-landing-pages/",
       "type": "page",
-      "status": "todo",
-      "note": "must ship noindex",
+      "status": "drop",
+      "note": "Form confirmation.",
       "seo": {
         "wpId": 19268,
         "title": "Thank you - Landing Pages - Papago Vans",
@@ -1984,8 +1993,8 @@
     {
       "path": "/thank-you-newsletter/",
       "type": "page",
-      "status": "todo",
-      "note": "must ship noindex",
+      "status": "drop",
+      "note": "Form confirmation.",
       "seo": {
         "wpId": 4600,
         "title": "Thank You - Newsletter - Papago Vans",
@@ -1996,8 +2005,8 @@
     {
       "path": "/thank-you-quiz-no-sale/",
       "type": "page",
-      "status": "todo",
-      "note": "must ship noindex",
+      "status": "drop",
+      "note": "Form confirmation for the retired quiz.",
       "seo": {
         "wpId": 4744,
         "title": "Thank you - Quiz - No Sale - Papago Vans",
@@ -2008,8 +2017,8 @@
     {
       "path": "/thank-you-quiz/",
       "type": "page",
-      "status": "todo",
-      "note": "must ship noindex",
+      "status": "drop",
+      "note": "Form confirmation for the retired quiz.",
       "seo": {
         "wpId": 3832,
         "title": "Thank you - Quiz - Papago Vans",
@@ -2020,8 +2029,8 @@
     {
       "path": "/thank-you-service-work/",
       "type": "page",
-      "status": "todo",
-      "note": "must ship noindex",
+      "status": "drop",
+      "note": "Form confirmation.",
       "seo": {
         "wpId": 2438,
         "title": "Thank you - Service Work - Papago Vans",
@@ -2032,8 +2041,8 @@
     {
       "path": "/thank-you/",
       "type": "page",
-      "status": "todo",
-      "note": "must ship noindex",
+      "status": "drop",
+      "note": "Form confirmation. Should be noindex, not rebuilt.",
       "seo": {
         "wpId": 524,
         "title": "Thank you - Papago Vans",
@@ -2044,24 +2053,26 @@
     {
       "path": "/the-commandant-mercedes-170-build/",
       "type": "page",
-      "status": "todo",
+      "status": "redirect",
       "seo": {
         "wpId": 10410,
         "title": "The Commandant - Mercedes 170\" Build - Papago Vans",
         "canonical": "/the-commandant-mercedes-170-build/",
         "index": "index"
-      }
+      },
+      "to": "/van-life-build-gallery/"
     },
     {
       "path": "/the-sentinel-mercedes-sprinter-144/",
       "type": "page",
-      "status": "todo",
+      "status": "redirect",
       "seo": {
         "wpId": 8153,
         "title": "The Sentinel - Mercedes 144\" Build - Papago Vans",
         "canonical": "/the-sentinel-mercedes-sprinter-144/",
         "index": "index"
-      }
+      },
+      "to": "/projects/the-sentinel-mercedes-sprinter-camper-van/"
     },
     {
       "path": "/van-conversion-build-tiers/",
@@ -2090,8 +2101,9 @@
     {
       "path": "/view-models/",
       "type": "page",
-      "status": "todo",
-      "note": "2 clicks / 411 impressions. Real page, not in the sitemap. Added from Search Console, 2026-09-24."
+      "status": "redirect",
+      "note": "2 clicks / 411 impressions. Real page, not in the sitemap. Added from Search Console, 2026-09-24.",
+      "to": "/van-life-build-gallery/"
     },
     {
       "path": "/which-adventure-van-style-fits-you-cloned-10193/",
@@ -2109,18 +2121,19 @@
     {
       "path": "/which-adventure-van-style-fits-you/",
       "type": "page",
-      "status": "todo",
+      "status": "redirect",
       "seo": {
         "wpId": 10193,
         "title": "Which Adventure Van Style Fits You? - Papago Vans",
         "canonical": "/which-adventure-van-style-fits-you/",
         "index": "index"
-      }
+      },
+      "to": "https://build.papagovans.com"
     },
     {
       "path": "/work-at-papago-vans/",
       "type": "page",
-      "status": "todo",
+      "status": "done",
       "seo": {
         "wpId": 5272,
         "title": "Work at Papago Vans - Papago Vans",
