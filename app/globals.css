@@ -420,38 +420,6 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 .scene-shot { display: block; }
 .scene-shot img { width: 100%; height: auto; border-radius: var(--r-lg); }
 
-/* Placeholder, not art. It prints the filename it is waiting for so the photo
-   can be dropped in without anyone reading the source. Delete .is-empty and
-   the two label rules once both scenes have their photograph. */
-.scene-shot.is-empty {
-	aspect-ratio: 3 / 2;
-	border: 1px dashed var(--line);
-	border-radius: var(--r-lg);
-	background: var(--soft);
-	display: grid;
-	place-items: center;
-	padding: 24px;
-}
-.scene-shot-label {
-	display: block;
-	text-align: center;
-	max-width: 320px;
-	font-size: 12px;
-	letter-spacing: 0.14em;
-	text-transform: uppercase;
-	font-weight: 700;
-	color: var(--muted);
-	line-height: 1.7;
-}
-.scene-shot-label em {
-	display: block;
-	margin: 8px 0 10px;
-	font-style: normal;
-	letter-spacing: 0;
-	text-transform: none;
-	font-size: 13px;
-	color: var(--footer);
-}
 @media (max-width: 860px) {
 	.scene { padding-top: 56px; }
 	.scene-inner { grid-template-columns: 1fr; gap: 28px; }

@@ -99,7 +99,9 @@ const scenes = [
       "Drawers that stay shut on the highway hold a week of clothes, the chairs and the dog's bed. Chairs out at a park you did not reserve a year ago, or your daughter's driveway with your own guest room attached.",
     ],
     shot: "/home/scene-open-calendar",
-    alt: "Placeholder: cooking in the galley with the slider open on the trees",
+    w: 1200,
+    h: 800,
+    alt: "A woman cooking at the galley counter of a Sprinter, induction burner going, slider door open on the trees",
   },
 ];
 
@@ -243,12 +245,10 @@ export default async function Home() {
       </section>
 
       {/* Picture the experience: one scene per buyer. Image placeholders until
-          the owner supplies photography; the file each one expects is printed
-          on the placeholder so the drop-in is unambiguous. */}
+          both photographed rather than illustrated. */}
       {scenes.map((s) => (
         <section className={s.flip ? "scene is-flipped" : "scene"} id={s.id} key={s.id}>
           <div className="wrap scene-inner">
-            {s.w ? (
               <picture className="scene-shot">
                 <source srcSet={`${s.shot}.avif`} type="image/avif" />
                 <source srcSet={`${s.shot}.webp`} type="image/webp" />
@@ -262,15 +262,6 @@ export default async function Home() {
                   decoding="async"
                 />
               </picture>
-            ) : (
-              <div className="scene-shot is-empty">
-                <span className="scene-shot-label">
-                  Image placeholder
-                  <em>{s.shot}.webp</em>
-                  {s.alt.replace(/^Placeholder: /, "")}
-                </span>
-              </div>
-            )}
             <div className="scene-copy">
               <p className="scene-eyebrow">{s.eyebrow}</p>
               <h2>{s.title}</h2>
