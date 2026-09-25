@@ -421,9 +421,16 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 .collage-head p { margin: 16px auto 28px; max-width: 560px; color: rgba(255,255,255,0.72); font-size: 17px; line-height: 1.6; }
 /* The wall carries more photos than fit and is cropped to a straight edge, so
    it never ends in a ragged line with navy showing through. The clip has to
-   live on this wrapper rather than on the grid itself. */
+   live on this wrapper rather than on the grid itself.
+
+   The height is not a viewport fraction. It is the exact bottom of the third
+   feature: rows x height plus the gaps between them. That is what puts the
+   family photo on the bottom edge with nothing peeking below it, and it has to
+   be recomputed at every breakpoint because the row height changes.
+
+   5 columns, 4 rows of 200 + 3 gaps of 20 = 860. */
 .collage-clip {
-	height: clamp(620px, 96vh, 1480px);
+	height: 860px;
 	overflow: hidden;
 }
 
@@ -456,6 +463,8 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 @media (max-width: 1100px) {
 	.collage-grid { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 180px; }
 	.collage-feature, .collage-feature-3 { grid-column: 3 / 5; }
+	/* 4 rows of 180 + 3 gaps of 20 */
+	.collage-clip { height: 780px; }
 }
 @media (max-width: 860px) {
 	.collage-grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 165px; }
@@ -463,11 +472,16 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 	/* Three columns is the width where a right-hand feature would sit on top of
 	   the left-hand one, so the third drops to its own rows instead. */
 	.collage-feature-3 { grid-column: 2 / 4; grid-row: 5 / 7; }
+	/* The feature drops to rows 5 and 6 here, so the wall grows to match:
+	   6 rows of 165 + 5 gaps of 20 */
+	.collage-clip { height: 1090px; }
 }
 @media (max-width: 560px) {
 	.collage-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 140px; }
 	.collage-feature { grid-column: 1 / 3; }
 	.collage-feature-3 { grid-column: 1 / 3; grid-row: 5 / 7; }
+	/* 6 rows of 140 + 5 gaps of 20 */
+	.collage-clip { height: 940px; }
 }
 
 .collage-cell img,
