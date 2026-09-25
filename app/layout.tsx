@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import NewsletterForm from "@/components/NewsletterForm";
 
 /*
  * Shared shell, ported from the Astro mockup at go.papagovans.com/home.
@@ -9,7 +10,10 @@ import "./globals.css";
  * header in next.config.ts, because a copy of the marketing site on our own
  * root domain must never compete with papagovans.com in search.
  *
- * Nav and footer links are still href="#". They become real routes as pages
+ * Footer links are still href="#": those pages are not built yet. The header
+ * nav points at the only two doors the site has, the configurator and the
+ * gallery, because lead capture is the configurator and Calendly, nothing else.
+ * Footer links become real routes as pages
  * land. Content moves into Payload once there is something worth editing.
  */
 
@@ -51,8 +55,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <img src="/home/Group-278.svg" alt="Papago Vans" width="174" height="27" />
             </a>
             <nav className="main-nav" aria-label="Main">
-              <a href="#">Let&rsquo;s Get Started</a>
-              <a href="#">View Recent Builds</a>
+              <a href="https://build.papagovans.com" target="_blank" rel="noopener">Build Your Van</a>
+              <a href="/van-life-build-gallery/">View Recent Builds</a>
             </nav>
             <div className="header-actions">
               <a href="/bespoke/" className="btn btn-expert btn-sm">
@@ -73,7 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <p className="kit-eyebrow">Newsletter</p>
             <h2>Let&rsquo;s Keep In Touch</h2>
             <p>Stay informed about our latest sale offers, upgrades and models.</p>
-            <a href="#" className="btn btn-gold">Get Started <span className="arw">&#8853;</span></a>
+            <NewsletterForm />
           </div>
         </section>
 
