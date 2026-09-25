@@ -20,6 +20,7 @@
  * fabrication photography is worth shooting.
  */
 
+import ExploreTheVan from "@/components/ExploreTheVan";
 import { listProjectCards } from "@/lib/content";
 
 const BUILD_APP = "https://build.papagovans.com";
@@ -244,8 +245,25 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Picture the experience: one scene per buyer. Image placeholders until
-          both photographed rather than illustrated. */}
+      {/* Explore the van. Deliberately not the builder: this is for the visitor
+          who has just landed and wants to see inside one before they care about
+          configuring anything. The viewer is a standalone copy, so nothing here
+          reaches build.papagovans.com. */}
+      <section className="explore" id="explore-the-van">
+        <div className="wrap">
+          <h2 className="section-title">Explore The Van</h2>
+          <p className="section-lede">
+            Almost nobody gets to Mesa before they decide. Turn this one around, look
+            under the bed, and check the parts you would check if you were standing
+            in it.
+          </p>
+          <div className="explore-viewer">
+            <ExploreTheVan />
+          </div>
+        </div>
+      </section>
+
+      {/* Picture the experience: one scene per buyer, both photographed. */}
       {scenes.map((s) => (
         <section className={s.flip ? "scene is-flipped" : "scene"} id={s.id} key={s.id}>
           <div className="wrap scene-inner">

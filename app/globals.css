@@ -443,6 +443,12 @@ body:has(.hero-full) .hamburger span { background: #fff; }
    order rather than a reversed source order. That keeps the stacked phone
    layout identical for the two: photo, then copy. Reversing in source would
    put scene two's copy above its photo on a phone only. */
+/* Explore the van. Sits between the two paths and the buyer scenes, so it
+   carries the page's own spacing rather than the viewer's. */
+.explore { padding: 80px 0 8px; }
+.explore-viewer { margin-top: 32px; }
+@media (max-width: 860px) { .explore { padding-top: 56px; } }
+
 .scene { padding: 84px 0 0; }
 .scene:last-of-type { padding-bottom: 8px; }
 .scene-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }

@@ -1,0 +1,92 @@
+/* Explore The Van. Colours fall back to the site's own tokens in
+   globals.css, so this renders on-brand with or without them. */
+
+.root { width: 100%; }
+.frame { position: relative; }
+
+.stage {
+	position: relative;
+	aspect-ratio: 16 / 9;
+	background: var(--soft, #f2ede1);
+	border-radius: var(--r-lg, 16px);
+	overflow: hidden;
+}
+@media (max-width: 720px) { .stage { aspect-ratio: 4 / 5; } }
+
+.viewer { display: block; width: 100%; height: 100%; --poster-color: transparent; }
+
+/* Hotspots are slotted into model-viewer; it toggles data-visible when a
+   label turns away from the camera. */
+.hotspot {
+	display: flex; align-items: center; gap: 6px;
+	padding: 0; border: 0; background: none; cursor: pointer;
+	transform: translate(-9px, -50%);
+	transition: opacity 0.2s;
+	font: inherit;
+}
+.hotspot:not([data-visible]) { opacity: 0; pointer-events: none; }
+.dot {
+	width: 18px; height: 18px; border-radius: 50%;
+	background: var(--gold, #f4d969);
+	box-shadow: 0 0 0 4px rgba(244, 217, 105, 0.35), 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.hotspotLabel {
+	padding: 4px 10px; border-radius: 999px;
+	background: rgba(48, 60, 71, 0.9); color: #fff;
+	font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+	white-space: nowrap;
+}
+.hotspot:hover .dot, .hotspotOn .dot { box-shadow: 0 0 0 6px rgba(244, 217, 105, 0.55), 0 2px 6px rgba(0, 0, 0, 0.3); }
+.hotspot:focus-visible { outline: 2px solid var(--gold, #f4d969); outline-offset: 4px; border-radius: 999px; }
+
+.topBar { position: absolute; top: 14px; right: 14px; display: flex; gap: 8px; }
+.pill {
+	padding: 8px 16px; border-radius: 999px; border: 0; cursor: pointer;
+	background: rgba(48, 60, 71, 0.9); color: #fff;
+	font: inherit; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+}
+.pillGold { background: var(--gold, #f4d969); color: var(--footer, #303c47); }
+.pillGold:hover { background: var(--gold-deep, #e9ca47); }
+
+.card {
+	position: absolute; left: 14px; bottom: 50px;
+	max-width: min(360px, calc(100% - 28px));
+	padding: 16px 18px; border-radius: var(--r-md, 12px);
+	background: rgba(252, 250, 243, 0.96); box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
+}
+.cardKicker { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted, #7b8591); }
+.cardTitle { margin: 4px 0 6px; font-size: 20px; color: var(--footer, #303c47); }
+.cardCopy { font-size: 15px; line-height: 1.55; color: var(--ink, #414042); }
+@media (max-width: 720px) {
+	.card { position: static; max-width: none; margin-top: 12px; box-shadow: none; border: 1px solid var(--line, #e6e0d2); }
+}
+
+.hint {
+	position: absolute; left: 14px; bottom: 14px; pointer-events: none;
+	padding: 4px 12px; border-radius: 999px;
+	background: rgba(48, 60, 71, 0.85); color: #fff;
+	font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+}
+@media (max-width: 720px) { .wide { display: none; } }
+
+.pad {
+	position: absolute; right: 14px; bottom: 14px;
+	display: grid; gap: 4px;
+	grid-template-columns: repeat(3, 40px); grid-template-rows: repeat(2, 40px);
+	grid-template-areas: ". up ." "left down right";
+}
+.padKey {
+	border: 0; border-radius: 8px; cursor: pointer;
+	background: rgba(48, 60, 71, 0.85); color: #fff; font-size: 18px;
+	touch-action: none; user-select: none;
+}
+.padKey:hover { background: var(--footer, #303c47); }
+
+.chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 18px; }
+.chip {
+	padding: 10px 20px; border-radius: 999px; cursor: pointer;
+	border: 1px solid var(--line, #e6e0d2); background: #fff; color: var(--ink, #414042);
+	font: inherit; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.chip:hover { border-color: var(--gold, #f4d969); }
+.chipOn { background: var(--gold, #f4d969); border-color: var(--gold, #f4d969); color: var(--footer, #303c47); }
