@@ -346,8 +346,8 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
             <>
               {head}
               <RevealSlider
-                label="Drag to bring the forest in behind the van"
-                handle="Gimme Trees"
+                label="Gimme trees: drag to bring the forest in behind the van"
+                tag="Gimme Trees"
                 back={<Photo m={media(s.image)} sizes="(max-width: 720px) 180vw, 100vw" />}
                 front={<Photo m={media(s.revealFront)} sizes="(max-width: 720px) 180vw, 100vw" />}
               />
