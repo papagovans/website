@@ -25,13 +25,51 @@ const values = [
   { t: "The price is the price", d: "Every option is priced before you talk to anyone. You can build the whole thing yourself online and watch the total move." },
 ];
 
-/* Group in first-appearance order rather than alphabetically: the source page
-   runs owners, then the shop, then the departments that support it. */
+/* Group in first-appearance order, then reorder deliberately below. */
 const departments: [string, typeof team][] = [];
 for (const member of team) {
   const found = departments.find(([d]) => d === member.dept);
   if (found) found[1].push(member);
   else departments.push([member.dept, [member]]);
+}
+const byDept = new Map(departments);
+
+/* Sales, Finance and Marketing share one line. Four people between them, and
+   a row each would be three headings over three near-empty grids. */
+const SIDE_BY_SIDE = ["Sales", "Finance", "Marketing"] as const;
+const LEAD = ["Owners", "Administration", ...SIDE_BY_SIDE] as readonly string[];
+/* Whatever is left, still in the source page's order, so adding a department
+   in the CMS later does not silently drop it off this page. */
+const REST = departments.map(([d]) => d).filter((d) => !LEAD.includes(d));
+
+function TeamGroup({ dept, eager = false }: { dept: string; eager?: boolean }) {
+  const people = byDept.get(dept);
+  if (!people?.length) return null;
+  return (
+    <section className="team-group">
+      <h3 className="team-dept">{dept}</h3>
+      <ul className="team-grid">
+        {people.map((m) => (
+          <li className="team-card" key={m.slug}>
+            <picture>
+              <source srcSet={`/team/${m.slug}.avif`} type="image/avif" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`/team/${m.slug}.webp`}
+                alt={`${m.name}, ${m.role} at Papago Vans`}
+                width={200}
+                height={200}
+                loading={eager ? "eager" : "lazy"}
+                decoding="async"
+              />
+            </picture>
+            <p className="team-name">{m.name}</p>
+            <p className="team-role">{m.role}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
 }
 
 export default async function AboutPage() {
@@ -124,14 +162,16 @@ export default async function AboutPage() {
             understand what we do.
           </p>
 
-          {/* The whole crew, ported from the live site's About page. Grouped by
-              department in the order that page uses, which runs owners first
-              and then the shop, because that is the order a visitor cares
-              about: who owns this, and who is actually holding the tools.
+          {/* The whole crew, ported from the live site's About page.
 
-              47 portraits is a lot of requests, so every one below the first
-              row is lazy. They arrive already cropped to a circle on the
-              brand blue, which is why there is no mask here. */}
+              The order here is the owner's, not the source page's: owners,
+              then administration, then sales, finance and marketing side by
+              side on one line, then the shop. It puts the people a visitor
+              would phone above the people who build the van.
+
+              Portraits arrive already cropped to a circle on the brand blue,
+              which is why there is no mask. Only the owners load eagerly; the
+              other forty-odd wait until they are scrolled to. */}
           {/* The count comes from the roster, not from prose. It was written out
               as a word and went stale the first time somebody left. */}
           <h2 className="page-h2">Meet The Team</h2>
@@ -140,30 +180,20 @@ export default async function AboutPage() {
             your electrical, the one who cuts your cabinets and the one who answers when
             you call are all on this page.
           </p>
-          {departments.map(([dept, people], di) => (
-            <section className="team-group" key={dept}>
-              <h3 className="team-dept">{dept}</h3>
-              <ul className="team-grid">
-                {people.map((m, i) => (
-                  <li className="team-card" key={m.slug}>
-                    <picture>
-                      <source srcSet={`/team/${m.slug}.avif`} type="image/avif" />
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={`/team/${m.slug}.webp`}
-                        alt={`${m.name}, ${m.role} at Papago Vans`}
-                        width={400}
-                        height={400}
-                        loading={di === 0 && i < 3 ? "eager" : "lazy"}
-                        decoding="async"
-                      />
-                    </picture>
-                    <p className="team-name">{m.name}</p>
-                    <p className="team-role">{m.role}</p>
-                  </li>
-                ))}
-              </ul>
-            </section>
+
+          <TeamGroup dept="Owners" eager />
+          <TeamGroup dept="Administration" />
+
+          {/* Three small departments that would each waste a full-width row
+              on their own: between them they are four people. */}
+          <div className="team-row">
+            {SIDE_BY_SIDE.map((d) => (
+              <TeamGroup dept={d} key={d} />
+            ))}
+          </div>
+
+          {REST.map((d) => (
+            <TeamGroup dept={d} key={d} />
           ))}
 
           <div className="page-note">
