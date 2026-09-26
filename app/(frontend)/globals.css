@@ -796,3 +796,13 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 .page-text { margin-bottom: 14px; }
 .scene-in-page { padding: 36px 0; }
 .page-note p + p { margin-top: 10px; }
+/* Sections added when Home, About, Bespoke and the Gallery moved into the CMS. */
+figure.scene-shot { margin: 0; }
+.scene-shot figcaption { margin-top: 10px; font-size: 13px; color: var(--muted); }
+.scene-btn { margin-top: 22px; }
+.page-cta-buttons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.journey-inner .btn + .btn { margin-left: 10px; }
+/* Portraits are cropped to a circle here, so a photo of any shape works. */
+.team-card img { border-radius: 50%; }
+/* Pages with a full-screen hero have no header band to sit the bar in. */
+.preview-bar-fixed { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 100; margin: 0; box-shadow: 0 6px 24px rgba(0,0,0,0.18); }

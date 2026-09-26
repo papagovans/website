@@ -69,6 +69,7 @@ export interface Config {
   collections: {
     pages: Page;
     posts: Post;
+    team: Team;
     media: Media;
     users: User;
     'payload-kv': PayloadKv;
@@ -80,6 +81,7 @@ export interface Config {
   collectionsSelect: {
     pages: PagesSelect<false> | PagesSelect<true>;
     posts: PostsSelect<false> | PostsSelect<true>;
+    team: TeamSelect<false> | TeamSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
@@ -122,7 +124,7 @@ export interface UserAuthOperations {
   };
 }
 /**
- * The site's pages, built from sections you can add, reorder and remove. Your work saves automatically as a draft; nothing is public until you click Publish. The home page, About, Bespoke and the Build Gallery are still edited in code.
+ * Every page on the site, built from sections you can add, reorder and remove. The front page is the one called Home. Your work saves automatically as a draft; nothing is public until you click Publish.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "pages".
@@ -138,11 +140,11 @@ export interface Page {
    */
   eyebrow?: string | null;
   /**
-   * The big headline at the top of the page. Say what the visitor gets, not what the page is.
+   * The big headline at the top of the page. Say what the visitor gets, not what the page is. Leave blank when the page starts with a Hero section, which has its own.
    */
-  heading: string;
+  heading?: string | null;
   /**
-   * Optional. Two or three sentences under the heading.
+   * Optional. Two or three sentences under the heading. Type {builds} for the number of finished builds; it updates itself.
    */
   intro?: string | null;
   /**
@@ -173,31 +175,6 @@ export interface Page {
             id?: string | null;
             blockName?: string | null;
             blockType: 'text';
-          }
-        | {
-            image: number | Media;
-            imageSide?: ('left' | 'right') | null;
-            eyebrow?: string | null;
-            heading: string;
-            subheading?: string | null;
-            content?: {
-              root: {
-                type: string;
-                children: {
-                  type: any;
-                  version: number;
-                  [k: string]: unknown;
-                }[];
-                direction: ('ltr' | 'rtl') | null;
-                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-                indent: number;
-                version: number;
-              };
-              [k: string]: unknown;
-            } | null;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'imageText';
           }
         | {
             /**
@@ -330,11 +307,85 @@ export interface Page {
         | {
             heading: string;
             /**
-             * One short line under the heading.
+             * As it should read, e.g. "$200,000 - $300,000".
+             */
+            price: string;
+            /**
+             * Optional. What the price includes.
+             */
+            note?: string | null;
+            items?:
+              | {
+                  title: string;
+                  text: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'priceBox';
+          }
+        | {
+            /**
+             * Optional. A heading shown above this section.
+             */
+            heading?: string | null;
+            /**
+             * Optional. Type {builds} for the number of finished builds or {team} for the number of people on the team; they update themselves.
+             */
+            intro?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'team';
+          }
+        | {
+            /**
+             * Optional. A heading shown above this section.
+             */
+            heading?: string | null;
+            items?:
+              | {
+                  /**
+                   * e.g. "March 2020" or just "2024".
+                   */
+                  when: string;
+                  title: string;
+                  text: string;
+                  /**
+                   * Tick until the date is confirmed. The pre-launch check lists every ticked milestone.
+                   */
+                  provisional?: boolean | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'timeline';
+          }
+        | {
+            style?: ('box' | 'band') | null;
+            eyebrow?: string | null;
+            /**
+             * Optional, but most calls to action read better with one.
+             */
+            heading?: string | null;
+            /**
+             * One or two short lines under the heading.
              */
             text?: string | null;
             button: {
               to: 'calendar' | 'sales' | 'service' | 'email' | 'map' | 'builder' | 'custom';
+              /**
+               * A page on this site like /financing/, or a full address like https://...
+               */
+              url?: string | null;
+              /**
+               * Optional. Blank uses the phone number, email or a standard label.
+               */
+              text?: string | null;
+            };
+            secondButton?: {
+              to?: ('calendar' | 'sales' | 'service' | 'email' | 'map' | 'builder' | 'custom') | null;
               /**
                * A page on this site like /financing/, or a full address like https://...
                */
@@ -366,10 +417,186 @@ export interface Page {
             blockName?: string | null;
             blockType: 'cta';
           }
+        | {
+            /**
+             * Fills the whole screen behind the words. Use a wide photo at least 1920 pixels across, with calm space where the text sits.
+             */
+            image: number | Media;
+            /**
+             * The first thing anyone reads. Press Enter to break it onto a second line.
+             */
+            heading: string;
+            text?: string | null;
+            button: {
+              to: 'calendar' | 'sales' | 'service' | 'email' | 'map' | 'builder' | 'custom';
+              /**
+               * A page on this site like /financing/, or a full address like https://...
+               */
+              url?: string | null;
+              /**
+               * Optional. Blank uses the phone number, email or a standard label.
+               */
+              text?: string | null;
+            };
+            secondButton?: {
+              to?: ('calendar' | 'sales' | 'service' | 'email' | 'map' | 'builder' | 'custom') | null;
+              /**
+               * A page on this site like /financing/, or a full address like https://...
+               */
+              url?: string | null;
+              /**
+               * Optional. Blank uses the phone number, email or a standard label.
+               */
+              text?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'hero';
+          }
+        | {
+            heading: string;
+            intro?: string | null;
+            /**
+             * Optional. Lets a button elsewhere scroll here: a name of "two-ways" is reached with #two-ways.
+             */
+            anchor?: string | null;
+            items?:
+              | {
+                  /**
+                   * The option's name, e.g. "Tailored".
+                   */
+                  title: string;
+                  kicker?: string | null;
+                  text: string;
+                  priceLabel?: string | null;
+                  price: string;
+                  button: {
+                    to: 'calendar' | 'sales' | 'service' | 'email' | 'map' | 'builder' | 'custom';
+                    /**
+                     * A page on this site like /financing/, or a full address like https://...
+                     */
+                    url?: string | null;
+                    /**
+                     * Optional. Blank uses the phone number, email or a standard label.
+                     */
+                    text?: string | null;
+                  };
+                  /**
+                   * Gold border and a gold button. Use on one card at most.
+                   */
+                  featured?: boolean | null;
+                  /**
+                   * e.g. "Most Popular".
+                   */
+                  flag?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'pathCards';
+          }
+        | {
+            heading: string;
+            intro?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'vanTour';
+          }
+        | {
+            image: number | Media;
+            imageSide?: ('left' | 'right') | null;
+            /**
+             * Optional. A short line under the photo.
+             */
+            caption?: string | null;
+            eyebrow?: string | null;
+            heading: string;
+            subheading?: string | null;
+            content?: {
+              root: {
+                type: string;
+                children: {
+                  type: any;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            button?: {
+              to?: ('calendar' | 'sales' | 'service' | 'email' | 'map' | 'builder' | 'custom') | null;
+              /**
+               * A page on this site like /financing/, or a full address like https://...
+               */
+              url?: string | null;
+              /**
+               * Optional. Blank uses the phone number, email or a standard label.
+               */
+              text?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'imageText';
+          }
+        | {
+            heading: string;
+            /**
+             * Type {builds} for the number of finished builds or {team} for the number of people on the team; they update themselves.
+             */
+            text?: string | null;
+            button?: {
+              to?: ('calendar' | 'sales' | 'service' | 'email' | 'map' | 'builder' | 'custom') | null;
+              /**
+               * A page on this site like /financing/, or a full address like https://...
+               */
+              url?: string | null;
+              /**
+               * Optional. Blank uses the phone number, email or a standard label.
+               */
+              text?: string | null;
+            };
+            /**
+             * Up to three photos shown large. The rest of the wall fills itself from the Build Gallery.
+             */
+            featured?: (number | Media)[] | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'photoWall';
+          }
+        | {
+            heading: string;
+            intro?: string | null;
+            /**
+             * Scroll slowly across the page. Use the customer's words exactly as they wrote them.
+             */
+            items?:
+              | {
+                  quote: string;
+                  /**
+                   * As they agreed to be named, e.g. "Debi L."
+                   */
+                  name: string;
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'testimonials';
+          }
+        | {
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'buildGallery';
+          }
       )[]
     | null;
   /**
-   * The blue link in search results. Blank uses the main heading followed by "| Papago Vans". Keep it under 60 characters.
+   * The blue link in search results. Blank uses the main heading (or the page name) followed by "| Papago Vans". Keep it under 60 characters.
    */
   seoTitle?: string | null;
   /**
@@ -377,7 +604,7 @@ export interface Page {
    */
   seoDescription?: string | null;
   /**
-   * papagovans.com/this-part/. Filled in from the page name when you first save. Changing it after publishing breaks links people already have.
+   * papagovans.com/this-part/. Filled in from the page name when you first save; "home" is the front page. Changing it after publishing breaks links people already have.
    */
   slug?: string | null;
   updatedAt: string;
@@ -482,6 +709,38 @@ export interface Post {
   _status?: ('draft' | 'published') | null;
 }
 /**
+ * The people on the About page. Drag the handle on the left of a row to change the order within a department. Removing someone takes them off the page.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "team".
+ */
+export interface Team {
+  id: number;
+  _order?: string | null;
+  /**
+   * As it should appear, e.g. "Jerry Suhrstedt" or just "Tim".
+   */
+  name: string;
+  role: string;
+  department:
+    | 'Owners'
+    | 'Administration'
+    | 'Finance'
+    | 'Sales'
+    | 'Marketing'
+    | 'Builders'
+    | 'Service Department'
+    | 'Painters'
+    | 'Inventory'
+    | 'CNC Specialists';
+  /**
+   * A head-and-shoulders photo. Any shape works: it is cropped to a circle on the page.
+   */
+  photo: number | Media;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * Who can sign in. To add someone, create them here with a starting password and send it to them; they can change it under their own account.
  *
  * This interface was referenced by `Config`'s JSON-Schema
@@ -542,6 +801,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'posts';
         value: number | Post;
+      } | null)
+    | ({
+        relationTo: 'team';
+        value: number | Team;
       } | null)
     | ({
         relationTo: 'media';
@@ -609,18 +872,6 @@ export interface PagesSelect<T extends boolean = true> {
           | T
           | {
               heading?: T;
-              content?: T;
-              id?: T;
-              blockName?: T;
-            };
-        imageText?:
-          | T
-          | {
-              image?: T;
-              imageSide?: T;
-              eyebrow?: T;
-              heading?: T;
-              subheading?: T;
               content?: T;
               id?: T;
               blockName?: T;
@@ -694,7 +945,151 @@ export interface PagesSelect<T extends boolean = true> {
               id?: T;
               blockName?: T;
             };
+        priceBox?:
+          | T
+          | {
+              heading?: T;
+              price?: T;
+              note?: T;
+              items?:
+                | T
+                | {
+                    title?: T;
+                    text?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        team?:
+          | T
+          | {
+              heading?: T;
+              intro?: T;
+              id?: T;
+              blockName?: T;
+            };
+        timeline?:
+          | T
+          | {
+              heading?: T;
+              items?:
+                | T
+                | {
+                    when?: T;
+                    title?: T;
+                    text?: T;
+                    provisional?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
         cta?:
+          | T
+          | {
+              style?: T;
+              eyebrow?: T;
+              heading?: T;
+              text?: T;
+              button?:
+                | T
+                | {
+                    to?: T;
+                    url?: T;
+                    text?: T;
+                  };
+              secondButton?:
+                | T
+                | {
+                    to?: T;
+                    url?: T;
+                    text?: T;
+                  };
+              smallPrint?: T;
+              id?: T;
+              blockName?: T;
+            };
+        hero?:
+          | T
+          | {
+              image?: T;
+              heading?: T;
+              text?: T;
+              button?:
+                | T
+                | {
+                    to?: T;
+                    url?: T;
+                    text?: T;
+                  };
+              secondButton?:
+                | T
+                | {
+                    to?: T;
+                    url?: T;
+                    text?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        pathCards?:
+          | T
+          | {
+              heading?: T;
+              intro?: T;
+              anchor?: T;
+              items?:
+                | T
+                | {
+                    title?: T;
+                    kicker?: T;
+                    text?: T;
+                    priceLabel?: T;
+                    price?: T;
+                    button?:
+                      | T
+                      | {
+                          to?: T;
+                          url?: T;
+                          text?: T;
+                        };
+                    featured?: T;
+                    flag?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        vanTour?:
+          | T
+          | {
+              heading?: T;
+              intro?: T;
+              id?: T;
+              blockName?: T;
+            };
+        imageText?:
+          | T
+          | {
+              image?: T;
+              imageSide?: T;
+              caption?: T;
+              eyebrow?: T;
+              heading?: T;
+              subheading?: T;
+              content?: T;
+              button?:
+                | T
+                | {
+                    to?: T;
+                    url?: T;
+                    text?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        photoWall?:
           | T
           | {
               heading?: T;
@@ -706,7 +1101,28 @@ export interface PagesSelect<T extends boolean = true> {
                     url?: T;
                     text?: T;
                   };
-              smallPrint?: T;
+              featured?: T;
+              id?: T;
+              blockName?: T;
+            };
+        testimonials?:
+          | T
+          | {
+              heading?: T;
+              intro?: T;
+              items?:
+                | T
+                | {
+                    quote?: T;
+                    name?: T;
+                    id?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        buildGallery?:
+          | T
+          | {
               id?: T;
               blockName?: T;
             };
@@ -735,6 +1151,19 @@ export interface PostsSelect<T extends boolean = true> {
   createdAt?: T;
   deletedAt?: T;
   _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "team_select".
+ */
+export interface TeamSelect<T extends boolean = true> {
+  _order?: T;
+  name?: T;
+  role?: T;
+  department?: T;
+  photo?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

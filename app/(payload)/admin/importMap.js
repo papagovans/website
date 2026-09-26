@@ -15,6 +15,9 @@ import { ItalicFeatureClient as ItalicFeatureClient_e70f5e05f09f93e00b997edb1ef0
 import { HeadingFeatureClient as HeadingFeatureClient_e70f5e05f09f93e00b997edb1ef0c864 } from '@payloadcms/richtext-lexical/client'
 import { ParagraphFeatureClient as ParagraphFeatureClient_e70f5e05f09f93e00b997edb1ef0c864 } from '@payloadcms/richtext-lexical/client'
 import { RowLabel as RowLabel_a22f15833f5c099d83eec5874403c04c } from '../../../components/admin/RowLabel'
+import { TeamHelp as TeamHelp_d781bf9398cf998c23c4c6792adb929f } from '../../../components/admin/Help'
+import { VanHelp as VanHelp_d781bf9398cf998c23c4c6792adb929f } from '../../../components/admin/Help'
+import { GalleryHelp as GalleryHelp_d781bf9398cf998c23c4c6792adb929f } from '../../../components/admin/Help'
 import { Icon as Icon_0a2e1b930498a0477bf175d2f033f688 } from '../../../components/admin/PapagoLogo'
 import { Logo as Logo_0a2e1b930498a0477bf175d2f033f688 } from '../../../components/admin/PapagoLogo'
 import { NavLogo as NavLogo_0a2e1b930498a0477bf175d2f033f688 } from '../../../components/admin/PapagoLogo'
@@ -40,6 +43,9 @@ export const importMap = {
   "@payloadcms/richtext-lexical/client#HeadingFeatureClient": HeadingFeatureClient_e70f5e05f09f93e00b997edb1ef0c864,
   "@payloadcms/richtext-lexical/client#ParagraphFeatureClient": ParagraphFeatureClient_e70f5e05f09f93e00b997edb1ef0c864,
   "/components/admin/RowLabel#RowLabel": RowLabel_a22f15833f5c099d83eec5874403c04c,
+  "/components/admin/Help#TeamHelp": TeamHelp_d781bf9398cf998c23c4c6792adb929f,
+  "/components/admin/Help#VanHelp": VanHelp_d781bf9398cf998c23c4c6792adb929f,
+  "/components/admin/Help#GalleryHelp": GalleryHelp_d781bf9398cf998c23c4c6792adb929f,
   "/components/admin/PapagoLogo#Icon": Icon_0a2e1b930498a0477bf175d2f033f688,
   "/components/admin/PapagoLogo#Logo": Logo_0a2e1b930498a0477bf175d2f033f688,
   "/components/admin/PapagoLogo#NavLogo": NavLogo_0a2e1b930498a0477bf175d2f033f688,

@@ -21,6 +21,7 @@ import { editor } from "./collections/editor";
 import { Media } from "./collections/Media";
 import { Pages } from "./collections/Pages";
 import { Posts } from "./collections/Posts";
+import { Team } from "./collections/Team";
 import { Users } from "./collections/Users";
 
 const dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -46,7 +47,7 @@ export default buildConfig({
       },
     },
   },
-  collections: [Pages, Posts, Media, Users],
+  collections: [Pages, Posts, Team, Media, Users],
   editor,
   db: postgresAdapter({
     pool: { connectionString },

@@ -11,8 +11,8 @@
     "urls:fetch": "node scripts/fetch-live-urls.mjs",
     "urls:check": "node scripts/check-urls.mjs",
     "urls:launch": "node scripts/check-urls.mjs --strict",
-    "check:provisional": "node scripts/check-provisional.mjs",
-    "check:launch": "node scripts/check-provisional.mjs --strict && npm run urls:launch"
+    "check:provisional": "tsx scripts/check-provisional.ts",
+    "check:launch": "tsx scripts/check-provisional.ts --strict && npm run urls:launch"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "^3.90.2",

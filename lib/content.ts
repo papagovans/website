@@ -16,7 +16,7 @@ import { join } from "node:path";
 import { draftMode } from "next/headers";
 import { getPayload } from "payload";
 import config from "@payload-config";
-import type { Post } from "@/payload-types";
+import type { Post, Team } from "@/payload-types";
 
 export type Shot = {
   /* lg only exists on the hero; see scripts/pull-projects.mjs */
@@ -146,4 +146,10 @@ export async function listCmsPageSlugs(): Promise<string[]> {
     select: { slug: true },
   });
   return docs.map((d) => d.slug).filter((s): s is string => Boolean(s));
+}
+
+/* Everyone on the Team list, in the order staff dragged them into. */
+export async function listTeam(): Promise<Team[]> {
+  const { docs } = await (await cms()).find({ collection: "team", sort: "_order", pagination: false, depth: 1 });
+  return docs;
 }

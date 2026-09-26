@@ -4,11 +4,12 @@ import { signedIn } from "./access";
 import { blocks } from "./blocks";
 import { fillSlug, revalidator } from "./revalidate";
 
-const pagePath = (slug: string) => `/${slug}/`;
+/* The page with the address "home" is the front page, at /. */
+export const pagePath = (slug: string) => (slug === "home" ? "/" : `/${slug}/`);
 
-/* Addresses the site already uses for pages built in code. A CMS page at one
-   of these would never be seen, because the coded page wins. */
-const TAKEN = ["admin", "api", "blog", "projects", "about-us", "bespoke", "van-life-build-gallery"];
+/* Addresses the site already uses for something else. A page at one of these
+   would never be seen. */
+const TAKEN = ["admin", "api", "blog", "projects"];
 
 export const Pages: CollectionConfig = {
   slug: "pages",
@@ -18,7 +19,7 @@ export const Pages: CollectionConfig = {
     useAsTitle: "title",
     defaultColumns: ["title", "slug", "_status", "updatedAt"],
     description:
-      "The site's pages, built from sections you can add, reorder and remove. Your work saves automatically as a draft; nothing is public until you click Publish. The home page, About, Bespoke and the Build Gallery are still edited in code.",
+      "Every page on the site, built from sections you can add, reorder and remove. The front page is the one called Home. Your work saves automatically as a draft; nothing is public until you click Publish.",
     listSearchableFields: ["title", "heading"],
     preview: (doc) =>
       doc?.slug ? `/api/preview/?path=${encodeURIComponent(pagePath(String(doc.slug)))}` : null,
@@ -52,14 +53,13 @@ export const Pages: CollectionConfig = {
               name: "heading",
               label: "Main heading",
               type: "text",
-              required: true,
-              admin: { description: "The big headline at the top of the page. Say what the visitor gets, not what the page is." },
+              admin: { description: "The big headline at the top of the page. Say what the visitor gets, not what the page is. Leave blank when the page starts with a Hero section, which has its own." },
             },
             {
               name: "intro",
               label: "Introduction",
               type: "textarea",
-              admin: { description: "Optional. Two or three sentences under the heading." },
+              admin: { description: "Optional. Two or three sentences under the heading. Type {builds} for the number of finished builds; it updates itself." },
             },
             {
               name: "sections",
@@ -81,7 +81,7 @@ export const Pages: CollectionConfig = {
               name: "seoTitle",
               label: "Title in Google",
               type: "text",
-              admin: { description: 'The blue link in search results. Blank uses the main heading followed by "| Papago Vans". Keep it under 60 characters.' },
+              admin: { description: 'The blue link in search results. Blank uses the main heading (or the page name) followed by "| Papago Vans". Keep it under 60 characters.' },
             },
             {
               name: "seoDescription",
@@ -105,7 +105,7 @@ export const Pages: CollectionConfig = {
         value && TAKEN.includes(value) ? `/${value}/ is already a page built in code. Choose another address.` : true,
       admin: {
         position: "sidebar",
-        description: "papagovans.com/this-part/. Filled in from the page name when you first save. Changing it after publishing breaks links people already have.",
+        description: 'papagovans.com/this-part/. Filled in from the page name when you first save; "home" is the front page. Changing it after publishing breaks links people already have.',
       },
     },
   ],
