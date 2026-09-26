@@ -277,12 +277,6 @@
  },
  {
   "dept": "Marketing",
-  "name": "Alec",
-  "role": "Marketing Manager",
-  "slug": "marketing-alec"
- },
- {
-  "dept": "Marketing",
   "name": "Jerry Suhrstedt",
   "role": "Marketing Manager",
   "slug": "marketing-jerry-suhrstedt"

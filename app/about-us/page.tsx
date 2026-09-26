@@ -132,11 +132,13 @@ export default async function AboutPage() {
               47 portraits is a lot of requests, so every one below the first
               row is lazy. They arrive already cropped to a circle on the
               brand blue, which is why there is no mask here. */}
+          {/* The count comes from the roster, not from prose. It was written out
+              as a word and went stale the first time somebody left. */}
           <h2 className="page-h2">Meet The Team</h2>
           <p className="page-p">
-            Forty-seven people in one building in Mesa. The person who wires your
-            electrical, the one who cuts your cabinets and the one who answers when you
-            call are all on this page.
+            {team.length} people in and around one shop in Mesa. The person who wires
+            your electrical, the one who cuts your cabinets and the one who answers when
+            you call are all on this page.
           </p>
           {departments.map(([dept, people], di) => (
             <section className="team-group" key={dept}>
