@@ -29,15 +29,34 @@ const faqs: { q: string; a: React.ReactNode }[] = [
     a: (
       <>
         <p>
-          A Tailored build runs $180,000 to $250,000 and a Bespoke build $200,000 to
-          $300,000. <strong>Both include the Mercedes-Benz Sprinter.</strong> Most of
-          the range is chassis length and how much power, water and off-road equipment
-          you specify.
+          <strong>Every floor plan starts at $180,000, and that includes the
+          Mercedes-Benz Sprinter.</strong> Not the conversion alone: the van as well,
+          finished and ready to drive.
+        </p>
+        <p>From there three things move the number, and you control all of them:</p>
+        <ul className="ticks">
+          <li>
+            <strong>Chassis length.</strong> The 144 is the $180,000 starting point. A
+            170 adds $12,000 and a 170 Extended adds $20,000.
+          </li>
+          <li>
+            <strong>Trim package.</strong> Essential is included. Adventure adds
+            $12,500 and Summit adds $28,000, and each one pre-fills every system in the
+            van rather than leaving you to spec it piece by piece.
+          </li>
+          <li>
+            <strong>Options.</strong> Solar, battery capacity, an indoor shower, air
+            conditioning, a winch. Every one of them is priced before you pick it.
+          </li>
+        </ul>
+        <p>
+          That puts most Tailored builds between $180,000 and $250,000. A Bespoke build,
+          drawn from nothing rather than from a floor plan, runs $200,000 to $300,000.
         </p>
         <p>
           You do not have to ask us what yours costs. Price it option by option in the{" "}
           <a href={BUILD_APP} target="_blank" rel="noopener">van builder</a> and watch
-          the total move as you choose.
+          the total move as you choose. The number it gives you is the number we quote.
         </p>
       </>
     ),
