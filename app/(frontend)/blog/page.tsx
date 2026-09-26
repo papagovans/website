@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { listPosts } from "@/lib/content";
-import "../content.css";
 
 export const metadata: Metadata = {
   title: "Van Life Guides | Papago Vans",

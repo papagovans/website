@@ -1,8 +1,0 @@
-.gal { padding: 48px 0 72px; }
-.gal-eyebrow { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
-.gal h1 { font-size: clamp(32px, 4.8vw, 52px); margin: 12px 0 0; color: var(--footer); }
-.gal-lede { margin-top: 16px; max-width: 620px; font-size: 18px; line-height: 1.6; color: var(--muted); }
-.gal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 22px; margin-top: 44px; }
-.gal-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-md); background: var(--soft); transition: 0.2s ease; }
-.gal-card:hover img { opacity: 0.88; }
-.gal-card h2 { font-size: 18px; margin-top: 12px; color: var(--footer); font-weight: 600; }

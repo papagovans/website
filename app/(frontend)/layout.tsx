@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Inter, Prompt } from "next/font/google";
 import "./globals.css";
 import NewsletterForm from "@/components/NewsletterForm";
 import {
@@ -69,6 +70,12 @@ const footerCols = [
   },
 ];
 
+/* Served from this site, not Google's: no extra domains to connect to, cached
+   for a year, and preloaded. Inter is one variable file for every weight;
+   Prompt carries only the three weights the CSS actually uses. */
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const prompt = Prompt({ subsets: ["latin"], weight: ["500", "600", "700"], variable: "--font-prompt", display: "swap" });
+
 export const metadata: Metadata = {
   title: "Arizona Campervan Conversions | Custom Vans by Papago",
   description:
@@ -79,15 +86,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Prompt:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang="en" className={`${inter.variable} ${prompt.variable}`}>
       <body>
         {/* Who and where the business is, on every page. It used to sit on
             Contact alone; now that Contact is a CMS page, the layout owns it. */}

@@ -7,29 +7,15 @@ import {
 import type { SerializedEditorState } from "@payloadcms/richtext-lexical/lexical";
 
 import type { Media } from "@/payload-types";
+import { Photo } from "./Photo";
 
 const converters: JSXConvertersFunction = ({ defaultConverters }) => ({
   ...defaultConverters,
-  upload: ({ node }) => {
-    const m = node.value as Media;
-    if (typeof m !== "object" || !m?.url) return null;
-    const src = m.sizes?.large?.url ?? m.url;
-    return (
-      <figure>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={src}
-          srcSet={m.sizes?.card?.url ? `${m.sizes.card.url} 800w, ${src} ${m.sizes?.large?.width ?? m.width}w` : undefined}
-          sizes="(max-width: 760px) 100vw, 720px"
-          alt={m.alt}
-          width={m.width ?? undefined}
-          height={m.height ?? undefined}
-          loading="lazy"
-          decoding="async"
-        />
-      </figure>
-    );
-  },
+  upload: ({ node }) => (
+    <figure>
+      <Photo m={node.value as Media} sizes="(max-width: 760px) 100vw, 720px" />
+    </figure>
+  ),
 });
 
 /* Inline: paragraphs run together with no <p>, for copy that sits inside

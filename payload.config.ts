@@ -17,6 +17,7 @@ import { vercelBlobStorage } from "@payloadcms/storage-vercel-blob";
 import { buildConfig } from "payload";
 import sharp from "sharp";
 
+import { Builds } from "./collections/Builds";
 import { editor } from "./collections/editor";
 import { Media } from "./collections/Media";
 import { Pages } from "./collections/Pages";
@@ -47,7 +48,7 @@ export default buildConfig({
       },
     },
   },
-  collections: [Pages, Posts, Team, Media, Users],
+  collections: [Pages, Posts, Builds, Team, Media, Users],
   editor,
   db: postgresAdapter({
     pool: { connectionString },

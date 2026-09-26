@@ -90,3 +90,8 @@
 }
 .chip:hover { border-color: var(--gold, #f4d969); }
 .chipOn { background: var(--gold, #f4d969); border-color: var(--gold, #f4d969); color: var(--footer, #303c47); }
+
+/* Before the viewer's script has loaded, <model-viewer> is an unknown element:
+   show the poster it would show, and hide the labels slotted into it. */
+.viewer:not(:defined) { background: url("/explore-the-van/poster.webp") center / cover no-repeat; }
+.viewer:not(:defined) > * { display: none; }

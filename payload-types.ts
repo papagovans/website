@@ -69,6 +69,7 @@ export interface Config {
   collections: {
     pages: Page;
     posts: Post;
+    builds: Build;
     team: Team;
     media: Media;
     users: User;
@@ -81,6 +82,7 @@ export interface Config {
   collectionsSelect: {
     pages: PagesSelect<false> | PagesSelect<true>;
     posts: PostsSelect<false> | PostsSelect<true>;
+    builds: BuildsSelect<false> | BuildsSelect<true>;
     team: TeamSelect<false> | TeamSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
@@ -638,6 +640,22 @@ export interface Media {
   focalX?: number | null;
   focalY?: number | null;
   sizes?: {
+    thumb?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    thumbAvif?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
     card?: {
       url?: string | null;
       width?: number | null;
@@ -646,7 +664,23 @@ export interface Media {
       filesize?: number | null;
       filename?: string | null;
     };
+    cardAvif?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
     large?: {
+      url?: string | null;
+      width?: number | null;
+      height?: number | null;
+      mimeType?: string | null;
+      filesize?: number | null;
+      filename?: string | null;
+    };
+    largeAvif?: {
       url?: string | null;
       width?: number | null;
       height?: number | null;
@@ -703,6 +737,57 @@ export interface Post {
    * Shown on the post. Guides are listed newest first.
    */
   publishedDate: string;
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * Finished vans. Each one gets its own page and appears in the Build Gallery and on the home page's photo wall, newest first. Your work saves automatically as a draft; nothing is public until you click Publish.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "builds".
+ */
+export interface Build {
+  id: number;
+  /**
+   * The name the owners gave it, e.g. "Sky Lounge".
+   */
+  title: string;
+  /**
+   * Drag to reorder. The first photo is the main one: it leads the page and is the picture in the gallery, so make it the whole van. A build with no photos stays out of the gallery.
+   */
+  photos?: (number | Media)[] | null;
+  /**
+   * One or two sentences: the chassis, the floor plan, what makes it this owner's van. Shown in Google results.
+   */
+  summary: string;
+  /**
+   * The full write-up: who it was built for, the systems in it, what is unusual about it.
+   */
+  description?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  /**
+   * papagovans.com/projects/this-part/. Filled in from the build name when you first save. Changing it after publishing breaks links people already have.
+   */
+  slug?: string | null;
+  /**
+   * Builds are listed newest first.
+   */
+  finished: string;
   updatedAt: string;
   createdAt: string;
   deletedAt?: string | null;
@@ -801,6 +886,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'posts';
         value: number | Post;
+      } | null)
+    | ({
+        relationTo: 'builds';
+        value: number | Build;
       } | null)
     | ({
         relationTo: 'team';
@@ -1154,6 +1243,22 @@ export interface PostsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "builds_select".
+ */
+export interface BuildsSelect<T extends boolean = true> {
+  title?: T;
+  photos?: T;
+  summary?: T;
+  description?: T;
+  slug?: T;
+  finished?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  deletedAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "team_select".
  */
 export interface TeamSelect<T extends boolean = true> {
@@ -1187,6 +1292,26 @@ export interface MediaSelect<T extends boolean = true> {
   sizes?:
     | T
     | {
+        thumb?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+        thumbAvif?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
         card?:
           | T
           | {
@@ -1197,7 +1322,27 @@ export interface MediaSelect<T extends boolean = true> {
               filesize?: T;
               filename?: T;
             };
+        cardAvif?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
         large?:
+          | T
+          | {
+              url?: T;
+              width?: T;
+              height?: T;
+              mimeType?: T;
+              filesize?: T;
+              filename?: T;
+            };
+        largeAvif?:
           | T
           | {
               url?: T;

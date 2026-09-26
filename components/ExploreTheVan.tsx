@@ -115,6 +115,48 @@ export default function ExploreTheVan() {
   const [active, setActive] = useState<Feature | null>(null);
   const [walking, setWalking] = useState(false);
   const pose = useRef({ x: 0, z: 0, heading: 0, phi: 0 });
+  const frame = useRef<HTMLDivElement>(null);
+
+  /* The viewer's script is 290 KB compressed, the heaviest thing on the page,
+     and most visitors never scroll this far. It loads once the section is
+     within a screen or so of view AND the visitor has scrolled, tapped or
+     moved the mouse, which a real visitor has always done by the time they
+     get here. Until then the poster stands in (see :not(:defined) in the
+     module CSS). */
+  const [loadViewer, setLoadViewer] = useState(false);
+  useEffect(() => {
+    const el = frame.current;
+    if (!el) return;
+    let near = false;
+    let touched = false;
+    const events = ["scroll", "pointerdown", "pointermove", "keydown", "touchstart"] as const;
+    const stop = () => {
+      io.disconnect();
+      events.forEach((e) => window.removeEventListener(e, onInput));
+    };
+    const go = () => {
+      if (near && touched) {
+        setLoadViewer(true);
+        stop();
+      }
+    };
+    const onInput = () => {
+      touched = true;
+      go();
+    };
+    const io = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          near = true;
+          go();
+        }
+      },
+      { rootMargin: "800px 0px" },
+    );
+    io.observe(el);
+    events.forEach((e) => window.addEventListener(e, onInput, { passive: true }));
+    return stop;
+  }, []);
 
   const aim = (target: string, orbit: string) => {
     const el = viewer.current;
@@ -201,9 +243,9 @@ export default function ExploreTheVan() {
 
   return (
     <div className={styles.root}>
-      <Script type="module" src={MODEL_VIEWER_SRC} strategy="afterInteractive" />
+      {loadViewer && <Script type="module" src={MODEL_VIEWER_SRC} strategy="afterInteractive" />}
 
-      <div className={styles.frame}>
+      <div className={styles.frame} ref={frame}>
       <div className={styles.stage}>
         <model-viewer
           ref={viewer}

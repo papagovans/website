@@ -4,9 +4,6 @@ import { draftMode } from "next/headers";
 import { convertLexicalToPlaintext } from "@payloadcms/richtext-lexical/plaintext";
 import { listProjectCards, listTeam, type CmsPage as Page } from "@/lib/content";
 import { PageSections, type PageData } from "./PageSections";
-import "@/app/(frontend)/content.css";
-import "@/app/(frontend)/bespoke.css";
-import "@/app/(frontend)/gallery.css";
 
 const needs = (page: Page, ...types: string[]) => (page.sections ?? []).some((s) => types.includes(s.blockType));
 

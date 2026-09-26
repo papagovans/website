@@ -47,6 +47,17 @@ const nextConfig: NextConfig = {
         source: "/:path*",
         headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
       },
+      /*
+       * The files in /public have fixed names, so Vercel serves them with
+       * max-age=0 and every visit re-asks for the logo. A week in the browser,
+       * then served stale while it checks for a new copy: a changed logo
+       * shows within a week without anyone renaming the file. Photos do not
+       * live here; they are in the Media Library with year-long caching.
+       */
+      ...["/home/:file*", "/brand/:file*", "/explore-the-van/:file*", "/favicon.:ext"].map((source) => ({
+        source,
+        headers: [{ key: "Cache-Control", value: "public, max-age=604800, stale-while-revalidate=2592000" }],
+      })),
     ];
   },
 };

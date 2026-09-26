@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { RichText } from "@/components/RichText";
 import { getPost, listPosts } from "@/lib/content";
 import type { Media } from "@/payload-types";
-import "../../content.css";
 
 export async function generateStaticParams() {
   return (await listPosts()).map((p) => ({ slug: p.slug }));

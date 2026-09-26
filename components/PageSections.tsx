@@ -9,6 +9,7 @@ import { DEPARTMENTS } from "@/collections/Team";
 import type { ProjectCard } from "@/lib/content";
 import { DESTINATIONS, type Destination } from "@/lib/site";
 import type { Media, Page, Team } from "@/payload-types";
+import { Photo } from "./Photo";
 import { RichText } from "./RichText";
 
 type Section = NonNullable<Page["sections"]>[number];
@@ -35,31 +36,6 @@ function Button({ d, className }: { d: Dest; className: string }) {
     <a href={b.href} {...ext(b.external)} className={className}>
       {b.text} <span className="arw">&#8853;</span>
     </a>
-  );
-}
-
-/* A Media Library photo at the size the layout needs. */
-function Photo({ m, sizes, eager, className }: { m: Media | null; sizes: string; eager?: boolean; className?: string }) {
-  if (!m?.url) return null;
-  const set = [
-    m.sizes?.card?.url && `${m.sizes.card.url} ${m.sizes.card.width}w`,
-    m.sizes?.large?.url && `${m.sizes.large.url} ${m.sizes.large.width}w`,
-    `${m.url} ${m.width}w`,
-  ].filter(Boolean).join(", ");
-  return (
-    // eslint-disable-next-line @next/next/no-img-element
-    <img
-      className={className}
-      src={m.sizes?.large?.url ?? m.url}
-      srcSet={set}
-      sizes={sizes}
-      alt={m.alt}
-      width={m.width ?? undefined}
-      height={m.height ?? undefined}
-      loading={eager ? "eager" : "lazy"}
-      fetchPriority={eager ? "high" : undefined}
-      decoding="async"
-    />
   );
 }
 
@@ -108,17 +84,7 @@ function TeamGroup({ dept, people, eager }: { dept: string; people: Team[]; eage
           const p = media(m.photo);
           return (
             <li className="team-card" key={m.id}>
-              {p?.url && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={p.sizes?.card?.url ?? p.url}
-                  alt={`${m.name}, ${m.role} at Papago Vans`}
-                  width={200}
-                  height={200}
-                  loading={eager ? "eager" : "lazy"}
-                  decoding="async"
-                />
-              )}
+              <Photo m={p} sizes="200px" max="thumb" eager={eager} alt={`${m.name}, ${m.role} at Papago Vans`} />
               <p className="team-name">{m.name}</p>
               <p className="team-role">{m.role}</p>
             </li>
@@ -418,11 +384,7 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
               ))}
               {wall.map((c) => (
                 <a className="collage-cell" href={c.path} key={c.slug}>
-                  <picture>
-                    <source srcSet={c.thumb_avif} type="image/avif" />
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={c.thumb_webp} alt={c.alt} width={c.w} height={c.h} loading="lazy" decoding="async" />
-                  </picture>
+                  <Photo m={c.photo} sizes="(max-width: 600px) 50vw, 20vw" max="card" />
                 </a>
               ))}
             </div>
@@ -464,12 +426,7 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
             <div className="gal-grid">
               {data.projects.map((c, i) => (
                 <a className="gal-card" href={c.path} key={c.slug}>
-                  <picture>
-                    <source srcSet={c.thumb_avif} type="image/avif" />
-                    <source srcSet={c.thumb_webp} type="image/webp" />
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={c.thumb_webp} alt={c.alt} loading={i < 6 ? "eager" : "lazy"} decoding="async" />
-                  </picture>
+                  <Photo m={c.photo} sizes="(max-width: 640px) 100vw, (max-width: 1000px) 50vw, 380px" max="card" eager={i < 3} />
                   <h2>{c.title}</h2>
                 </a>
               ))}
