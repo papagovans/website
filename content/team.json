@@ -1,0 +1,284 @@
+[
+ {
+  "dept": "Owners",
+  "name": "Tim",
+  "role": "CEO / Founder",
+  "slug": "owners-tim"
+ },
+ {
+  "dept": "Owners",
+  "name": "Ian",
+  "role": "CFO / Founder",
+  "slug": "owners-ian"
+ },
+ {
+  "dept": "Owners",
+  "name": "Jesse",
+  "role": "CTO / Founder",
+  "slug": "owners-jesse"
+ },
+ {
+  "dept": "Builders",
+  "name": "Travis",
+  "role": "Shop Manager",
+  "slug": "builders-travis"
+ },
+ {
+  "dept": "Builders",
+  "name": "Connor",
+  "role": "Assistant Shop Manager",
+  "slug": "builders-connor"
+ },
+ {
+  "dept": "Builders",
+  "name": "Paden",
+  "role": "Team Lead",
+  "slug": "builders-paden"
+ },
+ {
+  "dept": "Builders",
+  "name": "Ryan",
+  "role": "Team Lead",
+  "slug": "builders-ryan"
+ },
+ {
+  "dept": "Builders",
+  "name": "Ron",
+  "role": "Team Lead",
+  "slug": "builders-ron"
+ },
+ {
+  "dept": "Builders",
+  "name": "Scott",
+  "role": "Team Lead",
+  "slug": "builders-scott"
+ },
+ {
+  "dept": "Builders",
+  "name": "Michael",
+  "role": "Builder",
+  "slug": "builders-michael"
+ },
+ {
+  "dept": "Builders",
+  "name": "Jamison",
+  "role": "Builder",
+  "slug": "builders-jamison"
+ },
+ {
+  "dept": "Builders",
+  "name": "Joe",
+  "role": "Builder",
+  "slug": "builders-joe"
+ },
+ {
+  "dept": "Builders",
+  "name": "Jack",
+  "role": "Builder",
+  "slug": "builders-jack"
+ },
+ {
+  "dept": "Builders",
+  "name": "Micah",
+  "role": "Builder",
+  "slug": "builders-micah"
+ },
+ {
+  "dept": "Builders",
+  "name": "Damond",
+  "role": "Builder",
+  "slug": "builders-damond"
+ },
+ {
+  "dept": "Builders",
+  "name": "Phil",
+  "role": "Builder",
+  "slug": "builders-phil"
+ },
+ {
+  "dept": "Builders",
+  "name": "Tyler",
+  "role": "Builder",
+  "slug": "builders-tyler"
+ },
+ {
+  "dept": "Builders",
+  "name": "Vicente",
+  "role": "Builder",
+  "slug": "builders-vicente"
+ },
+ {
+  "dept": "Builders",
+  "name": "Robbie",
+  "role": "Builder",
+  "slug": "builders-robbie"
+ },
+ {
+  "dept": "Builders",
+  "name": "William",
+  "role": "Builder",
+  "slug": "builders-william"
+ },
+ {
+  "dept": "Builders",
+  "name": "Jonah",
+  "role": "Builder",
+  "slug": "builders-jonah"
+ },
+ {
+  "dept": "Builders",
+  "name": "Steve",
+  "role": "Builder",
+  "slug": "builders-steve"
+ },
+ {
+  "dept": "Builders",
+  "name": "Slava",
+  "role": "Builder",
+  "slug": "builders-slava"
+ },
+ {
+  "dept": "Builders",
+  "name": "Joshua",
+  "role": "Builder",
+  "slug": "builders-joshua"
+ },
+ {
+  "dept": "Builders",
+  "name": "Pat",
+  "role": "Builder",
+  "slug": "builders-pat"
+ },
+ {
+  "dept": "Builders",
+  "name": "John",
+  "role": "Builder",
+  "slug": "builders-john"
+ },
+ {
+  "dept": "Builders",
+  "name": "Stephen",
+  "role": "Builder",
+  "slug": "builders-stephen"
+ },
+ {
+  "dept": "Builders",
+  "name": "Curtis",
+  "role": "Builder",
+  "slug": "builders-curtis"
+ },
+ {
+  "dept": "Builders",
+  "name": "Clayton",
+  "role": "Builder",
+  "slug": "builders-clayton"
+ },
+ {
+  "dept": "Builders",
+  "name": "Kyler",
+  "role": "Builder",
+  "slug": "builders-kyler"
+ },
+ {
+  "dept": "Service Department",
+  "name": "Daniel",
+  "role": "Operations Director",
+  "slug": "service-department-daniel"
+ },
+ {
+  "dept": "Service Department",
+  "name": "Zach",
+  "role": "Service Lead",
+  "slug": "service-department-zach"
+ },
+ {
+  "dept": "Service Department",
+  "name": "Andrew",
+  "role": "Service Technician",
+  "slug": "service-department-andrew"
+ },
+ {
+  "dept": "Painters",
+  "name": "Manny",
+  "role": "Painter",
+  "slug": "painters-manny"
+ },
+ {
+  "dept": "Painters",
+  "name": "Brandon",
+  "role": "Painter",
+  "slug": "painters-brandon"
+ },
+ {
+  "dept": "Painters",
+  "name": "Michael",
+  "role": "Painter",
+  "slug": "painters-michael"
+ },
+ {
+  "dept": "CNC Specialists",
+  "name": "Skyler",
+  "role": "CNC Manager",
+  "slug": "cnc-specialists-skyler"
+ },
+ {
+  "dept": "CNC Specialists",
+  "name": "Adrian",
+  "role": "CNC Programmer",
+  "slug": "cnc-specialists-adrian"
+ },
+ {
+  "dept": "CNC Specialists",
+  "name": "William",
+  "role": "CNC Operator",
+  "slug": "cnc-specialists-william"
+ },
+ {
+  "dept": "Administration",
+  "name": "Katie",
+  "role": "Office Manager",
+  "slug": "administration-katie"
+ },
+ {
+  "dept": "Administration",
+  "name": "Izzy",
+  "role": "Office Administration",
+  "slug": "administration-izzy"
+ },
+ {
+  "dept": "Inventory",
+  "name": "Sam",
+  "role": "Parts Manager",
+  "slug": "inventory-sam"
+ },
+ {
+  "dept": "Inventory",
+  "name": "Jeff",
+  "role": "Parts Specialist",
+  "slug": "inventory-jeff"
+ },
+ {
+  "dept": "Sales",
+  "name": "Jeremy",
+  "role": "Sales Manager",
+  "slug": "sales-jeremy"
+ },
+ {
+  "dept": "Sales",
+  "name": "Rachel",
+  "role": "Client Engagement Specialist",
+  "slug": "sales-rachel"
+ },
+ {
+  "dept": "Finance",
+  "name": "Quynhchi",
+  "role": "Accountant",
+  "slug": "finance-quynhchi"
+ },
+ {
+  "dept": "Marketing",
+  "name": "Alec",
+  "role": "Marketing Manager",
+  "slug": "marketing-alec"
+ }
+]

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { listProjectCards } from "@/lib/content";
-import { CALENDAR_URL, ADDRESS_LINE1, ADDRESS_LINE2, MAP_URL } from "@/lib/site";
+import { CALENDAR_URL, ADDRESS_LINE1, ADDRESS_LINE2, MAP_URL, EMAIL } from "@/lib/site";
+import team from "@/content/team.json";
 
 /*
  * About Us.
@@ -23,6 +24,15 @@ const values = [
   { t: "You see it being built", d: "Weekly photographs of your own van as it happens. Owners tell us it is the part they did not expect and would not give up." },
   { t: "The price is the price", d: "Every option is priced before you talk to anyone. You can build the whole thing yourself online and watch the total move." },
 ];
+
+/* Group in first-appearance order rather than alphabetically: the source page
+   runs owners, then the shop, then the departments that support it. */
+const departments: [string, typeof team][] = [];
+for (const member of team) {
+  const found = departments.find(([d]) => d === member.dept);
+  if (found) found[1].push(member);
+  else departments.push([member.dept, [member]]);
+}
 
 export default async function AboutPage() {
   const shots = (await listProjectCards()).slice(0, 2);
@@ -113,6 +123,55 @@ export default async function AboutPage() {
             <a href="/van-life-build-gallery/"> gallery</a> is the fastest way to
             understand what we do.
           </p>
+
+          {/* The whole crew, ported from the live site's About page. Grouped by
+              department in the order that page uses, which runs owners first
+              and then the shop, because that is the order a visitor cares
+              about: who owns this, and who is actually holding the tools.
+
+              47 portraits is a lot of requests, so every one below the first
+              row is lazy. They arrive already cropped to a circle on the
+              brand blue, which is why there is no mask here. */}
+          <h2 className="page-h2">Meet The Team</h2>
+          <p className="page-p">
+            Forty-seven people in one building in Mesa. The person who wires your
+            electrical, the one who cuts your cabinets and the one who answers when you
+            call are all on this page.
+          </p>
+          {departments.map(([dept, people], di) => (
+            <section className="team-group" key={dept}>
+              <h3 className="team-dept">{dept}</h3>
+              <ul className="team-grid">
+                {people.map((m, i) => (
+                  <li className="team-card" key={m.slug}>
+                    <picture>
+                      <source srcSet={`/team/${m.slug}.avif`} type="image/avif" />
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={`/team/${m.slug}.webp`}
+                        alt={`${m.name}, ${m.role} at Papago Vans`}
+                        width={400}
+                        height={400}
+                        loading={di === 0 && i < 3 ? "eager" : "lazy"}
+                        decoding="async"
+                      />
+                    </picture>
+                    <p className="team-name">{m.name}</p>
+                    <p className="team-role">{m.role}</p>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+
+          <div className="page-note">
+            <p>
+              <strong>Want to be on this page?</strong> We hire in steps rather than
+              smoothly, and we keep applications on file. See{" "}
+              <a href="/work-at-papago-vans/">Careers</a>, or send a resume to{" "}
+              <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
+            </p>
+          </div>
 
           <h2 className="page-h2">Where we are</h2>
           <p className="page-p">
