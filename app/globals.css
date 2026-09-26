@@ -581,7 +581,13 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(116px, 1fr)); gap: 26px 18px; }
 .team-card { text-align: center; }
 .team-card img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
-.team-name { margin-top: 8px; font-size: 15px; font-weight: 600; color: var(--footer); text-transform: capitalize; }
+.team-name {
+	margin-top: 8px; font-size: 15px; font-weight: 600; color: var(--footer);
+	text-transform: capitalize;
+	/* The source page lists single first names; a full name has to wrap inside
+	   the card rather than widen it. */
+	line-height: 1.25; text-wrap: balance;
+}
 .team-role { font-size: 12.5px; line-height: 1.4; color: var(--muted); margin-top: 2px; }
 @media (max-width: 520px) {
 	.team-grid { grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 20px 14px; }
