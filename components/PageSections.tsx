@@ -9,6 +9,7 @@ import { DEPARTMENTS } from "@/collections/Team";
 import type { ProjectCard } from "@/lib/content";
 import { DESTINATIONS, type Destination } from "@/lib/site";
 import type { Media, Page, Team } from "@/payload-types";
+import { LoopVideo } from "./LoopVideo";
 import { Photo } from "./Photo";
 import { RichText } from "./RichText";
 
@@ -314,6 +315,19 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
               {s.items?.map((p) => (
                 <article className={p.featured ? "path-card is-featured" : "path-card"} key={p.id}>
                   {p.featured && p.flag && <span className="path-flag">{p.flag}</span>}
+                  {(media(p.image) || media(p.video)) && (
+                    <div className="path-media">
+                      {media(p.video)?.url ? (
+                        <LoopVideo
+                          src={media(p.video)!.url!}
+                          poster={media(p.image)?.sizes?.card?.url ?? media(p.image)?.url ?? undefined}
+                          label={media(p.video)!.alt}
+                        />
+                      ) : (
+                        <Photo m={media(p.image)} sizes="(max-width: 860px) 100vw, 440px" max="card" />
+                      )}
+                    </div>
+                  )}
                   {p.kicker && <p className="path-kicker">{p.kicker}</p>}
                   <h3 className="path-name">{p.title}</h3>
                   <p className="path-copy">{p.text}</p>

@@ -8,7 +8,7 @@ export const Media: CollectionConfig = {
   admin: {
     group: "Media Library",
     description:
-      "Every photo on the site. Upload straight from a phone or camera: images are resized and compressed automatically.",
+      "Every photo and video on the site. Upload photos straight from a phone or camera: they are resized and compressed automatically.",
     defaultColumns: ["filename", "alt", "updatedAt"],
   },
   // A browser loads these files directly, so reads are public. Changes need a login.
@@ -26,7 +26,8 @@ export const Media: CollectionConfig = {
    * which is why it stops here. WebP 78 is the fallback the site always used.
    */
   upload: {
-    mimeTypes: ["image/*"],
+    // Photos, plus short MP4 loops for cards. Videos are stored as uploaded.
+    mimeTypes: ["image/*", "video/mp4"],
     focalPoint: true,
     // The master copy: capped at 2400px so a 12MP phone photo is not stored
     // at 5MB, kept at a high quality because every size is cut from it.

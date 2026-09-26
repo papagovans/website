@@ -465,6 +465,14 @@ export interface Page {
             items?:
               | {
                   /**
+                   * Optional. Shown across the top of the card, cropped to a wide 2:1 shape.
+                   */
+                  image?: (number | null) | Media;
+                  /**
+                   * Plays silently on a loop in place of the picture, which still shows while it loads. MP4, under 1 MB.
+                   */
+                  video?: (number | null) | Media;
+                  /**
                    * The option's name, e.g. "Tailored".
                    */
                   title: string;
@@ -615,7 +623,7 @@ export interface Page {
   _status?: ('draft' | 'published') | null;
 }
 /**
- * Every photo on the site. Upload straight from a phone or camera: images are resized and compressed automatically.
+ * Every photo and video on the site. Upload photos straight from a phone or camera: they are resized and compressed automatically.
  *
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "media".
@@ -1131,6 +1139,8 @@ export interface PagesSelect<T extends boolean = true> {
               items?:
                 | T
                 | {
+                    image?: T;
+                    video?: T;
                     title?: T;
                     kicker?: T;
                     text?: T;

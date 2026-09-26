@@ -260,6 +260,22 @@ const PathCards: Block = {
       labels: { singular: "Card", plural: "Cards" },
       admin: { initCollapsed: true, ...rowLabel },
       fields: [
+        {
+          name: "image",
+          label: "Picture",
+          type: "upload",
+          relationTo: "media",
+          admin: { description: "Optional. Shown across the top of the card, cropped to a wide 2:1 shape." },
+        },
+        {
+          name: "video",
+          label: "Video (optional)",
+          type: "upload",
+          relationTo: "media",
+          admin: {
+            description: "Plays silently on a loop in place of the picture, which still shows while it loads. MP4, under 1 MB.",
+          },
+        },
         { name: "title", type: "text", required: true, admin: { description: 'The option\'s name, e.g. "Tailored".' } },
         { name: "kicker", label: "Line above the name", type: "text" },
         { name: "text", type: "textarea", required: true },
