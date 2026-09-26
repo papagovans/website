@@ -317,11 +317,32 @@ const PhotoShowcase: Block = {
   slug: "photoShowcase",
   labels: { singular: "Photo Showcase", plural: "Photo Showcases" },
   fields: [
+    { name: "eyebrow", label: "Small label above the heading", type: "text", admin: { description: 'Optional, e.g. "What we do".' } },
     {
       name: "heading",
       type: "textarea",
       required: true,
-      admin: { description: "Sits over the top left of the big photo. One plain sentence about what we do." },
+      admin: { description: "One plain sentence about what we do." },
+    },
+    {
+      name: "headingPlacement",
+      label: "Heading goes",
+      type: "radio",
+      defaultValue: "above",
+      options: [
+        { value: "above", label: "Above the photo, on its own" },
+        { value: "over", label: "Over the top left of the photo" },
+      ],
+      admin: { layout: "horizontal", description: "Above is calmer; over works when the photo has a plain area on the left." },
+    },
+    {
+      name: "proof",
+      label: "Short facts under the heading",
+      type: "array",
+      maxRows: 5,
+      labels: { singular: "Fact", plural: "Facts" },
+      admin: { description: 'Optional. A few words each, e.g. "RVIA certified". Shown in one line, separated by dots.' },
+      fields: [{ name: "text", type: "text", required: true }],
     },
     {
       name: "image",

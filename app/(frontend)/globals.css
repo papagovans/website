@@ -1080,7 +1080,7 @@ body:has(#mobile-menu:not([hidden])) .hamburger span { background: var(--ink); }
 .showcase { padding: 20px; display: grid; gap: 20px; }
 .showcase-main { position: relative; aspect-ratio: 12 / 5; border-radius: 18px; overflow: hidden; background: var(--footer); }
 .showcase-main img { width: 100%; height: 100%; object-fit: cover; object-position: 70% 50%; display: block; }
-.showcase-main::after {
+.showcase.is-over .showcase-main::after {
 	content: ""; position: absolute; inset: 0; pointer-events: none;
 	background: linear-gradient(100deg, rgba(20, 20, 22, 0.62) 0%, rgba(20, 20, 22, 0.28) 38%, rgba(20, 20, 22, 0) 62%);
 }
@@ -1097,7 +1097,26 @@ body:has(#mobile-menu:not([hidden])) .hamburger span { background: var(--ink); }
 	.showcase { padding: 16px; gap: 16px; }
 	.showcase-main { aspect-ratio: 4 / 3; }
 	.showcase-main h2 { max-width: 78%; font-size: 24px; padding: 20px; }
-	.showcase-main::after { background: linear-gradient(170deg, rgba(20, 20, 22, 0.66) 0%, rgba(20, 20, 22, 0.2) 55%, rgba(20, 20, 22, 0) 80%); }
+	.showcase.is-over .showcase-main::after { background: linear-gradient(170deg, rgba(20, 20, 22, 0.66) 0%, rgba(20, 20, 22, 0.2) 55%, rgba(20, 20, 22, 0) 80%); }
 	.showcase-row { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -16px; padding: 0 16px; scrollbar-width: none; }
 	.showcase-cell { flex: 0 0 70%; scroll-snap-align: start; }
+}
+
+/* Heading above the photo: a quiet band that separates the hero from the
+   first van, so two full-bleed photographs never meet head on. */
+.showcase-head { text-align: center; padding: 76px 24px 36px; max-width: 980px; margin: 0 auto; }
+.showcase-eyebrow { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.showcase-head h2 { margin-top: 12px; font-size: clamp(28px, 4vw, 48px); line-height: 1.1; color: var(--footer); text-wrap: balance; }
+.showcase-proof { list-style: none; margin: 22px 0 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 0; font-size: 15px; font-weight: 600; color: var(--footer); }
+.showcase-proof li + li::before { content: "\00B7"; margin: 0 14px; color: var(--gold-deep); font-weight: 700; }
+@media (max-width: 720px) {
+	.showcase-head { padding: 52px 8px 20px; }
+	.showcase-head h2 { font-size: 28px; }
+	.showcase-proof { font-size: 14px; }
+}
+/* Where the facts would wrap, a two-by-two grid instead of dots that land
+   at the start of a line. */
+@media (max-width: 900px) {
+	.showcase-proof { display: grid; grid-template-columns: repeat(2, auto); justify-content: center; gap: 8px 22px; }
+	.showcase-proof li + li::before { content: none; }
 }

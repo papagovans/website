@@ -474,9 +474,26 @@ export interface Page {
           }
         | {
             /**
-             * Sits over the top left of the big photo. One plain sentence about what we do.
+             * Optional, e.g. "What we do".
+             */
+            eyebrow?: string | null;
+            /**
+             * One plain sentence about what we do.
              */
             heading: string;
+            /**
+             * Above is calmer; over works when the photo has a plain area on the left.
+             */
+            headingPlacement?: ('above' | 'over') | null;
+            /**
+             * Optional. A few words each, e.g. "RVIA certified". Shown in one line, separated by dots.
+             */
+            proof?:
+              | {
+                  text: string;
+                  id?: string | null;
+                }[]
+              | null;
             /**
              * A wide photo, at least 1920 pixels across, with calm space on the left for the words.
              */
@@ -1176,7 +1193,15 @@ export interface PagesSelect<T extends boolean = true> {
         photoShowcase?:
           | T
           | {
+              eyebrow?: T;
               heading?: T;
+              headingPlacement?: T;
+              proof?:
+                | T
+                | {
+                    text?: T;
+                    id?: T;
+                  };
               image?: T;
               photos?: T;
               id?: T;

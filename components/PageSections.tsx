@@ -317,12 +317,25 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
 
     case "photoShowcase": {
       const rest = (Array.isArray(s.photos) ? s.photos : []).map(media).filter(Boolean);
+      const over = s.headingPlacement === "over";
+      const facts = (s.proof ?? []).map((f) => f.text).filter(Boolean);
       return (
-        <section className="showcase">
+        <section className={over ? "showcase is-over" : "showcase"}>
+          {!over && (
+            <header className="showcase-head">
+              {s.eyebrow && <p className="showcase-eyebrow">{s.eyebrow}</p>}
+              <h2>{s.heading}</h2>
+              {facts.length > 0 && (
+                <ul className="showcase-proof">
+                  {facts.map((f) => <li key={f}>{f}</li>)}
+                </ul>
+              )}
+            </header>
+          )}
           <div className="showcase-main">
             {/* A phone crops the wide photo to 4:3, which enlarges it about 1.8x. */}
             <Photo m={media(s.image)} sizes="(max-width: 720px) 180vw, 100vw" />
-            <h2>{s.heading}</h2>
+            {over && <h2>{s.heading}</h2>}
           </div>
           {rest.length > 0 && (
             <div className="showcase-row" style={{ ["--n" as string]: rest.length }}>
