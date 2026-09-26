@@ -1,60 +1,80 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { SALES_PHONE, tel } from "@/lib/site";
 
 /*
- * HubSpot form embed for the newsletter band.
+ * Newsletter band, on every page above the footer.
  *
- * Every form on this site is a HubSpot form, so signups land in the CRM with a
- * source property rather than in a second system that nobody reconciles.
+ * One field, asking for one thing. The previous version embedded HubSpot's own
+ * form script, which meant a third-party stylesheet inside our band and a
+ * layout we did not control; this posts to /api/newsletter, which forwards to
+ * the same HubSpot form server side.
  *
- * The form id comes from NEXT_PUBLIC_HUBSPOT_NEWSLETTER_FORM_ID so it can be
- * set in Vercel without a deploy. Until it is set the band falls back to the
- * phone number, which is a real thing a reader can do, rather than rendering a
- * dead input.
+ * Four states, and the failure one tells the truth rather than showing a tick
+ * over a dropped address. Until HUBSPOT_NEWSLETTER_FORM_ID is set in Vercel
+ * every submission lands there, which is deliberate: it is visible the first
+ * time anyone tests it.
  */
 
-const PORTAL_ID = "43782575";
-const FORM_ID = process.env.NEXT_PUBLIC_HUBSPOT_NEWSLETTER_FORM_ID;
-
-declare global {
-  interface Window {
-    hbspt?: { forms: { create: (o: Record<string, unknown>) => void } };
-  }
-}
+type State = "idle" | "sending" | "done" | "error";
 
 export default function NewsletterForm() {
-  const host = useRef<HTMLDivElement>(null);
-  const [failed, setFailed] = useState(false);
+  const [email, setEmail] = useState("");
+  const [state, setState] = useState<State>("idle");
 
-  useEffect(() => {
-    if (!FORM_ID || !host.current) return;
-    const target = `#${host.current.id}`;
+  async function onSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (state === "sending") return;
+    setState("sending");
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      setState(res.ok ? "done" : "error");
+    } catch {
+      setState("error");
+    }
+  }
 
-    const create = () => {
-      if (!window.hbspt) return setFailed(true);
-      window.hbspt.forms.create({ portalId: PORTAL_ID, formId: FORM_ID, region: "na1", target });
-    };
-
-    const existing = document.querySelector<HTMLScriptElement>("script[data-hsforms]");
-    if (existing) return create();
-
-    const s = document.createElement("script");
-    s.src = "https://js.hsforms.net/forms/embed/v2.js";
-    s.async = true;
-    s.dataset.hsforms = "true";
-    s.onload = create;
-    s.onerror = () => setFailed(true);
-    document.body.appendChild(s);
-  }, []);
-
-  if (!FORM_ID || failed) {
+  if (state === "done") {
     return (
-      <a href={tel(SALES_PHONE)} className="btn btn-gold">
-        Call {SALES_PHONE} <span className="arw">&#8853;</span>
-      </a>
+      <p className="kit-done" role="status">
+        You are on the list. We will not email you often, and never about anything
+        other than vans.
+      </p>
     );
   }
-  return <div id="hs-newsletter" className="kit-form" ref={host} />;
+
+  return (
+    <form className="kit-form" onSubmit={onSubmit} noValidate>
+      <label className="sr-only" htmlFor="kit-email">Email address</label>
+      <input
+        id="kit-email"
+        className="kit-input"
+        type="email"
+        name="email"
+        inputMode="email"
+        autoComplete="email"
+        required
+        placeholder="you@example.com"
+        value={email}
+        onChange={(e) => { setEmail(e.target.value); if (state === "error") setState("idle"); }}
+        aria-invalid={state === "error" || undefined}
+      />
+      <button className="btn btn-gold" type="submit" disabled={state === "sending"}>
+        {state === "sending" ? "Signing up…" : "Sign Up"}
+        {state !== "sending" && <span className="arw">&#8853;</span>}
+      </button>
+
+      {state === "error" && (
+        <p className="kit-error" role="alert">
+          That did not go through. Try again, or call{" "}
+          <a href={tel(SALES_PHONE)}>{SALES_PHONE}</a>.
+        </p>
+      )}
+    </form>
+  );
 }
