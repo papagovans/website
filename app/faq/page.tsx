@@ -4,12 +4,13 @@ import { CALENDAR_URL, BUILD_APP } from "@/lib/site";
 /*
  * FAQ.
  *
- * Ported from the WordPress page, but the two numbers in it were wrong for
- * this site and had to be reconciled rather than copied. The old page quotes
- * $53,595 to $127,395 excluding the van and a 6 to 9 week build; this site
- * quotes $180,000 to $250,000 including the van and 14 weeks. Shipping both
- * would have put the contradiction on one domain. The figures here follow the
- * home page. Whichever set is right, they have to agree.
+ * Ported from the WordPress page, but its numbers were wrong for this site.
+ * The old page quotes $53,595 to $127,395 excluding the van and a 6 to 9 week
+ * build. Owner's call, 2026-09-25: $180,000 including the van is the correct
+ * figure and is used everywhere, so the tier prices on the five floor plan
+ * pages were rewritten to match and their "the van is NOT included"
+ * disclaimers replaced. Treated as current until the shop says otherwise;
+ * papagovans.com still publishes the old set.
  *
  * <details> rather than a JS accordion: it opens on click, it is keyboard
  * accessible, it prints open, and Google reads the answer whether or not the

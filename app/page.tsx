@@ -31,29 +31,6 @@ const CALENDAR_URL = "https://calendly.com/jeremy-papago/30min";
    galleries, so nothing repeats. */
 const COLLAGE_COUNT = 45;
 
-const builds = [
-  {
-    name: "El Capitan",
-    price: "Starts at $127,395+",
-    img: "image-1-4.webp",
-    copy: "This is our top-tier luxury build, featuring premium finishes, custom upgrades, and adventure-ready options. Its spacious, flexible layout is perfect for families or larger groups who want to travel without limits.",
-    specs: ["2-6", "920Ah", "Yes", "33G"],
-  },
-  {
-    name: "Build Layout 4",
-    price: "Starts at $86,795",
-    img: "JMO_1216.webp",
-    copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-    specs: ["2-6", "460Ah", "Yes", "33G"],
-  },
-  {
-    name: "Build Layout 3",
-    price: "Starts at $108,595",
-    img: "image-5.webp",
-    copy: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
-    specs: ["2-6", "920Ah", "Yes", "33G"],
-  },
-];
 
 /*
  * Two ways to buy. The axis is where the build starts, not how much of it is
