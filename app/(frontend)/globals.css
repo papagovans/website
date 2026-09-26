@@ -890,7 +890,7 @@ figure.scene-shot { margin: 0; }
 .gal h1 { font-size: clamp(32px, 4.8vw, 52px); margin: 12px 0 0; color: var(--footer); }
 .gal-lede { margin-top: 16px; max-width: 620px; font-size: 18px; line-height: 1.6; color: var(--muted); }
 .gal-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 22px; margin-top: 44px; }
-.gal-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-md); background: var(--soft); transition: 0.2s ease; }
+.gal-card img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-md); background: var(--soft); transition: 0.2s ease; }
 .gal-card:hover img { opacity: 0.88; }
 .gal-card h2 { font-size: 18px; margin-top: 12px; color: var(--footer); font-weight: 600; }
 
@@ -954,7 +954,7 @@ figure.scene-shot { margin: 0; }
 }
 .proj-grid figure { margin: 0; }
 .proj-grid img {
-	width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+	width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover;
 	border-radius: var(--pg-radius-sm); background: var(--pg-surface);
 }
 .proj-grid .tall img { aspect-ratio: 3 / 4; }
@@ -977,3 +977,10 @@ figure.scene-shot { margin: 0; }
 	border-radius: var(--pg-radius-sm); padding: 14px 28px;
 	font-weight: 600; font-size: 15px; white-space: nowrap;
 }
+
+/* Photos arrive wrapped in <picture> (AVIF with a WebP fallback). The wrapper
+   must not be a box of its own, or an image sized to its container (the hero,
+   the photo wall) measures an inline wrapper instead. And every photo carries
+   its real width and height so the page reserves the space; where the CSS
+   crops to a shape with aspect-ratio, height: auto lets the shape win. */
+picture { display: contents; }
