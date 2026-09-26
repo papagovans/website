@@ -23,6 +23,15 @@ const nextConfig: NextConfig = {
    */
   trailingSlash: true,
 
+  /*
+   * The stylesheet arrives inside the HTML instead of as a separate request
+   * the page has to wait for. Measured with Lighthouse on mobile: the two
+   * render-blocking stylesheets held the first paint back about half a
+   * second. The site's CSS is ~13 KB compressed, and most visitors are new,
+   * so re-sending it with each page is the cheaper side of the trade.
+   */
+  experimental: { inlineCss: true },
+
   async redirects() {
     return live.urls
       .filter((u) => u.status === "redirect" && u.to)
