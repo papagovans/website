@@ -1120,3 +1120,50 @@ body:has(#mobile-menu:not([hidden])) .hamburger span { background: var(--ink); }
 	.showcase-proof { display: grid; grid-template-columns: repeat(2, auto); justify-content: center; gap: 8px 22px; }
 	.showcase-proof li + li::before { content: none; }
 }
+
+/* Photo Showcase, cut-out style: the van alone on the page background on the
+   right, the words beside it on the left. */
+.showcase-cut {
+	display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); align-items: center; gap: 48px;
+	width: min(1240px, 100%); margin: 0 auto; padding: 64px 12px 12px;
+}
+.showcase-cut .showcase-head { text-align: left; padding: 0; margin: 0; max-width: 520px; }
+.showcase-cut .showcase-proof { display: grid; gap: 8px; justify-content: start; margin-top: 24px; }
+.showcase-cut .showcase-proof li { position: relative; padding-left: 22px; }
+.showcase-cut .showcase-proof li::before, .showcase-cut .showcase-proof li + li::before {
+	content: "\2713"; position: absolute; left: 0; margin: 0; color: var(--gold-deep); font-weight: 700;
+}
+.showcase-van img { width: 100%; height: auto; display: block; }
+@media (max-width: 860px) {
+	.showcase-cut { grid-template-columns: 1fr; gap: 24px; padding: 44px 4px 4px; }
+	.showcase-cut .showcase-head { text-align: center; margin: 0 auto; }
+	.showcase-cut .showcase-proof { grid-template-columns: repeat(2, auto); justify-content: center; gap: 8px 20px; text-align: left; }
+}
+
+/* Reveal slider (components/RevealSlider.tsx). Both layers fill the same
+   12:5 frame with the same crop, so they stay aligned at every width. */
+.reveal { position: relative; aspect-ratio: 12 / 5; border-radius: 18px; overflow: hidden; user-select: none; }
+.reveal-back, .reveal-front { position: absolute; inset: 0; }
+.reveal-back img, .reveal-front img { width: 100%; height: 100%; object-fit: cover; object-position: 70% 50%; display: block; }
+.reveal-back { clip-path: inset(0 calc(100% - var(--pos)) 0 0); }
+.reveal-handle {
+	position: absolute; top: 0; bottom: 0; width: 2px; background: rgba(255, 255, 255, 0.9);
+	left: clamp(80px, var(--pos), calc(100% - 80px)); transform: translateX(-1px); pointer-events: none;
+	box-shadow: 0 0 0 1px rgba(20, 20, 22, 0.15);
+}
+.reveal-handle span {
+	position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+	white-space: nowrap; padding: 11px 16px; border-radius: 999px;
+	background: var(--gold); color: var(--ink); font-size: 14px; font-weight: 700; letter-spacing: 0.02em;
+	box-shadow: 0 4px 18px rgba(0, 0, 0, 0.22);
+}
+.reveal-input {
+	position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize;
+	touch-action: pan-y; appearance: none; -webkit-appearance: none;
+}
+.reveal:has(.reveal-input:focus-visible) .reveal-handle span { outline: 3px solid var(--footer); outline-offset: 3px; }
+@media (max-width: 720px) {
+	.reveal { aspect-ratio: 4 / 3; }
+	.reveal-handle { left: clamp(70px, var(--pos), calc(100% - 70px)); }
+	.reveal-handle span { font-size: 13px; padding: 9px 13px; }
+}

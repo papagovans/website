@@ -12,6 +12,7 @@ import type { Media, Page, Team } from "@/payload-types";
 import { ContactForm } from "./ContactForm";
 import { LoopVideo } from "./LoopVideo";
 import { Photo } from "./Photo";
+import { RevealSlider } from "./RevealSlider";
 import { RichText } from "./RichText";
 
 type Section = NonNullable<Page["sections"]>[number];
@@ -317,26 +318,50 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
 
     case "photoShowcase": {
       const rest = (Array.isArray(s.photos) ? s.photos : []).map(media).filter(Boolean);
-      const over = s.headingPlacement === "over";
+      const cutout = s.imageStyle === "cutout";
+      const reveal = s.imageStyle === "reveal" && media(s.revealFront);
+      const over = !cutout && !reveal && s.headingPlacement === "over";
       const facts = (s.proof ?? []).map((f) => f.text).filter(Boolean);
-      return (
-        <section className={over ? "showcase is-over" : "showcase"}>
-          {!over && (
-            <header className="showcase-head">
-              {s.eyebrow && <p className="showcase-eyebrow">{s.eyebrow}</p>}
-              <h2>{s.heading}</h2>
-              {facts.length > 0 && (
-                <ul className="showcase-proof">
-                  {facts.map((f) => <li key={f}>{f}</li>)}
-                </ul>
-              )}
-            </header>
+      const head = (
+        <header className="showcase-head">
+          {s.eyebrow && <p className="showcase-eyebrow">{s.eyebrow}</p>}
+          <h2>{s.heading}</h2>
+          {facts.length > 0 && (
+            <ul className="showcase-proof">
+              {facts.map((f) => <li key={f}>{f}</li>)}
+            </ul>
           )}
-          <div className="showcase-main">
-            {/* A phone crops the wide photo to 4:3, which enlarges it about 1.8x. */}
-            <Photo m={media(s.image)} sizes="(max-width: 720px) 180vw, 100vw" />
-            {over && <h2>{s.heading}</h2>}
-          </div>
+        </header>
+      );
+      return (
+        <section className={cutout ? "showcase is-cutout" : over ? "showcase is-over" : "showcase"}>
+          {cutout ? (
+            <div className="showcase-cut">
+              {head}
+              <div className="showcase-van">
+                <Photo m={media(s.image)} sizes="(max-width: 860px) 92vw, 56vw" />
+              </div>
+            </div>
+          ) : reveal ? (
+            <>
+              {head}
+              <RevealSlider
+                label="Drag to bring the forest in behind the van"
+                handle="Gimme Trees"
+                back={<Photo m={media(s.image)} sizes="(max-width: 720px) 180vw, 100vw" />}
+                front={<Photo m={media(s.revealFront)} sizes="(max-width: 720px) 180vw, 100vw" />}
+              />
+            </>
+          ) : (
+            <>
+              {!over && head}
+              <div className="showcase-main">
+                {/* A phone crops the wide photo to 4:3, which enlarges it about 1.8x. */}
+                <Photo m={media(s.image)} sizes="(max-width: 720px) 180vw, 100vw" />
+                {over && <h2>{s.heading}</h2>}
+              </div>
+            </>
+          )}
           {rest.length > 0 && (
             <div className="showcase-row" style={{ ["--n" as string]: rest.length }}>
               {rest.map((m) => (

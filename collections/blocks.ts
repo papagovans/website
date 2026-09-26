@@ -325,6 +325,16 @@ const PhotoShowcase: Block = {
       admin: { description: "One plain sentence about what we do." },
     },
     {
+      name: "revealFront",
+      label: "Cut-out in front (reveal slider)",
+      type: "upload",
+      relationTo: "media",
+      admin: {
+        condition: (_, s) => s?.imageStyle === "reveal",
+        description: "A transparent PNG exactly the size of the big photo, with the van where it sits in that photo, so the two line up. home-what-we-do-van-aligned is the current one.",
+      },
+    },
+    {
       name: "headingPlacement",
       label: "Heading goes",
       type: "radio",
@@ -333,7 +343,11 @@ const PhotoShowcase: Block = {
         { value: "above", label: "Above the photo, on its own" },
         { value: "over", label: "Over the top left of the photo" },
       ],
-      admin: { layout: "horizontal", description: "Above is calmer; over works when the photo has a plain area on the left." },
+      admin: {
+        layout: "horizontal",
+        description: "Above is calmer; over works when the photo has a plain area on the left. Ignored for a cut-out, where the words always sit beside it.",
+        condition: (_, s) => s?.imageStyle !== "cutout" && s?.imageStyle !== "reveal",
+      },
     },
     {
       name: "proof",
@@ -345,12 +359,24 @@ const PhotoShowcase: Block = {
       fields: [{ name: "text", type: "text", required: true }],
     },
     {
+      name: "imageStyle",
+      label: "Photo style",
+      type: "radio",
+      defaultValue: "photo",
+      options: [
+        { value: "photo", label: "Full photo with rounded corners" },
+        { value: "cutout", label: "Cut-out (no background): the words sit beside it" },
+        { value: "reveal", label: "Reveal slider: drag to bring the background in behind the cut-out" },
+      ],
+      admin: { description: "Cut-out needs a PNG with a transparent background. Reveal needs both: the full photo as the big photo, and the cut-out below." },
+    },
+    {
       name: "image",
       label: "Big photo",
       type: "upload",
       relationTo: "media",
       required: true,
-      admin: { description: "A wide photo, at least 1920 pixels across, with calm space on the left for the words." },
+      admin: { description: "Full photo: a wide one, at least 1920 pixels across. Cut-out: the van alone on a transparent background. The forest photo is home-what-we-do-1 in the Media Library." },
     },
     {
       name: "photos",

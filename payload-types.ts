@@ -482,7 +482,11 @@ export interface Page {
              */
             heading: string;
             /**
-             * Above is calmer; over works when the photo has a plain area on the left.
+             * A transparent PNG exactly the size of the big photo, with the van where it sits in that photo, so the two line up. home-what-we-do-van-aligned is the current one.
+             */
+            revealFront?: (number | null) | Media;
+            /**
+             * Above is calmer; over works when the photo has a plain area on the left. Ignored for a cut-out, where the words always sit beside it.
              */
             headingPlacement?: ('above' | 'over') | null;
             /**
@@ -495,7 +499,11 @@ export interface Page {
                 }[]
               | null;
             /**
-             * A wide photo, at least 1920 pixels across, with calm space on the left for the words.
+             * Cut-out needs a PNG with a transparent background. Reveal needs both: the full photo as the big photo, and the cut-out below.
+             */
+            imageStyle?: ('photo' | 'cutout' | 'reveal') | null;
+            /**
+             * Full photo: a wide one, at least 1920 pixels across. Cut-out: the van alone on a transparent background. The forest photo is home-what-we-do-1 in the Media Library.
              */
             image: number | Media;
             /**
@@ -1195,6 +1203,7 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               eyebrow?: T;
               heading?: T;
+              revealFront?: T;
               headingPlacement?: T;
               proof?:
                 | T
@@ -1202,6 +1211,7 @@ export interface PagesSelect<T extends boolean = true> {
                     text?: T;
                     id?: T;
                   };
+              imageStyle?: T;
               image?: T;
               photos?: T;
               id?: T;
