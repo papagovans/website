@@ -1,46 +1,75 @@
 import type { Metadata } from "next";
+import { draftMode } from "next/headers";
 import { notFound } from "next/navigation";
-import { getPage, listPages } from "@/lib/content";
+import { convertLexicalToPlaintext } from "@payloadcms/richtext-lexical/plaintext";
+import { PageSections } from "@/components/PageSections";
+import { getCmsPage, listCmsPageSlugs } from "@/lib/content";
 import "../../content.css";
 
 /*
- * Standalone pages that live at the site root: /faq/, /about-us/, /zion/,
- * /el-capitan-luxury-van-build/. They keep their original paths because those
- * paths are what rank; the route group's parentheses keep "(pages)" out of the
- * URL entirely.
+ * Every page edited in the CMS (Pages, at /admin), at the site root: /faq/,
+ * /zion/, /el-capitan-luxury-van-build/. They keep their original paths
+ * because those paths are what rank; the route group's parentheses keep
+ * "(pages)" out of the URL. A page built in code (about-us, bespoke) has its
+ * own folder, which wins over this route.
  */
 
-/* Slugs that now have a hand-built route of their own. The ported WordPress
-   body for each still sits in content/pages, unused: it is the record of what
-   the old page said, and the source the rewrite was checked against. Leaving
-   them in here would make two routes claim one path. */
-const REBUILT = new Set([
-  "about-us", "our-process", "faq", "service-department",
-  "financing", "work-at-papago-vans", "contact-us",
-]);
-
 export async function generateStaticParams() {
-  return (await listPages("pages"))
-    .filter((p) => !REBUILT.has(p.slug))
-    .map((p) => ({ slug: p.slug }));
+  return (await listCmsPageSlugs()).map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const p = await getPage((await params).slug);
+  const p = await getCmsPage((await params).slug);
   if (!p) return {};
-  return { title: p.seoTitle ?? p.title, description: p.description };
+  return { title: p.seoTitle || `${p.heading} | Papago Vans`, description: p.seoDescription ?? undefined };
 }
 
-export default async function StandalonePage({ params }: { params: Promise<{ slug: string }> }) {
-  const slug = (await params).slug;
-  if (REBUILT.has(slug)) notFound();
-  const page = await getPage(slug);
-  if (!page || page.type !== "pages") notFound();
+export default async function CmsPage({ params }: { params: Promise<{ slug: string }> }) {
+  const page = await getCmsPage((await params).slug);
+  if (!page) notFound();
+  const preview = (await draftMode()).isEnabled;
+
+  /* Marked up so answers can show in search results. Built from the same
+     questions the page renders, so none is schema-only. */
+  const faqs = (page.sections ?? []).flatMap((s) => (s.blockType === "faq" ? s.items ?? [] : []));
 
   return (
-    <article className="article wrap">
-      <h1>{page.title}</h1>
-      <div className="prose article-body" dangerouslySetInnerHTML={{ __html: page.body }} />
-    </article>
+    <>
+      {faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faqs.map((f) => ({
+                "@type": "Question",
+                name: f.question,
+                acceptedAnswer: { "@type": "Answer", text: convertLexicalToPlaintext({ data: f.answer }) },
+              })),
+            }).replace(/</g, "\\u003c"),
+          }}
+        />
+      )}
+      <section className="page-head">
+        <div className="wrap">
+          {preview && (
+            <p className="preview-bar">
+              Preview: this is your latest draft, only visible to you.{" "}
+              <a href={`/api/preview/?exit=1&path=/${page.slug}/`}>Exit preview</a>
+            </p>
+          )}
+          {page.eyebrow && <p className="page-eyebrow">{page.eyebrow}</p>}
+          <h1>{page.heading}</h1>
+          {page.intro && <p className="page-lede">{page.intro}</p>}
+        </div>
+      </section>
+
+      <section className="page-body">
+        <div className="wrap wrap-narrow">
+          <PageSections sections={page.sections} />
+        </div>
+      </section>
+    </>
   );
 }

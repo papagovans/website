@@ -60,3 +60,30 @@ export function Icon() {
     </div>
   );
 }
+
+/* The full lockup at the top of the sidebar on every signed-in screen, so it
+   is always obvious which admin this is: the website, not the van builder. */
+export function NavLogo() {
+  return (
+    <a
+      href="/admin"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: 8,
+        background: NAVY,
+        borderRadius: 12,
+        padding: "18px 16px 14px",
+        marginBottom: 20,
+        textDecoration: "none",
+      }}
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/brand/papago-stacked.svg" alt="Papago Vans" width={120} height={72} style={{ display: "block" }} />
+      <span style={{ color: "#f4d969", fontSize: 11, letterSpacing: "0.14em", textTransform: "uppercase", fontWeight: 600 }}>
+        Website
+      </span>
+    </a>
+  );
+}

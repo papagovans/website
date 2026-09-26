@@ -32,6 +32,29 @@ const converters: JSXConvertersFunction = ({ defaultConverters }) => ({
   },
 });
 
-export function RichText({ data, className }: { data: SerializedEditorState; className?: string }) {
-  return <PayloadRichText data={data} converters={converters} className={className} disableContainer={!className} />;
+/* Inline: paragraphs run together with no <p>, for copy that sits inside
+   something that is already a paragraph or a list item. */
+const inlineConverters: JSXConvertersFunction = (args) => ({
+  ...converters(args),
+  paragraph: ({ node, nodesToJSX }) => <>{nodesToJSX({ nodes: node.children })}</>,
+});
+
+export function RichText({
+  data,
+  className,
+  inline = false,
+}: {
+  data: SerializedEditorState | null | undefined;
+  className?: string;
+  inline?: boolean;
+}) {
+  if (!data) return null;
+  return (
+    <PayloadRichText
+      data={data}
+      converters={inline ? inlineConverters : converters}
+      className={className}
+      disableContainer={!className}
+    />
+  );
 }

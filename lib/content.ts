@@ -3,8 +3,8 @@
  *
  * Templates call getProject() and listProjectSlugs() and never touch storage.
  * Today those read the JSON the WordPress extractor wrote into content/.
- * Blog posts already come from Payload (bottom of this file). For the rest,
- * when Payload lands, only the function bodies below change: the templates,
+ * Pages and blog posts already come from Payload (bottom of this file). For
+ * build projects, when they move, only the function bodies below change: the templates,
  * the types and the rendered markup all stay exactly as they are.
  *
  * That is the whole reason this module exists. Retrofitting it after five
@@ -88,43 +88,9 @@ export async function listProjectCards(): Promise<ProjectCard[]> {
     .sort((a, b) => a.title.localeCompare(b.title));
 }
 
-export type Page = {
-  type: "posts" | "pages";
-  slug: string;
-  path: string;
-  title: string;
-  date: string | null;
-  seoTitle: string | null;
-  description: string;
-  /* Sanitised HTML: semantic tags only, every attribute stripped except href
-   * and the image trio. Safe to render, and the extractor is the only writer. */
-  body: string;
-};
-
-const PAGE_DIR = join(process.cwd(), "content", "pages");
-
-export async function getPage(slug: string): Promise<Page | null> {
-  try {
-    return JSON.parse(await readFile(join(PAGE_DIR, `${slug}.json`), "utf8"));
-  } catch {
-    return null;
-  }
-}
-
-export async function listPages(type?: "posts" | "pages"): Promise<Page[]> {
-  const files = await readdir(PAGE_DIR).catch(() => [] as string[]);
-  const docs = await Promise.all(
-    files.filter((f) => f.endsWith(".json")).map((f) => getPage(f.replace(/\.json$/, ""))),
-  );
-  return docs
-    .filter((p): p is Page => !!p && (!type || p.type === type))
-    .sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""));
-}
-
 /* ---------------------------------------------------------------------------
- * Blog posts live in the CMS (Payload, edited at /admin). Everything above
- * still reads the JSON the WordPress extractor wrote; it moves over page by
- * page, the same way.
+ * Pages and blog posts live in the CMS (Payload, edited at /admin). Build
+ * projects above still read the JSON the WordPress extractor wrote.
  * ------------------------------------------------------------------------- */
 
 export type { Post };
@@ -154,4 +120,30 @@ export async function listPosts(): Promise<Post[]> {
     depth: 1,
   });
   return docs;
+}
+
+export type { Page as CmsPage } from "@/payload-types";
+
+/* Same rules as posts: published only, unless an editor is previewing. */
+export async function getCmsPage(slug: string) {
+  const draft = (await draftMode()).isEnabled;
+  const { docs } = await (await cms()).find({
+    collection: "pages",
+    where: draft ? { slug: { equals: slug } } : { slug: { equals: slug }, _status: { equals: "published" } },
+    draft,
+    limit: 1,
+    depth: 2,
+  });
+  return docs[0] ?? null;
+}
+
+export async function listCmsPageSlugs(): Promise<string[]> {
+  const { docs } = await (await cms()).find({
+    collection: "pages",
+    where: { _status: { equals: "published" } },
+    pagination: false,
+    depth: 0,
+    select: { slug: true },
+  });
+  return docs.map((d) => d.slug).filter((s): s is string => Boolean(s));
 }

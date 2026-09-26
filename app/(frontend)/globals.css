@@ -784,3 +784,15 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 .journey-inner > p { margin: 18px auto 32px; max-width: 540px; font-size: 17px; line-height: 1.65; color: var(--muted); }
 .journey-alt { margin-top: 22px; font-size: 15px; color: var(--muted); }
 .journey-alt a { font-weight: 600; color: var(--footer); text-decoration: underline; }
+
+/* CMS page sections. A call to action placed first sits at the top of the
+   page body rather than 48px down it; an FAQ answer's list gets the same
+   ticks as the hand-built pages; Image and Text inside a page is the home
+   page's scene, minus the section padding. */
+.page-body .wrap > .page-cta:first-child { margin-top: 0; margin-bottom: 40px; }
+.faq-answer ul { display: grid; gap: 10px; margin: 4px 0 8px; }
+.faq-answer ul li { position: relative; padding-left: 26px; list-style: none; font-size: 16px; line-height: 1.65; color: var(--muted); }
+.faq-answer ul li::before { content: "\2713"; position: absolute; left: 0; color: var(--gold-deep); font-weight: 700; }
+.page-text { margin-bottom: 14px; }
+.scene-in-page { padding: 36px 0; }
+.page-note p + p { margin-top: 10px; }

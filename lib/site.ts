@@ -28,3 +28,16 @@ export const SOCIALS: [string, string, string][] = [
   ["TikTok", "tt", "https://www.tiktok.com/@papagovans"],
   ["YouTube", "yt", "https://www.youtube.com/@papagovans"],
 ];
+
+/* Where a CMS button or highlighted line can point. Staff pick one by name
+   instead of typing a phone number or calendar link, so a number that changes
+   here changes on every page at once. */
+export const DESTINATIONS = {
+  calendar: { label: "Jeremy's calendar (book a call)", href: CALENDAR_URL, text: "Schedule A Call", external: true },
+  sales: { label: "Sales phone", href: tel(SALES_PHONE), text: SALES_PHONE, external: false },
+  service: { label: "Service phone", href: tel(SERVICE_PHONE), text: SERVICE_PHONE, external: false },
+  email: { label: "Email", href: `mailto:${EMAIL}`, text: EMAIL, external: false },
+  map: { label: "Shop address (map)", href: MAP_URL, text: `${ADDRESS_LINE1}, ${ADDRESS_LINE2}`, external: true },
+  builder: { label: "Van builder", href: BUILD_APP, text: "Build Your Van", external: true },
+} as const;
+export type Destination = keyof typeof DESTINATIONS;

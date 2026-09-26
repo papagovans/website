@@ -1,37 +1,9 @@
-import type { CollectionAfterChangeHook, CollectionConfig, FieldHook } from "payload";
+import type { CollectionConfig } from "payload";
 
 import { signedIn } from "./access";
+import { fillSlug, revalidator } from "./revalidate";
 
-export const slugify = (s: string) =>
-  s
-    .normalize("NFKD")
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, "")
-    .trim()
-    .replace(/[\s_-]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-
-/* Filled from the title the first time the post is saved, then left alone:
-   a post's address is what Google and everyone's bookmarks point at. */
-const fillSlug: FieldHook = ({ value, data }) =>
-  value ? slugify(String(value)) : data?.title ? slugify(String(data.title)) : value;
-
-const postPath = (slug?: string | null) => `/blog/${slug}/`;
-
-/* The blog is prerendered. Publishing, unpublishing or renaming a post tells
-   Next which pages to rebuild, so the change is live on the next visit. */
-const revalidate: CollectionAfterChangeHook = async ({ doc, previousDoc }) => {
-  if (doc._status !== "published" && previousDoc?._status !== "published") return doc;
-  try {
-    const { revalidatePath } = await import("next/cache");
-    revalidatePath("/blog/");
-    revalidatePath(postPath(doc.slug));
-    if (previousDoc?.slug && previousDoc.slug !== doc.slug) revalidatePath(postPath(previousDoc.slug));
-  } catch {
-    // Outside a Next request (the import script), there is no cache to clear.
-  }
-  return doc;
-};
+const postPath = (slug: string) => `/blog/${slug}/`;
 
 export const Posts: CollectionConfig = {
   slug: "posts",
@@ -54,10 +26,7 @@ export const Posts: CollectionConfig = {
     maxPerDoc: 50,
   },
   defaultSort: "-publishedDate",
-  hooks: {
-    afterChange: [revalidate],
-    afterDelete: [({ doc }) => revalidate({ doc: { ...doc, _status: "published" } } as never)],
-  },
+  hooks: revalidator(postPath, "/blog/"),
   fields: [
     {
       type: "tabs",

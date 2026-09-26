@@ -19,6 +19,7 @@ import sharp from "sharp";
 
 import { editor } from "./collections/editor";
 import { Media } from "./collections/Media";
+import { Pages } from "./collections/Pages";
 import { Posts } from "./collections/Posts";
 import { Users } from "./collections/Users";
 
@@ -38,13 +39,14 @@ export default buildConfig({
     // Component paths, resolved into app/(payload)/admin/importMap.js.
     // Regenerate with `npx payload generate:importmap` after changing them.
     components: {
+      beforeNavLinks: ["/components/admin/PapagoLogo#NavLogo"],
       graphics: {
         Logo: "/components/admin/PapagoLogo#Logo",
         Icon: "/components/admin/PapagoLogo#Icon",
       },
     },
   },
-  collections: [Posts, Media, Users],
+  collections: [Pages, Posts, Media, Users],
   editor,
   db: postgresAdapter({
     pool: { connectionString },

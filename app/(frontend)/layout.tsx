@@ -89,6 +89,28 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body>
+        {/* Who and where the business is, on every page. It used to sit on
+            Contact alone; now that Contact is a CMS page, the layout owns it. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "AutomotiveBusiness",
+              name: "Papago Vans",
+              telephone: `+1${SALES_PHONE.replace(/\D/g, "")}`,
+              email: EMAIL,
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: ADDRESS_LINE1,
+                addressLocality: "Mesa",
+                addressRegion: "AZ",
+                postalCode: "85201",
+                addressCountry: "US",
+              },
+            }),
+          }}
+        />
         <header className="site-header">
           <div className="wrap header-inner">
             <a href="/" className="logo" aria-label="Papago Vans home">
