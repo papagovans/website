@@ -73,7 +73,9 @@ const footerCols = [
 /* Served from this site, not Google's: no extra domains to connect to, cached
    for a year, and preloaded. Inter is one variable file for every weight;
    Prompt carries only the three weights the CSS actually uses. */
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+/* Inter is body text, not the headline, so it is not preloaded: the
+   headline's font (Prompt) and the hero photo get the early bandwidth. */
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap", preload: false });
 const prompt = Prompt({ subsets: ["latin"], weight: ["500", "600", "700"], variable: "--font-prompt", display: "swap" });
 
 export const metadata: Metadata = {
@@ -151,7 +153,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </section>
 
         <footer className="site-footer">
-          <img className="footer-art" src="/home/Frame-66.svg" alt="" aria-hidden="true" />
+          <img className="footer-art" src="/home/Frame-66.svg" alt="" aria-hidden="true" loading="lazy" decoding="async" />
           <div className="wrap footer-inner">
             <div className="footer-cols">
               {footerCols.map((c) => (
@@ -188,7 +190,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </div>
             </div>
             <div className="footer-bottom">
-              <img src="/home/Group-21-1.svg" alt="Papago Vans" width="120" height="72" />
+              <img src="/home/Group-21-1.svg" alt="Papago Vans" width="120" height="72" loading="lazy" decoding="async" />
               <p className="copyright">&copy; 2026 Papago Vans. All rights reserved</p>
               <div className="social">
                 {SOCIALS.map(([name, mark, href]) => (

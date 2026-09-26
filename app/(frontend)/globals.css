@@ -303,6 +303,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 	   texture, and laying it straight on cream washed the contours out. Blended
 	   against the warm surface it keeps the lines and loses the cold cast. */
 	background: var(--soft) url("/home/CTA.webp") center / cover no-repeat;
+	/* AVIF where the browser takes it: 13 KB instead of 25 KB. */
+	background-image: image-set(url("/home/CTA.avif") type("image/avif"), url("/home/CTA.webp") type("image/webp"));
 	background-blend-mode: multiply;
 	border: 1px solid var(--line);
 	border-radius: var(--r-lg); text-align: center;
@@ -676,6 +678,8 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 	position: absolute;
 	inset: 0;
 	background: url("/home/topo-navy.webp") repeat;
+	/* 26 KB AVIF instead of 66 KB, SSIM 0.99999 against the lossless file. */
+	background-image: image-set(url("/home/topo-navy.avif") type("image/avif"), url("/home/topo-navy.webp") type("image/webp"));
 	background-size: 1920px auto;
 	pointer-events: none;
 }
@@ -984,3 +988,12 @@ figure.scene-shot { margin: 0; }
    its real width and height so the page reserves the space; where the CSS
    crops to a shape with aspect-ratio, height: auto lets the shape win. */
 picture { display: contents; }
+
+/* Sections well below the fold are not laid out, painted, or allowed to
+   fetch their background textures until they near the screen. Measured on
+   mobile: their textures were downloading before the headline had painted.
+   The intrinsic size keeps the scrollbar honest while they wait. */
+.collage, .keep-in-touch, .explore, .reviews, .site-footer {
+	content-visibility: auto;
+	contain-intrinsic-size: auto 900px;
+}
