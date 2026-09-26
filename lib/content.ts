@@ -3,14 +3,20 @@
  *
  * Templates call getProject() and listProjectSlugs() and never touch storage.
  * Today those read the JSON the WordPress extractor wrote into content/.
- * When Payload lands, only the two function bodies below change: the templates,
+ * Blog posts already come from Payload (bottom of this file). For the rest,
+ * when Payload lands, only the function bodies below change: the templates,
  * the types and the rendered markup all stay exactly as they are.
  *
  * That is the whole reason this module exists. Retrofitting it after five
  * templates already read from disk is the expensive version.
  */
+import "server-only";
 import { readdir, readFile } from "node:fs/promises";
 import { join } from "node:path";
+import { draftMode } from "next/headers";
+import { getPayload } from "payload";
+import config from "@payload-config";
+import type { Post } from "@/payload-types";
 
 export type Shot = {
   /* lg only exists on the hero; see scripts/pull-projects.mjs */
@@ -113,4 +119,39 @@ export async function listPages(type?: "posts" | "pages"): Promise<Page[]> {
   return docs
     .filter((p): p is Page => !!p && (!type || p.type === type))
     .sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""));
+}
+
+/* ---------------------------------------------------------------------------
+ * Blog posts live in the CMS (Payload, edited at /admin). Everything above
+ * still reads the JSON the WordPress extractor wrote; it moves over page by
+ * page, the same way.
+ * ------------------------------------------------------------------------- */
+
+export type { Post };
+
+const cms = () => getPayload({ config });
+
+/* Published only, unless a signed-in editor is previewing (see
+   app/(frontend)/api/preview). */
+export async function getPost(slug: string): Promise<Post | null> {
+  const draft = (await draftMode()).isEnabled;
+  const { docs } = await (await cms()).find({
+    collection: "posts",
+    where: draft ? { slug: { equals: slug } } : { slug: { equals: slug }, _status: { equals: "published" } },
+    draft,
+    limit: 1,
+    depth: 2,
+  });
+  return docs[0] ?? null;
+}
+
+export async function listPosts(): Promise<Post[]> {
+  const { docs } = await (await cms()).find({
+    collection: "posts",
+    where: { _status: { equals: "published" } },
+    sort: "-publishedDate",
+    pagination: false,
+    depth: 1,
+  });
+  return docs;
 }

@@ -6,3 +6,8 @@ node_modules
 *.tsbuildinfo
 next-env.d.ts
 .DS_Store
+
+# Installed by the Vercel Neon integration, not part of the site
+.agents/
+skills-lock.json
+.claude/
