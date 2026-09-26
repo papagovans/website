@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import NewsletterForm from "@/components/NewsletterForm";
+import {
+  SALES_PHONE, SERVICE_PHONE, EMAIL, ADDRESS_LINE1, ADDRESS_LINE2,
+  MAP_URL, CALENDAR_URL, BUILD_APP, SOCIALS, tel,
+} from "@/lib/site";
 
 /*
  * Shared shell, ported from the Astro mockup at go.papagovans.com/home.
@@ -17,19 +21,52 @@ import NewsletterForm from "@/components/NewsletterForm";
  * land. Content moves into Payload once there is something worth editing.
  */
 
-const PHONE = "+1 602-346-0331";
-/* Jeremy's booking link. The header CTA opens it directly rather than routing
-   through a page: the fastest thing a visitor can do for us is take a slot. */
-const CALENDAR_URL = "https://calendly.com/jeremy-papago/30min";
+/* The header phone is the sales line, the same number the live site has
+   published for years. It and the booking link both come from lib/site. */
 
+/* Every link here used to be href="#", which put twenty dead links on every
+   page of the site. They point at real pages now; anything still without one
+   is not listed rather than listed and broken. */
 const footerCols = [
-  // Staging lists "Four Peaks", which is not a plan in the build configurator's
-  // catalog. Using the real five so the footer and /signature cannot contradict
-  // each other.
-  { h: "Campers", links: ["El Capitan", "Zion", "Olympus", "Mammoth", "Rainier"] },
-  { h: "Resources", links: ["About Us", "News", "FAQ", "Financing"] },
-  { h: "Services", links: ["Interior Installation", "Exterior Upgrades", "Heating and cooling", "Partial Build"] },
-  { h: "Policies", links: ["Terms & Conditions", "Privacy Policy", "CCPA"] },
+  {
+    h: "Campers",
+    links: [
+      ["El Capitan", "/el-capitan-luxury-van-build/"],
+      ["Zion", "/zion/"],
+      ["Olympus", "/olympus/"],
+      ["Mammoth", "/mammoth/"],
+      ["Rainier", "/rainier/"],
+    ],
+  },
+  {
+    h: "Explore",
+    links: [
+      ["Build Your Van", BUILD_APP],
+      ["Build Gallery", "/van-life-build-gallery/"],
+      ["Our Process", "/our-process/"],
+      ["Bespoke Builds", "/bespoke/"],
+      ["Blog", "/blog/"],
+    ],
+  },
+  {
+    h: "Company",
+    links: [
+      ["About Us", "/about-us/"],
+      ["Service Department", "/service-department/"],
+      ["Financing", "/financing/"],
+      ["FAQ", "/faq/"],
+      ["Careers", "/work-at-papago-vans/"],
+      ["Contact Us", "/contact-us/"],
+    ],
+  },
+  {
+    h: "Vans We Convert",
+    links: [
+      ["Mercedes Sprinter", "/mercedes-sprinter/"],
+      ["Ram Promaster", "/ram-promaster/"],
+      ["Ford Transit", "/ford-transit/"],
+    ],
+  },
 ];
 
 export const metadata: Metadata = {
@@ -58,8 +95,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <img src="/home/Group-278.svg" alt="Papago Vans" width="174" height="27" />
             </a>
             <nav className="main-nav" aria-label="Main">
-              <a href="https://build.papagovans.com" target="_blank" rel="noopener">Build Your Van</a>
-              <a href="/van-life-build-gallery/">View Recent Builds</a>
+              <a href={BUILD_APP} target="_blank" rel="noopener">Build Your Van</a>
+              <a href="/van-life-build-gallery/">Recent Builds</a>
+              <a href="/our-process/">Our Process</a>
+              <a href="/about-us/">About</a>
+              <a href="/contact-us/">Contact</a>
             </nav>
             <div className="header-actions">
               <a
@@ -70,8 +110,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               >
                 Talk To An Expert <span className="arw">&#8853;</span>
               </a>
-              <a href={`tel:${PHONE.replace(/[^\d+]/g, "")}`} className="btn btn-outline btn-sm hide-sm">
-                {PHONE}
+              <a href={tel(SALES_PHONE)} className="btn btn-outline btn-sm hide-sm">
+                {SALES_PHONE}
               </a>
               <button className="hamburger" aria-label="Menu"><span /><span /><span /></button>
             </div>
@@ -96,16 +136,44 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {footerCols.map((c) => (
                 <div className="footer-col" key={c.h}>
                   <h4>{c.h}</h4>
-                  <ul>{c.links.map((l) => <li key={l}><a href="#">{l}</a></li>)}</ul>
+                  <ul>
+                    {c.links.map(([label, href]) => (
+                      <li key={label}>
+                        <a
+                          href={href}
+                          target={href.startsWith("http") ? "_blank" : undefined}
+                          rel={href.startsWith("http") ? "noopener" : undefined}
+                        >
+                          {label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
+              <div className="footer-col footer-contact">
+                <h4>Papago Vans</h4>
+                <ul>
+                  <li><a href={MAP_URL} target="_blank" rel="noopener">{ADDRESS_LINE1}<br />{ADDRESS_LINE2}</a></li>
+                  <li><a href={tel(SALES_PHONE)}>Sales {SALES_PHONE}</a></li>
+                  <li><a href={tel(SERVICE_PHONE)}>Service {SERVICE_PHONE}</a></li>
+                  <li><a href={`mailto:${EMAIL}`}>{EMAIL}</a></li>
+                </ul>
+                <ul className="footer-policies">
+                  <li><a href="/terms-conditions/">Terms &amp; Conditions</a></li>
+                  <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                  <li><a href="/ccpa/">CCPA</a></li>
+                </ul>
+              </div>
             </div>
             <div className="footer-bottom">
               <img src="/home/Group-21-1.svg" alt="Papago Vans" width="120" height="72" />
               <p className="copyright">&copy; 2026 Papago Vans. All rights reserved</p>
               <div className="social">
-                {["f", "t", "in", "@"].map((s) => (
-                  <a href="#" aria-label="Social" key={s}><span>{s}</span></a>
+                {SOCIALS.map(([name, mark, href]) => (
+                  <a href={href} target="_blank" rel="noopener" aria-label={name} key={name}>
+                    <span aria-hidden="true">{mark}</span>
+                  </a>
                 ))}
               </div>
             </div>

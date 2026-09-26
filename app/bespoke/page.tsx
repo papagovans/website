@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./bespoke.css";
+import { SALES_PHONE, tel } from "@/lib/site";
 
 /*
  * The Bespoke half of the two-way split on the homepage. Tailored hands off to
@@ -79,8 +80,8 @@ export default function BespokePage() {
       </section>
 
       <div className="bsp-cta">
-        <a className="btn btn-gold" href="tel:+16023460331">
-          Call +1 602-346-0331 <span className="arw">&#8853;</span>
+        <a className="btn btn-gold" href={tel(SALES_PHONE)}>
+          Call {SALES_PHONE} <span className="arw">&#8853;</span>
         </a>
         <a className="btn btn-outline" href="/van-life-build-gallery/">
           See builds we have finished <span className="arw">&#8853;</span>

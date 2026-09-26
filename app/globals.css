@@ -343,7 +343,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 }
 .footer-art { position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; min-width: 1280px; pointer-events: none; }
 .footer-inner { position: relative; }
-.footer-cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+.footer-cols { display: grid; grid-template-columns: repeat(5, 1fr); gap: 30px; }
+.footer-contact li { line-height: 1.5; }
+.footer-policies { margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.14); }
 .footer-col h4 { color: var(--gold); font-size: 15px; margin-bottom: 14px; }
 .footer-col li { margin-bottom: 9px; }
 .footer-col a { font-size: 13px; color: rgba(255,255,255,0.8); }
@@ -470,6 +472,62 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 	.scene-inner { grid-template-columns: 1fr; gap: 28px; }
 	.scene.is-flipped .scene-shot { order: 0; }
 }
+
+/* Standalone content pages: About, Process, FAQ, Service, Financing,
+   Careers, Contact. One set of classes rather than a stylesheet each; these
+   pages differ in copy, not in shape. */
+.page-head { padding: 72px 0 0; }
+.page-eyebrow { font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+.page-head h1 { font-size: clamp(30px, 4.4vw, 50px); margin: 12px 0 0; color: var(--footer); max-width: 900px; }
+.page-lede { margin-top: 18px; max-width: 640px; font-size: 18px; line-height: 1.65; color: var(--muted); }
+.page-body { padding: 44px 0 88px; }
+.wrap-narrow { max-width: 860px; }
+.page-h2 { font-size: clamp(22px, 2.6vw, 30px); color: var(--footer); margin: 44px 0 18px; }
+.page-p { font-size: 17px; line-height: 1.75; color: var(--muted); margin-bottom: 14px; max-width: 680px; }
+
+.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 8px; }
+@media (max-width: 720px) { .cards { grid-template-columns: 1fr; } }
+.card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--r-md); padding: 24px 22px; }
+.card h2 { font-size: 19px; color: var(--footer); margin-bottom: 8px; }
+.card p { font-size: 15px; line-height: 1.65; color: var(--muted); }
+.card-strong { margin-top: 12px; font-weight: 600; color: var(--footer) !important; }
+.card-strong a { text-decoration: underline; }
+
+/* Numbered process steps. The number is its own column so multi-line copy
+   stays aligned under itself rather than wrapping beneath the digit. */
+.steps { list-style: none; display: grid; gap: 4px; }
+.step { display: grid; grid-template-columns: 56px 1fr; gap: 20px; align-items: start; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.step:last-child { border-bottom: 0; }
+.step-num { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid var(--gold); font-weight: 700; color: var(--footer); }
+.step h2 { font-size: 20px; color: var(--footer); margin-bottom: 6px; }
+.step p { font-size: 16px; line-height: 1.65; color: var(--muted); }
+
+/* FAQ. Native <details>, so it works with JavaScript off and prints open. */
+.faq { border-bottom: 1px solid var(--line); }
+.faq summary { cursor: pointer; list-style: none; padding: 20px 36px 20px 0; font-family: Prompt, sans-serif; font-weight: 600; font-size: 18px; color: var(--footer); position: relative; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 4px; top: 16px; font-size: 24px; color: var(--gold-deep); font-weight: 400; }
+.faq[open] summary::after { content: "\2013"; }
+.faq-answer { padding: 0 0 22px; }
+.faq-answer p { font-size: 16px; line-height: 1.7; color: var(--muted); margin-bottom: 12px; max-width: 680px; }
+.faq-answer a, .page-p a, .page-note a, .ticks a { color: var(--footer); text-decoration: underline; }
+
+.ticks { display: grid; gap: 10px; margin: 4px 0 8px; }
+.ticks li { position: relative; padding-left: 26px; font-size: 16px; line-height: 1.65; color: var(--muted); }
+.ticks li::before { content: "\2713"; position: absolute; left: 0; color: var(--gold-deep); font-weight: 700; }
+
+.page-note { margin: 28px 0 8px; background: var(--soft); border: 1px solid var(--line); border-radius: var(--r-md); padding: 20px 22px; }
+.page-note p { font-size: 15px; line-height: 1.7; color: var(--muted); }
+.page-note strong { color: var(--footer); }
+
+.page-cta { margin-top: 48px; text-align: center; background: var(--soft); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 44px 28px; }
+.page-cta-top { margin-top: 0; margin-bottom: 40px; }
+.page-cta h2 { font-size: clamp(24px, 3vw, 34px); color: var(--footer); }
+.page-cta > p { margin: 12px auto 24px; max-width: 460px; color: var(--muted); font-size: 16px; }
+.page-cta-alt { margin-top: 16px; font-size: 15px; color: var(--muted); }
+.page-cta-alt a { color: var(--footer); font-weight: 600; text-decoration: underline; }
+
+.about-shop { padding: 56px 0 8px; }
 
 .why { padding: 88px 0; }
 .why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }

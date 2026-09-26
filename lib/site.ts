@@ -1,0 +1,30 @@
+/*
+ * Facts about the business that more than one page needs.
+ *
+ * Phone numbers, the address and the email are what papagovans.com publishes
+ * today, confirmed against its live Contact page rather than copied from the
+ * staging build, which carries a single number Ivio introduced and which does
+ * not appear anywhere on the live site. If the sales line has genuinely moved,
+ * change it here and every page follows.
+ */
+export const SALES_PHONE = "(480) 761-7175";
+export const SERVICE_PHONE = "(520) 666-4283";
+export const EMAIL = "info@papagovans.com";
+export const ADDRESS_LINE1 = "751 N Country Club Dr";
+export const ADDRESS_LINE2 = "Mesa, AZ 85201";
+export const MAP_URL =
+  "https://maps.google.com/?q=751+N+Country+Club+Dr,+Mesa,+AZ+85201";
+export const CALENDAR_URL = "https://calendly.com/jeremy-papago/30min";
+export const BUILD_APP = "https://build.papagovans.com";
+
+/** Digits only, for tel: links. */
+export const tel = (n: string) => `tel:+1${n.replace(/\D/g, "")}`;
+
+/* Real profiles, read off the live site's footer. The rebuild shipped four
+   placeholder letters pointing at "#". */
+export const SOCIALS: [string, string, string][] = [
+  ["Facebook", "f", "https://www.facebook.com/Papagovans/"],
+  ["Instagram", "ig", "https://www.instagram.com/papagovans/"],
+  ["TikTok", "tt", "https://www.tiktok.com/@papagovans"],
+  ["YouTube", "yt", "https://www.youtube.com/@papagovans"],
+];

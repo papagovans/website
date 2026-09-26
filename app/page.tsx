@@ -22,6 +22,7 @@
 
 import ExploreTheVan from "@/components/ExploreTheVan";
 import { listProjectCards } from "@/lib/content";
+import { SALES_PHONE, tel } from "@/lib/site";
 
 const BUILD_APP = "https://build.papagovans.com";
 const CALENDAR_URL = "https://calendly.com/jeremy-papago/30min";
@@ -292,54 +293,9 @@ export default async function Home() {
         </section>
       ))}
 
-      {/* Why Papago. The shop photograph is the only one of its kind in either
-          WordPress media library: everything else is finished vans. Worth more
-          shop and fabrication photography when someone has a camera in there. */}
-      <section className="why">
-        <div className="wrap why-inner">
-          <div className="why-copy">
-            <p className="why-eyebrow">Why Papago</p>
-            <h2>Built By Hand, In Our Own Shop</h2>
-            <p>
-              Every van is built in Mesa, Arizona by the same people who drew it. Nothing
-              is subcontracted, nothing ships to a third party halfway through, and the
-              person who installed your electrical is someone you can ask about it.
-            </p>
-            <p>
-              You get weekly photographs of your own build as it happens. Owners tell us
-              that is the part they did not expect and would not give up.
-            </p>
-            <a href="/bespoke/" className="btn btn-outline">Talk To A Designer <span className="arw">&#8853;</span></a>
-          </div>
-          <div className="why-shots">
-            <figure className="why-team">
-              <picture>
-                <source srcSet="/shop/team-lg.avif" type="image/avif" />
-                <source srcSet="/shop/team-lg.webp" type="image/webp" />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/shop/team-lg.webp"
-                  alt="The Papago Vans crew in the Mesa shop, in front of a row of Sprinters under build"
-                  width={1600}
-                  height={843}
-                  loading="lazy"
-                  decoding="async"
-                />
-              </picture>
-              <figcaption>The people who will build your van. Mesa, Arizona.</figcaption>
-            </figure>
-            <div className="why-pair">
-              {collage.slice(0, 2).map((c) => (
-                <picture key={c.slug}>
-                  <source srcSet={c.thumb_avif} type="image/avif" />
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={c.thumb_webp} alt={c.alt} width={c.w} height={c.h} loading="lazy" decoding="async" />
-                </picture>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Why Papago moved to /about-us/ on the owner's call. It is the
+          company's argument for itself, not a step in choosing a van, and the
+          home page already has two of those above it. */}
 
       {/* Photo collage on the footer navy. */}
       <section className="collage">
@@ -468,7 +424,7 @@ export default async function Home() {
               Schedule A Call <span className="arw">&#8853;</span>
             </a>
             <p className="journey-alt">
-              Or call <a href="tel:+16023460331">+1 602-346-0331</a> and talk to someone now.
+              Or call <a href={tel(SALES_PHONE)}>{SALES_PHONE}</a> and talk to someone now.
             </p>
           </div>
         </div>

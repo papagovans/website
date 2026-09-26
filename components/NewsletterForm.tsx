@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { SALES_PHONE, tel } from "@/lib/site";
 
 /*
  * HubSpot form embed for the newsletter band.
@@ -50,8 +51,8 @@ export default function NewsletterForm() {
 
   if (!FORM_ID || failed) {
     return (
-      <a href="tel:+16023460331" className="btn btn-gold">
-        Call +1 602-346-0331 <span className="arw">&#8853;</span>
+      <a href={tel(SALES_PHONE)} className="btn btn-gold">
+        Call {SALES_PHONE} <span className="arw">&#8853;</span>
       </a>
     );
   }
