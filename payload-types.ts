@@ -421,6 +421,23 @@ export interface Page {
           }
         | {
             /**
+             * Optional. A heading shown above this section.
+             */
+            heading?: string | null;
+            /**
+             * Optional. One line above the form.
+             */
+            intro?: string | null;
+            /**
+             * Optional. Leave blank to let the visitor choose. Submissions go to HubSpot as "Website Contact Form".
+             */
+            preset?: ('conversion' | 'service') | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'contactForm';
+          }
+        | {
+            /**
              * Fills the whole screen behind the words. Use a wide photo at least 1920 pixels across, with calm space where the text sits.
              */
             image: number | Media;
@@ -454,6 +471,23 @@ export interface Page {
             id?: string | null;
             blockName?: string | null;
             blockType: 'hero';
+          }
+        | {
+            /**
+             * Sits over the top left of the big photo. One plain sentence about what we do.
+             */
+            heading: string;
+            /**
+             * A wide photo, at least 1920 pixels across, with calm space on the left for the words.
+             */
+            image: number | Media;
+            /**
+             * Up to six, shown in one row under the big photo. Drag to reorder.
+             */
+            photos?: (number | Media)[] | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'photoShowcase';
           }
         | {
             heading: string;
@@ -1107,6 +1141,15 @@ export interface PagesSelect<T extends boolean = true> {
               id?: T;
               blockName?: T;
             };
+        contactForm?:
+          | T
+          | {
+              heading?: T;
+              intro?: T;
+              preset?: T;
+              id?: T;
+              blockName?: T;
+            };
         hero?:
           | T
           | {
@@ -1127,6 +1170,15 @@ export interface PagesSelect<T extends boolean = true> {
                     url?: T;
                     text?: T;
                   };
+              id?: T;
+              blockName?: T;
+            };
+        photoShowcase?:
+          | T
+          | {
+              heading?: T;
+              image?: T;
+              photos?: T;
               id?: T;
               blockName?: T;
             };

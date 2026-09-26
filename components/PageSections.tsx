@@ -9,6 +9,7 @@ import { DEPARTMENTS } from "@/collections/Team";
 import type { ProjectCard } from "@/lib/content";
 import { DESTINATIONS, type Destination } from "@/lib/site";
 import type { Media, Page, Team } from "@/payload-types";
+import { ContactForm } from "./ContactForm";
 import { LoopVideo } from "./LoopVideo";
 import { Photo } from "./Photo";
 import { RichText } from "./RichText";
@@ -257,6 +258,15 @@ function Narrow({ s, data }: { s: Section; data: PageData }) {
         </>
       );
 
+    case "contactForm":
+      return (
+        <section className="contact-block" id="contact-form">
+          <Heading text={s.heading} />
+          {s.intro && <p className="page-p">{s.intro}</p>}
+          <ContactForm preset={s.preset ?? null} />
+        </section>
+      );
+
     case "cta":
       return (
         <div className="page-cta">
@@ -304,6 +314,28 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
           </div>
         </section>
       );
+
+    case "photoShowcase": {
+      const rest = (Array.isArray(s.photos) ? s.photos : []).map(media).filter(Boolean);
+      return (
+        <section className="showcase">
+          <div className="showcase-main">
+            {/* A phone crops the wide photo to 4:3, which enlarges it about 1.8x. */}
+            <Photo m={media(s.image)} sizes="(max-width: 720px) 180vw, 100vw" />
+            <h2>{s.heading}</h2>
+          </div>
+          {rest.length > 0 && (
+            <div className="showcase-row" style={{ ["--n" as string]: rest.length }}>
+              {rest.map((m) => (
+                <div className="showcase-cell" key={m!.id}>
+                  <Photo m={m} sizes="(max-width: 720px) 70vw, 20vw" max="card" />
+                </div>
+              ))}
+            </div>
+          )}
+        </section>
+      );
+    }
 
     case "pathCards":
       return (

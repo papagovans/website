@@ -213,6 +213,25 @@ const Cta: Block = {
   ],
 };
 
+const ContactFormBlock: Block = {
+  slug: "contactForm",
+  labels: { singular: "Contact Form", plural: "Contact Forms" },
+  fields: [
+    sectionHeading,
+    { name: "intro", label: "Introduction", type: "textarea", admin: { description: "Optional. One line above the form." } },
+    {
+      name: "preset",
+      label: "Start with",
+      type: "select",
+      options: [
+        { value: "conversion", label: "Camper van conversion selected" },
+        { value: "service", label: "Service or repair selected" },
+      ],
+      admin: { description: "Optional. Leave blank to let the visitor choose. Submissions go to HubSpot as \"Website Contact Form\"." },
+    },
+  ],
+};
+
 /* ---- Full-width sections ----------------------------------------------- */
 
 const Hero: Block = {
@@ -290,6 +309,36 @@ const PathCards: Block = {
         },
         { name: "flag", label: "Badge on a highlighted card", type: "text", admin: { condition: (_, s) => Boolean(s?.featured), description: 'e.g. "Most Popular".' } },
       ],
+    },
+  ],
+};
+
+const PhotoShowcase: Block = {
+  slug: "photoShowcase",
+  labels: { singular: "Photo Showcase", plural: "Photo Showcases" },
+  fields: [
+    {
+      name: "heading",
+      type: "textarea",
+      required: true,
+      admin: { description: "Sits over the top left of the big photo. One plain sentence about what we do." },
+    },
+    {
+      name: "image",
+      label: "Big photo",
+      type: "upload",
+      relationTo: "media",
+      required: true,
+      admin: { description: "A wide photo, at least 1920 pixels across, with calm space on the left for the words." },
+    },
+    {
+      name: "photos",
+      label: "Photos underneath",
+      type: "upload",
+      relationTo: "media",
+      hasMany: true,
+      maxRows: 6,
+      admin: { description: "Up to six, shown in one row under the big photo. Drag to reorder." },
     },
   ],
 };
@@ -381,9 +430,9 @@ const BuildGallery: Block = {
 };
 
 /* The renderer groups consecutive content sections into one reading column. */
-export const WIDE = new Set(["hero", "pathCards", "vanTour", "imageText", "photoWall", "testimonials", "buildGallery"]);
+export const WIDE = new Set(["hero", "photoShowcase", "pathCards", "vanTour", "imageText", "photoWall", "testimonials", "buildGallery"]);
 
 export const blocks = [
-  Text, Cards, Steps, Faq, Checklist, Note, PriceBox, Team, Timeline, Cta,
-  Hero, PathCards, VanTour, ImageText, PhotoWall, Testimonials, BuildGallery,
+  Text, Cards, Steps, Faq, Checklist, Note, PriceBox, Team, Timeline, Cta, ContactFormBlock,
+  Hero, PhotoShowcase, PathCards, VanTour, ImageText, PhotoWall, Testimonials, BuildGallery,
 ];

@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { cleanHutk, pageUriFrom, submitHubSpotForm } from "@/lib/hubspot";
 
 /*
  * Newsletter signup.
@@ -17,7 +18,6 @@ import { NextResponse } from "next/server";
  * nothing is worse than one that admits it is not connected.
  */
 
-const PORTAL_ID = process.env.HUBSPOT_PORTAL_ID ?? "43782575";
 const FORM_ID = process.env.HUBSPOT_NEWSLETTER_FORM_ID;
 
 /* Shape only. HubSpot does the real validation, and a stricter regex here
@@ -30,8 +30,7 @@ export async function POST(request: Request) {
   try {
     const body = await request.json();
     email = String(body?.email ?? "").trim();
-    // HubSpot's tracking cookie: a 32-character hex id, nothing else accepted.
-    hutk = /^[a-f0-9]{32}$/.test(String(body?.hutk ?? "")) ? String(body.hutk) : undefined;
+    hutk = cleanHutk(body?.hutk);
   } catch {
     return NextResponse.json({ ok: false, reason: "bad-request" }, { status: 400 });
   }
@@ -48,22 +47,13 @@ export async function POST(request: Request) {
   }
 
   try {
-    const res = await fetch(
-      `https://api.hsforms.com/submissions/v3/integration/submit/${PORTAL_ID}/${FORM_ID}`,
-      {
-        method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify({
-          fields: [
-            { objectTypeId: "0-1", name: "email", value: email },
-            { objectTypeId: "0-1", name: "papago_lead_source", value: "Website Newsletter" },
-          ],
-          context: { pageUri: request.headers.get("referer") ?? "", pageName: "Newsletter band", ...(hutk ? { hutk } : {}) },
-        }),
-      },
+    const res = await submitHubSpotForm(
+      FORM_ID,
+      { email },
+      { pageUri: pageUriFrom(null, request.headers.get("referer")), pageName: "Newsletter band", hutk },
     );
     if (!res.ok) {
-      console.error("newsletter: HubSpot returned", res.status, await res.text());
+      console.error("newsletter: HubSpot returned", res.status, res.body);
       return NextResponse.json({ ok: false, reason: "upstream" }, { status: 502 });
     }
     return NextResponse.json({ ok: true });

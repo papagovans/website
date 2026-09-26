@@ -29,7 +29,7 @@ export default function NewsletterForm() {
     if (state === "sending") return;
     setState("sending");
     try {
-      const res = await fetch("/api/newsletter", {
+      const res = await fetch("/api/newsletter/", {
         method: "POST",
         headers: { "content-type": "application/json" },
         // HubSpot's visitor cookie ties the signup to the pages they browsed.
