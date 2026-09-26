@@ -18,6 +18,9 @@ import NewsletterForm from "@/components/NewsletterForm";
  */
 
 const PHONE = "+1 602-346-0331";
+/* Jeremy's booking link. The header CTA opens it directly rather than routing
+   through a page: the fastest thing a visitor can do for us is take a slot. */
+const CALENDAR_URL = "https://calendly.com/jeremy-papago/30min";
 
 const footerCols = [
   // Staging lists "Four Peaks", which is not a plan in the build configurator's
@@ -59,7 +62,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <a href="/van-life-build-gallery/">View Recent Builds</a>
             </nav>
             <div className="header-actions">
-              <a href="/bespoke/" className="btn btn-expert btn-sm">
+              <a
+                href={CALENDAR_URL}
+                target="_blank"
+                rel="noopener"
+                className="btn btn-expert btn-sm"
+              >
                 Talk To An Expert <span className="arw">&#8853;</span>
               </a>
               <a href={`tel:${PHONE.replace(/[^\d+]/g, "")}`} className="btn btn-outline btn-sm hide-sm">
