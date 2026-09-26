@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Prompt } from "next/font/google";
 import "./globals.css";
 import NewsletterForm from "@/components/NewsletterForm";
+import { Tracking } from "@/components/Tracking";
 import {
   SALES_PHONE, SERVICE_PHONE, EMAIL, ADDRESS_LINE1, ADDRESS_LINE2,
   MAP_URL, CALENDAR_URL, BUILD_APP, SOCIALS, tel,
@@ -90,6 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${prompt.variable}`}>
       <body>
+        <Tracking />
         {/* Who and where the business is, on every page. It used to sit on
             Contact alone; now that Contact is a CMS page, the layout owns it. */}
         <script

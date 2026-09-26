@@ -1,5 +1,6 @@
 "use client";
 
+import { trackLead } from "./Tracking";
 import { useState } from "react";
 import { SALES_PHONE, tel } from "@/lib/site";
 
@@ -31,9 +32,11 @@ export default function NewsletterForm() {
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify({ email }),
+        // HubSpot's visitor cookie ties the signup to the pages they browsed.
+        body: JSON.stringify({ email, hutk: document.cookie.match(/(?:^|; )hubspotutk=([^;]+)/)?.[1] }),
       });
       setState(res.ok ? "done" : "error");
+      if (res.ok) trackLead("newsletter");
     } catch {
       setState("error");
     }

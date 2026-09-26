@@ -26,9 +26,12 @@ const looksLikeEmail = (v: string) => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v);
 
 export async function POST(request: Request) {
   let email = "";
+  let hutk: string | undefined;
   try {
     const body = await request.json();
     email = String(body?.email ?? "").trim();
+    // HubSpot's tracking cookie: a 32-character hex id, nothing else accepted.
+    hutk = /^[a-f0-9]{32}$/.test(String(body?.hutk ?? "")) ? String(body.hutk) : undefined;
   } catch {
     return NextResponse.json({ ok: false, reason: "bad-request" }, { status: 400 });
   }
@@ -55,7 +58,7 @@ export async function POST(request: Request) {
             { objectTypeId: "0-1", name: "email", value: email },
             { objectTypeId: "0-1", name: "papago_lead_source", value: "Website Newsletter" },
           ],
-          context: { pageUri: request.headers.get("referer") ?? "", pageName: "Newsletter band" },
+          context: { pageUri: request.headers.get("referer") ?? "", pageName: "Newsletter band", ...(hutk ? { hutk } : {}) },
         }),
       },
     );
