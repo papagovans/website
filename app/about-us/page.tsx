@@ -34,13 +34,22 @@ for (const member of team) {
 }
 const byDept = new Map(departments);
 
-/* Sales, Finance and Marketing share one line. Four people between them, and
-   a row each would be three headings over three near-empty grids. */
-const SIDE_BY_SIDE = ["Sales", "Finance", "Marketing"] as const;
-const LEAD = ["Owners", "Administration", ...SIDE_BY_SIDE] as readonly string[];
+/* Page order, one entry per line. Small departments share a line: a row each
+   would be headings over near-empty grids. Each column is sized by headcount,
+   so a portrait is the same size whichever department it sits in. */
+const PINNED: string[][] = [["Owners"], ["Administration", "Finance"], ["Sales", "Marketing"]];
+const PAIRED: string[][] = [["Inventory", "CNC Specialists"]];
 /* Whatever is left, still in the source page's order, so adding a department
-   in the CMS later does not silently drop it off this page. */
-const REST = departments.map(([d]) => d).filter((d) => !LEAD.includes(d));
+   in the CMS later does not silently drop it off this page. A pair takes the
+   place of its last member. */
+const placed = [...PINNED, ...PAIRED].flat();
+const ROWS: string[][] = [
+  ...PINNED,
+  ...departments.flatMap(([d]): string[][] => {
+    if (!placed.includes(d)) return [[d]];
+    return PAIRED.filter((pair) => pair.at(-1) === d);
+  }),
+];
 
 /*
  * The company timeline.
@@ -245,20 +254,21 @@ export default async function AboutPage() {
             you call are all on this page.
           </p>
 
-          <TeamGroup dept="Owners" eager />
-          <TeamGroup dept="Administration" />
-
-          {/* Three small departments that would each waste a full-width row
-              on their own: between them they are four people. */}
-          <div className="team-row">
-            {SIDE_BY_SIDE.map((d) => (
-              <TeamGroup dept={d} key={d} />
-            ))}
-          </div>
-
-          {REST.map((d) => (
-            <TeamGroup dept={d} key={d} />
-          ))}
+          {ROWS.map((row, i) =>
+            row.length === 1 ? (
+              <TeamGroup dept={row[0]} eager={i === 0} key={row[0]} />
+            ) : (
+              <div
+                className="team-row"
+                key={row.join()}
+                style={{ gridTemplateColumns: row.map((d) => `${byDept.get(d)?.length ?? 1}fr`).join(" ") }}
+              >
+                {row.map((d) => (
+                  <TeamGroup dept={d} key={d} />
+                ))}
+              </div>
+            ),
+          )}
 
           <div className="page-note">
             <p>

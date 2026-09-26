@@ -612,7 +612,7 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 30px 20px; }
 .team-card img { max-width: 200px; margin-inline: auto; }
 
-/* Sales, Finance and Marketing on one line. The row does the breakout, so its
+/* Small departments share a line (Administration + Finance, Sales + Marketing). The row does the breakout, so its
    children must not do it again or each would centre itself on the viewport
    and they would stack on top of each other. */
 .team-row {
@@ -620,8 +620,7 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 	width: min(1200px, calc(100vw - 48px)); margin-left: 50%; transform: translateX(-50%);
 }
 .team-row .team-group { width: auto; margin-left: 0; transform: none; }
-.team-row .team-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
-@media (max-width: 860px) { .team-row { grid-template-columns: 1fr; } }
+@media (max-width: 860px) { .team-row { grid-template-columns: 1fr !important; } }
 .team-card { text-align: center; }
 .team-card img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
 .team-name {
