@@ -10,14 +10,14 @@ import { CALENDAR_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Our Process | How A Papago Van Gets Built",
   description:
-    "Ten steps from first call to keys: design consultation, 3D renderings, build slot, construction, final inspection and walkthrough.",
+    "Ten steps from first call to keys: design consultation, 3D renderings, deposit, construction, final inspection and walkthrough.",
 };
 
 const steps = [
   { t: "Reach out", d: "A call with Jeremy about where you want to go, who is coming, and what you haul. No configuration, no pressure." },
   { t: "Get a real quote", d: "An itemised number for the build you described, not a range. You see what every option costs before you commit to any of them." },
   { t: "We source the van", d: "We buy through dealerships we already work with. If you own a Sprinter, bring it and we price the build alone." },
-  { t: "Secure your build slot", d: "A deposit puts you in the schedule on a dated slot. From that day the clock on your fourteen weeks is real." },
+  { t: "Secure your build", d: "A deposit reserves your build and locks your pricing." },
   { t: "Design meeting", d: "Layout, finishes, and every system in the van, decided together with the people who will actually build it." },
   { t: "3D renderings", d: "You see your van before it exists, from the inside. Changes here cost nothing. Changes after the cabinets are cut cost a lot." },
   { t: "Approve the final design", d: "One sign-off that locks the drawing, so nobody is guessing on the shop floor." },
@@ -34,7 +34,7 @@ export default function OurProcessPage() {
           <p className="page-eyebrow">How It Works</p>
           <h1>From First Call To Keys</h1>
           <p className="page-lede">
-            Ten steps, in order, with a dated build slot in the middle of them. You get
+            Ten steps, in order, with your deposit in the middle of them. You get
             weekly photographs of your own van the whole way through.
           </p>
         </div>

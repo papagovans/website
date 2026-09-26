@@ -21,7 +21,7 @@ const areas = [
   { t: "Electrical", d: "12V and 110V systems, lithium, solar, inverters and shore power. The system owners ask the most questions about." },
   { t: "Fabrication", d: "Metalwork, racks, bumpers, brackets and the mounts nobody sells off the shelf." },
   { t: "Upholstery and soft goods", d: "Seating, cushions, headliners and the parts of the van people actually touch." },
-  { t: "Operations and admin", d: "Scheduling, purchasing, and keeping a shop full of dated build slots running to those dates." },
+  { t: "Operations and admin", d: "Scheduling, purchasing, and keeping a shop full of builds running smoothly." },
 ];
 
 export default function CareersPage() {

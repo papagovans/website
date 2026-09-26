@@ -35,7 +35,7 @@ const COLLAGE_COUNT = 45;
 /*
  * Two ways to buy. The axis is where the build starts, not how much of it is
  * custom: Tailored starts from a floor plan we have built before, Bespoke
- * starts from nothing. Everything else, the price and the timeline included,
+ * starts from nothing. Everything else, the price included,
  * falls out of that one difference, which is why the cards lead with it.
  */
 /* Picture the experience. Two scenes, one per buyer, in the order the owner
@@ -88,7 +88,6 @@ const paths = [
   {
     name: "Tailored",
     kicker: "Start from a proven floor plan",
-    timing: "Keys in your hand: 14 weeks",
     copy: "Pick one of the five layouts we have built dozens of times, then decide every system in it yourself: power, water, heat, kitchen, storage, finishes. The price moves as you choose, so nothing is a surprise. Download your Build Sheet when you are done.",
     range: "$180,000 - $250,000",
     cta: "Start Your Build",
@@ -99,8 +98,7 @@ const paths = [
   {
     name: "Bespoke",
     kicker: "Start from an empty van",
-    timing: "Keys in your hand: 9-14 months",
-    copy: "No floor plan, no starting point, just a blank Sprinter and a designer who draws it around how you actually live. Your layout, your cabinetry, your ideas. It costs more and takes the long way round, and for the right owner it is worth every week of it.",
+    copy: "No floor plan, no starting point, just a blank Sprinter and a designer who draws it around how you actually live. Your layout, your cabinetry, your ideas. It costs more, and for the right owner it is worth every dollar of it.",
     range: "$200,000 - $300,000",
     cta: "How Bespoke Works",
     href: "/bespoke/",
@@ -203,7 +201,6 @@ export default async function Home() {
                 {p.featured && <span className="path-flag">Most Popular</span>}
                 <p className="path-kicker">{p.kicker}</p>
                 <h3 className="path-name">{p.name}</h3>
-                <p className="path-timing">{p.timing}</p>
                 <p className="path-copy">{p.copy}</p>
                 <div className="path-foot">
                   <p className="path-range-label">Pricing range (includes van)</p>

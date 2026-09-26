@@ -146,17 +146,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 	padding: 6px 14px; border-radius: 999px;
 }
 .path-kicker { font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); }
-.path-name { font-size: 26px; margin: 8px 0 0; }
-/* The lead time is the real difference between the three, so it sits directly
-   under the name in ink rather than muted like the kicker above it. */
-.path-timing {
-	/* Half a pixel of tracking, not the 1.5 the other uppercase labels use:
-	   at the narrow end of the three-column grid the Bespoke line wraps at
-	   anything wider and knocks the three cards' copy out of alignment. */
-	font-size: 12px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase;
-	color: var(--ink); margin: 10px 0 14px; padding-bottom: 14px;
-	border-bottom: 1px solid var(--line);
-}
+.path-name { font-size: 26px; margin: 8px 0 14px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
 .path-copy { color: var(--muted); font-size: 15px; }
 /* Pins the price and button to the bottom so all three line up. */
 .path-foot { margin-top: auto; padding-top: 26px; }
@@ -396,8 +386,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 .social a { width: 32px; height: 32px; border-radius: 7px; background: rgba(255,255,255,0.12); display: grid; place-content: center; font-size: 12px; font-weight: 600; }
 
 /* The three-way cards drop to one column earlier than everything else. Below
-   about 1080px the third column is too narrow to hold "KEYS IN YOUR HAND:
-   9-14 MONTHS" on one line, and a single wrapped card throws the other two
+   about 1080px the third column is too narrow for its copy, and a single
+   wrapped card throws the other two
    out of alignment. */
 @media (max-width: 1080px) {
 	.paths-grid { grid-template-columns: 1fr; gap: 26px; }
@@ -472,7 +462,7 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 
 /* Two ways to build, on Geotrek's bone palette. */
 .paths { background: #f6f3ee; padding: 84px 0 88px; scroll-margin-top: 0; }
-.paths .section-title, .paths .path-name, .paths .path-timing { color: #343434; }
+.paths .section-title, .paths .path-name { color: #343434; }
 .paths .section-lede { color: #6f6b64; }
 .paths .path-card { background: #fff; border-color: #e7e2d9; }
 .paths .path-card.is-featured { background: #fff; border-color: var(--gold); }

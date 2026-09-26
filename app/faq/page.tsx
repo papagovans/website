@@ -12,6 +12,9 @@ import { CALENDAR_URL, BUILD_APP } from "@/lib/site";
  * disclaimers replaced. Treated as current until the shop says otherwise;
  * papagovans.com still publishes the old set.
  *
+ * No build timeline, owner's call 2026-09-25: quoting one caused confusion,
+ * so the timeline question is gone rather than rewritten.
+ *
  * <details> rather than a JS accordion: it opens on click, it is keyboard
  * accessible, it prints open, and Google reads the answer whether or not the
  * panel is expanded.
@@ -20,7 +23,7 @@ import { CALENDAR_URL, BUILD_APP } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Campervan Conversion FAQ | Papago Vans",
   description:
-    "What a Papago build costs, how long it takes, what is included, and how the electrical, water and heating systems actually work.",
+    "What a Papago build costs, what is included, and how the electrical, water and heating systems actually work.",
 };
 
 const faqs: { q: string; a: React.ReactNode }[] = [
@@ -59,16 +62,6 @@ const faqs: { q: string; a: React.ReactNode }[] = [
           the total move as you choose. The number it gives you is the number we quote.
         </p>
       </>
-    ),
-  },
-  {
-    q: "What is the typical timeline?",
-    a: (
-      <p>
-        Fourteen weeks from the day your build slot is secured for a Tailored build.
-        Bespoke runs nine to fourteen months, because it starts at a drawing board
-        rather than a floor plan we have already built dozens of times.
-      </p>
     ),
   },
   {
@@ -126,8 +119,8 @@ const faqs: { q: string; a: React.ReactNode }[] = [
     a: (
       <p>
         You pick flooring, wall panels, cabinet faces and countertop from our swatch
-        sets. We keep those materials in stock, so choosing from them does not add
-        weeks to your build while something ships.
+        sets. We keep those materials in stock, so choosing from them does not hold up
+        your build while something ships.
       </p>
     ),
   },

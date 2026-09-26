@@ -28,16 +28,12 @@ const WHAT = [
     h: "You work with a designer, not a form",
     p: "Drawings, revisions, and real conversations. You will see the layout before a single panel is cut, and you will be asked to change your mind more than once.",
   },
-  {
-    h: "It takes nine to fourteen months",
-    p: "Most of that is design and iteration, not fabrication. If you need to be on the road this season, Tailored is the honest answer and we will tell you so.",
-  },
 ];
 
 const DRIVERS = [
   ["Chassis", "144, 170 or 170 EXT, and whether you want AWD"],
   ["Power system", "A weekender and a full-time off-grid build are not the same battery bank"],
-  ["Water and heat", "Indoor shower, hot water and diesel heat add both cost and weeks"],
+  ["Water and heat", "Indoor shower, hot water and diesel heat each add to the cost"],
   ["Cabinetry", "Solid hardwood, custom galley work and unusual geometry all move the number"],
   ["Lift and tyres", "Suspension, wheels and off-road protection are their own line"],
 ];
@@ -48,9 +44,9 @@ export default function BespokePage() {
       <p className="bsp-eyebrow">Bespoke</p>
       <h1>Start From An Empty Van</h1>
       <p className="bsp-lede">
-        No floor plan, no starting point. A blank Mercedes-Benz Sprinter, a designer, and
-        as long as it takes to draw the van around the way you actually live. It is the
-        slower road and the more expensive one, and for the right owner it is the only one.
+        No floor plan, no starting point. A blank Mercedes-Benz Sprinter and a designer
+        who draws the van around the way you actually live. It is the more expensive
+        road, and for the right owner it is the only one.
       </p>
 
       <div className="bsp-grid">

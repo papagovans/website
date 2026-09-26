@@ -66,7 +66,7 @@ export default function FinancingPage() {
               <h2>Apply before you design</h2>
               <p>
                 Knowing your number first turns the design meeting into real decisions
-                instead of guesses. It also means your build slot is not waiting on an
+                instead of guesses. It also means your build is not waiting on an
                 approval.
               </p>
             </article>
@@ -77,7 +77,6 @@ export default function FinancingPage() {
             <li>The build you want priced. The <a href="https://build.papagovans.com" target="_blank" rel="noopener">van builder</a> gives you an itemised total in about five minutes.</li>
             <li>Proof of income, the same documents any vehicle loan asks for.</li>
             <li>A rough deposit figure. More down is a smaller monthly payment and usually a better rate.</li>
-            <li>Your timeline, since a build slot and a loan approval want to land in the same month.</li>
           </ul>
 
           <div className="page-note">

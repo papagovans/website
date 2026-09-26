@@ -22,7 +22,6 @@ const values = [
   { t: "Nothing is subcontracted", d: "Your van does not ship to a third party halfway through. The person who installed your electrical is someone you can ask about it, by name, a year later." },
   { t: "You see it being built", d: "Weekly photographs of your own van as it happens. Owners tell us it is the part they did not expect and would not give up." },
   { t: "The price is the price", d: "Every option is priced before you talk to anyone. You can build the whole thing yourself online and watch the total move." },
-  { t: "A dated build slot", d: "Your deposit buys a place in the schedule on a real date, not a place in a queue that keeps moving." },
 ];
 
 export default async function AboutPage() {
