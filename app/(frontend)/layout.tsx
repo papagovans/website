@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Prompt } from "next/font/google";
+import { inter, prompt } from "@/lib/fonts";
 import "./globals.css";
 import NewsletterForm from "@/components/NewsletterForm";
 import { Tracking } from "@/components/Tracking";
+import { MobileMenu } from "@/components/MobileMenu";
 import {
   SALES_PHONE, SERVICE_PHONE, EMAIL, ADDRESS_LINE1, ADDRESS_LINE2,
   MAP_URL, CALENDAR_URL, BUILD_APP, SOCIALS, tel,
@@ -71,14 +72,6 @@ const footerCols = [
   },
 ];
 
-/* Served from this site, not Google's: no extra domains to connect to, cached
-   for a year, and preloaded. Inter is one variable file for every weight;
-   Prompt carries only the three weights the CSS actually uses. */
-/* Inter is body text, not the headline, so it is not preloaded: the
-   headline's font (Prompt) and the hero photo get the early bandwidth. */
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap", preload: false });
-const prompt = Prompt({ subsets: ["latin"], weight: ["500", "600", "700"], variable: "--font-prompt", display: "swap" });
-
 export const metadata: Metadata = {
   title: "Arizona Campervan Conversions | Custom Vans by Papago",
   description:
@@ -138,7 +131,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <a href={tel(SALES_PHONE)} className="btn btn-outline btn-sm hide-sm">
                 {SALES_PHONE}
               </a>
-              <button className="hamburger" aria-label="Menu"><span /><span /><span /></button>
+              <MobileMenu
+                links={[
+                  { label: "Build Your Van", href: BUILD_APP, external: true },
+                  { label: "Recent Builds", href: "/van-life-build-gallery/" },
+                  { label: "Our Process", href: "/our-process/" },
+                  { label: "Bespoke Builds", href: "/bespoke/" },
+                  { label: "Service Department", href: "/service-department/" },
+                  { label: "Financing", href: "/financing/" },
+                  { label: "FAQ", href: "/faq/" },
+                  { label: "Guides", href: "/blog/" },
+                  { label: "About", href: "/about-us/" },
+                  { label: "Contact", href: "/contact-us/" },
+                ]}
+                phones={[
+                  { label: "Sales", number: SALES_PHONE, href: tel(SALES_PHONE) },
+                  { label: "Service", number: SERVICE_PHONE, href: tel(SERVICE_PHONE) },
+                ]}
+                cta={{ label: "Talk To An Expert", href: CALENDAR_URL, external: true }}
+              />
             </div>
           </div>
         </header>

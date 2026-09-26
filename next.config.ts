@@ -30,7 +30,7 @@ const nextConfig: NextConfig = {
    * second. The site's CSS is ~13 KB compressed, and most visitors are new,
    * so re-sending it with each page is the cheaper side of the trade.
    */
-  experimental: { inlineCss: true },
+  experimental: { inlineCss: true, globalNotFound: true },
 
   async redirects() {
     return live.urls

@@ -1,11 +1,11 @@
 {
   "source": "https://papagovans.com",
   "generated": "2026-09-24",
-  "total": 186,
+  "total": 208,
   "counts": {
-    "done": 1,
-    "todo": 174,
-    "redirect": 11
+    "done": 158,
+    "redirect": 37,
+    "drop": 13
   },
   "urls": [
     {
@@ -466,14 +466,14 @@
     {
       "path": "/financing/",
       "type": "page",
-      "status": "drop",
+      "status": "done",
       "seo": {
         "wpId": 12055,
         "title": "Camper Van Financing with Hearth | Papago Vans",
         "canonical": "/financing/",
         "index": "index"
       },
-      "note": "Three words of content behind an embedded widget. Rebuild when there is something to say."
+      "note": "Rebuilt 2026-09-25 as a CMS page. No rates or lender named until the shop confirms them."
     },
     {
       "path": "/ford-transit/",
@@ -2164,6 +2164,90 @@
         "canonical": "/zion/",
         "index": "index"
       }
+    },
+    {
+      "path": "/recent-projects/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/van-life-build-gallery/",
+      "note": "Linked from old content or redirected by papagovans.com, found in the 2026-09-26 old-vs-new audit. Chains flattened to one hop."
+    },
+    {
+      "path": "/gallery/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/van-life-build-gallery/",
+      "note": "Linked from old content or redirected by papagovans.com, found in the 2026-09-26 old-vs-new audit. Chains flattened to one hop."
+    },
+    {
+      "path": "/el-capitan/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/el-capitan-luxury-van-build/",
+      "note": "Linked from old content or redirected by papagovans.com, found in the 2026-09-26 old-vs-new audit. Chains flattened to one hop."
+    },
+    {
+      "path": "/build-tiers/",
+      "type": "page",
+      "status": "redirect",
+      "to": "https://build.papagovans.com",
+      "note": "Linked from old content or redirected by papagovans.com, found in the 2026-09-26 old-vs-new audit. Chains flattened to one hop."
+    },
+    {
+      "path": "/conversion-van-build-tiers/",
+      "type": "page",
+      "status": "redirect",
+      "to": "https://build.papagovans.com",
+      "note": "Linked from old content or redirected by papagovans.com, found in the 2026-09-26 old-vs-new audit. Chains flattened to one hop."
+    },
+    {
+      "path": "/camper-van-conversion/",
+      "type": "page",
+      "status": "redirect",
+      "to": "https://build.papagovans.com",
+      "note": "Linked from old content or redirected by papagovans.com, found in the 2026-09-26 old-vs-new audit. Chains flattened to one hop."
+    },
+    {
+      "path": "/category/guide-for-van-life/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/blog/",
+      "note": "Linked from old content or redirected by papagovans.com, found in the 2026-09-26 old-vs-new audit. Chains flattened to one hop."
+    },
+    {
+      "path": "/category/uncategorized/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/blog/",
+      "note": "Linked from old content or redirected by papagovans.com, found in the 2026-09-26 old-vs-new audit. Chains flattened to one hop."
+    },
+    {
+      "path": "/privacy/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/privacy-policy/",
+      "note": "Linked from old content or redirected by papagovans.com, found in the 2026-09-26 old-vs-new audit. Chains flattened to one hop."
+    },
+    {
+      "path": "/contact/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/contact-us/",
+      "note": "Linked from old content or redirected by papagovans.com, found in the 2026-09-26 old-vs-new audit. Chains flattened to one hop."
+    },
+    {
+      "path": "/terms-and-conditions/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/terms-conditions/",
+      "note": "Linked from old content or redirected by papagovans.com, found in the 2026-09-26 old-vs-new audit. Chains flattened to one hop."
+    },
+    {
+      "path": "/6-reasons-to-use-havelock-wool-in-a-van-conversion/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/blog/6-reasons-to-use-havelock-wool-in-a-van-conversion/",
+      "note": "Linked from old content or redirected by papagovans.com, found in the 2026-09-26 old-vs-new audit. Chains flattened to one hop."
     }
   ],
   "enriched": "2026-09-24"
