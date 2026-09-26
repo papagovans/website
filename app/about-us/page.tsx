@@ -42,6 +42,31 @@ const LEAD = ["Owners", "Administration", ...SIDE_BY_SIDE] as readonly string[];
    in the CMS later does not silently drop it off this page. */
 const REST = departments.map(([d]) => d).filter((d) => !LEAD.includes(d));
 
+/* Four milestones, verbatim from papagovans.com/about-us apart from a stray
+   double full stop in the first. The source has no photographs with them. */
+const milestones = [
+  {
+    when: "March 2020",
+    title: "Papago Vans begins",
+    copy: "Tim, Ian and Jesse launch Papago Vans in Jesse\u2019s single car garage, starting with an E350 conversion. That first build paid for the next one.",
+  },
+  {
+    when: "August 2020",
+    title: "Out of the garage",
+    copy: "The team outgrows the garage and moves into 1,650 square feet. Around ten vans get built there, all of them custom orders, and Papago takes on its first employees.",
+  },
+  {
+    when: "August 2021",
+    title: "Downtown Phoenix",
+    copy: "A 4,800 square foot building in downtown Phoenix. More staff, and the first build team managers, which is the point a shop stops being run off one person\u2019s memory.",
+  },
+  {
+    when: "November 2022",
+    title: "22,400 square feet in Mesa",
+    copy: "The current shop. A CNC machine for faster and more precise cutting, a dedicated service department, a full paint booth, and a crew past 38 people.",
+  },
+];
+
 function TeamGroup({ dept, eager = false }: { dept: string; eager?: boolean }) {
   const people = byDept.get(dept);
   if (!people?.length) return null;
@@ -204,6 +229,26 @@ export default async function AboutPage() {
               <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.
             </p>
           </div>
+
+          {/* The journey, ported from the live About page. It carries no images
+              there, and none are invented here.
+
+              It stops at November 2022, which is where the source stops. Three
+              years of the company are missing from it, including the move to
+              RVIA certification and whatever took the crew from 38 people to
+              47. Worth extending rather than quietly leaving at four. */}
+          <h2 className="page-h2">The Papago Journey</h2>
+          <ol className="timeline">
+            {milestones.map((m) => (
+              <li className="milestone" key={m.when}>
+                <p className="milestone-when">{m.when}</p>
+                <div className="milestone-body">
+                  <h3>{m.title}</h3>
+                  <p>{m.copy}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
 
           <h2 className="page-h2">Where we are</h2>
           <p className="page-p">
