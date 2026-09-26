@@ -42,9 +42,30 @@ const LEAD = ["Owners", "Administration", ...SIDE_BY_SIDE] as readonly string[];
    in the CMS later does not silently drop it off this page. */
 const REST = departments.map(([d]) => d).filter((d) => !LEAD.includes(d));
 
-/* Four milestones, verbatim from papagovans.com/about-us apart from a stray
-   double full stop in the first. The source has no photographs with them. */
-const milestones = [
+/*
+ * The company timeline.
+ *
+ * The first four are verbatim from papagovans.com/about-us, apart from a stray
+ * double full stop in the first. The source has no photographs with them.
+ *
+ * !! The last three carry PROVISIONAL DATES. !!
+ *
+ * Their substance is verified and public: Papago is RVIA certified, has passed
+ * 300 builds, is an authorized Mercedes-Benz, Ford and RAM dealer, and the
+ * roster on this page is 47 people. What is NOT verified is WHEN any of it
+ * happened. No date appears on papagovans.com, go.papagovans.com, the FAQ, the
+ * blog or anywhere in search, and the owner asked for dates to be filled in
+ * and checked afterwards (2026-09-25).
+ *
+ * So: the facts are real, the months are guesses. Anything marked `provisional`
+ * needs a real date before this site goes public. Grep for it.
+ */
+const milestones: {
+  when: string;
+  title: string;
+  copy: string;
+  provisional?: true;
+}[] = [
   {
     when: "March 2020",
     title: "Papago Vans begins",
@@ -64,6 +85,24 @@ const milestones = [
     when: "November 2022",
     title: "22,400 square feet in Mesa",
     copy: "The current shop. A CNC machine for faster and more precise cutting, a dedicated service department, a full paint booth, and a crew past 38 people.",
+  },
+  {
+    when: "2023",
+    provisional: true,
+    title: "RVIA certified",
+    copy: "Papago becomes an RVIA certified builder, which means every van is inspected against the industry\u2019s construction and safety standards. It is also what lets a finished build be insured and financed as an RV rather than as a modified cargo van.",
+  },
+  {
+    when: "2024",
+    provisional: true,
+    title: "300 builds",
+    copy: "The three hundredth van leaves the shop. Five floor plans by this point, each one built enough times that the shop knows where every wire and every screw goes before the van arrives.",
+  },
+  {
+    when: "2025",
+    provisional: true,
+    title: "An authorized dealer, and a crew of 47",
+    copy: "Papago becomes an authorized Mercedes-Benz, Ford and RAM dealer, so the van and the conversion can be bought and financed together. The team reaches 47.",
   },
 ];
 

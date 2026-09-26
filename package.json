@@ -10,7 +10,9 @@
     "lint": "next lint",
     "urls:fetch": "node scripts/fetch-live-urls.mjs",
     "urls:check": "node scripts/check-urls.mjs",
-    "urls:launch": "node scripts/check-urls.mjs --strict"
+    "urls:launch": "node scripts/check-urls.mjs --strict",
+    "check:provisional": "node scripts/check-provisional.mjs",
+    "check:launch": "node scripts/check-provisional.mjs --strict && npm run urls:launch"
   },
   "dependencies": {
     "next": "16.3.5",
