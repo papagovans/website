@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/check-urls.mjs",
     "start": "next start",
     "lint": "next lint",
     "urls:fetch": "node scripts/fetch-live-urls.mjs",
