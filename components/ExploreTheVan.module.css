@@ -17,20 +17,24 @@
 
 /* Hotspots are slotted into model-viewer; it toggles data-visible when a
    label turns away from the camera. */
+/* The viewer centres each hotspot's box on its point, so the box is only the
+   dot and the label hangs off it: the dot lands on the point whatever the
+   label's length. A box sized to dot plus label put long labels' dots well
+   off their target. */
 .hotspot {
-	display: flex; align-items: center; gap: 6px;
+	position: relative; width: 18px; height: 18px;
 	padding: 0; border: 0; background: none; cursor: pointer;
-	transform: translate(-9px, -50%);
 	transition: opacity 0.2s;
 	font: inherit;
 }
-.hotspot:not([data-visible]) { opacity: 0; pointer-events: none; }
+.hotspot:not([data-visible]), .hotspot[data-blocked] { opacity: 0; pointer-events: none; }
 .dot {
-	width: 18px; height: 18px; border-radius: 50%;
+	display: block; width: 18px; height: 18px; border-radius: 50%;
 	background: var(--gold, #f4d969);
 	box-shadow: 0 0 0 4px rgba(244, 217, 105, 0.35), 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 .hotspotLabel {
+	position: absolute; left: calc(100% + 6px); top: 50%; transform: translateY(-50%);
 	padding: 4px 10px; border-radius: 999px;
 	background: rgba(48, 60, 71, 0.9); color: #fff;
 	font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;

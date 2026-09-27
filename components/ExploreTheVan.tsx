@@ -87,6 +87,7 @@ const FEATURES = [
     position: "0.86m 0.45m -1.91m",
     normal: "0m 0m 1m",
     view: { target: "0.86m 0.45m -1.8m", orbit: "-60deg 75deg 1.7m" },
+    hideBehindWalls: true,
   },
   {
     id: "water",
@@ -96,6 +97,7 @@ const FEATURES = [
     position: "0.8m 0.42m -0.86m",
     normal: "0m 0m -1m",
     view: { target: "0.8m 0.42m -0.95m", orbit: "-120deg 75deg 1.7m" },
+    hideBehindWalls: true,
   },
 ] as const;
 
@@ -226,6 +228,39 @@ export default function ExploreTheVan() {
   useEffect(() => {
     if (walking) place();
   }, [walking, place]);
+
+  /* The viewer hides a dot only when its surface faces away, so a dot on a
+     cabinet deep in the garage still shows through the van's wall. After the
+     camera moves, look along the line of sight to each dot: if the first
+     surface hit is somewhere else, something is in the way, so hide it. Only
+     the garage dots opt in: the others sit behind glass or bedding that the
+     check would count as a wall, and read fine as they are. */
+  useEffect(() => {
+    const el = viewer.current as (ModelViewerElement & {
+      queryHotspot(name: string): { canvasPosition: { x: number; y: number }; position: { x: number; y: number; z: number } } | null;
+      positionAndNormalFromPoint(x: number, y: number): { position: { x: number; y: number; z: number } } | null;
+    }) | null;
+    if (!el || walking) return;
+    let frameId = 0;
+    const check = () => {
+      frameId = 0;
+      const box = el.getBoundingClientRect();
+      for (const f of FEATURES) {
+        if (!("hideBehindWalls" in f)) continue;
+        const h = el.queryHotspot(`hotspot-${f.id}`);
+        const btn = el.querySelector(`[slot="hotspot-${f.id}"]`);
+        if (!h || !btn) continue;
+        const hit = el.positionAndNormalFromPoint(box.left + h.canvasPosition.x, box.top + h.canvasPosition.y);
+        const d = hit ? Math.hypot(hit.position.x - h.position.x, hit.position.y - h.position.y, hit.position.z - h.position.z) : 0;
+        btn.toggleAttribute("data-blocked", d > 0.3); // ponytail: 0.3 m slack for dots set just off their surface
+      }
+    };
+    const onChange = () => { if (!frameId) frameId = requestAnimationFrame(check); };
+    el.addEventListener("camera-change", onChange);
+    el.addEventListener("load", onChange);
+    onChange();
+    return () => { el.removeEventListener("camera-change", onChange); el.removeEventListener("load", onChange); cancelAnimationFrame(frameId); };
+  }, [walking, loadViewer]);
 
   // Dragging to look changes the heading; the next step follows it.
   useEffect(() => {
