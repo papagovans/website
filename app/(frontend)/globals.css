@@ -1149,7 +1149,7 @@ body:has(#mobile-menu:not([hidden])) .hamburger span { background: var(--ink); }
    trunks, butted against the slider so the tyres rest on it. border-image
    paints past the edges without widening the page. */
 .showcase:has(.reveal) { padding-bottom: 0; }
-.showcase:has(.reveal) .showcase-head h2, .showcase:has(.reveal) .showcase-proof { color: #372523; }
+.showcase:has(.reveal) .showcase-eyebrow, .showcase:has(.reveal) .showcase-head h2, .showcase:has(.reveal) .showcase-proof { color: #372523; }
 .showcase:has(.reveal) .showcase-row { margin-top: -20px; padding-top: 20px; padding-bottom: 20px; border-image: linear-gradient(#372523 0 0) fill 0 / / 0 100vmax; }
 .reveal { position: relative; aspect-ratio: 12 / 5; user-select: none; touch-action: pan-y; }
 /* The rounding lives on the layers, not the frame, so the handle can hang
@@ -1176,8 +1176,8 @@ body:has(#mobile-menu:not([hidden])) .hamburger span { background: var(--ink); }
 }
 .reveal-tag {
 	position: absolute; left: 16px; bottom: 16px; margin: 0; z-index: 1; pointer-events: none;
-	font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: var(--footer);
-	background: rgba(252, 250, 243, 0.94); border: 1px solid var(--line); padding: 7px 12px; border-radius: 999px;
+	font-size: 13px; font-weight: 700; letter-spacing: 0.04em; color: #eadbc0;
+	background: #372523; padding: 7px 12px; border-radius: 999px;
 }
 .reveal-input { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
 .reveal:has(.reveal-input:focus-visible) .reveal-knob { outline: 3px solid var(--gold); outline-offset: 3px; }
