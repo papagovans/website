@@ -454,6 +454,15 @@ const PhotoWall: Block = {
       maxRows: 3,
       admin: { description: "Up to three photos shown large. The rest of the wall fills itself from the Build Gallery." },
     },
+    {
+      name: "mixIn",
+      label: "Photos mixed into the wall",
+      type: "upload",
+      relationTo: "media",
+      hasMany: true,
+      maxRows: 6,
+      admin: { description: "Optional. Small photos placed among the build photos, near the top where they are seen. Use them to break up a run of van exteriors. They do not link anywhere." },
+    },
   ],
 };
 

@@ -292,6 +292,9 @@ function Narrow({ s, data }: { s: Section; data: PageData }) {
 }
 
 const COLLAGE_COUNT = 45;
+/* Where mixed-in photos land among the small tiles: scattered through the
+   rows seen first on a desktop, never two in the same column in a row. */
+const MIX_SLOTS = [1, 3, 7, 10, 14, 19];
 
 function Wide({ s, data }: { s: Section; data: PageData }) {
   switch (s.blockType) {
@@ -458,6 +461,7 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
       const step = Math.max(1, Math.floor(cards.length / COLLAGE_COUNT));
       const wall = Array.from({ length: COLLAGE_COUNT }, (_, i) => cards[(i * step) % cards.length]).filter(Boolean);
       const big = (Array.isArray(s.featured) ? s.featured : []).map(media);
+      const mix = (s.mixIn ?? []).map(media).filter((m): m is Media => m !== null);
       return (
         <section className="collage">
           <div className="wrap collage-head">
@@ -472,11 +476,18 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
                   <Photo m={m} sizes="(max-width: 860px) 100vw, 40vw" />
                 </div>
               ))}
-              {wall.map((c) => (
-                <a className="collage-cell" href={c.path} key={c.slug}>
-                  <Photo m={c.photo} sizes="(max-width: 600px) 50vw, 20vw" max="card" />
-                </a>
-              ))}
+              {wall.map((c, i) => {
+                const extra = mix[MIX_SLOTS.indexOf(i)];
+                return extra ? (
+                  <div className="collage-cell" key={`mix-${extra.id}`}>
+                    <Photo m={extra} sizes="(max-width: 600px) 50vw, 20vw" max="card" />
+                  </div>
+                ) : (
+                  <a className="collage-cell" href={c.path} key={c.slug}>
+                    <Photo m={c.photo} sizes="(max-width: 600px) 50vw, 20vw" max="card" />
+                  </a>
+                );
+              })}
             </div>
           </div>
         </section>

@@ -648,6 +648,10 @@ export interface Page {
              * Up to three photos shown large. The rest of the wall fills itself from the Build Gallery.
              */
             featured?: (number | Media)[] | null;
+            /**
+             * Optional. Small photos placed among the build photos, near the top where they are seen. Use them to break up a run of van exteriors. They do not link anywhere.
+             */
+            mixIn?: (number | Media)[] | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'photoWall';
@@ -1311,6 +1315,7 @@ export interface PagesSelect<T extends boolean = true> {
                     text?: T;
                   };
               featured?: T;
+              mixIn?: T;
               id?: T;
               blockName?: T;
             };
