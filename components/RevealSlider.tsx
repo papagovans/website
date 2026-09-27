@@ -25,7 +25,7 @@ export function RevealSlider({ back, front, ground, label, tag }: { back: ReactN
   return (
     <div
       ref={frame}
-      className={dragging ? "reveal is-dragging" : "reveal"}
+      className={[dragging && "is-dragging", ground && "has-ground", "reveal"].filter(Boolean).join(" ")}
       style={{ ["--pos" as string]: `${pos}%` }}
     >
       <div className="reveal-back">{back}</div>
