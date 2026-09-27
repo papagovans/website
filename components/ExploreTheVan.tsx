@@ -81,8 +81,8 @@ const FEATURES = [
      a camera placed straight in front of either door. */
   {
     id: "solar",
-    label: "Solar Charger & House Batteries",
-    title: "Solar Charger & House Batteries",
+    label: "Solar & House Batteries",
+    title: "Solar & House Batteries",
     copy: "The solar charger and the house batteries sit behind these doors in the garage under the bed, out of the living space and easy to reach.",
     position: "0.86m 0.45m -1.91m",
     normal: "0m 0m 1m",
@@ -91,8 +91,8 @@ const FEATURES = [
   },
   {
     id: "water",
-    label: "Water Tank & Water Heater",
-    title: "Water Tank & Water Heater",
+    label: "Water Tank & Heater",
+    title: "Water Tank & Heater",
     copy: "The fresh water tank and the water heater sit behind the garage doors on the other side, low in the van and out of the living space.",
     position: "0.8m 0.42m -0.86m",
     normal: "0m 0m -1m",
