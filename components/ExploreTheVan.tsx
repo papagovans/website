@@ -8,7 +8,7 @@ import styles from "./ExploreTheVan.module.css";
  * Explore The Van: the home page's interactive interior.
  *
  * A standalone copy of the builder's 3D van (build.papagovans.com), with the
- * five things buyers inspect labelled on the model. Picking a label flies
+ * things buyers inspect labelled on the model. Picking a label flies
  * the camera in to that feature and opens a short description. "Walk
  * inside" drops the visitor at eye height in the aisle.
  *
@@ -75,6 +75,27 @@ const FEATURES = [
     position: "2.97m 1.87m -1.85m",
     normal: "0m 0m 1m",
     view: { target: "2.97m 1.8m -1.85m", orbit: "15deg 80deg 1.3m" },
+  },
+  /* The garage under the bed: two cabinets face each other across it. Both
+     views look in through the open rear, since the far cabinet would block
+     a camera placed straight in front of either door. */
+  {
+    id: "solar",
+    label: "Solar & Batteries",
+    title: "Solar Charger & House Batteries",
+    copy: "The solar charger and the house batteries sit behind these doors in the garage under the bed, out of the living space and easy to reach.",
+    position: "0.86m 0.45m -1.91m",
+    normal: "0m 0m 1m",
+    view: { target: "0.86m 0.45m -1.8m", orbit: "-60deg 75deg 1.7m" },
+  },
+  {
+    id: "water",
+    label: "Water",
+    title: "Water Tank & Water Heater",
+    copy: "The fresh water tank and the water heater sit behind the garage doors on the other side, low in the van and out of the living space.",
+    position: "0.8m 0.42m -0.86m",
+    normal: "0m 0m -1m",
+    view: { target: "0.8m 0.42m -0.95m", orbit: "-120deg 75deg 1.7m" },
   },
 ] as const;
 
@@ -322,7 +343,7 @@ export default function ExploreTheVan() {
       )}
       </div>
 
-      {/* The same five, as plain buttons: for phones, keyboards and anyone
+      {/* The same features, as plain buttons: for phones, keyboards and anyone
           who does not think to tap a dot on a 3D model. */}
       <div className={styles.chips} aria-label="Inspect a feature">
         {FEATURES.map((f) => (

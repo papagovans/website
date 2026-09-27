@@ -82,11 +82,11 @@
 }
 .padKey:hover { background: var(--footer, #303c47); }
 
-.chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 18px; }
+.chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 16px; }
 .chip {
-	padding: 10px 20px; border-radius: 999px; cursor: pointer;
+	padding: 7px 14px; border-radius: 999px; cursor: pointer;
 	border: 1px solid var(--line, #e6e0d2); background: #fff; color: var(--ink, #414042);
-	font: inherit; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+	font: inherit; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
 }
 .chip:hover { border-color: var(--gold, #f4d969); }
 .chipOn { background: var(--gold, #f4d969); border-color: var(--gold, #f4d969); color: var(--footer, #303c47); }
