@@ -408,6 +408,7 @@ const VanTour: Block = {
   fields: [
     { name: "heading", type: "text", required: true },
     { name: "intro", label: "Introduction", type: "textarea" },
+    destination("button", "Button under the van (optional)"),
     { type: "ui", name: "vanHelp", admin: { components: { Field: "/components/admin/Help#VanHelp" } } },
   ],
 };

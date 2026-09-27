@@ -416,7 +416,7 @@ export interface Page {
               [k: string]: unknown;
             } | null;
             /**
-             * Optional. Up to three cut-outs with transparent backgrounds (PNG). They rise into the right side of the band as it scrolls into view, and the text moves to the left.
+             * Optional. Up to three cut-outs with transparent backgrounds (PNG). One shows per visit, the next one each time the visitor comes back, rising out of the bottom-right corner as the box scrolls into view. The text moves to the left.
              */
             people?: (number | Media)[] | null;
             id?: string | null;
@@ -572,6 +572,17 @@ export interface Page {
         | {
             heading: string;
             intro?: string | null;
+            button?: {
+              to?: ('calendar' | 'sales' | 'service' | 'email' | 'map' | 'builder' | 'custom') | null;
+              /**
+               * A page on this site like /financing/, or a full address like https://...
+               */
+              url?: string | null;
+              /**
+               * Optional. Blank uses the phone number, email or a standard label.
+               */
+              text?: string | null;
+            };
             id?: string | null;
             blockName?: string | null;
             blockType: 'vanTour';
@@ -1257,6 +1268,13 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               heading?: T;
               intro?: T;
+              button?:
+                | T
+                | {
+                    to?: T;
+                    url?: T;
+                    text?: T;
+                  };
               id?: T;
               blockName?: T;
             };

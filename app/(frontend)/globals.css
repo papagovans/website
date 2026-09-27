@@ -18,7 +18,7 @@
 	--r-sm: 10px;
 }
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; background: var(--paper); }
+html { scroll-behavior: smooth; scroll-padding-top: 96px; background: var(--paper); } /* padding: jump links land below the pinned header */
 body {
 	margin: 0;
 	/* Inter for running text, Prompt kept for headings. Prompt is a display
@@ -798,6 +798,7 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 .journey-inner h2 { margin-top: 12px; font-size: clamp(28px, 4vw, 46px); color: var(--footer); }
 .journey-inner > p { margin: 18px auto 32px; max-width: 540px; font-size: 17px; line-height: 1.65; color: var(--muted); }
 .journey-alt { margin-top: 22px; font-size: 15px; color: var(--muted); }
+.explore-cta { margin-top: 32px; text-align: center; }
 .journey-alt a { font-weight: 600; color: var(--footer); text-decoration: underline; }
 
 /* With pop-up photos the text moves left and one cut-out rises out of the

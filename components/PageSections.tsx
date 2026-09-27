@@ -423,6 +423,11 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
             <div className="explore-viewer">
               <ExploreTheVan />
             </div>
+            {s.button?.to && (
+              <p className="explore-cta">
+                <Button d={s.button} className="btn btn-gold" />
+              </p>
+            )}
           </div>
         </section>
       );
