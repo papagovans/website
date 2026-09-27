@@ -3,6 +3,7 @@ import { inter, prompt } from "@/lib/fonts";
 import "./globals.css";
 import NewsletterForm from "@/components/NewsletterForm";
 import { LoadedFlag } from "@/components/LoadedFlag";
+import { ScrolledFlag } from "@/components/ScrolledFlag";
 import { Tracking } from "@/components/Tracking";
 import { MobileMenu } from "@/components/MobileMenu";
 import {
@@ -86,6 +87,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${inter.variable} ${prompt.variable}`}>
       <body>
         <LoadedFlag />
+        <ScrolledFlag />
         <Tracking />
         {/* Who and where the business is, on every page. It used to sit on
             Contact alone; now that Contact is a CMS page, the layout owns it. */}

@@ -433,8 +433,16 @@ html[data-loaded] .kit-inner { background-image: image-set(url("/home/CTA.avif")
    there and stays solid everywhere else. :has() keeps that decision in CSS
    rather than threading a prop from the page through the shared layout. */
 body:has(.hero-full) .site-header {
-	position: absolute; inset: 0 0 auto; z-index: 60;
+	position: fixed; inset: 0 0 auto; z-index: 60;
 	background: transparent; border-bottom: 0;
+	transition: background-color 0.4s ease, backdrop-filter 0.4s ease;
+}
+/* Pinned to the top the whole way down. Clear over the hero, then a dark
+   glass backing fades in once the page is 30px down (data-scrolled, set by
+   ScrolledFlag), so the white links stay readable over any section. */
+html[data-scrolled] body:has(.hero-full) .site-header {
+	background: rgba(18, 20, 22, 0.62);
+	backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
 }
 body:has(.hero-full) .site-header .main-nav a { color: #fff; }
 body:has(.hero-full) .site-header .main-nav a:hover { color: rgba(255,255,255,0.72); }
