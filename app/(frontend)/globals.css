@@ -1149,6 +1149,7 @@ body:has(#mobile-menu:not([hidden])) .hamburger span { background: var(--ink); }
    trunks, butted against the slider so the tyres rest on it. border-image
    paints past the edges without widening the page. */
 .showcase:has(.reveal) { padding-bottom: 0; }
+.showcase:has(.reveal) .showcase-head h2, .showcase:has(.reveal) .showcase-proof { color: #372523; }
 .showcase:has(.reveal) .showcase-row { margin-top: -20px; padding-top: 20px; padding-bottom: 20px; border-image: linear-gradient(#372523 0 0) fill 0 / / 0 100vmax; }
 .reveal { position: relative; aspect-ratio: 12 / 5; user-select: none; touch-action: pan-y; }
 /* The rounding lives on the layers, not the frame, so the handle can hang
