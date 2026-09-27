@@ -1145,10 +1145,15 @@ body:has(#mobile-menu:not([hidden])) .hamburger span { background: var(--ink); }
    whole showcase is held narrower than the page so the slider does not
    fill the screen. */
 .showcase:has(.reveal) { width: min(1140px, 100%); margin: 0 auto; }
+/* The photo row sits on a full-width bar of bark brown, sampled from the
+   trunks, butted against the slider so the tyres rest on it. border-image
+   paints past the edges without widening the page. */
+.showcase:has(.reveal) { padding-bottom: 0; }
+.showcase:has(.reveal) .showcase-row { margin-top: -20px; padding-top: 20px; padding-bottom: 20px; border-image: linear-gradient(#372523 0 0) fill 0 / / 0 100vmax; }
 .reveal { position: relative; aspect-ratio: 12 / 5; user-select: none; touch-action: pan-y; }
 /* The rounding lives on the layers, not the frame, so the handle can hang
    over the edge and show its whole circle at the start. */
-.reveal-back, .reveal-front { position: absolute; inset: 0; border-radius: 18px; overflow: hidden; }
+.reveal-back, .reveal-front { position: absolute; inset: 0; border-radius: 18px 18px 0 0; overflow: hidden; }
 .reveal-back img, .reveal-front img { width: 100%; height: 100%; object-fit: cover; object-position: 70% 50%; display: block; pointer-events: none; }
 .reveal-back { clip-path: inset(0 calc(100% - var(--pos)) 0 0); transition: clip-path 0.35s ease; }
 .reveal-handle {
