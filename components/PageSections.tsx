@@ -354,6 +354,7 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
                 tag="Gimme Trees"
                 back={<Photo m={media(s.image)} sizes="(max-width: 720px) 180vw, 100vw" />}
                 front={<Photo m={media(s.revealFront)} sizes="(max-width: 720px) 180vw, 100vw" />}
+                ground={s.revealGround ? <Photo m={media(s.revealGround)} sizes="(max-width: 720px) 180vw, 100vw" /> : null}
               />
             </>
           ) : (

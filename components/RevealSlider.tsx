@@ -12,7 +12,7 @@
  */
 import { useRef, useState, type ReactNode } from "react";
 
-export function RevealSlider({ back, front, label, tag }: { back: ReactNode; front: ReactNode; label: string; tag: string }) {
+export function RevealSlider({ back, front, ground, label, tag }: { back: ReactNode; front: ReactNode; ground?: ReactNode; label: string; tag: string }) {
   const [pos, setPos] = useState(0);
   const [dragging, setDragging] = useState(false);
   const frame = useRef<HTMLDivElement>(null);
@@ -29,6 +29,8 @@ export function RevealSlider({ back, front, label, tag }: { back: ReactNode; fro
       style={{ ["--pos" as string]: `${pos}%` }}
     >
       <div className="reveal-back">{back}</div>
+      {/* Ground for the tyres, only on the side the forest has not reached. */}
+      {ground && <div className="reveal-ground">{ground}</div>}
       <div className="reveal-front">{front}</div>
       <div
         className="reveal-handle"

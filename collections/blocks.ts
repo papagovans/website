@@ -347,6 +347,16 @@ const PhotoShowcase: Block = {
       },
     },
     {
+      name: "revealGround",
+      label: "Ground under the cut-out (reveal slider)",
+      type: "upload",
+      relationTo: "media",
+      admin: {
+        condition: (_, s) => s?.imageStyle === "reveal",
+        description: "Optional. A transparent PNG the size of the big photo holding only a strip of ground, so the tyres rest on something before the forest comes in. It shows only where the forest has not been revealed. home-what-we-do-ground is the current one.",
+      },
+    },
+    {
       name: "headingPlacement",
       label: "Heading goes",
       type: "radio",

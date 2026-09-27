@@ -490,6 +490,10 @@ export interface Page {
              */
             revealFront?: (number | null) | Media;
             /**
+             * Optional. A transparent PNG the size of the big photo holding only a strip of ground, so the tyres rest on something before the forest comes in. It shows only where the forest has not been revealed. home-what-we-do-ground is the current one.
+             */
+            revealGround?: (number | null) | Media;
+            /**
              * Above is calmer; over works when the photo has a plain area on the left. Ignored for a cut-out, where the words always sit beside it.
              */
             headingPlacement?: ('above' | 'over') | null;
@@ -1224,6 +1228,7 @@ export interface PagesSelect<T extends boolean = true> {
               eyebrow?: T;
               heading?: T;
               revealFront?: T;
+              revealGround?: T;
               headingPlacement?: T;
               proof?:
                 | T

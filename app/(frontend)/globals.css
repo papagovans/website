@@ -1194,14 +1194,15 @@ body:has(#mobile-menu:not([hidden])) .hamburger span { background: var(--ink); }
 .reveal { position: relative; aspect-ratio: 12 / 5; user-select: none; touch-action: pan-y; }
 /* The rounding lives on the layers, not the frame, so the handle can hang
    over the edge and show its whole circle at the start. */
-.reveal-back, .reveal-front { position: absolute; inset: 0; border-radius: 18px 18px 0 0; overflow: hidden; }
-.reveal-back img, .reveal-front img { width: 100%; height: 100%; object-fit: cover; object-position: 70% 50%; display: block; pointer-events: none; }
+.reveal-back, .reveal-ground, .reveal-front { position: absolute; inset: 0; border-radius: 18px 18px 0 0; overflow: hidden; }
+.reveal-back img, .reveal-ground img, .reveal-front img { width: 100%; height: 100%; object-fit: cover; object-position: 70% 50%; display: block; pointer-events: none; }
 .reveal-back { clip-path: inset(0 calc(100% - var(--pos)) 0 0); transition: clip-path 0.35s ease; }
+.reveal-ground { clip-path: inset(0 0 0 var(--pos)); transition: clip-path 0.35s ease; }
 .reveal-handle {
 	position: absolute; top: 0; bottom: 0; left: var(--pos); width: 44px; margin-left: -22px;
 	cursor: ew-resize; touch-action: none; z-index: 2; transition: left 0.35s ease;
 }
-.reveal.is-dragging .reveal-back, .reveal.is-dragging .reveal-handle { transition: none; }
+.reveal.is-dragging .reveal-back, .reveal.is-dragging .reveal-ground, .reveal.is-dragging .reveal-handle { transition: none; }
 /* The bar: white on the photo, with a hairline of shadow so it still shows
    against the pale page before any forest is in. */
 .reveal-handle::before {
