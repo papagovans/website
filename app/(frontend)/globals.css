@@ -2,7 +2,7 @@
 	--gold: #f4d969;
 	--gold-deep: #e9ca47;
 	--ink: #414042;
-	--muted: #7b8591;
+	--muted: #626c78;
 	--dark: #1f2124;
 	--blue: #6c93b7;
 	--footer: #303c47;   /* navy: same value Frame-66.svg paints with, and the build app */
@@ -50,10 +50,13 @@ body::before {
 	position: fixed;
 	inset: 0;
 	z-index: -1;
-	background: url("/home/Mask-1.webp") repeat;
 	background-size: 1920px auto;
 	pointer-events: none;
 }
+/* Decoration waits for the page to finish loading (the layout sets
+   data-loaded on the load event), so its 80 KB is not competing with the
+   headline. Measured on mobile Lighthouse: 0.4 s off LCP. */
+html[data-loaded] body::before { background-image: url("/home/Mask-1.webp"); }
 img { max-width: 100%; display: block; }
 h1, h2, h3, h4 { margin: 0; font-family: var(--font-prompt), Prompt, sans-serif; font-weight: 700; line-height: 1.15; letter-spacing: -0.01em; }
 p { margin: 0; }
@@ -302,9 +305,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 	/* multiply rather than a flat colour: CTA.webp is a near-white topographic
 	   texture, and laying it straight on cream washed the contours out. Blended
 	   against the warm surface it keeps the lines and loses the cold cast. */
-	background: var(--soft) url("/home/CTA.webp") center / cover no-repeat;
-	/* AVIF where the browser takes it: 13 KB instead of 25 KB. */
-	background-image: image-set(url("/home/CTA.avif") type("image/avif"), url("/home/CTA.webp") type("image/webp"));
+	background: var(--soft) center / cover no-repeat;
 	background-blend-mode: multiply;
 	border: 1px solid var(--line);
 	border-radius: var(--r-lg); text-align: center;
@@ -313,6 +314,8 @@ ul { margin: 0; padding: 0; list-style: none; }
 	padding: 100px 24px clamp(150px, 18vw, 270px);
 	display: flex; flex-direction: column; align-items: center; gap: 14px;
 }
+/* AVIF where the browser takes it: 13 KB instead of 25 KB. Waits for load, like the page texture. */
+html[data-loaded] .kit-inner { background-image: image-set(url("/home/CTA.avif") type("image/avif"), url("/home/CTA.webp") type("image/webp")); }
 .kit-eyebrow {
 	font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
 	color: var(--muted); font-weight: 600;
@@ -378,7 +381,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .footer-cols { display: grid; grid-template-columns: repeat(5, 1fr); gap: 30px; }
 .footer-contact li { line-height: 1.5; }
 .footer-policies { margin-top: 16px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.14); }
-.footer-col h4 { color: var(--gold); font-size: 15px; margin-bottom: 14px; }
+.footer-col h2 { color: var(--gold); font-size: 15px; margin-bottom: 14px; }
 .footer-col li { margin-bottom: 9px; }
 .footer-col a { font-size: 13px; color: rgba(255,255,255,0.8); }
 .footer-col a:hover { color: #fff; }
@@ -918,7 +921,7 @@ figure.scene-shot { margin: 0; }
 	--pg-surface: #f2ede1;
 	--pg-ink: #414042;
 	--pg-head: #303c47;
-	--pg-muted: #7b8591;
+	--pg-muted: #626c78;
 	--pg-line: #e6e0d2;
 	--pg-accent: #303c47;
 	--pg-accent-ink: #f4d969;

@@ -546,7 +546,7 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
 
 function Stars() {
   return (
-    <div className="stars" aria-label="Five out of five stars">
+    <div className="stars" role="img" aria-label="Five out of five stars">
       {Array.from({ length: 5 }, (_, i) => (
         <svg key={i} viewBox="0 0 20 19" width="15" height="14" aria-hidden="true">
           <path d="M10 0l2.6 6.3 6.8.5-5.2 4.4 1.6 6.6L10 14.3 4.2 17.8l1.6-6.6L.6 6.8l6.8-.5z" />

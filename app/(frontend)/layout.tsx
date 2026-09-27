@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { inter, prompt } from "@/lib/fonts";
 import "./globals.css";
 import NewsletterForm from "@/components/NewsletterForm";
+import { LoadedFlag } from "@/components/LoadedFlag";
 import { Tracking } from "@/components/Tracking";
 import { MobileMenu } from "@/components/MobileMenu";
 import {
@@ -84,6 +85,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${inter.variable} ${prompt.variable}`}>
       <body>
+        <LoadedFlag />
         <Tracking />
         {/* Who and where the business is, on every page. It used to sit on
             Contact alone; now that Contact is a CMS page, the layout owns it. */}
@@ -171,7 +173,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="footer-cols">
               {footerCols.map((c) => (
                 <div className="footer-col" key={c.h}>
-                  <h4>{c.h}</h4>
+                  <h2>{c.h}</h2>
                   <ul>
                     {c.links.map(([label, href]) => (
                       <li key={label}>
@@ -188,7 +190,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </div>
               ))}
               <div className="footer-col footer-contact">
-                <h4>Papago Vans</h4>
+                <h2>Papago Vans</h2>
                 <ul>
                   <li><a href={MAP_URL} target="_blank" rel="noopener">{ADDRESS_LINE1}<br />{ADDRESS_LINE2}</a></li>
                   <li><a href={tel(SALES_PHONE)}>Sales {SALES_PHONE}</a></li>

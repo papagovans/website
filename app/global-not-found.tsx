@@ -10,6 +10,7 @@ import type { Metadata } from "next";
 import "./(frontend)/globals.css";
 import { NotFoundBody } from "@/components/NotFoundBody";
 import { inter, prompt } from "@/lib/fonts";
+import { LoadedFlag } from "@/components/LoadedFlag";
 
 export const metadata: Metadata = { title: "Page Not Found | Papago Vans", robots: { index: false } };
 
@@ -17,6 +18,7 @@ export default function GlobalNotFound() {
   return (
     <html lang="en" className={`${inter.variable} ${prompt.variable}`}>
       <body>
+        <LoadedFlag />
         <header className="site-header">
           <div className="wrap header-inner">
             <a href="/" className="logo" aria-label="Papago Vans home">
