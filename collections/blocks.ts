@@ -210,6 +210,18 @@ const Cta: Block = {
       editor: shortText,
       admin: { description: 'Optional. Usually a second way in, like "Or call (480) 761-7175."' },
     },
+    {
+      name: "people",
+      label: "Pop-up photos",
+      type: "upload",
+      relationTo: "media",
+      hasMany: true,
+      maxRows: 3,
+      admin: {
+        condition: (_, s) => s?.style === "band",
+        description: "Optional. Up to three cut-outs with transparent backgrounds (PNG). One shows per visit, the next one each time the visitor comes back, rising out of the bottom-right corner as the box scrolls into view. The text moves to the left.",
+      },
+    },
   ],
 };
 

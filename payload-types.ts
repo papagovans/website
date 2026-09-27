@@ -415,6 +415,10 @@ export interface Page {
               };
               [k: string]: unknown;
             } | null;
+            /**
+             * Optional. Up to three cut-outs with transparent backgrounds (PNG). They rise into the right side of the band as it scrolls into view, and the text moves to the left.
+             */
+            people?: (number | Media)[] | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'cta';
@@ -1163,6 +1167,7 @@ export interface PagesSelect<T extends boolean = true> {
                     text?: T;
                   };
               smallPrint?: T;
+              people?: T;
               id?: T;
               blockName?: T;
             };

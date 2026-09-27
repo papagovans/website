@@ -11,6 +11,7 @@ import { DESTINATIONS, type Destination } from "@/lib/site";
 import type { Media, Page, Team } from "@/payload-types";
 import { ContactForm } from "./ContactForm";
 import { LoopVideo } from "./LoopVideo";
+import { PopUp } from "./PopUp";
 import { Photo } from "./Photo";
 import { RevealSlider } from "./RevealSlider";
 import { RichText } from "./RichText";
@@ -519,9 +520,10 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
         </section>
       );
 
-    case "cta":
+    case "cta": {
+      const people = (s.people ?? []).map(media).filter((m): m is Media => m !== null);
       return (
-        <section className="journey">
+        <section className={people.length ? "journey has-people" : "journey"}>
           <div className="wrap">
             <div className="journey-inner">
               {s.eyebrow && <p className="journey-eyebrow">{s.eyebrow}</p>}
@@ -534,10 +536,19 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
                   <RichText data={s.smallPrint} inline />
                 </p>
               )}
+              {people.length > 0 && (
+                <PopUp
+                  className="journey-people"
+                  items={people.map((m) => (
+                    <Photo m={m} sizes="(max-width: 760px) 100vw, 680px" key={m.id} />
+                  ))}
+                />
+              )}
             </div>
           </div>
         </section>
       );
+    }
 
     default:
       return null;

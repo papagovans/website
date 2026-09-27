@@ -792,6 +792,34 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 .journey-alt { margin-top: 22px; font-size: 15px; color: var(--muted); }
 .journey-alt a { font-weight: 600; color: var(--footer); text-decoration: underline; }
 
+/* With pop-up photos the text moves left and one cut-out rises out of the
+   box's bottom edge on the right, slowly, the first time it scrolls into
+   view. The photos are cropped on their right side, so they sit hard
+   against the box's right edge and the crop reads as the box cutting them. */
+.has-people .journey-inner {
+	position: relative; overflow: hidden; text-align: left; min-height: 480px;
+	display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
+	padding: clamp(48px, 7vw, 76px) clamp(28px, 5vw, 64px);
+}
+.has-people .journey-inner > :not(.journey-people) { max-width: 44%; }
+.has-people .journey-inner > p { margin-left: 0; margin-right: 0; }
+.journey-people { position: absolute; right: 0; bottom: 0; width: 56%; height: 92%; pointer-events: none; }
+.jp {
+	position: absolute; inset: 0; display: flex; justify-content: flex-end; align-items: flex-end;
+	transform: translateY(105%); transition: transform 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.jp[hidden] { display: none; }
+.journey-people.is-in .jp { transform: none; }
+.jp img { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; }
+@media (max-width: 760px) {
+	.has-people .journey-inner { min-height: 0; padding: 48px 24px 0; }
+	.has-people .journey-inner > :not(.journey-people) { max-width: none; }
+	.journey-people { position: relative; width: calc(100% + 24px); height: 280px; margin: 28px -24px 0 auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+	.jp { transform: none; transition: none; }
+}
+
 /* CMS page sections. A call to action placed first sits at the top of the
    page body rather than 48px down it; an FAQ answer's list gets the same
    ticks as the hand-built pages; Image and Text inside a page is the home
