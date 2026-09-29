@@ -3,8 +3,8 @@
   "generated": "2026-09-24",
   "total": 208,
   "counts": {
-    "done": 158,
-    "redirect": 37,
+    "done": 156,
+    "redirect": 39,
     "drop": 13
   },
   "urls": [
@@ -509,8 +509,8 @@
       "path": "/mammoth-old/",
       "type": "page",
       "status": "redirect",
-      "to": "/mammoth/",
-      "note": "duplicate competing with its own live counterpart",
+      "to": "/mckinley/",
+      "note": "Mammoth was renamed McKinley, owner 2026-09-28.",
       "seo": {
         "wpId": 1540,
         "title": "Mammoth old Build Tier - Papago Vans",
@@ -521,13 +521,15 @@
     {
       "path": "/mammoth/",
       "type": "page",
-      "status": "done",
+      "status": "redirect",
       "seo": {
         "wpId": 11846,
         "title": "Mammoth Camper Van Build Tier | Papago Vans",
         "canonical": "/mammoth/",
         "index": "index"
-      }
+      },
+      "to": "/mckinley/",
+      "note": "Mammoth was renamed McKinley, owner 2026-09-28."
     },
     {
       "path": "/mercedes-sprinter/",
@@ -1881,8 +1883,8 @@
       "path": "/rainier-old/",
       "type": "page",
       "status": "redirect",
-      "to": "/rainier/",
-      "note": "duplicate competing with its own live counterpart",
+      "to": "/",
+      "note": "Rainier was retired as a duplicate floor plan, owner 2026-09-28. No plan replaces it, so it goes home.",
       "seo": {
         "wpId": 1538,
         "title": "Rainier old Build Tier - Papago Vans",
@@ -1893,13 +1895,15 @@
     {
       "path": "/rainier/",
       "type": "page",
-      "status": "done",
+      "status": "redirect",
       "seo": {
         "wpId": 11921,
         "title": "Rainier Camper Van Build Tier | Papago Vans",
         "canonical": "/rainier/",
         "index": "index"
-      }
+      },
+      "to": "/",
+      "note": "Rainier was retired as a duplicate floor plan, owner 2026-09-28. No plan replaces it, so it goes home."
     },
     {
       "path": "/ram-promaster/",
