@@ -2,14 +2,15 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CmsPage } from "@/components/CmsPage";
 import { getCmsPage } from "@/lib/content";
+import { TempChrome } from "@/components/TempChrome";
 
 /*
  * Stopgap, 2026-09-29. The gallery on the live papagovans.com is broken, so the
  * live URL points here until this site launches. Same CMS page as
  * /van-life-build-gallery/, so an edit in /admin shows on both. The shared
  * layout's nav, header buttons, newsletter band and footer are hidden here;
- * only the logo stays, and it links to the live papagovans.com rather than
- * the staging home. Delete this route on launch day.
+ * only the logo stays (linking to papagovans.com), and build cards open the
+ * /projects-temp/ copies. See TempChrome. Delete this route on launch day.
  */
 
 const SOURCE = "van-life-build-gallery";
@@ -25,10 +26,8 @@ export default async function Page() {
   if (!page) notFound();
   return (
     <>
-      <style>{`.main-nav,.header-actions,.keep-in-touch,.site-footer{display:none!important}`}</style>
-      {/* The logo lives in the shared layout, so its href is swapped here. */}
-      <script dangerouslySetInnerHTML={{ __html: `document.querySelector('.site-header .logo')?.setAttribute('href','https://papagovans.com')` }} />
       <CmsPage page={page} path={`/${SOURCE}/`} />
+      <TempChrome />
     </>
   );
 }
