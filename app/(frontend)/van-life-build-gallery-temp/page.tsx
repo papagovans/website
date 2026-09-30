@@ -8,8 +8,8 @@ import { getCmsPage } from "@/lib/content";
  * live URL points here until this site launches. Same CMS page as
  * /van-life-build-gallery/, so an edit in /admin shows on both. The shared
  * layout's nav, header buttons, newsletter band and footer are hidden here;
- * only the logo stays, and it does not link, so a visitor from the live site
- * is not walked into staging. Delete this route on launch day.
+ * only the logo stays, and it links to the live papagovans.com rather than
+ * the staging home. Delete this route on launch day.
  */
 
 const SOURCE = "van-life-build-gallery";
@@ -25,7 +25,9 @@ export default async function Page() {
   if (!page) notFound();
   return (
     <>
-      <style>{`.main-nav,.header-actions,.keep-in-touch,.site-footer{display:none!important}.site-header .logo{pointer-events:none}`}</style>
+      <style>{`.main-nav,.header-actions,.keep-in-touch,.site-footer{display:none!important}`}</style>
+      {/* The logo lives in the shared layout, so its href is swapped here. */}
+      <script dangerouslySetInnerHTML={{ __html: `document.querySelector('.site-header .logo')?.setAttribute('href','https://papagovans.com')` }} />
       <CmsPage page={page} path={`/${SOURCE}/`} />
     </>
   );
