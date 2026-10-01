@@ -425,11 +425,11 @@ function Narrow({ s, data }: { s: Section; data: PageData }) {
 
     case "team":
       return (
-        <>
+        <div id="our-team">
           <Heading text={s.heading} />
           {s.intro && <p className="page-p">{data.fill(s.intro)}</p>}
           <TeamGrid team={data.team} />
-        </>
+        </div>
       );
 
     case "timeline":

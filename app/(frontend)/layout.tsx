@@ -119,8 +119,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <nav className="main-nav" aria-label="Main">
               <a href={BUILD_LINK.href} {...(BUILD_LINK.external && { target: "_blank", rel: "noopener" })}>{BUILD_LINK.text}</a>
               <a href="/van-life-build-gallery/">Recent Builds</a>
-              <a href="/our-process/">Our Process</a>
-              <a href="/about-us/">About</a>
+              {/* Opens on hover or keyboard focus; About itself still goes to the page. */}
+              <div className="nav-drop">
+                <a href="/about-us/" aria-haspopup="true">About <span className="nav-caret" aria-hidden="true">&#9662;</span></a>
+                <div className="nav-menu">
+                  <a href="/our-process/">Our Process</a>
+                  <a href="/about-us/#our-team">Our Team</a>
+                </div>
+              </div>
               <a href="/contact-us/">Contact</a>
             </nav>
             <div className="header-actions">
@@ -146,6 +152,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   { label: "FAQ", href: "/faq/" },
                   { label: "Guides", href: "/blog/" },
                   { label: "About", href: "/about-us/" },
+                  { label: "Our Team", href: "/about-us/#our-team" },
                   { label: "Contact", href: "/contact-us/" },
                 ]}
                 phones={[

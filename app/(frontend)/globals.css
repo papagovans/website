@@ -85,6 +85,19 @@ ul { margin: 0; padding: 0; list-style: none; }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px 0; }
 .main-nav { display: flex; gap: 34px; font-size: 15px; font-weight: 500; }
 .main-nav a:hover { color: var(--muted); }
+.main-nav { align-items: center; }
+.nav-drop { position: relative; }
+.nav-caret { font-size: 11px; margin-left: 3px; }
+/* padding-top bridges the gap so the menu stays open on the way down to it */
+.nav-menu {
+	position: absolute; top: 100%; left: -18px; padding-top: 14px; min-width: 190px;
+	opacity: 0; visibility: hidden; transform: translateY(-4px); transition: 0.15s ease;
+}
+.nav-menu::before { content: ""; position: absolute; inset: 14px 0 0; background: #fff; border: 1px solid var(--line); border-radius: var(--r-md); box-shadow: 0 12px 28px rgba(31,33,36,0.1); }
+.nav-menu a { position: relative; display: block; padding: 11px 18px; }
+.nav-menu a:first-child { margin-top: 6px; }
+.nav-menu a:last-child { margin-bottom: 6px; }
+.nav-drop:hover .nav-menu, .nav-drop:focus-within .nav-menu { opacity: 1; visibility: visible; transform: none; }
 .header-actions { display: flex; align-items: center; gap: 16px; }
 /* Hidden until the nav collapses, so the two never show at once. The width it
    appears at is the same 1000px the nav disappears at, below. */
