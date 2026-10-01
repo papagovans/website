@@ -19,9 +19,13 @@ const PORTAL = "43782575";
 export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion" }: { formId?: string; name?: string }) {
   useEffect(() => {
     /* The current embed announces a submission with a window event; older
-       ones post a message. Either one counts once. */
+       ones post a message. Either one counts once, and only for this form:
+       a page can carry two (Contact Us has sales and service). */
     let sent = false;
-    const lead = () => {
+    const lead = (e?: Event) => {
+      const forms = (window as unknown as { HubSpotFormsV4?: { getFormFromEvent?: (e: Event) => { getFormId?: () => string } } }).HubSpotFormsV4;
+      const id = e ? forms?.getFormFromEvent?.(e)?.getFormId?.() : formId;
+      if (id ? id !== formId : document.querySelectorAll(".hs-form-frame").length > 1) return;
       if (sent) return;
       sent = true;
       trackLead(name);

@@ -241,6 +241,18 @@ const ContactFormBlock: Block = {
       ],
       admin: { description: "Blank means the sales form, edited in HubSpot. The service request asks what the van needs." },
     },
+    {
+      name: "formId",
+      label: "HubSpot form ID (optional)",
+      type: "text",
+      admin: { description: 'Shows this HubSpot form instead: the data-form-id from its embed code, e.g. "c2d5806e-8f73-4932-a720-f10ac6dbc66a". Set "Which form" to Service request for a service form, so its leads are reported as service.' },
+    },
+    {
+      name: "anchor",
+      label: "Jump link name",
+      type: "text",
+      admin: { description: 'Optional. Lets a button elsewhere scroll here: "service-department" is reached with /contact-us/#service-department. Blank is #contact-form.' },
+    },
   ],
 };
 

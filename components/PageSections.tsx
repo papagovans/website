@@ -268,10 +268,16 @@ function Narrow({ s, data }: { s: Section; data: PageData }) {
 
     case "contactForm":
       return (
-        <section className="contact-block" id="contact-form">
+        <section className="contact-block" id={s.anchor || "contact-form"}>
           <Heading text={s.heading} />
           {s.intro && <p className="page-p">{s.intro}</p>}
-          {s.preset === "service" ? <ContactForm /> : <HubSpotForm />}
+          {s.formId ? (
+            <HubSpotForm formId={s.formId.trim()} name={s.preset === "service" ? "contact_service" : "contact_conversion"} />
+          ) : s.preset === "service" ? (
+            <ContactForm />
+          ) : (
+            <HubSpotForm />
+          )}
         </section>
       );
 

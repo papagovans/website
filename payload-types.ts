@@ -433,9 +433,17 @@ export interface Page {
              */
             intro?: string | null;
             /**
-             * Optional. Leave blank to let the visitor choose. Submissions go to HubSpot as "Website Contact Form".
+             * Blank means the sales form, edited in HubSpot. The service request asks what the van needs.
              */
             preset?: ('conversion' | 'service') | null;
+            /**
+             * Shows this HubSpot form instead: the data-form-id from its embed code, e.g. "c2d5806e-8f73-4932-a720-f10ac6dbc66a". Set "Which form" to Service request for a service form, so its leads are reported as service.
+             */
+            formId?: string | null;
+            /**
+             * Optional. Lets a button elsewhere scroll here: "service-department" is reached with /contact-us/#service-department. Blank is #contact-form.
+             */
+            anchor?: string | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'contactForm';
@@ -1253,6 +1261,8 @@ export interface PagesSelect<T extends boolean = true> {
               heading?: T;
               intro?: T;
               preset?: T;
+              formId?: T;
+              anchor?: T;
               id?: T;
               blockName?: T;
             };
