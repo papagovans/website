@@ -1088,32 +1088,6 @@ body:has(#mobile-menu:not([hidden])) .hamburger span { background: var(--ink); }
 
 /* Contact form */
 .contact-block { margin: 44px 0 8px; scroll-margin-top: 90px; }
-.contact-form { display: grid; gap: 16px; background: #fff; border: 1px solid var(--line); border-radius: var(--r-md); padding: 26px 24px; }
-.contact-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-@media (max-width: 640px) { .contact-row { grid-template-columns: 1fr; } }
-.contact-field { display: grid; gap: 6px; font-size: 14px; font-weight: 600; color: var(--footer); }
-.contact-narrow { max-width: 320px; }
-.contact-field input, .contact-field select, .contact-field textarea {
-	font: inherit; font-weight: 400; font-size: 16px; color: var(--ink);
-	background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; width: 100%;
-}
-.contact-field textarea { resize: vertical; min-height: 120px; }
-.contact-field :focus-visible, .contact-choice input:focus-visible + * { outline: 2px solid var(--gold-deep); outline-offset: 1px; }
-.contact-form [aria-invalid="true"], .contact-form :user-invalid { border-color: #b4483c; }
-.contact-choice { border: 0; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 10px; }
-.contact-choice legend { font-size: 14px; font-weight: 600; color: var(--footer); margin-bottom: 8px; }
-.contact-choice label {
-	display: flex; align-items: center; gap: 8px; cursor: pointer;
-	border: 1px solid var(--line); border-radius: 999px; padding: 10px 16px; font-size: 15px; background: var(--paper);
-}
-.contact-choice label.is-on { border-color: var(--gold); background: #fdf6d8; }
-.contact-form .btn { justify-self: start; }
-.contact-error { color: #b4483c; font-size: 14px; }
-.contact-error a, .contact-done a { color: var(--footer); text-decoration: underline; font-weight: 600; }
-.contact-done { background: var(--soft); border: 1px solid var(--line); border-radius: var(--r-md); padding: 26px 24px; }
-.contact-done h3 { color: var(--footer); font-size: 20px; margin-bottom: 8px; }
-.contact-done p { color: var(--muted); }
-.contact-trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 /* Photo Showcase: one big rounded photo with the headline over its top left,
    a row of smaller ones underneath, 20px of space around and between. */

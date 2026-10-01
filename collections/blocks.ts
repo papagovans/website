@@ -237,9 +237,9 @@ const ContactFormBlock: Block = {
       type: "select",
       options: [
         { value: "conversion", label: "Sales: HubSpot \"2026 New Contact Form - All Purpose\"" },
-        { value: "service", label: "Service request" },
+        { value: "service", label: "Service: HubSpot \"2026 - Service Request\"" },
       ],
-      admin: { description: "Blank means the sales form, edited in HubSpot. The service request asks what the van needs." },
+      admin: { description: "Both forms are edited in HubSpot. Blank means the sales form." },
     },
     {
       name: "formId",

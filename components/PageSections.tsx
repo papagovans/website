@@ -9,8 +9,7 @@ import { DEPARTMENTS } from "@/collections/Team";
 import type { ProjectCard } from "@/lib/content";
 import { DESTINATIONS, type Destination } from "@/lib/site";
 import type { Media, Page, Team } from "@/payload-types";
-import { ContactForm } from "./ContactForm";
-import { HubSpotForm } from "./HubSpotForm";
+import { HubSpotForm, SERVICE_FORM_ID } from "./HubSpotForm";
 import { LoopVideo } from "./LoopVideo";
 import { PopUp } from "./PopUp";
 import { Photo } from "./Photo";
@@ -271,13 +270,12 @@ function Narrow({ s, data }: { s: Section; data: PageData }) {
         <section className="contact-block" id={s.anchor || "contact-form"}>
           <Heading text={s.heading} />
           {s.intro && <p className="page-p">{s.intro}</p>}
-          {s.formId ? (
-            <HubSpotForm formId={s.formId.trim()} light={Boolean(s.lightCard)} name={s.preset === "service" ? "contact_service" : "contact_conversion"} />
-          ) : s.preset === "service" ? (
-            <ContactForm />
-          ) : (
-            <HubSpotForm />
-          )}
+          {/* ponytail: preset picks the default form; a typed form id overrides it */}
+          <HubSpotForm
+            formId={s.formId?.trim() || (s.preset === "service" ? SERVICE_FORM_ID : undefined)}
+            light={Boolean(s.lightCard)}
+            name={s.preset === "service" ? "contact_service" : "contact_conversion"}
+          />
         </section>
       );
 
