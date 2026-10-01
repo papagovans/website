@@ -32,8 +32,20 @@ const nextConfig: NextConfig = {
    */
   experimental: { inlineCss: true, globalNotFound: true },
 
+  /*
+   * Images the old WordPress site served. Emails, Google listings and other
+   * sites still link to them, and WordPress lives on at WP Engine after the
+   * domain moves, so they are fetched from there rather than breaking.
+   */
+  async rewrites() {
+    return [{ source: "/wp-content/uploads/:path*", destination: "https://papagovans.wpengine.com/wp-content/uploads/:path*" }];
+  },
+
   async redirects() {
-    return live.urls
+    return [
+      // One address for search engines: www goes to papagovans.com.
+      { source: "/:path*", has: [{ type: "host" as const, value: "www.papagovans.com" }], destination: "https://papagovans.com/:path*", statusCode: 301 },
+      ...live.urls
       .filter((u) => u.status === "redirect" && u.to)
       .map((u) => ({
         source: u.path.replace(/\/$/, ""),
@@ -42,7 +54,8 @@ const nextConfig: NextConfig = {
         // treats identically, but every SEO tool and auditor looks for a 301.
         // No reason to make anyone wonder.
         statusCode: 301,
-      }));
+      })),
+    ];
   },
 
   /*
