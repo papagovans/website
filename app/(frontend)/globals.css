@@ -1283,5 +1283,6 @@ a.tier-rung:hover h3 { color: var(--blue); }
 	.tier-price { font-size: 12px; bottom: 6px; right: calc(var(--van) + 6px); }
 }
 
-/* HubSpot's own form (HubSpotForm.tsx) on the same card the site's forms sit on. */
-.hubspot-form { background: #fff; border: 1px solid var(--line); border-radius: var(--r-md); padding: 26px 24px; min-height: 420px; }
+/* HubSpot's own form (HubSpotForm.tsx). It draws inside HubSpot's iframe with
+   white labels, which the site's CSS cannot reach, so it sits on navy. */
+.hubspot-form { background: var(--footer); border-radius: var(--r-md); padding: 26px 24px 34px; min-height: 420px; }

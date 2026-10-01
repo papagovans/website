@@ -40,7 +40,10 @@ export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion
   return (
     <>
       <Script src={`https://js.hsforms.net/forms/embed/${PORTAL}.js`} strategy="afterInteractive" />
-      <div className="hs-form-frame hubspot-form" data-region="na1" data-form-id={formId} data-portal-id={PORTAL} />
+      {/* HubSpot sizes .hs-form-frame to its form, so padding lives on the wrapper, not on it. */}
+      <div className="hubspot-form">
+        <div className="hs-form-frame" data-region="na1" data-form-id={formId} data-portal-id={PORTAL} />
+      </div>
     </>
   );
 }
