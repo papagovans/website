@@ -44,7 +44,7 @@ const FEATURES = [
     id: "bathroom",
     label: "Bathroom",
     title: "Enclosed bathroom",
-    copy: "A shower and toilet behind a glass door, between the bed and the kitchen, so nobody walks outside at 2 a.m.",
+    copy: "A shower and toilet behind a door, between the bed and the kitchen, so nobody walks outside at 2 a.m.",
     position: "2.45m 1.3m -1.6m",
     normal: "0m 0m 1m",
     view: { target: "2.45m 0.8m -1.9m", orbit: "30deg 20deg 2.6m" },
