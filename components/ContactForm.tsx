@@ -1,23 +1,19 @@
 "use client";
 /*
- * The contact form. Posts to /api/contact, which forwards to HubSpot.
- *
- * Two shapes. Sales (the default) asks exactly what HubSpot's "2026 New
- * Contact Form - All Purpose" holds: name, email, phone, budget including the
- * van (required there, so required here) and timeline. The service page
- * (preset "service") asks what the van needs instead, and is never asked a
- * build budget.
+ * The service request form, on the service page. Posts to /api/contact,
+ * which forwards to HubSpot. Sales enquiries use HubSpot's own form
+ * (HubSpotForm.tsx) instead. Required is only what the shop cannot work
+ * without: name, email and phone.
  */
 import { useRef, useState } from "react";
-import { BUDGETS, HEARD, TIMELINES, type Interest } from "@/lib/contact";
-import { SALES_PHONE, SERVICE_PHONE, tel } from "@/lib/site";
+import { HEARD } from "@/lib/contact";
+import { SERVICE_PHONE, tel } from "@/lib/site";
 import { trackLead } from "./Tracking";
 
 type State = "idle" | "sending" | "done" | "error" | "invalid";
 
-export function ContactForm({ preset }: { preset?: Interest | null }) {
+export function ContactForm() {
   const [state, setState] = useState<State>("idle");
-  const interest: Interest = preset === "service" ? "service" : "conversion";
   const [first, setFirst] = useState("");
   const opened = useRef(Date.now());
 
@@ -46,14 +42,14 @@ export function ContactForm({ preset }: { preset?: Interest | null }) {
       if (res.ok) {
         setFirst(String(data.firstname ?? ""));
         setState("done");
-        trackLead(`contact_${interest}`);
+        trackLead("contact_service");
       } else setState(res.status === 400 ? "invalid" : "error");
     } catch {
       setState("error");
     }
   }
 
-  const phone = interest === "service" ? SERVICE_PHONE : SALES_PHONE;
+  const phone = SERVICE_PHONE;
 
   if (state === "done") {
     return (
@@ -95,40 +91,17 @@ export function ContactForm({ preset }: { preset?: Interest | null }) {
         </label>
       </div>
 
-      <input type="hidden" name="interest" value={interest} />
-
-      {interest === "conversion" ? (
-        <div className="contact-row">
-          <label className="contact-field">
-            <span>Overall budget, including the van *</span>
-            <select name="budget" defaultValue="" required>
-              <option value="" disabled>Choose a range</option>
-              {BUDGETS.map((b) => <option key={b}>{b}</option>)}
-            </select>
-          </label>
-          <label className="contact-field">
-            <span>What&apos;s your timeline?</span>
-            <select name="timeline" defaultValue="">
-              <option value="" disabled>Choose one</option>
-              {TIMELINES.map((t) => <option key={t}>{t}</option>)}
-            </select>
-          </label>
-        </div>
-      ) : (
-        <>
-          <label className="contact-field">
-            <span>What does your van need?</span>
-            <textarea name="message" rows={5} maxLength={5000} />
-          </label>
-          <label className="contact-field contact-narrow">
-            <span>How did you find us?</span>
-            <select name="heard" defaultValue="">
-              <option value="">Choose one</option>
-              {HEARD.map((h) => <option key={h} value={h}>{h === "Youtube" ? "YouTube" : h}</option>)}
-            </select>
-          </label>
-        </>
-      )}
+      <label className="contact-field">
+        <span>What does your van need?</span>
+        <textarea name="message" rows={5} maxLength={5000} />
+      </label>
+      <label className="contact-field contact-narrow">
+        <span>How did you find us?</span>
+        <select name="heard" defaultValue="">
+          <option value="">Choose one</option>
+          {HEARD.map((h) => <option key={h} value={h}>{h === "Youtube" ? "YouTube" : h}</option>)}
+        </select>
+      </label>
 
       <button className="btn btn-gold" type="submit" disabled={state === "sending"}>
         {state === "sending" ? "Sending…" : "Send"}

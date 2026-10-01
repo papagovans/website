@@ -36,7 +36,7 @@ const OVERRIDES = {
   "/which-adventure-van-style-fits-you-cloned-10193/": {
     status: "redirect",
     to: "/which-adventure-van-style-fits-you/",
-    note: "duplicate of the quiz",
+    note: "duplicate of the old style finder",
   },
 };
 

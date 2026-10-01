@@ -233,13 +233,13 @@ const ContactFormBlock: Block = {
     { name: "intro", label: "Introduction", type: "textarea", admin: { description: "Optional. One line above the form." } },
     {
       name: "preset",
-      label: "Start with",
+      label: "Which form",
       type: "select",
       options: [
-        { value: "conversion", label: "Camper van conversion selected" },
-        { value: "service", label: "Service or repair selected" },
+        { value: "conversion", label: "Sales: HubSpot \"2026 New Contact Form - All Purpose\"" },
+        { value: "service", label: "Service request" },
       ],
-      admin: { description: "Optional. Leave blank to let the visitor choose. Submissions go to HubSpot as \"Website Contact Form\"." },
+      admin: { description: "Blank means the sales form, edited in HubSpot. The service request asks what the van needs." },
     },
   ],
 };

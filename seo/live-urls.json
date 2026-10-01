@@ -1877,8 +1877,8 @@
         "canonical": "/quiz/",
         "index": "index"
       },
-      "to": "/van-conversion-build-tiers/",
-      "note": "Pointed at the build tiers page while the builder is paused, owner 2026-10-01. Was https://build.papagovans.com."
+      "to": "/contact-us/",
+      "note": "Retired; the HubSpot form \"2026 New Contact Form - All Purpose\" on /contact-us/ replaces it, owner 2026-10-01."
     },
     {
       "path": "/rainier-old/",
@@ -2114,8 +2114,8 @@
       "path": "/which-adventure-van-style-fits-you-cloned-10193/",
       "type": "page",
       "status": "redirect",
-      "to": "/which-adventure-van-style-fits-you/",
-      "note": "duplicate of the quiz",
+      "to": "/contact-us/",
+      "note": "Retired; the HubSpot form \"2026 New Contact Form - All Purpose\" on /contact-us/ replaces it, owner 2026-10-01.",
       "seo": {
         "wpId": 10241,
         "title": "Which Adventure Van Style Fits You? - [Cloned #10193] - Papago Vans",
@@ -2133,8 +2133,8 @@
         "canonical": "/which-adventure-van-style-fits-you/",
         "index": "index"
       },
-      "to": "/van-conversion-build-tiers/",
-      "note": "Pointed at the build tiers page while the builder is paused, owner 2026-10-01. Was https://build.papagovans.com."
+      "to": "/contact-us/",
+      "note": "Retired; the HubSpot form \"2026 New Contact Form - All Purpose\" on /contact-us/ replaces it, owner 2026-10-01."
     },
     {
       "path": "/work-at-papago-vans/",

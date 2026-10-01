@@ -10,6 +10,7 @@ import type { ProjectCard } from "@/lib/content";
 import { DESTINATIONS, type Destination } from "@/lib/site";
 import type { Media, Page, Team } from "@/payload-types";
 import { ContactForm } from "./ContactForm";
+import { HubSpotForm } from "./HubSpotForm";
 import { LoopVideo } from "./LoopVideo";
 import { PopUp } from "./PopUp";
 import { Photo } from "./Photo";
@@ -270,7 +271,7 @@ function Narrow({ s, data }: { s: Section; data: PageData }) {
         <section className="contact-block" id="contact-form">
           <Heading text={s.heading} />
           {s.intro && <p className="page-p">{s.intro}</p>}
-          <ContactForm preset={s.preset ?? null} />
+          {s.preset === "service" ? <ContactForm /> : <HubSpotForm />}
         </section>
       );
 
