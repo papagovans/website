@@ -428,6 +428,9 @@ html[data-scrolled] body:has(.hero-full) .site-header {
 }
 body:has(.hero-full) .site-header .main-nav a { color: #fff; }
 body:has(.hero-full) .site-header .main-nav a:hover { color: rgba(255,255,255,0.72); }
+/* The About menu is a white card, so its links stay dark over a photo hero too. */
+.main-nav .nav-menu a, body:has(.hero-full) .site-header .main-nav .nav-menu a { color: var(--ink); }
+.main-nav .nav-menu a:hover, body:has(.hero-full) .site-header .main-nav .nav-menu a:hover { color: var(--muted); }
 /* The logo is a dark SVG. Forcing it white beats shipping a second file. */
 body:has(.hero-full) .site-header .logo img { filter: brightness(0) invert(1); }
 /* The phone pill is gold-on-ink by default, which disappears against sky. */
