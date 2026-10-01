@@ -1337,3 +1337,11 @@ a.tier-rung:hover h3 { color: var(--blue); }
 	.tp-stats li { flex-basis: 50%; }
 	.tp-stats li:nth-child(odd) { border-left: 0; }
 }
+
+/* Background video on a hero: a 16:9 frame scaled to cover, like the photo. */
+.hero-video {
+	position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+	width: max(100%, 177.78vh); height: max(100%, 56.25vw); border: 0; pointer-events: none;
+	opacity: 0; transition: opacity 0.8s ease;
+}
+.hero-video.is-on { opacity: 1; }

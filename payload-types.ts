@@ -462,6 +462,10 @@ export interface Page {
              */
             heading: string;
             text?: string | null;
+            /**
+             * A YouTube link. It plays silently on a loop behind the words; the photo above shows while it loads.
+             */
+            video?: string | null;
             button: {
               to: 'calendar' | 'sales' | 'service' | 'email' | 'map' | 'builder' | 'custom';
               /**
@@ -1369,6 +1373,7 @@ export interface PagesSelect<T extends boolean = true> {
               image?: T;
               heading?: T;
               text?: T;
+              video?: T;
               button?:
                 | T
                 | {

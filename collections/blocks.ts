@@ -283,6 +283,12 @@ const Hero: Block = {
       admin: { description: "The first thing anyone reads. Press Enter to break it onto a second line." },
     },
     { name: "text", type: "textarea" },
+    {
+      name: "video",
+      label: "Background video (optional)",
+      type: "text",
+      admin: { description: "A YouTube link. It plays silently on a loop behind the words; the photo above shows while it loads." },
+    },
     destination("button", "Button", true),
     destination("secondButton", "Second button (optional, outlined)"),
   ],
