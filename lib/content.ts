@@ -19,6 +19,9 @@ export type ProjectCard = { slug: string; path: string; title: string; summary: 
 
 export type { Post };
 
+/* A tier page as its neighbours link to it: "Other build tiers". */
+export type TierLink = { path: string; name: string; tagline: string; total: number; photo: Media | null };
+
 const cms = () => getPayload({ config });
 
 /* Published only, unless a signed-in editor is previewing (see
@@ -127,4 +130,22 @@ export async function listProjectCards(): Promise<ProjectCard[]> {
     const photo = Array.isArray(d.photos) ? byId.get(d.photos[0] as number) : undefined;
     return photo && d.slug ? [{ slug: d.slug, path: `/projects/${d.slug}/`, title: d.title, summary: d.summary, photo }] : [];
   });
+}
+
+/* Every published page carrying a Tier Page section, cheapest first. */
+export async function listTierLinks(): Promise<TierLink[]> {
+  const { docs } = await (await cms()).find({
+    collection: "pages",
+    where: { _status: { equals: "published" }, "sections.blockType": { equals: "tierPage" } },
+    pagination: false,
+    depth: 1,
+    select: { slug: true, sections: true },
+  });
+  return docs
+    .flatMap((d) => {
+      const t = d.sections?.find((s) => s.blockType === "tierPage");
+      if (!t || t.blockType !== "tierPage" || !d.slug) return [];
+      return [{ path: `/${d.slug}/`, name: t.name, tagline: t.tagline ?? "", total: t.price + (t.vanAllowance ?? 0), photo: typeof t.heroPhoto === "object" ? t.heroPhoto : null }];
+    })
+    .sort((a, b) => a.total - b.total);
 }

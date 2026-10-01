@@ -1884,8 +1884,8 @@
       "path": "/rainier-old/",
       "type": "page",
       "status": "redirect",
-      "to": "/",
-      "note": "Rainier was retired as a duplicate floor plan, owner 2026-09-28. No plan replaces it, so it goes home.",
+      "to": "/rainier/",
+      "note": "Old copy of the Rainier page; the tier page is back at /rainier/, owner 2026-10-01.",
       "seo": {
         "wpId": 1538,
         "title": "Rainier old Build Tier - Papago Vans",
@@ -1896,15 +1896,14 @@
     {
       "path": "/rainier/",
       "type": "page",
-      "status": "redirect",
+      "status": "done",
       "seo": {
         "wpId": 11921,
         "title": "Rainier Camper Van Build Tier | Papago Vans",
         "canonical": "/rainier/",
         "index": "index"
       },
-      "to": "/",
-      "note": "Rainier was retired as a duplicate floor plan, owner 2026-09-28. No plan replaces it, so it goes home."
+      "note": "Back as a tier page, owner 2026-10-01: the site shows the old five tiers while the builder waits."
     },
     {
       "path": "/ram-promaster/",

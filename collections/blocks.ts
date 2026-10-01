@@ -594,6 +594,78 @@ const Testimonials: Block = {
   ],
 };
 
+/* One build tier's own page, laid out like the old site's: a hero with the
+   price, headline numbers, who it suits, what is in it by system, photos,
+   then the upgrades every tier can add. Owner, 2026-10-01. */
+const lines = (name: string, label: string, description: string): Field => ({ name, label, type: "textarea", admin: { description } });
+const TierPage: Block = {
+  slug: "tierPage",
+  labels: { singular: "Tier Page", plural: "Tier Pages" },
+  fields: [
+    { type: "row", fields: [
+      { name: "name", type: "text", required: true },
+      { name: "tagline", type: "text", admin: { description: 'e.g. "The Weekend Warrior".' } },
+    ] },
+    { type: "row", fields: [
+      { name: "price", label: "Build price", type: "number", required: true, min: 0, admin: { description: "The conversion alone, dollars, no commas. Match the Build Tiers page." } },
+      { name: "vanAllowance", label: "Van allowance", type: "number", min: 0, defaultValue: 75000, admin: { description: "Added to the build price, so the number shown includes the van." } },
+    ] },
+    { name: "priceNote", label: "Under the price", type: "text", defaultValue: "Includes a $75,000 Mercedes-Benz Sprinter allowance. We also build on the Ford Transit and Ram ProMaster." },
+    { name: "heroPhoto", label: "Hero photo", type: "upload", relationTo: "media", required: true },
+    {
+      name: "stats",
+      label: "Headline numbers",
+      type: "array",
+      maxRows: 5,
+      labels: { singular: "Number", plural: "Numbers" },
+      fields: [{ type: "row", fields: [
+        { name: "value", type: "text", required: true, admin: { description: 'e.g. "400Ah"' } },
+        { name: "label", type: "text", required: true, admin: { description: 'e.g. "Lithium battery"' } },
+      ] }],
+    },
+    { name: "introHeading", label: "Who it suits: heading", type: "text" },
+    { name: "intro", label: "Who it suits", type: "textarea", admin: { description: "A blank line starts a new paragraph." } },
+    { name: "introPhoto", label: "Who it suits: photo", type: "upload", relationTo: "media" },
+    {
+      name: "features",
+      label: "Build features",
+      type: "array",
+      labels: { singular: "System", plural: "Systems" },
+      admin: { initCollapsed: true, ...rowLabel, description: "One tab each: Kitchen, Electricity, Plumbing..." },
+      fields: [
+        { name: "name", type: "text", required: true },
+        { name: "photo", type: "upload", relationTo: "media" },
+        lines("items", "What's in it", "One item per line."),
+      ],
+    },
+    { name: "interiorPhotos", label: "Interior highlights", type: "upload", relationTo: "media", hasMany: true },
+    { name: "exteriorPhotos", label: "Exterior upgrades", type: "upload", relationTo: "media", hasMany: true },
+    {
+      name: "packages",
+      label: "Package upgrades",
+      type: "array",
+      labels: { singular: "Package", plural: "Packages" },
+      admin: { initCollapsed: true, ...rowLabel, description: "The same on every tier page today, so change it on all five." },
+      fields: [
+        { name: "name", type: "text", required: true },
+        { name: "description", type: "textarea" },
+      ],
+    },
+    {
+      name: "alaCarte",
+      label: "A la carte upgrades",
+      type: "array",
+      labels: { singular: "Category", plural: "Categories" },
+      admin: { initCollapsed: true, ...rowLabel, description: "The same on every tier page today, so change it on all five." },
+      fields: [
+        { name: "name", label: "Category", type: "text", required: true },
+        lines("items", "Upgrades", "One per line."),
+      ],
+    },
+    { name: "builds", label: "Featured builds", type: "relationship", relationTo: "builds", hasMany: true, maxRows: 4, maxDepth: 0 },
+  ],
+};
+
 const BuildGallery: Block = {
   slug: "buildGallery",
   labels: { singular: "Build Gallery", plural: "Build Galleries" },
@@ -602,9 +674,9 @@ const BuildGallery: Block = {
 };
 
 /* The renderer groups consecutive content sections into one reading column. */
-export const WIDE = new Set(["hero", "photoShowcase", "pathCards", "vanTour", "imageText", "photoWall", "testimonials", "buildGallery", "buildTiers"]);
+export const WIDE = new Set(["hero", "photoShowcase", "pathCards", "vanTour", "imageText", "photoWall", "testimonials", "buildGallery", "buildTiers", "tierPage"]);
 
 export const blocks = [
   Text, Cards, Steps, Faq, Checklist, Note, PriceBox, Team, Timeline, Cta, ContactFormBlock,
-  Hero, PhotoShowcase, PathCards, VanTour, ImageText, PhotoWall, Testimonials, BuildGallery, BuildTiers,
+  Hero, PhotoShowcase, PathCards, VanTour, ImageText, PhotoWall, Testimonials, BuildGallery, BuildTiers, TierPage,
 ];

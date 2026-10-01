@@ -6,7 +6,7 @@
 import ExploreTheVan from "@/components/ExploreTheVan";
 import { WIDE } from "@/collections/blocks";
 import { DEPARTMENTS } from "@/collections/Team";
-import type { ProjectCard } from "@/lib/content";
+import type { ProjectCard, TierLink } from "@/lib/content";
 import { DESTINATIONS, type Destination } from "@/lib/site";
 import type { Media, Page, Team } from "@/payload-types";
 import { HubSpotForm, SERVICE_FORM_ID } from "./HubSpotForm";
@@ -15,10 +15,11 @@ import { PopUp } from "./PopUp";
 import { Photo } from "./Photo";
 import { RevealSlider } from "./RevealSlider";
 import { RichText } from "./RichText";
+import { Tabs } from "./Tabs";
 
 type Section = NonNullable<Page["sections"]>[number];
 type Dest = { to?: string | null; url?: string | null; text?: string | null } | null | undefined;
-export type PageData = { projects: ProjectCard[]; team: Team[]; fill: (s?: string | null) => string };
+export type PageData = { projects: ProjectCard[]; team: Team[]; tiers: TierLink[]; fill: (s?: string | null) => string };
 
 function resolve(d: Dest) {
   if (!d?.to) return null;
@@ -46,6 +47,185 @@ function Button({ d, className }: { d: Dest; className: string }) {
 /* A build tier links to its floor plan page, or sits still when it has none. */
 function Tier({ link, className, children }: { link?: string | null; className: string; children: React.ReactNode }) {
   return link ? <a href={link} className={className}>{children}</a> : <div className={className}>{children}</div>;
+}
+
+const usd = (n: number) => `$${n.toLocaleString("en-US")}`;
+const lineList = (t?: string | null) => (t ?? "").split("\n").map((l) => l.trim()).filter(Boolean);
+const photos = (v: unknown) => (Array.isArray(v) ? v.map(media).filter((m): m is Media => m !== null) : []);
+
+function PhotoStrip({ heading, list }: { heading: string; list: Media[] }) {
+  if (!list.length) return null;
+  return (
+    <section className="tp-strip">
+      <div className="wrap"><h2 className="section-title">{heading}</h2></div>
+      <div className="tp-strip-row">
+        {list.map((m) => (
+          <div className="tp-strip-cell" key={m.id}>
+            <Photo m={m} sizes="(max-width: 720px) 80vw, 30vw" max="card" />
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+/* A build tier's own page. Sections with nothing in them are left out. */
+function TierPage({ s, data }: { s: Extract<Section, { blockType: "tierPage" }>; data: PageData }) {
+  const total = s.price + (s.vanAllowance ?? 0);
+  const id = s.name.toLowerCase().replace(/\W+/g, "-");
+  const features = (s.features ?? []).filter((f) => f.name);
+  const builds = (s.builds ?? [])
+    .map((b) => data.projects.find((c) => c.slug === (typeof b === "object" ? b.slug : null)))
+    .filter((c): c is ProjectCard => Boolean(c));
+  const others = data.tiers.filter((t) => t.name !== s.name);
+  return (
+    <>
+      <section className="tp-hero">
+        <div className="hero-media">
+          <Photo m={media(s.heroPhoto)} sizes="100vw" eager />
+        </div>
+        <div className="wrap tp-hero-inner">
+          <nav className="tp-crumbs" aria-label="Breadcrumb">
+            <a href="/">Home</a> <span aria-hidden="true">/</span> <a href="/van-conversion-build-tiers/">Build Tiers</a> <span aria-hidden="true">/</span> <span aria-current="page">{s.name}</span>
+          </nav>
+          <h1>{s.name}</h1>
+          {s.tagline && <p className="tp-tagline">{s.tagline}</p>}
+          <p className="tp-from">Starts at</p>
+          <p className="tp-price">{usd(total)}</p>
+          {s.priceNote && <p className="tp-note">{s.priceNote}</p>}
+          <div className="hero-full-ctas">
+            <a href={DESTINATIONS.calendar.href} target="_blank" rel="noopener" className="btn btn-gold">Talk To An Expert <span className="arw">&#8853;</span></a>
+            <a href="/van-conversion-build-tiers/" className="btn btn-ghost">Compare All Tiers</a>
+          </div>
+        </div>
+      </section>
+
+      {!!s.stats?.length && (
+        <section className="tp-stats">
+          <ul className="wrap">
+            {s.stats.map((x) => <li key={x.id}><strong>{x.value}</strong><span>{x.label}</span></li>)}
+          </ul>
+        </section>
+      )}
+
+      {s.intro && (
+        <section className={media(s.introPhoto) ? "scene tp-intro" : "scene tp-intro is-text"}>
+          <div className="wrap scene-inner">
+            {media(s.introPhoto) && (
+              <figure className="scene-shot"><Photo m={media(s.introPhoto)} sizes="(max-width: 860px) 100vw, 50vw" /></figure>
+            )}
+            <div className="scene-copy">
+              <p className="scene-eyebrow">The {s.name}</p>
+              {s.introHeading && <h2>{s.introHeading}</h2>}
+              {s.intro.split(/\n\s*\n/).map((p, i) => <p key={i}>{p}</p>)}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {features.length > 0 && (
+        <section className="tp-features">
+          <div className="wrap">
+            <h2 className="section-title">Build Features</h2>
+            <p className="section-lede">What comes in every {s.name}, system by system.</p>
+            <Tabs
+              id={`${id}-features`}
+              className="tp-feature-tabs"
+              tabs={features.map((f) => ({
+                label: f.name,
+                panel: (
+                  <div className={media(f.photo) ? "tp-feature" : "tp-feature is-text"}>
+                    {media(f.photo) && <div className="tp-feature-photo"><Photo m={media(f.photo)} sizes="(max-width: 860px) 100vw, 50vw" max="card" /></div>}
+                    <div>
+                      <h3>{f.name}</h3>
+                      <ul className="ticks">{lineList(f.items).map((l) => <li key={l}>{l}</li>)}</ul>
+                    </div>
+                  </div>
+                ),
+              }))}
+            />
+          </div>
+        </section>
+      )}
+
+      <PhotoStrip heading="Interior Highlights" list={photos(s.interiorPhotos)} />
+      <PhotoStrip heading="Exterior Upgrades" list={photos(s.exteriorPhotos)} />
+
+      {!!s.packages?.length && (
+        <section className="tp-packages">
+          <div className="wrap">
+            <h2 className="section-title">Package Upgrades</h2>
+            <p className="section-lede">Bundles you can add to the {s.name}. Ask us for current pricing.</p>
+            <div className="tp-packages-grid">
+              {s.packages.map((p) => (
+                <details className="faq" key={p.id}>
+                  <summary>{p.name}</summary>
+                  {p.description && <div className="faq-answer"><p>{p.description}</p></div>}
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {!!s.alaCarte?.length && (
+        <section className="tp-alc">
+          <div className="wrap">
+            <div className="tp-alc-card">
+              <h2>A La Carte Upgrades</h2>
+              <Tabs
+                id={`${id}-alc`}
+                className="tp-alc-tabs"
+                tabs={s.alaCarte.map((c) => ({
+                  label: c.name,
+                  panel: <ul className="ticks">{lineList(c.items).map((l) => <li key={l}>{l}</li>)}</ul>,
+                }))}
+              />
+            </div>
+          </div>
+        </section>
+      )}
+
+      {builds.length > 0 && (
+        <section className="tp-builds">
+          <div className="wrap">
+            <h2 className="section-title">Featured Builds</h2>
+            <div className="tp-builds-grid">
+              {builds.map((b) => (
+                <a className="tp-build" href={b.path} key={b.slug}>
+                  <Photo m={b.photo} sizes="(max-width: 720px) 100vw, 25vw" max="card" />
+                  <h3>{b.title}</h3>
+                  <p>{s.name} build tier</p>
+                </a>
+              ))}
+            </div>
+            <p className="tp-center"><a href="/van-life-build-gallery/" className="btn btn-outline">View All Builds <span className="arw">&#8853;</span></a></p>
+          </div>
+        </section>
+      )}
+
+      {others.length > 0 && (
+        <section className="tp-others">
+          <div className="wrap">
+            <h2 className="section-title">Other Build Tiers</h2>
+            <p className="section-lede">Each layout works on the Mercedes-Benz Sprinter, Ford Transit and Ram ProMaster. Which one is right for you?</p>
+            <div className="tp-others-grid">
+              {others.map((t) => (
+                <a className="tp-other" href={t.path} key={t.path}>
+                  <Photo m={t.photo} sizes="(max-width: 720px) 100vw, 25vw" max="card" alt="" />
+                  <span className="tp-other-copy">
+                    <strong>{t.name}</strong>
+                    {t.tagline && <span>{t.tagline}</span>}
+                    <span className="tp-other-price">From {usd(t.total)}</span>
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+    </>
+  );
 }
 
 function Heading({ text }: { text?: string | null }) {
@@ -398,7 +578,6 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
       const tiers = [...(s.tiers ?? [])].sort((x, y) => x.price - y.price);
       const van = s.vanAllowance ?? 0;
       const top = Math.max(...tiers.map((t) => t.price + van), 1);
-      const usd = (n: number) => `$${n.toLocaleString("en-US")}`;
       return (
         <section className="tiers">
           <div className="wrap">
@@ -458,6 +637,9 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
         </section>
       );
     }
+
+    case "tierPage":
+      return <TierPage s={s} data={data} />;
 
     case "pathCards":
       return (

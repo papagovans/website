@@ -754,6 +754,85 @@ export interface Page {
             blockName?: string | null;
             blockType: 'buildTiers';
           }
+        | {
+            name: string;
+            /**
+             * e.g. "The Weekend Warrior".
+             */
+            tagline?: string | null;
+            /**
+             * The conversion alone, dollars, no commas. Match the Build Tiers page.
+             */
+            price: number;
+            /**
+             * Added to the build price, so the number shown includes the van.
+             */
+            vanAllowance?: number | null;
+            priceNote?: string | null;
+            heroPhoto: number | Media;
+            stats?:
+              | {
+                  /**
+                   * e.g. "400Ah"
+                   */
+                  value: string;
+                  /**
+                   * e.g. "Lithium battery"
+                   */
+                  label: string;
+                  id?: string | null;
+                }[]
+              | null;
+            introHeading?: string | null;
+            /**
+             * A blank line starts a new paragraph.
+             */
+            intro?: string | null;
+            introPhoto?: (number | null) | Media;
+            /**
+             * One tab each: Kitchen, Electricity, Plumbing...
+             */
+            features?:
+              | {
+                  name: string;
+                  photo?: (number | null) | Media;
+                  /**
+                   * One item per line.
+                   */
+                  items?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            interiorPhotos?: (number | Media)[] | null;
+            exteriorPhotos?: (number | Media)[] | null;
+            /**
+             * The same on every tier page today, so change it on all five.
+             */
+            packages?:
+              | {
+                  name: string;
+                  description?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            /**
+             * The same on every tier page today, so change it on all five.
+             */
+            alaCarte?:
+              | {
+                  name: string;
+                  /**
+                   * One per line.
+                   */
+                  items?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
+            builds?: (number | Build)[] | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'tierPage';
+          }
       )[]
     | null;
   /**
@@ -850,6 +929,57 @@ export interface Media {
   };
 }
 /**
+ * Finished vans. Each one gets its own page and appears in the Build Gallery and on the home page's photo wall, newest first. Your work saves automatically as a draft; nothing is public until you click Publish.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "builds".
+ */
+export interface Build {
+  id: number;
+  /**
+   * The name the owners gave it, e.g. "Sky Lounge".
+   */
+  title: string;
+  /**
+   * Drag to reorder. The first photo is the main one: it leads the page and is the picture in the gallery, so make it the whole van. A build with no photos stays out of the gallery.
+   */
+  photos?: (number | Media)[] | null;
+  /**
+   * One or two sentences: the chassis, the floor plan, what makes it this owner's van. Shown in Google results.
+   */
+  summary: string;
+  /**
+   * The full write-up: who it was built for, the systems in it, what is unusual about it.
+   */
+  description?: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  /**
+   * papagovans.com/projects/this-part/. Filled in from the build name when you first save. Changing it after publishing breaks links people already have.
+   */
+  slug?: string | null;
+  /**
+   * Builds are listed newest first.
+   */
+  finished: string;
+  updatedAt: string;
+  createdAt: string;
+  deletedAt?: string | null;
+  _status?: ('draft' | 'published') | null;
+}
+/**
  * Articles on the Guides page. Your work saves automatically as a draft; nothing is public until you click Publish.
  *
  * This interface was referenced by `Config`'s JSON-Schema
@@ -896,57 +1026,6 @@ export interface Post {
    * Shown on the post. Guides are listed newest first.
    */
   publishedDate: string;
-  updatedAt: string;
-  createdAt: string;
-  deletedAt?: string | null;
-  _status?: ('draft' | 'published') | null;
-}
-/**
- * Finished vans. Each one gets its own page and appears in the Build Gallery and on the home page's photo wall, newest first. Your work saves automatically as a draft; nothing is public until you click Publish.
- *
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "builds".
- */
-export interface Build {
-  id: number;
-  /**
-   * The name the owners gave it, e.g. "Sky Lounge".
-   */
-  title: string;
-  /**
-   * Drag to reorder. The first photo is the main one: it leads the page and is the picture in the gallery, so make it the whole van. A build with no photos stays out of the gallery.
-   */
-  photos?: (number | Media)[] | null;
-  /**
-   * One or two sentences: the chassis, the floor plan, what makes it this owner's van. Shown in Google results.
-   */
-  summary: string;
-  /**
-   * The full write-up: who it was built for, the systems in it, what is unusual about it.
-   */
-  description?: {
-    root: {
-      type: string;
-      children: {
-        type: any;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  } | null;
-  /**
-   * papagovans.com/projects/this-part/. Filled in from the build name when you first save. Changing it after publishing breaks links people already have.
-   */
-  slug?: string | null;
-  /**
-   * Builds are listed newest first.
-   */
-  finished: string;
   updatedAt: string;
   createdAt: string;
   deletedAt?: string | null;
@@ -1458,6 +1537,53 @@ export interface PagesSelect<T extends boolean = true> {
                     art?: T;
                     id?: T;
                   };
+              id?: T;
+              blockName?: T;
+            };
+        tierPage?:
+          | T
+          | {
+              name?: T;
+              tagline?: T;
+              price?: T;
+              vanAllowance?: T;
+              priceNote?: T;
+              heroPhoto?: T;
+              stats?:
+                | T
+                | {
+                    value?: T;
+                    label?: T;
+                    id?: T;
+                  };
+              introHeading?: T;
+              intro?: T;
+              introPhoto?: T;
+              features?:
+                | T
+                | {
+                    name?: T;
+                    photo?: T;
+                    items?: T;
+                    id?: T;
+                  };
+              interiorPhotos?: T;
+              exteriorPhotos?: T;
+              packages?:
+                | T
+                | {
+                    name?: T;
+                    description?: T;
+                    id?: T;
+                  };
+              alaCarte?:
+                | T
+                | {
+                    name?: T;
+                    items?: T;
+                    id?: T;
+                  };
+              builds?: T;
               id?: T;
               blockName?: T;
             };

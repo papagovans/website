@@ -2,7 +2,7 @@
    them. Shared by the front page and every other page. */
 import { draftMode } from "next/headers";
 import { convertLexicalToPlaintext } from "@payloadcms/richtext-lexical/plaintext";
-import { listProjectCards, listTeam, type CmsPage as Page } from "@/lib/content";
+import { listProjectCards, listTeam, listTierLinks, type CmsPage as Page } from "@/lib/content";
 import { PageSections, type PageData } from "./PageSections";
 
 const needs = (page: Page, ...types: string[]) => (page.sections ?? []).some((s) => types.includes(s.blockType));
@@ -10,13 +10,15 @@ const needs = (page: Page, ...types: string[]) => (page.sections ?? []).some((s)
 export async function CmsPage({ page, path }: { page: Page; path: string }) {
   const preview = (await draftMode()).isEnabled;
   const text = JSON.stringify(page);
-  const [projects, team] = await Promise.all([
-    needs(page, "photoWall", "buildGallery") || text.includes("{builds}") ? listProjectCards() : [],
+  const [projects, team, tiers] = await Promise.all([
+    needs(page, "photoWall", "buildGallery", "tierPage") || text.includes("{builds}") ? listProjectCards() : [],
     needs(page, "team") || text.includes("{team}") ? listTeam() : [],
+    needs(page, "tierPage") ? listTierLinks() : [],
   ]);
   const data: PageData = {
     projects,
     team,
+    tiers,
     fill: (s) => (s ?? "").replaceAll("{builds}", String(projects.length)).replaceAll("{team}", String(team.length)),
   };
 
@@ -48,7 +50,7 @@ export async function CmsPage({ page, path }: { page: Page; path: string }) {
           <a href={`/api/preview/?exit=1&path=${path}`}>Exit preview</a>
         </p>
       )}
-      {page.heading && (
+      {page.heading && !needs(page, "tierPage") && (
         <section className="page-head">
           <div className="wrap">
             {page.eyebrow && <p className="page-eyebrow">{page.eyebrow}</p>}

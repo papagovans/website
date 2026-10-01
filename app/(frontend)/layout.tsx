@@ -40,6 +40,7 @@ const footerCols = [
       ["Zion", "/zion/"],
       ["Olympus", "/olympus/"],
       ["McKinley", "/mckinley/"],
+      ["Rainier", "/rainier/"],
     ],
   },
   {
