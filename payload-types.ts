@@ -463,7 +463,7 @@ export interface Page {
             heading: string;
             text?: string | null;
             /**
-             * A YouTube link. It plays silently on a loop behind the words; the photo above shows while it loads.
+             * A YouTube link, or the address of a short .mp4 clip (desktop only, under 20 seconds and a few MB). It plays silently on a loop behind the words; the photo shows while it loads, and on phones for a clip.
              */
             video?: string | null;
             button: {

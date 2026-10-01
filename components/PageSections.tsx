@@ -9,7 +9,7 @@ import { DEPARTMENTS } from "@/collections/Team";
 import type { ProjectCard, TierLink } from "@/lib/content";
 import { DESTINATIONS, type Destination } from "@/lib/site";
 import type { Media, Page, Team } from "@/payload-types";
-import { HeroVideo } from "./HeroVideo";
+import { HeroFileVideo, HeroVideo } from "./HeroVideo";
 import { HubSpotForm, SERVICE_FORM_ID } from "./HubSpotForm";
 import { LoopVideo } from "./LoopVideo";
 import { PopUp } from "./PopUp";
@@ -499,7 +499,7 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
           <div className="hero-media">
             {/* LCP image: eager and high priority. Never lazy-load this. */}
             <Photo m={media(s.image)} sizes="100vw" eager />
-            {s.video && <HeroVideo url={s.video} />}
+            {s.video && (/\.(mp4|webm)(\?|$)/i.test(s.video) ? <HeroFileVideo src={s.video} /> : <HeroVideo url={s.video} />)}
           </div>
           <div className="wrap hero-full-inner">
             <h1>

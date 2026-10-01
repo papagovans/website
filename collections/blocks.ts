@@ -287,7 +287,7 @@ const Hero: Block = {
       name: "video",
       label: "Background video (optional)",
       type: "text",
-      admin: { description: "A YouTube link. It plays silently on a loop behind the words; the photo above shows while it loads." },
+      admin: { description: "A YouTube link, or the address of a short .mp4 clip (desktop only, under 20 seconds and a few MB). It plays silently on a loop behind the words; the photo shows while it loads, and on phones for a clip." },
     },
     destination("button", "Button", true),
     destination("secondButton", "Second button (optional, outlined)"),

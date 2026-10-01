@@ -40,3 +40,29 @@ export function HeroVideo({ url }: { url: string }) {
     />
   );
 }
+
+/* A short silent clip hosted on the site, desktop only: a phone keeps the
+   photo and downloads nothing. It loads after the page has, and fades in
+   once it is actually playing, so a slow connection only ever sees the photo. */
+export function HeroFileVideo({ src }: { src: string }) {
+  const ref = useRef<HTMLVideoElement>(null);
+  const [shown, setShown] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el || !window.matchMedia("(min-width: 1000px)").matches || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    el.src = src;
+    el.play().catch(() => {}); // blocked autoplay just leaves the photo up
+  }, [src]);
+  return (
+    <video
+      ref={ref}
+      className={shown ? "hero-video hero-file is-on" : "hero-video hero-file"}
+      muted
+      loop
+      playsInline
+      preload="none"
+      aria-hidden="true"
+      onPlaying={() => setShown(true)}
+    />
+  );
+}

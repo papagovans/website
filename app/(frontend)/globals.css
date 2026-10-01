@@ -1361,6 +1361,7 @@ a.tier-rung:hover h3 { color: var(--blue); }
 	opacity: 0; transition: opacity 0.8s ease;
 }
 .hero-video.is-on { opacity: 1; }
+video.hero-file { top: 0; left: 0; width: 100%; height: 100%; transform: none; object-fit: cover; }
 
 /* Logo strip: a short band under the hero, logos spread edge to edge. */
 .logo-strip { border-bottom: 1px solid var(--line); background: var(--paper); }
