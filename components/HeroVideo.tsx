@@ -50,6 +50,8 @@ export function HeroFileVideo({ src }: { src: string }) {
   useEffect(() => {
     const el = ref.current;
     if (!el || !window.matchMedia("(min-width: 1000px)").matches || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    el.muted = true; // React does not set this on a server-rendered video, and browsers only autoplay muted ones
+    el.autoplay = true; // the browser starts it when ready, and again when a background tab comes forward
     el.src = src;
     el.play().catch(() => {}); // blocked autoplay just leaves the photo up
   }, [src]);
