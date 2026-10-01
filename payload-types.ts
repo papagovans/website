@@ -837,6 +837,15 @@ export interface Page {
             blockName?: string | null;
             blockType: 'tierPage';
           }
+        | {
+            /**
+             * Drag to reorder. A transparent PNG or WebP with the empty margin trimmed off looks best; sizes even out on their own.
+             */
+            logos: (number | Media)[];
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'logoStrip';
+          }
       )[]
     | null;
   /**
@@ -1589,6 +1598,13 @@ export interface PagesSelect<T extends boolean = true> {
                     id?: T;
                   };
               builds?: T;
+              id?: T;
+              blockName?: T;
+            };
+        logoStrip?:
+          | T
+          | {
+              logos?: T;
               id?: T;
               blockName?: T;
             };

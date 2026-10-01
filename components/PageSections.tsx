@@ -640,6 +640,24 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
       );
     }
 
+    case "logoStrip":
+      return (
+        <section className="logo-strip">
+          <ul className="wrap">
+            {photos(s.logos).map((m) => {
+              /* ponytail: wide logos get less height so every logo carries about the same visual weight */
+              const a = (m.width ?? 1) / (m.height ?? 1);
+              return (
+                <li key={m.id}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={m.url!} alt={m.alt ?? ""} style={{ "--h": `${Math.round(Math.min(64, 64 * a ** -0.4))}px` } as React.CSSProperties} loading="lazy" decoding="async" />
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      );
+
     case "tierPage":
       return <TierPage s={s} data={data} />;
 

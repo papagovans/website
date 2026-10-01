@@ -1361,3 +1361,13 @@ a.tier-rung:hover h3 { color: var(--blue); }
 	opacity: 0; transition: opacity 0.8s ease;
 }
 .hero-video.is-on { opacity: 1; }
+
+/* Logo strip: a short band under the hero, logos spread edge to edge. */
+.logo-strip { border-bottom: 1px solid var(--line); background: var(--paper); }
+.logo-strip ul { display: flex; align-items: center; justify-content: space-between; gap: 24px 40px; flex-wrap: wrap; padding: 26px 0; }
+.logo-strip li { display: flex; align-items: center; }
+.logo-strip img { height: var(--h); width: auto; max-width: 100%; display: block; }
+@media (max-width: 720px) {
+	.logo-strip ul { justify-content: space-evenly; gap: 20px 28px; padding: 20px 0; }
+	.logo-strip img { height: calc(var(--h) * 0.7); }
+}

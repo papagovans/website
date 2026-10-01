@@ -672,6 +672,22 @@ const TierPage: Block = {
   ],
 };
 
+/* A short row of brand and credential logos, spread evenly across the page. */
+const LogoStrip: Block = {
+  slug: "logoStrip",
+  labels: { singular: "Logo Strip", plural: "Logo Strips" },
+  fields: [
+    {
+      name: "logos",
+      type: "upload",
+      relationTo: "media",
+      hasMany: true,
+      required: true,
+      admin: { description: "Drag to reorder. A transparent PNG or WebP with the empty margin trimmed off looks best; sizes even out on their own." },
+    },
+  ],
+};
+
 const BuildGallery: Block = {
   slug: "buildGallery",
   labels: { singular: "Build Gallery", plural: "Build Galleries" },
@@ -680,9 +696,9 @@ const BuildGallery: Block = {
 };
 
 /* The renderer groups consecutive content sections into one reading column. */
-export const WIDE = new Set(["hero", "photoShowcase", "pathCards", "vanTour", "imageText", "photoWall", "testimonials", "buildGallery", "buildTiers", "tierPage"]);
+export const WIDE = new Set(["hero", "photoShowcase", "pathCards", "vanTour", "imageText", "photoWall", "testimonials", "buildGallery", "buildTiers", "tierPage", "logoStrip"]);
 
 export const blocks = [
   Text, Cards, Steps, Faq, Checklist, Note, PriceBox, Team, Timeline, Cta, ContactFormBlock,
-  Hero, PhotoShowcase, PathCards, VanTour, ImageText, PhotoWall, Testimonials, BuildGallery, BuildTiers, TierPage,
+  Hero, PhotoShowcase, PathCards, VanTour, ImageText, PhotoWall, Testimonials, BuildGallery, BuildTiers, TierPage, LogoStrip,
 ];
