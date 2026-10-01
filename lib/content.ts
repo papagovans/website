@@ -14,7 +14,7 @@ export type { Build };
 
 /* A build as the gallery and the photo wall need it: its name, its address
    and its main photo, without the other twenty photos. */
-export type ProjectCard = { slug: string; path: string; title: string; summary: string; photo: Media };
+export type ProjectCard = { id: number; slug: string; path: string; title: string; summary: string; photo: Media };
 
 
 export type { Post };
@@ -128,7 +128,7 @@ export async function listProjectCards(): Promise<ProjectCard[]> {
   const byId = new Map(photos.map((m) => [m.id, m]));
   return docs.flatMap((d) => {
     const photo = Array.isArray(d.photos) ? byId.get(d.photos[0] as number) : undefined;
-    return photo && d.slug ? [{ slug: d.slug, path: `/projects/${d.slug}/`, title: d.title, summary: d.summary, photo }] : [];
+    return photo && d.slug ? [{ id: d.id, slug: d.slug, path: `/projects/${d.slug}/`, title: d.title, summary: d.summary, photo }] : [];
   });
 }
 

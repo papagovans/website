@@ -1281,7 +1281,7 @@ a.tier-rung:hover h3 { color: var(--blue); }
 .tp-feature-tabs .tabs-panel { margin-top: 30px; }
 .tp-feature { display: grid; grid-template-columns: 1.1fr 1fr; gap: 44px; align-items: center; background: #fff; border-radius: var(--r-lg); padding: 18px; }
 .tp-feature.is-text { grid-template-columns: 1fr; padding: 34px; }
-.tp-feature-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-md); display: block; }
+.tp-feature-photo img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-md); display: block; }
 .tp-feature h3 { font-size: 26px; color: var(--footer); margin-bottom: 16px; }
 .tp-feature > div:last-child { padding-right: 18px; }
 
@@ -1291,7 +1291,7 @@ a.tier-rung:hover h3 { color: var(--blue); }
 	padding: 0 max(16px, calc((100vw - 1200px) / 2)) 10px; scrollbar-width: thin;
 }
 .tp-strip-cell { flex: 0 0 clamp(240px, 30vw, 380px); scroll-snap-align: start; }
-.tp-strip-cell img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--r-md); display: block; }
+.tp-strip-cell img { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: var(--r-md); display: block; }
 
 .tp-packages { padding: 84px 0 0; }
 .tp-packages-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px; margin-top: 26px; align-items: start; }
@@ -1308,7 +1308,7 @@ a.tier-rung:hover h3 { color: var(--blue); }
 .tp-builds-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 28px; }
 .tp-build { display: block; border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; background: #fff; transition: 0.15s ease; }
 .tp-build:hover { border-color: var(--gold); }
-.tp-build img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.tp-build img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
 .tp-build h3 { font-size: 18px; color: var(--footer); padding: 14px 16px 0; }
 .tp-build p { font-size: 13px; color: var(--muted); padding: 4px 16px 16px; }
 .tp-center { text-align: center; margin-top: 30px; }

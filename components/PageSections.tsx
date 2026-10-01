@@ -75,7 +75,7 @@ function TierPage({ s, data }: { s: Extract<Section, { blockType: "tierPage" }>;
   const id = s.name.toLowerCase().replace(/\W+/g, "-");
   const features = (s.features ?? []).filter((f) => f.name);
   const builds = (s.builds ?? [])
-    .map((b) => data.projects.find((c) => c.slug === (typeof b === "object" ? b.slug : null)))
+    .map((b) => data.projects.find((c) => c.id === (typeof b === "object" ? b.id : b)))
     .filter((c): c is ProjectCard => Boolean(c));
   const others = data.tiers.filter((t) => t.name !== s.name);
   return (
