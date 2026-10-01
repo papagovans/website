@@ -46,14 +46,19 @@ const nextConfig: NextConfig = {
   },
 
   /*
-   * Staging only. A copy of the marketing site on our own root domain must never
-   * compete with papagovans.com in search. Remove this, deliberately, on the day
-   * this becomes the live site.
+   * noindex everywhere except papagovans.com itself, so staging and preview
+   * links never compete with the live site in search, and going live needs no
+   * change here. Same rule as app/robots.ts. Hosts are spelled out because
+   * next.config cannot import lib/site.ts's LIVE_HOSTS before the build.
    */
   async headers() {
     return [
       {
         source: "/:path*",
+        missing: [
+          { type: "host", value: "papagovans.com" },
+          { type: "host", value: "www.papagovans.com" },
+        ],
         headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
       },
       /*

@@ -15,6 +15,10 @@ export const ADDRESS_LINE2 = "Mesa, AZ 85201";
 export const MAP_URL =
   "https://maps.google.com/?q=751+N+Country+Club+Dr,+Mesa,+AZ+85201";
 export const CALENDAR_URL = "https://calendly.com/jeremy-papago/30min";
+/* The live site. Search engines may crawl only these hosts (app/robots.ts,
+   next.config.ts); every other host, staging included, is noindex. */
+export const SITE_URL = "https://papagovans.com";
+export const LIVE_HOSTS = ["papagovans.com", "www.papagovans.com"];
 export const BUILD_APP = "https://build.papagovans.com";
 /* The builder is paused (owner, 2026-10-01) while its new pricing waits. Off,
    every "Build Your Van" link on the site, menus and CMS buttons alike, goes
