@@ -1921,8 +1921,8 @@
       "path": "/recent-build/clubhouse-cruiser/",
       "type": "page",
       "status": "redirect",
-      "note": "Old /recent-build/ structure. Added from Search Console, 2026-09-24.",
-      "to": "/projects/clubhouse-cruiser/"
+      "note": "Old /recent-build/ structure. The build slug is clubhouse-cruiser-4x4-sprinter-camper-van, as papagovans.com redirects it; fixed 2026-10-01.",
+      "to": "/projects/clubhouse-cruiser-4x4-sprinter-camper-van/"
     },
     {
       "path": "/service-department/",
