@@ -43,6 +43,11 @@ function Button({ d, className }: { d: Dest; className: string }) {
   );
 }
 
+/* A build tier links to its floor plan page, or sits still when it has none. */
+function Tier({ link, className, children }: { link?: string | null; className: string; children: React.ReactNode }) {
+  return link ? <a href={link} className={className}>{children}</a> : <div className={className}>{children}</div>;
+}
+
 function Heading({ text }: { text?: string | null }) {
   return text ? <h2 className="page-h2">{text}</h2> : null;
 }
@@ -376,6 +381,50 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
               ))}
             </div>
           )}
+        </section>
+      );
+    }
+
+    case "buildTiers": {
+      const tiers = s.tiers ?? [];
+      const top = Math.max(...tiers.map((t) => t.price), 1);
+      return (
+        <section className="tiers">
+          <div className="wrap">
+            <h2 className="section-title">{s.heading}</h2>
+            {s.intro?.split(/\n\s*\n/).map((p, i) => <p className="section-lede" key={i}>{p}</p>)}
+            <div className="tier-banners">
+              {tiers.map((t) => (
+                <Tier link={t.link} className="tier-banner" key={t.id}>
+                  <Photo m={media(t.photo)} sizes="(max-width: 1200px) 100vw, 1200px" alt="" />
+                  <span className="tier-banner-name">{t.name}</span>
+                  {t.tagline && <span className="tier-banner-tag">{t.tagline}</span>}
+                </Tier>
+              ))}
+            </div>
+            {s.priceHeading && <h2 className="section-title tiers-price-title">{s.priceHeading}</h2>}
+            <ol className="tier-ladder">
+              {[...tiers].sort((a, b) => a.price - b.price).map((t) => (
+                <li key={t.id}>
+                  <Tier link={t.link} className="tier-rung">
+                    <h3>{t.name}</h3>
+                    {/* ponytail: bar length is the price's share of the top tier; CSS floors it so the cheapest still fits its van */}
+                    <div className="tier-bar" style={{ "--share": t.price / top } as React.CSSProperties}>
+                      <span className="tier-price">${t.price.toLocaleString("en-US")}+</span>
+                      <span className="tier-van">
+                        {(t.art === "olympus" || t.art === "el-capitan") && (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img src={`/build-tiers/tent-${t.art}.svg`} alt="" className="tier-tent" />
+                        )}
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={`/build-tiers/van-${t.art}.svg`} alt={`${t.name} van`} />
+                      </span>
+                    </div>
+                  </Tier>
+                </li>
+              ))}
+            </ol>
+          </div>
         </section>
       );
     }

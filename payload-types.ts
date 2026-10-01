@@ -685,6 +685,43 @@ export interface Page {
             blockName?: string | null;
             blockType: 'buildGallery';
           }
+        | {
+            heading: string;
+            /**
+             * A blank line starts a new paragraph.
+             */
+            intro?: string | null;
+            priceHeading?: string | null;
+            /**
+             * Banners show in this order. The price ladder sorts itself, cheapest first.
+             */
+            tiers?:
+              | {
+                  name: string;
+                  /**
+                   * e.g. "The Luxury Explorer".
+                   */
+                  tagline?: string | null;
+                  /**
+                   * Dollars, no commas. Shows as "$53,595+".
+                   */
+                  price: number;
+                  /**
+                   * The floor plan page, e.g. /zion/. Leave empty and the tier is not clickable.
+                   */
+                  link?: string | null;
+                  /**
+                   * The banner. A wide photo, cropped to a strip.
+                   */
+                  photo: number | Media;
+                  art: 'rainier' | 'mckinley' | 'zion' | 'olympus' | 'el-capitan';
+                  id?: string | null;
+                }[]
+              | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'buildTiers';
+          }
       )[]
     | null;
   /**
@@ -1342,6 +1379,26 @@ export interface PagesSelect<T extends boolean = true> {
         buildGallery?:
           | T
           | {
+              id?: T;
+              blockName?: T;
+            };
+        buildTiers?:
+          | T
+          | {
+              heading?: T;
+              intro?: T;
+              priceHeading?: T;
+              tiers?:
+                | T
+                | {
+                    name?: T;
+                    tagline?: T;
+                    price?: T;
+                    link?: T;
+                    photo?: T;
+                    art?: T;
+                    id?: T;
+                  };
               id?: T;
               blockName?: T;
             };

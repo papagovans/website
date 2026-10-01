@@ -43,24 +43,16 @@ its live counterpart. **Confirm this against Search Console before launch.** If
 the `-old` page is the one actually ranking, the arrow reverses, and getting it
 backwards costs us the page.
 
-## /van-conversion-build-tiers/ redirects to the builder
+## /van-conversion-build-tiers/ is a page again
 
-Owner decision, 2026-09-24: this page points at build.papagovans.com.
+Owner decision, 2026-10-01: the builder and its new pricing wait, so the old
+tiers page is rebuilt as a CMS page (a Build Tiers section: a banner per plan
+and a price ladder). It replaces the 2026-09-24 redirect to the builder, and
+`/build-tiers/`, `/conversion-van-build-tiers/` and `/camper-van-conversion/`
+point at it again, as they do on papagovans.com.
 
-Record the numbers so the trade is visible if it needs revisiting. Over the 12
-months to 2026-09-22 this was the site's eighth page by clicks:
-
-| Clicks | Impressions |
-|---|---|
-| 288 | 87,558 |
-
-Those impressions come from informational queries about conversion pricing and
-tiers. The configurator does not answer an informational query, so Google may
-treat the redirect as a soft 404 and drop the page rather than pass its ranking
-to the destination. Watch that URL in Search Console for a quarter.
-
-The alternative, if the impressions fall off: rebuild it as a real page that
-compares Tailored against Bespoke and lists the five floor plans with working
-prices (the live version prints `$0 +` for all five), and put the builder link
-on it as the call to action. That keeps the ranking and still feeds the builder.
-Reversing is a one-line change to this URL's entry in live-urls.json.
+Over the 12 months to 2026-09-22 this was the site's eighth page by clicks
+(288 clicks, 87,558 impressions), from informational queries about conversion
+pricing and tiers. Keeping a real page at the URL keeps that ranking. Prices
+and tiers are edited in /admin under Pages; the scripted import is
+`scripts/import-build-tiers.ts`.

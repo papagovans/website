@@ -325,6 +325,45 @@ const PathCards: Block = {
   ],
 };
 
+/* The old site's Build Tiers page: a photo banner per floor plan, then the
+   same plans as a price ladder, each bar as long as its price. */
+const BuildTiers: Block = {
+  slug: "buildTiers",
+  labels: { singular: "Build Tiers", plural: "Build Tiers" },
+  fields: [
+    { name: "heading", type: "text", required: true, defaultValue: "Build Tiers" },
+    { name: "intro", label: "Introduction", type: "textarea", admin: { description: "A blank line starts a new paragraph." } },
+    { name: "priceHeading", label: "Price heading", type: "text", defaultValue: "Build Tiers by Price" },
+    {
+      name: "tiers",
+      type: "array",
+      minRows: 1,
+      labels: { singular: "Tier", plural: "Tiers" },
+      admin: { initCollapsed: true, ...rowLabel, description: "Banners show in this order. The price ladder sorts itself, cheapest first." },
+      fields: [
+        { name: "name", type: "text", required: true },
+        { name: "tagline", type: "text", admin: { description: 'e.g. "The Luxury Explorer".' } },
+        { name: "price", label: "Starting price", type: "number", required: true, min: 0, admin: { description: 'Dollars, no commas. Shows as "$53,595+".' } },
+        { name: "link", type: "text", admin: { description: "The floor plan page, e.g. /zion/. Leave empty and the tier is not clickable." } },
+        { name: "photo", type: "upload", relationTo: "media", required: true, admin: { description: "The banner. A wide photo, cropped to a strip." } },
+        {
+          name: "art",
+          label: "Van drawing",
+          type: "select",
+          required: true,
+          options: [
+            { label: "Rainier (bare van)", value: "rainier" },
+            { label: "McKinley (roof rack)", value: "mckinley" },
+            { label: "Zion (rack and gear)", value: "zion" },
+            { label: "Olympus (pop-top tent)", value: "olympus" },
+            { label: "El Capitan (roof tent, fully kitted)", value: "el-capitan" },
+          ],
+        },
+      ],
+    },
+  ],
+};
+
 const PhotoShowcase: Block = {
   slug: "photoShowcase",
   labels: { singular: "Photo Showcase", plural: "Photo Showcases" },
@@ -509,9 +548,9 @@ const BuildGallery: Block = {
 };
 
 /* The renderer groups consecutive content sections into one reading column. */
-export const WIDE = new Set(["hero", "photoShowcase", "pathCards", "vanTour", "imageText", "photoWall", "testimonials", "buildGallery"]);
+export const WIDE = new Set(["hero", "photoShowcase", "pathCards", "vanTour", "imageText", "photoWall", "testimonials", "buildGallery", "buildTiers"]);
 
 export const blocks = [
   Text, Cards, Steps, Faq, Checklist, Note, PriceBox, Team, Timeline, Cta, ContactFormBlock,
-  Hero, PhotoShowcase, PathCards, VanTour, ImageText, PhotoWall, Testimonials, BuildGallery,
+  Hero, PhotoShowcase, PathCards, VanTour, ImageText, PhotoWall, Testimonials, BuildGallery, BuildTiers,
 ];

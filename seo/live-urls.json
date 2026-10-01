@@ -3,8 +3,8 @@
   "generated": "2026-09-24",
   "total": 208,
   "counts": {
-    "done": 156,
-    "redirect": 39,
+    "done": 157,
+    "redirect": 38,
     "drop": 13
   },
   "urls": [
@@ -2081,15 +2081,14 @@
     {
       "path": "/van-conversion-build-tiers/",
       "type": "page",
-      "status": "redirect",
+      "status": "done",
       "seo": {
         "wpId": 407,
         "title": "Van Conversion Build Tiers - Papago Vans",
         "canonical": "/van-conversion-build-tiers/",
         "index": "index"
       },
-      "to": "https://build.papagovans.com",
-      "note": "Owner decision 2026-09-24: send this to the Tailored builder. See the traffic note in seo/README.md before reversing."
+      "note": "Rebuilt as a CMS page, owner 2026-10-01: the builder and its new pricing wait, so the old tiers and prices stay. Replaces the 2026-09-24 redirect to the builder."
     },
     {
       "path": "/van-life-build-gallery/",
@@ -2194,22 +2193,22 @@
       "path": "/build-tiers/",
       "type": "page",
       "status": "redirect",
-      "to": "https://build.papagovans.com",
-      "note": "Linked from old content or redirected by papagovans.com, found in the 2026-09-26 old-vs-new audit. Chains flattened to one hop."
+      "to": "/van-conversion-build-tiers/",
+      "note": "Redirected by papagovans.com to the build tiers page; kept, one hop. Found in the 2026-09-26 old-vs-new audit."
     },
     {
       "path": "/conversion-van-build-tiers/",
       "type": "page",
       "status": "redirect",
-      "to": "https://build.papagovans.com",
-      "note": "Linked from old content or redirected by papagovans.com, found in the 2026-09-26 old-vs-new audit. Chains flattened to one hop."
+      "to": "/van-conversion-build-tiers/",
+      "note": "Redirected by papagovans.com to the build tiers page; kept, one hop. Found in the 2026-09-26 old-vs-new audit."
     },
     {
       "path": "/camper-van-conversion/",
       "type": "page",
       "status": "redirect",
-      "to": "https://build.papagovans.com",
-      "note": "Linked from old content or redirected by papagovans.com, found in the 2026-09-26 old-vs-new audit. Chains flattened to one hop."
+      "to": "/van-conversion-build-tiers/",
+      "note": "Redirected by papagovans.com to the build tiers page; kept, one hop. Found in the 2026-09-26 old-vs-new audit."
     },
     {
       "path": "/category/guide-for-van-life/",
