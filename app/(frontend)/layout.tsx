@@ -67,7 +67,7 @@ const footerCols = [
     h: "Vans We Convert",
     links: [
       ["Mercedes Sprinter", "/mercedes-sprinter/"],
-      ["Ram Promaster", "/ram-promaster/"],
+      ["Ram ProMaster", "/ram-promaster/"],
       ["Ford Transit", "/ford-transit/"],
     ],
   },

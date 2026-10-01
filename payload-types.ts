@@ -433,7 +433,7 @@ export interface Page {
              */
             intro?: string | null;
             /**
-             * Blank means the sales form, edited in HubSpot. The service request asks what the van needs.
+             * Both forms are edited in HubSpot. Blank means the sales form.
              */
             preset?: ('conversion' | 'service') | null;
             /**

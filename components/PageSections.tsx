@@ -433,7 +433,7 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
                   <div className="tier-card-body">
                     {t.tagline && <p className="tier-card-tag">{t.tagline}</p>}
                     <h3>{t.name}</h3>
-                    <p className="tier-card-price">From <strong>{usd(t.price + van)}+</strong></p>
+                    <p className="tier-card-price">From <strong>{usd(t.price + van)}</strong></p>
                     {van > 0 && <p className="tier-card-split">{usd(t.price)} build + {usd(van)} van allowance</p>}
                     {t.summary && <p className="tier-card-copy">{t.summary}</p>}
                     {!!t.specs?.length && (
