@@ -16,6 +16,13 @@ export const MAP_URL =
   "https://maps.google.com/?q=751+N+Country+Club+Dr,+Mesa,+AZ+85201";
 export const CALENDAR_URL = "https://calendly.com/jeremy-papago/30min";
 export const BUILD_APP = "https://build.papagovans.com";
+/* The builder is paused (owner, 2026-10-01) while its new pricing waits. Off,
+   every "Build Your Van" link on the site, menus and CMS buttons alike, goes
+   to the build tiers page instead. Set true and they all go back at once. */
+export const BUILDER_LIVE = false;
+export const BUILD_LINK = BUILDER_LIVE
+  ? { href: BUILD_APP, text: "Build Your Van", external: true }
+  : { href: "/van-conversion-build-tiers/", text: "Build Tiers", external: false };
 
 /** Digits only, for tel: links. */
 export const tel = (n: string) => `tel:+1${n.replace(/\D/g, "")}`;
@@ -38,6 +45,6 @@ export const DESTINATIONS = {
   service: { label: "Service phone", href: tel(SERVICE_PHONE), text: SERVICE_PHONE, external: false },
   email: { label: "Email", href: `mailto:${EMAIL}`, text: EMAIL, external: false },
   map: { label: "Shop address (map)", href: MAP_URL, text: `${ADDRESS_LINE1}, ${ADDRESS_LINE2}`, external: true },
-  builder: { label: "Van builder", href: BUILD_APP, text: "Build Your Van", external: true },
+  builder: { label: BUILDER_LIVE ? "Van builder" : "Van builder (paused, goes to Build Tiers)", ...BUILD_LINK },
 } as const;
 export type Destination = keyof typeof DESTINATIONS;

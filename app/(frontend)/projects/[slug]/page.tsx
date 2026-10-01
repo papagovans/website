@@ -5,7 +5,7 @@ import { Photo } from "@/components/Photo";
 import { RichText } from "@/components/RichText";
 import { getBuild, listBuildSlugs } from "@/lib/content";
 import type { Media } from "@/payload-types";
-import { BUILD_APP } from "@/lib/site";
+import { BUILDER_LIVE, BUILD_LINK } from "@/lib/site";
 
 export async function generateStaticParams() {
   return (await listBuildSlugs()).map((slug) => ({ slug }));
@@ -60,8 +60,8 @@ export default async function BuildPage({ params }: { params: Promise<{ slug: st
           <h2>Want something like this?</h2>
           <p>Every Papago van starts as a conversation about how you actually travel.</p>
         </div>
-        <a className="btn-accent" href={BUILD_APP}>
-          Start Your Build
+        <a className="btn-accent" href={BUILD_LINK.href}>
+          {BUILDER_LIVE ? "Start Your Build" : "See Build Tiers"}
         </a>
       </section>
     </article>

@@ -8,7 +8,7 @@ import { Tracking } from "@/components/Tracking";
 import { MobileMenu } from "@/components/MobileMenu";
 import {
   SALES_PHONE, SERVICE_PHONE, EMAIL, ADDRESS_LINE1, ADDRESS_LINE2,
-  MAP_URL, CALENDAR_URL, BUILD_APP, SOCIALS, tel,
+  MAP_URL, CALENDAR_URL, BUILD_LINK, SOCIALS, tel,
 } from "@/lib/site";
 
 /*
@@ -45,7 +45,7 @@ const footerCols = [
   {
     h: "Explore",
     links: [
-      ["Build Your Van", BUILD_APP],
+      [BUILD_LINK.text, BUILD_LINK.href],
       ["Build Gallery", "/van-life-build-gallery/"],
       ["Our Process", "/our-process/"],
       ["Bespoke Builds", "/bespoke/"],
@@ -116,7 +116,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <img src="/home/Group-278.svg" alt="Papago Vans" width="174" height="27" />
             </a>
             <nav className="main-nav" aria-label="Main">
-              <a href={BUILD_APP} target="_blank" rel="noopener">Build Your Van</a>
+              <a href={BUILD_LINK.href} {...(BUILD_LINK.external && { target: "_blank", rel: "noopener" })}>{BUILD_LINK.text}</a>
               <a href="/van-life-build-gallery/">Recent Builds</a>
               <a href="/our-process/">Our Process</a>
               <a href="/about-us/">About</a>
@@ -136,7 +136,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               </a>
               <MobileMenu
                 links={[
-                  { label: "Build Your Van", href: BUILD_APP, external: true },
+                  { label: BUILD_LINK.text, href: BUILD_LINK.href, external: BUILD_LINK.external },
                   { label: "Recent Builds", href: "/van-life-build-gallery/" },
                   { label: "Our Process", href: "/our-process/" },
                   { label: "Bespoke Builds", href: "/bespoke/" },

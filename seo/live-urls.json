@@ -4,8 +4,8 @@
   "total": 208,
   "counts": {
     "done": 157,
-    "redirect": 38,
-    "drop": 13
+    "redirect": 39,
+    "drop": 12
   },
   "urls": [
     {
@@ -1877,7 +1877,8 @@
         "canonical": "/quiz/",
         "index": "index"
       },
-      "to": "https://build.papagovans.com"
+      "to": "/van-conversion-build-tiers/",
+      "note": "Pointed at the build tiers page while the builder is paused, owner 2026-10-01. Was https://build.papagovans.com."
     },
     {
       "path": "/rainier-old/",
@@ -1937,14 +1938,15 @@
     {
       "path": "/service-work-request/",
       "type": "page",
-      "status": "drop",
+      "status": "redirect",
       "seo": {
         "wpId": 2234,
         "title": "Service Work Request - Papago Vans",
         "canonical": "/service-work-request/",
         "index": "index"
       },
-      "note": "Service is a later phase; the form will be a HubSpot form."
+      "note": "The old Gravity Forms service request. Its form lives on the service page now, 2026-10-01.",
+      "to": "/service-department/"
     },
     {
       "path": "/terms-conditions/",
@@ -2131,7 +2133,8 @@
         "canonical": "/which-adventure-van-style-fits-you/",
         "index": "index"
       },
-      "to": "https://build.papagovans.com"
+      "to": "/van-conversion-build-tiers/",
+      "note": "Pointed at the build tiers page while the builder is paused, owner 2026-10-01. Was https://build.papagovans.com."
     },
     {
       "path": "/work-at-papago-vans/",

@@ -1,6 +1,6 @@
 /* What a visitor sees on a page that does not exist: say so plainly, then
    give them the four places most people were trying to reach. */
-import { BUILD_APP, SALES_PHONE, tel } from "@/lib/site";
+import { BUILD_LINK, SALES_PHONE, tel } from "@/lib/site";
 
 export function NotFoundBody() {
   return (
@@ -13,7 +13,7 @@ export function NotFoundBody() {
         </p>
         <div className="not-found-links">
           <a href="/van-life-build-gallery/" className="btn btn-outline">Recent Builds <span className="arw">&#8853;</span></a>
-          <a href={BUILD_APP} target="_blank" rel="noopener" className="btn btn-gold">Build Your Van <span className="arw">&#8853;</span></a>
+          <a href={BUILD_LINK.href} {...(BUILD_LINK.external && { target: "_blank", rel: "noopener" })} className="btn btn-gold">{BUILD_LINK.text} <span className="arw">&#8853;</span></a>
           <a href="/blog/" className="btn btn-outline">Guides <span className="arw">&#8853;</span></a>
           <a href="/" className="btn btn-outline">Home <span className="arw">&#8853;</span></a>
         </div>
