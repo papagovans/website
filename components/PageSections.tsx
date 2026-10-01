@@ -386,31 +386,24 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
     }
 
     case "buildTiers": {
-      const tiers = s.tiers ?? [];
-      const top = Math.max(...tiers.map((t) => t.price), 1);
+      const tiers = [...(s.tiers ?? [])].sort((x, y) => x.price - y.price);
+      const van = s.vanAllowance ?? 0;
+      const top = Math.max(...tiers.map((t) => t.price + van), 1);
+      const usd = (n: number) => `$${n.toLocaleString("en-US")}`;
       return (
         <section className="tiers">
           <div className="wrap">
             <h2 className="section-title">{s.heading}</h2>
             {s.intro?.split(/\n\s*\n/).map((p, i) => <p className="section-lede" key={i}>{p}</p>)}
-            <div className="tier-banners">
-              {tiers.map((t) => (
-                <Tier link={t.link} className="tier-banner" key={t.id}>
-                  <Photo m={media(t.photo)} sizes="(max-width: 1200px) 100vw, 1200px" alt="" />
-                  <span className="tier-banner-name">{t.name}</span>
-                  {t.tagline && <span className="tier-banner-tag">{t.tagline}</span>}
-                </Tier>
-              ))}
-            </div>
-            {s.priceHeading && <h2 className="section-title tiers-price-title">{s.priceHeading}</h2>}
+            {s.chassisLine && <p className="tier-chassis">{s.chassisLine}</p>}
             <ol className="tier-ladder">
-              {[...tiers].sort((a, b) => a.price - b.price).map((t) => (
+              {tiers.map((t) => (
                 <li key={t.id}>
                   <Tier link={t.link} className="tier-rung">
                     <h3>{t.name}</h3>
                     {/* ponytail: bar length is the price's share of the top tier; CSS floors it so the cheapest still fits its van */}
-                    <div className="tier-bar" style={{ "--share": t.price / top } as React.CSSProperties}>
-                      <span className="tier-price">${t.price.toLocaleString("en-US")}+</span>
+                    <div className="tier-bar" style={{ "--share": (t.price + van) / top } as React.CSSProperties}>
+                      <span className="tier-price">{usd(t.price + van)}+</span>
                       <span className="tier-van">
                         {(t.art === "olympus" || t.art === "el-capitan") && (
                           // eslint-disable-next-line @next/next/no-img-element
@@ -424,6 +417,34 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
                 </li>
               ))}
             </ol>
+            {s.priceNote && <p className="tier-note">{s.priceNote}</p>}
+            {s.cardsHeading && <h2 className="section-title tiers-cards-title">{s.cardsHeading}</h2>}
+            <div className="tier-cards">
+              {tiers.map((t) => (
+                <article className="tier-card" key={t.id} id={t.name.toLowerCase().replace(/\s+/g, "-")}>
+                  <div className="tier-card-photo">
+                    <Photo m={media(t.photo)} sizes="(max-width: 860px) 100vw, 560px" max="card" alt="" />
+                  </div>
+                  <div className="tier-card-body">
+                    {t.tagline && <p className="tier-card-tag">{t.tagline}</p>}
+                    <h3>{t.name}</h3>
+                    <p className="tier-card-price">From <strong>{usd(t.price + van)}+</strong></p>
+                    {van > 0 && <p className="tier-card-split">{usd(t.price)} build + {usd(van)} van allowance</p>}
+                    {t.summary && <p className="tier-card-copy">{t.summary}</p>}
+                    {!!t.specs?.length && (
+                      <ul className="tier-specs">
+                        {t.specs.map((x) => <li key={x.id}><strong>{x.value}</strong> {x.label}</li>)}
+                      </ul>
+                    )}
+                    {t.link ? (
+                      <a href={t.link} className="btn btn-outline">See the {t.name} <span className="arw">&#8853;</span></a>
+                    ) : (
+                      <a href={DESTINATIONS.calendar.href} target="_blank" rel="noopener" className="btn btn-outline">Ask about the {t.name} <span className="arw">&#8853;</span></a>
+                    )}
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
       );

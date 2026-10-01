@@ -691,9 +691,15 @@ export interface Page {
              * A blank line starts a new paragraph.
              */
             intro?: string | null;
-            priceHeading?: string | null;
+            chassisLine?: string | null;
             /**
-             * Banners show in this order. The price ladder sorts itself, cheapest first.
+             * Added to every tier's price, so the numbers include the van. Dollars, no commas.
+             */
+            vanAllowance?: number | null;
+            priceNote?: string | null;
+            cardsHeading?: string | null;
+            /**
+             * Shown cheapest first, whatever the order here.
              */
             tiers?:
               | {
@@ -703,16 +709,30 @@ export interface Page {
                    */
                   tagline?: string | null;
                   /**
-                   * Dollars, no commas. Shows as "$53,595+".
+                   * The conversion alone, in dollars, no commas. The van allowance is added on the page.
                    */
                   price: number;
                   /**
-                   * The floor plan page, e.g. /zion/. Leave empty and the tier is not clickable.
+                   * Two sentences at most.
+                   */
+                  summary?: string | null;
+                  specs?:
+                    | {
+                        /**
+                         * e.g. "400Ah"
+                         */
+                        value: string;
+                        /**
+                         * e.g. "Lithium battery"
+                         */
+                        label: string;
+                        id?: string | null;
+                      }[]
+                    | null;
+                  /**
+                   * The floor plan page, e.g. /zion/. Leave empty and the button books a call instead.
                    */
                   link?: string | null;
-                  /**
-                   * The banner. A wide photo, cropped to a strip.
-                   */
                   photo: number | Media;
                   art: 'rainier' | 'mckinley' | 'zion' | 'olympus' | 'el-capitan';
                   id?: string | null;
@@ -1387,13 +1407,24 @@ export interface PagesSelect<T extends boolean = true> {
           | {
               heading?: T;
               intro?: T;
-              priceHeading?: T;
+              chassisLine?: T;
+              vanAllowance?: T;
+              priceNote?: T;
+              cardsHeading?: T;
               tiers?:
                 | T
                 | {
                     name?: T;
                     tagline?: T;
                     price?: T;
+                    summary?: T;
+                    specs?:
+                      | T
+                      | {
+                          value?: T;
+                          label?: T;
+                          id?: T;
+                        };
                     link?: T;
                     photo?: T;
                     art?: T;

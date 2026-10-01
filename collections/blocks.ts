@@ -325,27 +325,63 @@ const PathCards: Block = {
   ],
 };
 
-/* The old site's Build Tiers page: a photo banner per floor plan, then the
-   same plans as a price ladder, each bar as long as its price. */
+/* The old site's Build Tiers page, laid out for a buyer comparing: a price
+   ladder to scan first, then one card per tier with its price, who it suits
+   and its headline numbers. Both run cheapest first. */
 const BuildTiers: Block = {
   slug: "buildTiers",
   labels: { singular: "Build Tiers", plural: "Build Tiers" },
   fields: [
     { name: "heading", type: "text", required: true, defaultValue: "Build Tiers" },
     { name: "intro", label: "Introduction", type: "textarea", admin: { description: "A blank line starts a new paragraph." } },
-    { name: "priceHeading", label: "Price heading", type: "text", defaultValue: "Build Tiers by Price" },
+    {
+      name: "chassisLine",
+      label: "Vans we build on",
+      type: "text",
+      defaultValue: "We build on all three: Mercedes-Benz Sprinter, Ford Transit and Ram ProMaster.",
+    },
+    {
+      name: "vanAllowance",
+      label: "Van allowance",
+      type: "number",
+      min: 0,
+      defaultValue: 75000,
+      admin: { description: "Added to every tier's price, so the numbers include the van. Dollars, no commas." },
+    },
+    {
+      name: "priceNote",
+      label: "Price note",
+      type: "textarea",
+      defaultValue:
+        "Prices include a $75,000 Mercedes-Benz Sprinter allowance as a convenience. A Ford Transit averages $57,000 and a Ram ProMaster $56,000. To keep your costs down, you buy the van direct through one of our dealers.",
+    },
+    { name: "cardsHeading", label: "Heading over the tier cards", type: "text", defaultValue: "What each tier gets you" },
     {
       name: "tiers",
       type: "array",
       minRows: 1,
       labels: { singular: "Tier", plural: "Tiers" },
-      admin: { initCollapsed: true, ...rowLabel, description: "Banners show in this order. The price ladder sorts itself, cheapest first." },
+      admin: { initCollapsed: true, ...rowLabel, description: "Shown cheapest first, whatever the order here." },
       fields: [
         { name: "name", type: "text", required: true },
         { name: "tagline", type: "text", admin: { description: 'e.g. "The Luxury Explorer".' } },
-        { name: "price", label: "Starting price", type: "number", required: true, min: 0, admin: { description: 'Dollars, no commas. Shows as "$53,595+".' } },
-        { name: "link", type: "text", admin: { description: "The floor plan page, e.g. /zion/. Leave empty and the tier is not clickable." } },
-        { name: "photo", type: "upload", relationTo: "media", required: true, admin: { description: "The banner. A wide photo, cropped to a strip." } },
+        { name: "price", label: "Build price", type: "number", required: true, min: 0, admin: { description: "The conversion alone, in dollars, no commas. The van allowance is added on the page." } },
+        { name: "summary", label: "Who it suits", type: "textarea", admin: { description: "Two sentences at most." } },
+        {
+          name: "specs",
+          label: "Headline numbers",
+          type: "array",
+          maxRows: 4,
+          labels: { singular: "Number", plural: "Numbers" },
+          fields: [
+            { type: "row", fields: [
+              { name: "value", type: "text", required: true, admin: { description: 'e.g. "400Ah"' } },
+              { name: "label", type: "text", required: true, admin: { description: 'e.g. "Lithium battery"' } },
+            ] },
+          ],
+        },
+        { name: "link", type: "text", admin: { description: "The floor plan page, e.g. /zion/. Leave empty and the button books a call instead." } },
+        { name: "photo", type: "upload", relationTo: "media", required: true },
         {
           name: "art",
           label: "Van drawing",

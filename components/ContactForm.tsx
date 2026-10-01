@@ -2,13 +2,14 @@
 /*
  * The contact form. Posts to /api/contact, which forwards to HubSpot.
  *
- * Budget and timeline only appear for a conversion: a service customer is
- * not asked about build budgets. Required is only what sales cannot work
- * without (name, email, phone, what it is about); the rest qualifies the
- * lead but does not stop anyone sending it.
+ * Two shapes. Sales (the default) asks exactly what HubSpot's "2026 New
+ * Contact Form - All Purpose" holds: name, email, phone, budget including the
+ * van (required there, so required here) and timeline. The service page
+ * (preset "service") asks what the van needs instead, and is never asked a
+ * build budget.
  */
 import { useRef, useState } from "react";
-import { BUDGETS, HEARD, INTERESTS, TIMELINES, type Interest } from "@/lib/contact";
+import { BUDGETS, HEARD, TIMELINES, type Interest } from "@/lib/contact";
 import { SALES_PHONE, SERVICE_PHONE, tel } from "@/lib/site";
 import { trackLead } from "./Tracking";
 
@@ -16,7 +17,7 @@ type State = "idle" | "sending" | "done" | "error" | "invalid";
 
 export function ContactForm({ preset }: { preset?: Interest | null }) {
   const [state, setState] = useState<State>("idle");
-  const [interest, setInterest] = useState<Interest | "">(preset ?? "");
+  const interest: Interest = preset === "service" ? "service" : "conversion";
   const [first, setFirst] = useState("");
   const opened = useRef(Date.now());
 
@@ -45,7 +46,7 @@ export function ContactForm({ preset }: { preset?: Interest | null }) {
       if (res.ok) {
         setFirst(String(data.firstname ?? ""));
         setState("done");
-        trackLead(`contact_${interest || "unknown"}`);
+        trackLead(`contact_${interest}`);
       } else setState(res.status === 400 ? "invalid" : "error");
     } catch {
       setState("error");
@@ -94,47 +95,40 @@ export function ContactForm({ preset }: { preset?: Interest | null }) {
         </label>
       </div>
 
-      <fieldset className="contact-choice">
-        <legend>What can we help with? *</legend>
-        {(Object.keys(INTERESTS) as Interest[]).map((k) => (
-          <label key={k} className={interest === k ? "is-on" : ""}>
-            <input type="radio" name="interest" value={k} required checked={interest === k} onChange={() => setInterest(k)} />
-            {INTERESTS[k].label}
-          </label>
-        ))}
-      </fieldset>
+      <input type="hidden" name="interest" value={interest} />
 
-      {interest === "conversion" && (
+      {interest === "conversion" ? (
         <div className="contact-row">
           <label className="contact-field">
-            <span>Budget, including the van</span>
-            <select name="budget" defaultValue="">
+            <span>Overall budget, including the van *</span>
+            <select name="budget" defaultValue="" required>
               <option value="" disabled>Choose a range</option>
               {BUDGETS.map((b) => <option key={b}>{b}</option>)}
             </select>
           </label>
           <label className="contact-field">
-            <span>When would you like it?</span>
+            <span>What&apos;s your timeline?</span>
             <select name="timeline" defaultValue="">
               <option value="" disabled>Choose one</option>
               {TIMELINES.map((t) => <option key={t}>{t}</option>)}
             </select>
           </label>
         </div>
+      ) : (
+        <>
+          <label className="contact-field">
+            <span>What does your van need?</span>
+            <textarea name="message" rows={5} maxLength={5000} />
+          </label>
+          <label className="contact-field contact-narrow">
+            <span>How did you find us?</span>
+            <select name="heard" defaultValue="">
+              <option value="">Choose one</option>
+              {HEARD.map((h) => <option key={h} value={h}>{h === "Youtube" ? "YouTube" : h}</option>)}
+            </select>
+          </label>
+        </>
       )}
-
-      <label className="contact-field">
-        <span>{interest === "service" ? "What does your van need?" : "Tell us about your project"}</span>
-        <textarea name="message" rows={5} maxLength={5000} />
-      </label>
-
-      <label className="contact-field contact-narrow">
-        <span>How did you find us?</span>
-        <select name="heard" defaultValue="">
-          <option value="">Choose one</option>
-          {HEARD.map((h) => <option key={h} value={h}>{h === "Youtube" ? "YouTube" : h}</option>)}
-        </select>
-      </label>
 
       <button className="btn btn-gold" type="submit" disabled={state === "sending"}>
         {state === "sending" ? "Sending…" : "Send"}
