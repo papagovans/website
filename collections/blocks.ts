@@ -248,6 +248,12 @@ const ContactFormBlock: Block = {
       admin: { description: 'Shows this HubSpot form instead: the data-form-id from its embed code, e.g. "c2d5806e-8f73-4932-a720-f10ac6dbc66a". Set "Which form" to Service request for a service form, so its leads are reported as service.' },
     },
     {
+      name: "lightCard",
+      label: "White card behind the HubSpot form",
+      type: "checkbox",
+      admin: { description: "HubSpot styles each form itself. Tick this for a form with dark text; leave it for one with white text, which sits on navy." },
+    },
+    {
       name: "anchor",
       label: "Jump link name",
       type: "text",

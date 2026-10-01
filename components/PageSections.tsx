@@ -272,7 +272,7 @@ function Narrow({ s, data }: { s: Section; data: PageData }) {
           <Heading text={s.heading} />
           {s.intro && <p className="page-p">{s.intro}</p>}
           {s.formId ? (
-            <HubSpotForm formId={s.formId.trim()} name={s.preset === "service" ? "contact_service" : "contact_conversion"} />
+            <HubSpotForm formId={s.formId.trim()} light={Boolean(s.lightCard)} name={s.preset === "service" ? "contact_service" : "contact_conversion"} />
           ) : s.preset === "service" ? (
             <ContactForm />
           ) : (

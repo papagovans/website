@@ -1286,3 +1286,4 @@ a.tier-rung:hover h3 { color: var(--blue); }
 /* HubSpot's own form (HubSpotForm.tsx). It draws inside HubSpot's iframe with
    white labels, which the site's CSS cannot reach, so it sits on navy. */
 .hubspot-form { background: var(--footer); border-radius: var(--r-md); padding: 26px 24px 34px; min-height: 420px; }
+.hubspot-form.is-light { background: #fff; border: 1px solid var(--line); }

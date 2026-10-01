@@ -441,6 +441,10 @@ export interface Page {
              */
             formId?: string | null;
             /**
+             * HubSpot styles each form itself. Tick this for a form with dark text; leave it for one with white text, which sits on navy.
+             */
+            lightCard?: boolean | null;
+            /**
              * Optional. Lets a button elsewhere scroll here: "service-department" is reached with /contact-us/#service-department. Blank is #contact-form.
              */
             anchor?: string | null;
@@ -1262,6 +1266,7 @@ export interface PagesSelect<T extends boolean = true> {
               intro?: T;
               preset?: T;
               formId?: T;
+              lightCard?: T;
               anchor?: T;
               id?: T;
               blockName?: T;
