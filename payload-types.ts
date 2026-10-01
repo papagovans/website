@@ -965,22 +965,35 @@ export interface Team {
    * As it should appear, e.g. "Jerry Suhrstedt" or just "Tim".
    */
   name: string;
-  role: string;
-  department:
-    | 'Owners'
-    | 'Administration'
-    | 'Finance'
-    | 'Sales'
-    | 'Marketing'
-    | 'Builders'
-    | 'Service Department'
-    | 'Painters'
-    | 'Inventory'
-    | 'CNC Specialists';
   /**
-   * A head-and-shoulders photo. Any shape works: it is cropped to a circle on the page.
+   * Untick when someone leaves. They come off the About page but their photo and details are kept, so ticking it again brings them back.
    */
-  photo: number | Media;
+  active?: boolean | null;
+  /**
+   * Optional. Leave blank if not known yet.
+   */
+  role?: string | null;
+  /**
+   * Optional. Anyone without one is shown in a Team row at the end.
+   */
+  department?:
+    | (
+        | 'Owners'
+        | 'Administration'
+        | 'Finance'
+        | 'Sales'
+        | 'Marketing'
+        | 'Builders'
+        | 'Service Department'
+        | 'Painters'
+        | 'Inventory'
+        | 'CNC Specialists'
+      )
+    | null;
+  /**
+   * A head-and-shoulders photo. Any shape works: it is cropped to a circle on the page. Without one, a plain blue circle shows until a photo is added.
+   */
+  photo?: (number | null) | Media;
   updatedAt: string;
   createdAt: string;
 }
@@ -1497,6 +1510,7 @@ export interface BuildsSelect<T extends boolean = true> {
 export interface TeamSelect<T extends boolean = true> {
   _order?: T;
   name?: T;
+  active?: T;
   role?: T;
   department?: T;
   photo?: T;

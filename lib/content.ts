@@ -74,7 +74,7 @@ export async function listCmsPageSlugs(): Promise<string[]> {
 
 /* Everyone on the Team list, in the order staff dragged them into. */
 export async function listTeam(): Promise<Team[]> {
-  const { docs } = await (await cms()).find({ collection: "team", sort: "_order", pagination: false, depth: 1 });
+  const { docs } = await (await cms()).find({ collection: "team", where: { active: { not_equals: false } }, sort: "_order", pagination: false, depth: 1 });
   return docs;
 }
 

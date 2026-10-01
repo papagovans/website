@@ -24,7 +24,7 @@ export const Team: CollectionConfig = {
   admin: {
     group: "Content",
     useAsTitle: "name",
-    defaultColumns: ["name", "role", "department", "photo"],
+    defaultColumns: ["name", "role", "department", "active", "photo"],
     description:
       "The people on the About page. Drag the handle on the left of a row to change the order within a department. Removing someone takes them off the page.",
     listSearchableFields: ["name", "role"],
@@ -36,19 +36,25 @@ export const Team: CollectionConfig = {
   hooks: { afterChange: [rebuildAll], afterDelete: [rebuildAll] },
   fields: [
     { name: "name", type: "text", required: true, admin: { description: "As it should appear, e.g. \"Jerry Suhrstedt\" or just \"Tim\"." } },
-    { name: "role", label: "Job title", type: "text", required: true },
+    {
+      name: "active",
+      label: "Show on the website",
+      type: "checkbox",
+      defaultValue: true,
+      admin: { position: "sidebar", description: "Untick when someone leaves. They come off the About page but their photo and details are kept, so ticking it again brings them back." },
+    },
+    { name: "role", label: "Job title", type: "text", admin: { description: "Optional. Leave blank if not known yet." } },
     {
       name: "department",
       type: "select",
-      required: true,
+      admin: { description: "Optional. Anyone without one is shown in a Team row at the end." },
       options: DEPARTMENTS.map((d) => ({ label: d, value: d })),
     },
     {
       name: "photo",
       type: "upload",
       relationTo: "media",
-      required: true,
-      admin: { description: "A head-and-shoulders photo. Any shape works: it is cropped to a circle on the page." },
+      admin: { description: "A head-and-shoulders photo. Any shape works: it is cropped to a circle on the page. Without one, a plain blue circle shows until a photo is added." },
     },
   ],
 };

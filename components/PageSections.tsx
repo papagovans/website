@@ -93,9 +93,13 @@ function TeamGroup({ dept, people, eager }: { dept: string; people: Team[]; eage
           const p = media(m.photo);
           return (
             <li className="team-card" key={m.id}>
-              <Photo m={p} sizes="200px" max="thumb" eager={eager} alt={`${m.name}, ${m.role} at Papago Vans`} />
+              {p ? (
+                <Photo m={p} sizes="200px" max="thumb" eager={eager} alt={`${m.name}${m.role ? `, ${m.role}` : ""} at Papago Vans`} />
+              ) : (
+                <div className="team-blank" aria-hidden="true" />
+              )}
               <p className="team-name">{m.name}</p>
-              <p className="team-role">{m.role}</p>
+              {m.role && <p className="team-role">{m.role}</p>}
             </li>
           );
         })}
@@ -106,7 +110,7 @@ function TeamGroup({ dept, people, eager }: { dept: string; people: Team[]; eage
 
 function TeamGrid({ team }: { team: Team[] }) {
   const byDept = new Map<string, Team[]>();
-  for (const m of team) byDept.set(m.department, [...(byDept.get(m.department) ?? []), m]);
+  for (const m of team) { const d = m.department ?? "Team"; byDept.set(d, [...(byDept.get(d) ?? []), m]); }
   const paired = TEAM_ROWS.flat();
   const rows: string[][] = [];
   /* Department order is fixed, so dragging one person never moves a whole

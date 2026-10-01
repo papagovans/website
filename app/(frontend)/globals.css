@@ -601,6 +601,8 @@ body:has(.hero-full) .hamburger span { background: #fff; }
 @media (max-width: 860px) { .team-row { grid-template-columns: 1fr !important; } }
 .team-card { text-align: center; }
 .team-card img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
+/* No photo yet: a plain blue circle the same size as a portrait. */
+.team-blank { width: 100%; max-width: 200px; aspect-ratio: 1; margin-inline: auto; border-radius: 50%; background: var(--blue); }
 .team-name {
 	margin-top: 8px; font-size: 15px; font-weight: 600; color: var(--footer);
 	text-transform: capitalize;
