@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { inter, prompt } from "@/lib/fonts";
 import "./globals.css";
-import NewsletterForm from "@/components/NewsletterForm";
+import { HubSpotForm, NEWSLETTER_FORM_ID } from "@/components/HubSpotForm";
 import { LoadedFlag } from "@/components/LoadedFlag";
 import { ScrolledFlag } from "@/components/ScrolledFlag";
 import { Tracking } from "@/components/Tracking";
@@ -164,7 +164,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <p className="kit-eyebrow">Newsletter</p>
             <h2>Let&rsquo;s Keep In Touch</h2>
             <p>Stay informed about our latest sale offers, upgrades and models.</p>
-            <NewsletterForm />
+            <div className="kit-form"><HubSpotForm formId={NEWSLETTER_FORM_ID} name="newsletter" card="none" /></div>
           </div>
         </section>
 

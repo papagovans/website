@@ -273,7 +273,7 @@ function Narrow({ s, data }: { s: Section; data: PageData }) {
           {/* ponytail: preset picks the default form; a typed form id overrides it */}
           <HubSpotForm
             formId={s.formId?.trim() || (s.preset === "service" ? SERVICE_FORM_ID : undefined)}
-            light={Boolean(s.lightCard)}
+            card={s.lightCard ? "light" : "navy"}
             name={s.preset === "service" ? "contact_service" : "contact_conversion"}
           />
         </section>

@@ -15,9 +15,11 @@ import { trackLead } from "./Tracking";
 
 export const SALES_FORM_ID = "47d8947c-38d0-4d29-82a0-a37d2873d63f"; // 2026 New Contact Form - All Purpose
 export const SERVICE_FORM_ID = "c2d5806e-8f73-4932-a720-f10ac6dbc66a"; // 2026 - Service Request
+export const NEWSLETTER_FORM_ID = "b401718b-4c7c-4c5a-8bd7-8eaa0c46baca"; // footer signup, owner 2026-10-01
 const PORTAL = "43782575";
 
-export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion", light = false }: { formId?: string; name?: string; light?: boolean }) {
+/* card: "navy" for a form styled with white text, "light" for dark text, "none" to sit on the page as-is. */
+export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion", card = "navy" }: { formId?: string; name?: string; card?: "navy" | "light" | "none" }) {
   useEffect(() => {
     /* The current embed announces a submission with a window event; older
        ones post a message. Either one counts once, and only for this form:
@@ -46,7 +48,7 @@ export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion
     <>
       <Script src={`https://js.hsforms.net/forms/embed/${PORTAL}.js`} strategy="afterInteractive" />
       {/* HubSpot sizes .hs-form-frame to its form, so padding lives on the wrapper, not on it. */}
-      <div className={light ? "hubspot-form is-light" : "hubspot-form"}>
+      <div className={card === "none" ? "hubspot-bare" : card === "light" ? "hubspot-form is-light" : "hubspot-form"}>
         <div className="hs-form-frame" data-region="na1" data-form-id={formId} data-portal-id={PORTAL} />
       </div>
     </>

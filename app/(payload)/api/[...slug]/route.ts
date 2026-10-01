@@ -1,5 +1,4 @@
-/* Payload's REST API. The site's own /api/newsletter is a static
- * segment under app/(frontend), so it wins over this catch-all. */
+/* Payload's REST API. */
 import config from "@payload-config";
 import {
   REST_DELETE,
