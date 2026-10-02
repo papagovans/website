@@ -486,6 +486,11 @@ function Narrow({ s, data }: { s: Section; data: PageData }) {
   }
 }
 
+/* First frame of each hero clip, shown on desktop until the clip plays.
+   ponytail: one hand-made file per clip (ffmpeg -frames:v 1, then cwebp);
+   a new hero video without an entry here just shows the photo first. */
+const POSTERS: Record<string, string> = { "/home/hero-drone.mp4": "/home/hero-drone-poster.webp" };
+
 const COLLAGE_COUNT = 45;
 /* Where mixed-in photos land among the small tiles: scattered through the
    rows seen first on a desktop, never two in the same column in a row. */
@@ -498,7 +503,7 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
         <section className="hero-full">
           <div className="hero-media">
             {/* LCP image: eager and high priority. Never lazy-load this. */}
-            <Photo m={media(s.image)} sizes="100vw" eager />
+            <Photo m={media(s.image)} sizes="100vw" eager desktop={s.video ? POSTERS[s.video] : undefined} />
             {s.video && (/\.(mp4|webm)(\?|$)/i.test(s.video) ? <HeroFileVideo src={s.video} /> : <HeroVideo url={s.video} />)}
           </div>
           <div className="wrap hero-full-inner">

@@ -15,6 +15,7 @@ export function Photo({
   eager = false,
   className,
   alt,
+  desktop,
 }: {
   m: Media | number | null | undefined;
   sizes: string;
@@ -22,6 +23,10 @@ export function Photo({
   eager?: boolean;
   className?: string;
   alt?: string;
+  /* A different image for desktop widths (1000px up, where HeroFileVideo
+     plays): the hero passes its video's first frame, so the video fades in
+     over the same picture instead of over a different photo. */
+  desktop?: string;
 }) {
   if (!m || typeof m !== "object" || !m.url) return null;
   const use = WIDTHS.slice(0, WIDTHS.indexOf(max) + 1);
@@ -44,6 +49,7 @@ export function Photo({
 
   return (
     <picture>
+      {desktop && <source media="(min-width: 1000px)" srcSet={desktop} />}
       {avif && <source type="image/avif" srcSet={avif} sizes={sizes} />}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
