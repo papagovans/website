@@ -47,6 +47,8 @@ const nextConfig: NextConfig = {
       // Next has already dropped the trailing slash, so it goes back on here: one hop, not two.
       { source: "/", has: [{ type: "host" as const, value: "www.papagovans.com" }], destination: "https://papagovans.com/", statusCode: 301 },
       { source: "/:path+", has: [{ type: "host" as const, value: "www.papagovans.com" }], destination: "https://papagovans.com/:path+/", statusCode: 301 },
+      // The WordPress site's Yoast sitemaps, still on file in Search Console.
+      ...["/sitemap_index.xml", "/page-sitemap.xml", "/post-sitemap.xml", "/projects-sitemap.xml", "/wp-sitemap.xml"].map((source) => ({ source, destination: "/sitemap.xml", statusCode: 301 })),
       ...live.urls
       .filter((u) => u.status === "redirect" && u.to)
       .map((u) => ({
