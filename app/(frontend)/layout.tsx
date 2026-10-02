@@ -15,9 +15,9 @@ import {
  * Shared shell, ported from the Astro mockup at go.papagovans.com/home.
  *
  * Header, newsletter band and footer live here so a second page cannot drift
- * from the first. This is staging: noindex is set both here and as a response
- * header in next.config.ts, because a copy of the marketing site on our own
- * root domain must never compete with papagovans.com in search.
+ * from the first. Search engines may index papagovans.com only: every other
+ * host (stage, previews) gets a noindex response header from next.config.ts.
+ * No robots tag here, or the live site would carry it too.
  *
  * Footer links are still href="#": those pages are not built yet. The header
  * nav points at the only two doors the site has, the configurator and the
@@ -78,7 +78,6 @@ export const metadata: Metadata = {
   title: "Arizona Campervan Conversions | Custom Vans by Papago",
   description:
     "Rugged, high-performance camper van conversions on the Mercedes-Benz Sprinter, Ford Transit and Ram ProMaster, built by hand in Mesa, Arizona.",
-  robots: { index: false, follow: false },
   icons: { icon: "/favicon.svg" },
 };
 
