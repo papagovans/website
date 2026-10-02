@@ -1884,8 +1884,8 @@
       "path": "/rainier-old/",
       "type": "page",
       "status": "redirect",
-      "to": "/rainier/",
-      "note": "Old copy of the Rainier page; the tier page is back at /rainier/, owner 2026-10-01.",
+      "to": "/van-conversion-build-tiers/",
+      "note": "Old copy of the Rainier page. Rainier removed from the line-up, owner 2026-10-02.",
       "seo": {
         "wpId": 1538,
         "title": "Rainier old Build Tier - Papago Vans",
@@ -1896,14 +1896,15 @@
     {
       "path": "/rainier/",
       "type": "page",
-      "status": "done",
+      "status": "redirect",
+      "to": "/van-conversion-build-tiers/",
       "seo": {
         "wpId": 11921,
         "title": "Rainier Camper Van Build Tier | Papago Vans",
         "canonical": "/rainier/",
         "index": "index"
       },
-      "note": "Back as a tier page, owner 2026-10-01: the site shows the old five tiers while the builder waits."
+      "note": "Rainier removed from the line-up, owner 2026-10-02. Its searchers land on the four tiers."
     },
     {
       "path": "/ram-promaster/",

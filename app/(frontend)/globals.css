@@ -1255,7 +1255,7 @@ a.tier-rung:hover h3 { color: var(--blue); }
 .hubspot-form.is-light { background: #fff; border: 1px solid var(--line); }
 
 /* ==========================================================================
-   Tier pages (Rainier, McKinley, Zion, Olympus, El Capitan), owner 2026-10-01:
+   Tier pages (McKinley, Zion, Olympus, El Capitan), owner 2026-10-01:
    the old site's order, in this site's type and colour.
    ========================================================================== */
 .tabs-list { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }

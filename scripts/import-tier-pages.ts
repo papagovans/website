@@ -36,7 +36,7 @@ type Live = {
 type Node = { type: string; tag?: string; text?: string; children?: Node[] };
 
 const TIERS = [
-  { old: "rainier", slug: "rainier", name: "Rainier", tagline: "The Weekend Warrior", price: 53595 },
+  // Rainier was here; removed from the line-up, owner 2026-10-02. Do not re-add.
   { old: "mammoth", slug: "mckinley", name: "McKinley", tagline: "The Happy Camper", price: 69295 },
   { old: "zion", slug: "zion", name: "Zion", tagline: "The Adventure Seeker", price: 86795 },
   { old: "olympus", slug: "olympus", name: "Olympus", tagline: "The Traveling Nomad", price: 108595 },
