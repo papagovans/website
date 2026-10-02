@@ -44,7 +44,9 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       // One address for search engines: www goes to papagovans.com.
-      { source: "/:path*", has: [{ type: "host" as const, value: "www.papagovans.com" }], destination: "https://papagovans.com/:path*", statusCode: 301 },
+      // Next has already dropped the trailing slash, so it goes back on here: one hop, not two.
+      { source: "/", has: [{ type: "host" as const, value: "www.papagovans.com" }], destination: "https://papagovans.com/", statusCode: 301 },
+      { source: "/:path+", has: [{ type: "host" as const, value: "www.papagovans.com" }], destination: "https://papagovans.com/:path+/", statusCode: 301 },
       ...live.urls
       .filter((u) => u.status === "redirect" && u.to)
       .map((u) => ({
