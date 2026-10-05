@@ -4,7 +4,7 @@ import "./globals.css";
 import { HubSpotForm, NEWSLETTER_FORM_ID } from "@/components/HubSpotForm";
 import { LoadedFlag } from "@/components/LoadedFlag";
 import { ScrolledFlag } from "@/components/ScrolledFlag";
-import { Tracking } from "@/components/Tracking";
+import { GtmBody, GtmHead, Tracking } from "@/components/Tracking";
 import { MobileMenu } from "@/components/MobileMenu";
 import {
   SALES_PHONE, SERVICE_PHONE, EMAIL, ADDRESS_LINE1, ADDRESS_LINE2,
@@ -83,7 +83,11 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${prompt.variable}`}>
+      <head>
+        <GtmHead />
+      </head>
       <body>
+        <GtmBody />
         <LoadedFlag />
         <ScrolledFlag />
         <Tracking />
