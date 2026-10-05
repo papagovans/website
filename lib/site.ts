@@ -14,7 +14,9 @@ export const ADDRESS_LINE1 = "751 N Country Club Dr";
 export const ADDRESS_LINE2 = "Mesa, AZ 85201";
 export const MAP_URL =
   "https://maps.google.com/?q=751+N+Country+Club+Dr,+Mesa,+AZ+85201";
-export const CALENDAR_URL = "https://calendly.com/jeremy-papago/30min";
+/* Jeremy's HubSpot scheduling page, "Custom Van Build Consultation" (owner
+   2026-10-05: HubSpot only, no Calendly). Bookings land on the contact in HubSpot. */
+export const CALENDAR_URL = "https://meetings.hubspot.com/jeremy-piccirillo";
 /* The live site. Search engines may crawl only these hosts (app/robots.ts,
    next.config.ts); every other host, staging included, is noindex. */
 export const SITE_URL = "https://papagovans.com";
