@@ -19,10 +19,10 @@ export const SERVICE_FORM_ID = "c2d5806e-8f73-4932-a720-f10ac6dbc66a"; // 2026 -
 export const NEWSLETTER_FORM_ID = "b401718b-4c7c-4c5a-8bd7-8eaa0c46baca"; // footer signup, owner 2026-10-01
 const PORTAL = "43782575";
 
-/* Owner 2026-10-05: a buyer who picks $170K or more on the sales form is
-   offered Jeremy's calendar right away; everyone else goes to an SDR.
-   Stored values, not labels: "$170K - $200K" and "$200K+". */
-export const wantsCalendar = (budget: unknown) => /^\$(170|200)K/.test(String(budget ?? ""));
+/* Owner 2026-10-05: a buyer who picks $190K or more on the sales form is
+   offered Jeremy's calendar right away; $170K - $190K goes to an SDR.
+   Stored values: "$170K - $190K", "$190K - $220K", "$220K - $260K", "$260K+". */
+export const wantsCalendar = (budget: unknown) => /^\$(190|220|260)K/.test(String(budget ?? ""));
 type HsForm = { getFormId?: () => string; getFormFieldValues?: () => Promise<{ name: string; value: unknown }[]> };
 
 /* card: "navy" for a form styled with white text, "light" for dark text, "none" to sit on the page as-is. */
