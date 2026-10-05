@@ -1383,3 +1383,24 @@ video.hero-file { top: 0; left: 0; width: 100%; height: 100%; transform: none; o
 .book-jeremy h3 { margin: 0 0 8px; }
 .book-jeremy p { margin: 0 0 12px; color: var(--muted); }
 .book-jeremy .meetings-iframe-container { min-height: 640px; }
+
+/* Hero with a HubSpot form beside the words: the "Which Build Fits You?" quiz, owner 2026-10-05. */
+.hero-has-form .hero-full-inner { display: grid; gap: 32px; padding-top: 120px; padding-bottom: 56px; }
+.hero-has-form .hero-form { color: var(--ink); }
+@media (min-width: 1000px) {
+	.hero-full.hero-has-form { align-items: center; }
+	.hero-has-form .hero-full-inner { grid-template-columns: 1fr minmax(0, 520px); align-items: center; gap: 56px; padding-bottom: 72px; }
+	.hero-has-form .hero-full-inner > h1, .hero-has-form .hero-full-inner > p { grid-column: 1; }
+	.hero-has-form .hero-form { grid-column: 2; grid-row: 1 / span 2; }
+}
+.hero-has-form .hubspot-form { min-height: 380px; }
+.quiz-match { margin-top: 20px; padding: 26px 24px; background: #fff; border: 1px solid var(--line); border-radius: var(--r-md); scroll-margin-top: 90px; }
+.quiz-match .quiz-match-kicker { margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); }
+.quiz-match h3 { margin: 6px 0 2px; font-size: 34px; }
+.quiz-match p { margin: 8px 0 0; font-size: 16px; color: var(--ink); }
+.quiz-match .quiz-match-tagline { color: var(--muted); margin-top: 0; }
+.quiz-match-ctas { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 12px; }
+@media (max-width: 999px) {
+	.hero-has-form .hero-full-inner { gap: 20px; }
+	.hero-has-form .hubspot-form { padding: 8px 4px 12px; }
+}

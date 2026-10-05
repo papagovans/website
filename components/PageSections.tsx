@@ -10,7 +10,7 @@ import type { ProjectCard, TierLink } from "@/lib/content";
 import { DESTINATIONS, type Destination } from "@/lib/site";
 import type { Media, Page, Team } from "@/payload-types";
 import { HeroFileVideo, HeroVideo } from "./HeroVideo";
-import { HubSpotForm, SERVICE_FORM_ID } from "./HubSpotForm";
+import { HubSpotForm, QUIZ_FORM_ID, SERVICE_FORM_ID } from "./HubSpotForm";
 import { LoopVideo } from "./LoopVideo";
 import { PopUp } from "./PopUp";
 import { Photo } from "./Photo";
@@ -500,7 +500,7 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
   switch (s.blockType) {
     case "hero":
       return (
-        <section className="hero-full">
+        <section className={s.formId ? "hero-full hero-has-form" : "hero-full"}>
           <div className="hero-media">
             {/* LCP image: eager and high priority. Never lazy-load this. */}
             <Photo m={media(s.image)} sizes="100vw" eager desktop={s.video ? POSTERS[s.video] : undefined} />
@@ -513,10 +513,16 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
               ))}
             </h1>
             {s.text && <p>{s.text}</p>}
-            <div className="hero-full-ctas">
-              <Button d={s.button} className="btn btn-gold" />
-              <Button d={s.secondButton} className="btn btn-ghost" />
-            </div>
+            {s.formId ? (
+              <div className="hero-form">
+                <HubSpotForm formId={s.formId.trim()} card="light" name={s.formId.trim() === QUIZ_FORM_ID ? "quiz_conversion" : "contact_conversion"} tiers={data.tiers.map(({ path, name, tagline, total }) => ({ path, name, tagline, total }))} />
+              </div>
+            ) : (
+              <div className="hero-full-ctas">
+                <Button d={s.button} className="btn btn-gold" />
+                <Button d={s.secondButton} className="btn btn-ghost" />
+              </div>
+            )}
           </div>
         </section>
       );

@@ -466,8 +466,12 @@ export interface Page {
              * A YouTube link, or the address of a short .mp4 clip (desktop only, under 20 seconds and a few MB). It plays silently on a loop behind the words; the photo shows while it loads, and on phones for a clip.
              */
             video?: string | null;
-            button: {
-              to: 'calendar' | 'sales' | 'service' | 'email' | 'map' | 'builder' | 'custom';
+            /**
+             * The data-form-id from a HubSpot embed code. The form sits in a white card to the right of the heading, and the buttons are hidden. The "2026 - Which Build Fits You" quiz (d85f2b90-5a81-49c9-8972-a55b714287fe) also shows the buyer their matching build tier when they finish.
+             */
+            formId?: string | null;
+            button?: {
+              to?: ('calendar' | 'sales' | 'service' | 'email' | 'map' | 'builder' | 'custom') | null;
               /**
                * A page on this site like /financing/, or a full address like https://...
                */
@@ -1383,6 +1387,7 @@ export interface PagesSelect<T extends boolean = true> {
               heading?: T;
               text?: T;
               video?: T;
+              formId?: T;
               button?:
                 | T
                 | {

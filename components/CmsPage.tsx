@@ -13,7 +13,7 @@ export async function CmsPage({ page, path }: { page: Page; path: string }) {
   const [projects, team, tiers] = await Promise.all([
     needs(page, "photoWall", "buildGallery", "tierPage") || text.includes("{builds}") ? listProjectCards() : [],
     needs(page, "team") || text.includes("{team}") ? listTeam() : [],
-    needs(page, "tierPage") ? listTierLinks() : [],
+    needs(page, "tierPage") || (page.sections ?? []).some((s) => s.blockType === "hero" && s.formId) ? listTierLinks() : [],
   ]);
   const data: PageData = {
     projects,

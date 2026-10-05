@@ -289,7 +289,13 @@ const Hero: Block = {
       type: "text",
       admin: { description: "A YouTube link, or the address of a short .mp4 clip (desktop only, under 20 seconds and a few MB). It plays silently on a loop behind the words; the photo shows while it loads, and on phones for a clip." },
     },
-    destination("button", "Button", true),
+    {
+      name: "formId",
+      label: "HubSpot form beside the words (optional)",
+      type: "text",
+      admin: { description: 'The data-form-id from a HubSpot embed code. The form sits in a white card to the right of the heading, and the buttons are hidden. The "2026 - Which Build Fits You" quiz (d85f2b90-5a81-49c9-8972-a55b714287fe) also shows the buyer their matching build tier when they finish.' },
+    },
+    destination("button", "Button"),
     destination("secondButton", "Second button (optional, outlined)"),
   ],
 };

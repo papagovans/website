@@ -17,6 +17,7 @@ import { CALENDAR_URL } from "@/lib/site";
 export const SALES_FORM_ID = "47d8947c-38d0-4d29-82a0-a37d2873d63f"; // 2026 New Contact Form - All Purpose
 export const SERVICE_FORM_ID = "c2d5806e-8f73-4932-a720-f10ac6dbc66a"; // 2026 - Service Request
 export const NEWSLETTER_FORM_ID = "b401718b-4c7c-4c5a-8bd7-8eaa0c46baca"; // footer signup, owner 2026-10-01
+export const QUIZ_FORM_ID = "d85f2b90-5a81-49c9-8972-a55b714287fe"; // 2026 - Which Build Fits You, owner 2026-10-05
 const PORTAL = "43782575";
 
 /* Owner 2026-10-05: a buyer who picks $190K or more on the sales form is
@@ -25,20 +26,37 @@ const PORTAL = "43782575";
 export const wantsCalendar = (budget: unknown) => /^\$(190|220|260)K/.test(String(budget ?? ""));
 type HsForm = { getFormId?: () => string; getFormFieldValues?: () => Promise<{ name: string; value: unknown }[]> };
 
+/* The quiz's match: the dearest tier whose price, van included, fits under
+   the top of the budget they picked. Tiers come in cheapest first.
+   ponytail: budget only, on the Sprinter allowance; add travel style or
+   must-haves when the shop says which tier each one points to. */
+const BUDGET_TOP: Record<string, number> = { "$170K - $190K": 190000, "$190K - $220K": 220000, "$220K - $260K": 260000, "$260K+": Infinity };
+export type QuizTier = { path: string; name: string; tagline: string; total: number };
+export const matchTier = (tiers: QuizTier[], budget: unknown) => tiers.filter((t) => t.total <= (BUDGET_TOP[String(budget)] ?? 0)).pop() ?? tiers[0];
+
 /* card: "navy" for a form styled with white text, "light" for dark text, "none" to sit on the page as-is. */
-export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion", card = "navy" }: { formId?: string; name?: string; card?: "navy" | "light" | "none" }) {
+export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion", card = "navy", tiers = [] }: { formId?: string; name?: string; card?: "navy" | "light" | "none"; tiers?: QuizTier[] }) {
+  const [calendar, setCalendar] = useState(false);
+  const [match, setMatch] = useState<QuizTier>();
   useEffect(() => {
     /* The current embed announces a submission with a window event; older
        ones post a message. Either one counts once, and only for this form:
        a page can carry two (Contact Us has sales and service). */
     let sent = false;
     const lead = (e?: Event) => {
-      const forms = (window as unknown as { HubSpotFormsV4?: { getFormFromEvent?: (e: Event) => { getFormId?: () => string } } }).HubSpotFormsV4;
-      const id = e ? forms?.getFormFromEvent?.(e)?.getFormId?.() : formId;
+      const forms = (window as unknown as { HubSpotFormsV4?: { getFormFromEvent?: (e: Event) => HsForm } }).HubSpotFormsV4;
+      const form = e ? forms?.getFormFromEvent?.(e) : undefined;
+      const id = e ? form?.getFormId?.() : formId;
       if (id ? id !== formId : document.querySelectorAll(".hs-form-frame").length > 1) return;
       if (sent) return;
       sent = true;
       trackLead(name);
+      if (formId === SALES_FORM_ID || formId === QUIZ_FORM_ID)
+        form?.getFormFieldValues?.().then((v) => {
+          const budget = v.find((f) => f.name.endsWith("/budget_including_the_van"))?.value;
+          if (formId === QUIZ_FORM_ID && tiers.length) setMatch(matchTier(tiers, budget));
+          if (wantsCalendar(budget)) setCalendar(true);
+        }).catch(() => {});
     };
     const onMessage = (e: MessageEvent) => {
       if (e.data?.type === "hsFormCallback" && e.data?.eventName === "onFormSubmitted" && e.data?.id === formId) lead();
@@ -49,7 +67,7 @@ export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion
       window.removeEventListener("hs-form-event:on-submission:success", lead);
       window.removeEventListener("message", onMessage);
     };
-  }, [formId, name]);
+  }, [formId, name, tiers]);
 
   return (
     <>
@@ -58,22 +76,41 @@ export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion
       <div className={card === "none" ? "hubspot-bare" : card === "light" ? "hubspot-form is-light" : "hubspot-form"}>
         <div className="hs-form-frame" data-region="na1" data-form-id={formId} data-portal-id={PORTAL} />
       </div>
+      {match && <QuizMatch t={match} />}
+      {calendar && <BookJeremy scroll={!match} />}
     </>
+  );
+}
+
+function QuizMatch({ t }: { t: QuizTier }) {
+  const box = useRef<HTMLDivElement>(null);
+  useEffect(() => box.current?.scrollIntoView({ behavior: "smooth", block: "start" }), []);
+  return (
+    <div className="quiz-match" ref={box}>
+      <p className="quiz-match-kicker">Your build match</p>
+      <h3>{t.name}</h3>
+      {t.tagline && <p className="quiz-match-tagline">{t.tagline}</p>}
+      <p>Starts at <strong>${t.total.toLocaleString("en-US")}</strong>, van included.</p>
+      <div className="quiz-match-ctas">
+        <a href={t.path} className="btn btn-gold">See the {t.name} <span className="arw">&#8853;</span></a>
+        <a href="/van-conversion-build-tiers/" className="btn btn-outline">Compare All Tiers</a>
+      </div>
+    </div>
   );
 }
 
 /* HubSpot's meetings embed. Its script scans for the container when it loads,
    so it is added after the container renders. No contact details ride in the
    URL; HubSpot recognises the visitor from its own cookie. */
-export function BookJeremy() {
+export function BookJeremy({ scroll = true }: { scroll?: boolean }) {
   const box = useRef<HTMLDivElement>(null);
   useEffect(() => {
-    box.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    if (scroll) box.current?.scrollIntoView({ behavior: "smooth", block: "start" });
     const s = document.createElement("script");
     s.src = "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js";
     document.body.appendChild(s);
     return () => s.remove();
-  }, []);
+  }, [scroll]);
   return (
     <div className="book-jeremy" ref={box}>
       <h3>Skip the Wait. Book Your Call With Jeremy.</h3>
