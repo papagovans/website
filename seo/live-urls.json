@@ -2254,6 +2254,13 @@
       "status": "redirect",
       "to": "/blog/6-reasons-to-use-havelock-wool-in-a-van-conversion/",
       "note": "Linked from old content or redirected by papagovans.com, found in the 2026-09-26 old-vs-new audit. Chains flattened to one hop."
+    },
+    {
+      "path": "/buy-a-camper-van/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/van-conversion-build-tiers/",
+      "note": "Old WordPress redirect (to /build-tiers/) never captured; a Google Ads sitelink 'Buy A Van' pointed here and was disapproved for 404, 2026-10-05."
     }
   ],
   "enriched": "2026-09-24"
