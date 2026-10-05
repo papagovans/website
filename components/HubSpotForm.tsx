@@ -10,13 +10,20 @@
  * event the site's own form sent, so nothing downstream has to change.
  */
 import Script from "next/script";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { trackLead } from "./Tracking";
+import { CALENDAR_URL } from "@/lib/site";
 
 export const SALES_FORM_ID = "47d8947c-38d0-4d29-82a0-a37d2873d63f"; // 2026 New Contact Form - All Purpose
 export const SERVICE_FORM_ID = "c2d5806e-8f73-4932-a720-f10ac6dbc66a"; // 2026 - Service Request
 export const NEWSLETTER_FORM_ID = "b401718b-4c7c-4c5a-8bd7-8eaa0c46baca"; // footer signup, owner 2026-10-01
 const PORTAL = "43782575";
+
+/* Owner 2026-10-05: a buyer who picks $170K or more on the sales form is
+   offered Jeremy's calendar right away; everyone else goes to an SDR.
+   Stored values, not labels: "$170K - $200K" and "$200K+". */
+export const wantsCalendar = (budget: unknown) => /^\$(170|200)K/.test(String(budget ?? ""));
+type HsForm = { getFormId?: () => string; getFormFieldValues?: () => Promise<{ name: string; value: unknown }[]> };
 
 /* card: "navy" for a form styled with white text, "light" for dark text, "none" to sit on the page as-is. */
 export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion", card = "navy" }: { formId?: string; name?: string; card?: "navy" | "light" | "none" }) {
@@ -52,5 +59,26 @@ export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion
         <div className="hs-form-frame" data-region="na1" data-form-id={formId} data-portal-id={PORTAL} />
       </div>
     </>
+  );
+}
+
+/* HubSpot's meetings embed. Its script scans for the container when it loads,
+   so it is added after the container renders. No contact details ride in the
+   URL; HubSpot recognises the visitor from its own cookie. */
+export function BookJeremy() {
+  const box = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    box.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const s = document.createElement("script");
+    s.src = "https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js";
+    document.body.appendChild(s);
+    return () => s.remove();
+  }, []);
+  return (
+    <div className="book-jeremy" ref={box}>
+      <h3>Skip the Wait. Book Your Call With Jeremy.</h3>
+      <p>Jeremy runs sales at Papago. Pick a time that works and he will call you to talk through your build, your budget and your timing.</p>
+      <div className="meetings-iframe-container" data-src={`${CALENDAR_URL}?embed=true`} />
+    </div>
   );
 }
