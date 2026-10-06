@@ -244,6 +244,8 @@ export default function ExploreTheVan() {
     let frameId = 0;
     const check = () => {
       frameId = 0;
+      // The script loads after this effect; the "load" listener reruns the check once it has.
+      if (typeof el.queryHotspot !== "function") return;
       const box = el.getBoundingClientRect();
       for (const f of FEATURES) {
         if (!("hideBehindWalls" in f)) continue;
