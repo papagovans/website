@@ -300,6 +300,31 @@ const Hero: Block = {
   ],
 };
 
+/* The quiz's front door on the home page, owner 2026-10-06: question one is
+   asked right here, and an answer opens the quiz with it already ticked. */
+const QuizStart: Block = {
+  slug: "quizStart",
+  labels: { singular: "Quiz Starter", plural: "Quiz Starters" },
+  fields: [
+    { name: "eyebrow", label: "Small label above the heading", type: "text" },
+    { name: "heading", type: "text", required: true },
+    { name: "text", type: "textarea" },
+    {
+      name: "points",
+      label: "Check marks",
+      type: "array",
+      maxRows: 4,
+      fields: [{ name: "text", type: "text", required: true }],
+    },
+    {
+      name: "anchor",
+      label: "Jump link name",
+      type: "text",
+      admin: { description: 'Lets a button elsewhere scroll here, e.g. "which-build" is reached with /#which-build.' },
+    },
+  ],
+};
+
 const PathCards: Block = {
   slug: "pathCards",
   labels: { singular: "Pricing Cards", plural: "Pricing Cards" },
@@ -702,9 +727,9 @@ const BuildGallery: Block = {
 };
 
 /* The renderer groups consecutive content sections into one reading column. */
-export const WIDE = new Set(["hero", "photoShowcase", "pathCards", "vanTour", "imageText", "photoWall", "testimonials", "buildGallery", "buildTiers", "tierPage", "logoStrip"]);
+export const WIDE = new Set(["hero", "photoShowcase", "pathCards", "quizStart", "vanTour", "imageText", "photoWall", "testimonials", "buildGallery", "buildTiers", "tierPage", "logoStrip"]);
 
 export const blocks = [
   Text, Cards, Steps, Faq, Checklist, Note, PriceBox, Team, Timeline, Cta, ContactFormBlock,
-  Hero, PhotoShowcase, PathCards, VanTour, ImageText, PhotoWall, Testimonials, BuildGallery, BuildTiers, TierPage, LogoStrip,
+  Hero, PhotoShowcase, PathCards, QuizStart, VanTour, ImageText, PhotoWall, Testimonials, BuildGallery, BuildTiers, TierPage, LogoStrip,
 ];

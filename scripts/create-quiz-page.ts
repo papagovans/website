@@ -12,7 +12,7 @@ const { loadEnvConfig } = createRequire(import.meta.url)("@next/env");
 loadEnvConfig(process.cwd());
 const { getPayload } = await import("payload");
 const { default: config } = await import("../payload.config.ts");
-const { QUIZ_FORM_ID } = await import("../components/HubSpotForm.tsx");
+const { QUIZ_FORM_ID } = await import("../lib/site.ts");
 
 const payload = await getPayload({ config });
 const SLUG = "which-build-fits-you";

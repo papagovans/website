@@ -10,7 +10,8 @@ import type { ProjectCard, TierLink } from "@/lib/content";
 import { DESTINATIONS, type Destination } from "@/lib/site";
 import type { Media, Page, Team } from "@/payload-types";
 import { HeroFileVideo, HeroVideo } from "./HeroVideo";
-import { HubSpotForm, QUIZ_FORM_ID, SERVICE_FORM_ID } from "./HubSpotForm";
+import { HubSpotForm, SERVICE_FORM_ID } from "./HubSpotForm";
+import { QUIZ_FORM_ID, QUIZ_PATH, QUIZ_VANS } from "@/lib/site";
 import { LoopVideo } from "./LoopVideo";
 import { PopUp } from "./PopUp";
 import { Photo } from "./Photo";
@@ -671,6 +672,34 @@ function Wide({ s, data }: { s: Section; data: PageData }) {
 
     case "tierPage":
       return <TierPage s={s} data={data} />;
+
+    case "quizStart":
+      return (
+        <section className="quiz-start" id={s.anchor || undefined}>
+          <div className="wrap quiz-start-grid">
+            <div className="quiz-start-copy">
+              {s.eyebrow && <p className="quiz-start-eyebrow">{s.eyebrow}</p>}
+              <h2>{s.heading}</h2>
+              {s.text && <p>{s.text}</p>}
+              {s.points && s.points.length > 0 && (
+                <ul className="quiz-start-points">
+                  {s.points.map((p) => <li key={p.id}>{p.text}</li>)}
+                </ul>
+              )}
+            </div>
+            <div className="quiz-start-card">
+              <p className="quiz-start-step">Question 1 of 8</p>
+              <h3>Which van do you want to build on?</h3>
+              <div className="quiz-start-answers">
+                {QUIZ_VANS.map(([key, label]) => (
+                  <a key={key} href={`${QUIZ_PATH}?van=${key}`} className="quiz-start-answer">{label} <span className="arw">&#8853;</span></a>
+                ))}
+              </div>
+              <p className="quiz-start-note">Seven more quick ones after this. Your matching build shows up at the end.</p>
+            </div>
+          </div>
+        </section>
+      );
 
     case "pathCards":
       return (

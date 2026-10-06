@@ -17,6 +17,17 @@ export const MAP_URL =
 /* Jeremy's HubSpot scheduling page, "Custom Van Build Consultation" (owner
    2026-10-05: HubSpot only, no Calendly). Bookings land on the contact in HubSpot. */
 export const CALENDAR_URL = "https://meetings.hubspot.com/jeremy-piccirillo";
+/* The "Which Build Fits You?" quiz page. Question one is also asked on the
+   home page (Quiz Starter): ?van=<key> on the quiz page ticks the answer. The
+   value must be HubSpot's stored value for van_options. */
+export const QUIZ_FORM_ID = "d85f2b90-5a81-49c9-8972-a55b714287fe"; // HubSpot "2026 - Which Build Fits You", owner 2026-10-05
+export const QUIZ_PATH = "/which-build-fits-you/";
+export const QUIZ_VANS: [key: string, label: string, value: string][] = [
+  ["sprinter", "Mercedes Sprinter", "Mercedes Sprinter"],
+  ["transit", "Ford Transit", "Ford Transit"],
+  ["promaster", "Ram ProMaster", "RAM Promaster"],
+  ["unsure", "Not sure yet", "I'm Not Sure Yet!"],
+];
 /* The live site. Search engines may crawl only these hosts (app/robots.ts,
    next.config.ts); every other host, staging included, is noindex. */
 export const SITE_URL = "https://papagovans.com";

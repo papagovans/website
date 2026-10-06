@@ -12,12 +12,12 @@
 import Script from "next/script";
 import { useEffect, useRef, useState } from "react";
 import { trackLead } from "./Tracking";
-import { CALENDAR_URL } from "@/lib/site";
+import { CALENDAR_URL, QUIZ_FORM_ID, QUIZ_VANS } from "@/lib/site";
+export { QUIZ_FORM_ID };
 
 export const SALES_FORM_ID = "47d8947c-38d0-4d29-82a0-a37d2873d63f"; // 2026 New Contact Form - All Purpose
 export const SERVICE_FORM_ID = "c2d5806e-8f73-4932-a720-f10ac6dbc66a"; // 2026 - Service Request
 export const NEWSLETTER_FORM_ID = "b401718b-4c7c-4c5a-8bd7-8eaa0c46baca"; // footer signup, owner 2026-10-01
-export const QUIZ_FORM_ID = "d85f2b90-5a81-49c9-8972-a55b714287fe"; // 2026 - Which Build Fits You, owner 2026-10-05
 const PORTAL = "43782575";
 
 /* Owner 2026-10-05: a buyer who picks $190K or more on the sales form is
@@ -58,6 +58,13 @@ export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion
           if (wantsCalendar(budget)) setCalendar(true);
         }).catch(() => {});
     };
+    /* An answer picked on the home page arrives as ?van=; tick it once the form is up. */
+    const ready = (e: Event) => {
+      const form = (window as unknown as { HubSpotFormsV4?: { getFormFromEvent?: (e: Event) => HsForm & { setFieldValue?: (name: string, value: string) => void } } }).HubSpotFormsV4?.getFormFromEvent?.(e);
+      const van = QUIZ_VANS.find(([key]) => key === new URLSearchParams(location.search).get("van"));
+      if (formId === QUIZ_FORM_ID && form?.getFormId?.() === QUIZ_FORM_ID && van) form.setFieldValue?.("0-1/van_options", van[2]);
+    };
+    window.addEventListener("hs-form-event:on-ready", ready);
     const onMessage = (e: MessageEvent) => {
       if (e.data?.type === "hsFormCallback" && e.data?.eventName === "onFormSubmitted" && e.data?.id === formId) lead();
     };
@@ -65,6 +72,7 @@ export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion
     window.addEventListener("message", onMessage);
     return () => {
       window.removeEventListener("hs-form-event:on-submission:success", lead);
+      window.removeEventListener("hs-form-event:on-ready", ready);
       window.removeEventListener("message", onMessage);
     };
   }, [formId, name, tiers]);

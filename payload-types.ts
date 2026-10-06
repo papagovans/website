@@ -594,6 +594,24 @@ export interface Page {
             blockType: 'pathCards';
           }
         | {
+            eyebrow?: string | null;
+            heading: string;
+            text?: string | null;
+            points?:
+              | {
+                  text: string;
+                  id?: string | null;
+                }[]
+              | null;
+            /**
+             * Lets a button elsewhere scroll here, e.g. "which-build" is reached with /#which-build.
+             */
+            anchor?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'quizStart';
+          }
+        | {
             heading: string;
             intro?: string | null;
             button?: {
@@ -1452,6 +1470,22 @@ export interface PagesSelect<T extends boolean = true> {
                     flag?: T;
                     id?: T;
                   };
+              id?: T;
+              blockName?: T;
+            };
+        quizStart?:
+          | T
+          | {
+              eyebrow?: T;
+              heading?: T;
+              text?: T;
+              points?:
+                | T
+                | {
+                    text?: T;
+                    id?: T;
+                  };
+              anchor?: T;
               id?: T;
               blockName?: T;
             };
