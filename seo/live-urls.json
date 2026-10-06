@@ -1987,8 +1987,9 @@
     {
       "path": "/thank-you-landing-pages/",
       "type": "page",
-      "status": "drop",
-      "note": "Form confirmation.",
+      "status": "redirect",
+      "to": "https://go.papagovans.com/thank-you",
+      "note": "Two HubSpot forms still sent visitors here after submitting; the redirect was removed 2026-10-06 and this catches any old copy of the form. The landing pages' thank-you shows Jeremy's calendar.",
       "seo": {
         "wpId": 19268,
         "title": "Thank you - Landing Pages - Papago Vans",

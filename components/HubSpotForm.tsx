@@ -20,10 +20,8 @@ export const SERVICE_FORM_ID = "c2d5806e-8f73-4932-a720-f10ac6dbc66a"; // 2026 -
 export const NEWSLETTER_FORM_ID = "b401718b-4c7c-4c5a-8bd7-8eaa0c46baca"; // footer signup, owner 2026-10-01
 const PORTAL = "43782575";
 
-/* Owner 2026-10-05: a buyer who picks $190K or more on the sales form is
-   offered Jeremy's calendar right away; $170K - $190K goes to an SDR.
-   Stored values: "$170K - $190K", "$190K - $220K", "$220K - $260K", "$260K+". */
-export const wantsCalendar = (budget: unknown) => /^\$(190|220|260)K/.test(String(budget ?? ""));
+/* Owner 2026-10-06: everyone who sends the sales form or the quiz is offered
+   Jeremy's calendar right away (it was $190K and up from 10-05). */
 type HsForm = { getFormId?: () => string; getFormFieldValues?: () => Promise<{ name: string; value: unknown }[]> };
 
 /* The quiz's match: the dearest tier whose price, van included, fits under
@@ -51,11 +49,10 @@ export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion
       if (sent) return;
       sent = true;
       trackLead(name);
-      if (formId === SALES_FORM_ID || formId === QUIZ_FORM_ID)
+      if (formId === SALES_FORM_ID || formId === QUIZ_FORM_ID) setCalendar(true);
+      if (formId === QUIZ_FORM_ID && tiers.length)
         form?.getFormFieldValues?.().then((v) => {
-          const budget = v.find((f) => f.name.endsWith("/budget_including_the_van"))?.value;
-          if (formId === QUIZ_FORM_ID && tiers.length) setMatch(matchTier(tiers, budget));
-          if (wantsCalendar(budget)) setCalendar(true);
+          setMatch(matchTier(tiers, v.find((f) => f.name.endsWith("/budget_including_the_van"))?.value));
         }).catch(() => {});
     };
     /* An answer picked on the home page arrives as ?van=; tick it once the form is up. */
