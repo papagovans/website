@@ -1423,3 +1423,5 @@ video.hero-file { top: 0; left: 0; width: 100%; height: 100%; transform: none; o
 .quiz-start-answer:hover, .quiz-start-answer:focus-visible { border-color: var(--gold); background: var(--soft); }
 .quiz-start-answer .arw { color: var(--gold-deep); }
 .quiz-start-note { margin-top: 16px; font-size: 14px; color: var(--muted); }
+/* Straight under a hero (Build Tiers page) the navy band sits flush, no strip of page between. */
+.hero-full + .quiz-start { margin-top: 0; }
