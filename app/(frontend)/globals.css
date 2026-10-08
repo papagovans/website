@@ -1425,3 +1425,5 @@ video.hero-file { top: 0; left: 0; width: 100%; height: 100%; transform: none; o
 .quiz-start-note { margin-top: 16px; font-size: 14px; color: var(--muted); }
 /* Straight under a hero (Build Tiers page) the navy band sits flush, no strip of page between. */
 .hero-full + .quiz-start { margin-top: 0; }
+/* A card ticked "Full width" in the CMS spans both columns (Contact Us: Sales & Service). */
+.cards > .card.is-wide { grid-column: 1 / -1; }

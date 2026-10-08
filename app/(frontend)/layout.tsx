@@ -7,7 +7,7 @@ import { ScrolledFlag } from "@/components/ScrolledFlag";
 import { GtmBody, GtmHead, Tracking } from "@/components/Tracking";
 import { MobileMenu } from "@/components/MobileMenu";
 import {
-  SALES_PHONE, SERVICE_PHONE, EMAIL, ADDRESS_LINE1, ADDRESS_LINE2,
+  SALES_PHONE, EMAIL, ADDRESS_LINE1, ADDRESS_LINE2,
   MAP_URL, CALENDAR_URL, BUILD_LINK, SOCIALS, tel,
 } from "@/lib/site";
 
@@ -158,8 +158,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   { label: "Contact", href: "/contact-us/" },
                 ]}
                 phones={[
-                  { label: "Sales", number: SALES_PHONE, href: tel(SALES_PHONE) },
-                  { label: "Service", number: SERVICE_PHONE, href: tel(SERVICE_PHONE) },
+                  { label: "Sales & Service", number: SALES_PHONE, href: tel(SALES_PHONE) },
                 ]}
                 cta={{ label: "Talk To An Expert", href: CALENDAR_URL, external: true }}
               />
@@ -204,8 +203,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <h2>Papago Vans</h2>
                 <ul>
                   <li><a href={MAP_URL} target="_blank" rel="noopener">{ADDRESS_LINE1}<br />{ADDRESS_LINE2}</a></li>
-                  <li><a href={tel(SALES_PHONE)}>Sales {SALES_PHONE}</a></li>
-                  <li><a href={tel(SERVICE_PHONE)}>Service {SERVICE_PHONE}</a></li>
+                  <li><a href={tel(SALES_PHONE)}>Sales &amp; Service {SALES_PHONE}</a></li>
                   <li><a href={`mailto:${EMAIL}`}>{EMAIL}</a></li>
                 </ul>
                 <ul className="footer-policies">

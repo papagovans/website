@@ -340,7 +340,7 @@ function Narrow({ s, data }: { s: Section; data: PageData }) {
             {s.items?.map((c) => {
               const hl = resolve(c.highlight);
               return (
-                <article className="card" key={c.id}>
+                <article className={c.wide ? "card is-wide" : "card"} key={c.id}>
                   <h2>{c.title}</h2>
                   <p>{c.text}</p>
                   {hl && (

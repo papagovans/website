@@ -43,6 +43,7 @@ const Cards: Block = {
         { name: "title", type: "text", required: true },
         { name: "text", type: "textarea", required: true },
         destination("highlight", "Highlighted line (optional)"),
+        { name: "wide", label: "Full width", type: "checkbox", admin: { description: "Spans both columns instead of sitting beside another card." } },
       ],
     },
   ],

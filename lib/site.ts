@@ -8,7 +8,10 @@
  * change it here and every page follows.
  */
 export const SALES_PHONE = "(480) 761-7175";
-export const SERVICE_PHONE = "(520) 666-4283";
+/* One number for sales and service since 2026-10-08 (owner); the old service
+   line was (520) 666-4283. Kept as its own name so "Service phone" buttons in
+   the CMS keep working, and can split again with one edit. */
+export const SERVICE_PHONE = SALES_PHONE;
 export const EMAIL = "info@papagovans.com";
 export const ADDRESS_LINE1 = "751 N Country Club Dr";
 export const ADDRESS_LINE2 = "Mesa, AZ 85201";

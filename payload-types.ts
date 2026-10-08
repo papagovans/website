@@ -198,6 +198,10 @@ export interface Page {
                      */
                     text?: string | null;
                   };
+                  /**
+                   * Spans both columns instead of sitting beside another card.
+                   */
+                  wide?: boolean | null;
                   id?: string | null;
                 }[]
               | null;
@@ -1267,6 +1271,7 @@ export interface PagesSelect<T extends boolean = true> {
                           url?: T;
                           text?: T;
                         };
+                    wide?: T;
                     id?: T;
                   };
               id?: T;
