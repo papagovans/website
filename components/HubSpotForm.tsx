@@ -119,7 +119,7 @@ export function BookJeremy({ scroll = true }: { scroll?: boolean }) {
   return (
     <div className="book-jeremy" ref={box}>
       <h3>Skip the Wait. Book Your Call With Jeremy.</h3>
-      <p>Jeremy runs sales at Papago. Pick a time that works and he will call you to talk through your build, your budget and your timing.</p>
+      <p>Jeremy is our Senior Build Consultant. Pick a time that works and he will call you to talk through your build, your budget and your timing.</p>
       <div className="meetings-iframe-container" data-src={`${CALENDAR_URL}?embed=true`} />
     </div>
   );

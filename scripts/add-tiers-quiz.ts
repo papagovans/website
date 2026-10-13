@@ -32,7 +32,7 @@ if (!sections.some((s) => s.blockType === "quizStart")) {
     points: [
       { text: "Eight quick questions, about two minutes" },
       { text: "Your matching build and its starting price at the end" },
-      { text: "Book a call with our sales manager if you want to talk it through" },
+      { text: "Book a call with our Senior Build Consultant if you want to talk it through" },
     ],
   });
 }
