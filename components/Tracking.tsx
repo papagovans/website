@@ -64,8 +64,20 @@ export function Tracking() {
 }
 
 /* Tells GTM a lead happened, as the event name GA4 and Google Ads expect.
-   GTM decides what to do with it; this only reports it. */
-export function trackLead(form: string) {
+   GTM decides what to do with it; this only reports it.
+   user_data is what the visitor typed (email, phone, name): Meta advanced
+   matching and Google enhanced conversions hash it before it leaves the
+   browser. event_id lets Meta pair the pixel's Lead with its server copy and
+   count it once. Owner 2026-10-15. */
+export type LeadUser = { email?: string; phone_number?: string; first_name?: string; last_name?: string };
+export function trackLead(form: string, user_data: LeadUser = {}) {
   const w = window as unknown as { dataLayer?: Record<string, unknown>[] };
-  (w.dataLayer ??= []).push({ event: "generate_lead", form_name: form });
+  const event_id = crypto.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+  (w.dataLayer ??= []).push({ event: "generate_lead", form_name: form, event_id, user_data });
+}
+
+/* HubSpot field values ("0-1/email" and so on) as the user_data above. */
+export function leadUser(values: { name: string; value: unknown }[] = []): LeadUser {
+  const get = (key: string) => String(values.find((f) => f.name.endsWith(`/${key}`))?.value ?? "").trim() || undefined;
+  return { email: get("email"), phone_number: get("mobilephone") ?? get("phone"), first_name: get("firstname"), last_name: get("lastname") };
 }

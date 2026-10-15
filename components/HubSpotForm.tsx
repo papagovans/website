@@ -11,7 +11,7 @@
  */
 import Script from "next/script";
 import { useEffect, useRef, useState } from "react";
-import { trackLead } from "./Tracking";
+import { leadUser, trackLead } from "./Tracking";
 import { CALENDAR_URL, QUIZ_FORM_ID, QUIZ_VANS } from "@/lib/site";
 export { QUIZ_FORM_ID };
 
@@ -28,7 +28,8 @@ type HsForm = { getFormId?: () => string; getFormFieldValues?: () => Promise<{ n
    the top of the budget they picked. Tiers come in cheapest first.
    ponytail: budget only, on the Sprinter allowance; add travel style or
    must-haves when the shop says which tier each one points to. */
-const BUDGET_TOP: Record<string, number> = { "$170K - $190K": 190000, "$190K - $220K": 220000, "$220K - $260K": 260000, "$260K+": Infinity };
+/* Ranges as the forms ask them since 2026-10-14; the two older ones stay so a stale form still matches. */
+const BUDGET_TOP: Record<string, number> = { "$170K - $190K": 190000, "$190K - $220K": 220000, "$220K - $240K": 240000, "$240K - $260K": 260000, "$220K - $260K": 260000, "$260K+": Infinity };
 export type QuizTier = { path: string; name: string; tagline: string; total: number };
 export const matchTier = (tiers: QuizTier[], budget: unknown) => tiers.filter((t) => t.total <= (BUDGET_TOP[String(budget)] ?? 0)).pop() ?? tiers[0];
 
@@ -48,12 +49,14 @@ export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion
       if (id ? id !== formId : document.querySelectorAll(".hs-form-frame").length > 1) return;
       if (sent) return;
       sent = true;
-      trackLead(name);
       if (formId === SALES_FORM_ID || formId === QUIZ_FORM_ID) setCalendar(true);
-      if (formId === QUIZ_FORM_ID && tiers.length)
-        form?.getFormFieldValues?.().then((v) => {
-          setMatch(matchTier(tiers, v.find((f) => f.name.endsWith("/budget_including_the_van"))?.value));
-        }).catch(() => {});
+      /* The lead is reported with what they typed when the form can say; a
+         failed read still reports it, just without the matching data. */
+      const values = form?.getFormFieldValues?.() ?? Promise.resolve([]);
+      values.catch(() => []).then((v) => {
+        trackLead(name, leadUser(v));
+        if (formId === QUIZ_FORM_ID && tiers.length) setMatch(matchTier(tiers, v.find((f) => f.name.endsWith("/budget_including_the_van"))?.value));
+      });
     };
     /* An answer picked on the home page arrives as ?van=; tick it once the form is up. */
     const ready = (e: Event) => {
