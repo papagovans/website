@@ -80,8 +80,21 @@ function TierPage({ s, data }: { s: Extract<Section, { blockType: "tierPage" }>;
     .map((b) => data.projects.find((c) => c.id === (typeof b === "object" ? b.id : b)))
     .filter((c): c is ProjectCard => Boolean(c));
   const others = data.tiers.filter((t) => t.name !== s.name);
+  const photo = media(s.heroPhoto);
+  /* Owner 2026-10-20 (AI search): the tier as a product with its published
+     starting price, van included, so answer engines quote the real number. */
+  const product = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: `${s.name} camper van conversion`,
+    description: [s.tagline, s.intro].filter(Boolean).join(". "),
+    brand: { "@type": "Brand", name: "Papago Vans" },
+    ...(photo?.url ? { image: photo.url } : {}),
+    offers: { "@type": "Offer", price: total, priceCurrency: "USD", availability: "https://schema.org/InStock", description: "Starting price, including a Mercedes-Benz Sprinter allowance." },
+  };
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(product) }} />
       <section className="tp-hero">
         <div className="hero-media">
           <Photo m={media(s.heroPhoto)} sizes="100vw" eager />

@@ -8,7 +8,7 @@ import { GtmBody, GtmHead, Tracking } from "@/components/Tracking";
 import { MobileMenu } from "@/components/MobileMenu";
 import {
   SALES_PHONE, EMAIL, ADDRESS_LINE1, ADDRESS_LINE2,
-  MAP_URL, CONTACT_FORM_URL, BUILD_LINK, SOCIALS, tel,
+  MAP_URL, CONTACT_FORM_URL, BUILD_LINK, SOCIALS, SITE_URL, tel,
 } from "@/lib/site";
 
 /*
@@ -100,6 +100,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               "@context": "https://schema.org",
               "@type": "AutomotiveBusiness",
               name: "Papago Vans",
+              // Owner 2026-10-20 (AI search): who we are, where, what it costs
+              // and where else we live online. Prices are the published ones.
+              url: SITE_URL,
+              logo: `${SITE_URL}/home/Group-278.svg`,
+              description: "Custom camper van conversions on the Mercedes-Benz Sprinter, Ford Transit and Ram ProMaster, built by hand in our own shop in Mesa, Arizona. RVIA certified, veteran owned.",
+              priceRange: "$144,295 to $350,000, van included",
+              areaServed: ["Arizona", "United States"],
+              sameAs: SOCIALS.map(([, , href]) => href),
               telephone: `+1${SALES_PHONE.replace(/\D/g, "")}`,
               email: EMAIL,
               address: {
