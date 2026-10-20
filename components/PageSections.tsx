@@ -456,10 +456,11 @@ function Narrow({ s, data }: { s: Section; data: PageData }) {
         <section className="contact-block" id={s.anchor || "contact-form"}>
           <Heading text={s.heading} />
           {s.intro && <p className="page-p">{s.intro}</p>}
-          {/* ponytail: preset picks the default form; a typed form id overrides it */}
+          {/* ponytail: preset picks the default form; a typed form id overrides it.
+              Sales forms sit on the light card (owner 2026-10-20: no white text); Service keeps navy. */}
           <HubSpotForm
             formId={s.formId?.trim() || (s.preset === "service" ? SERVICE_FORM_ID : undefined)}
-            card={s.lightCard ? "light" : "navy"}
+            card={s.preset === "service" && !s.lightCard ? "navy" : "light"}
             name={s.preset === "service" ? "contact_service" : "contact_conversion"}
           />
         </section>
