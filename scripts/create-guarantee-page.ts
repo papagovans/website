@@ -126,7 +126,7 @@ const sections = [
     blockType: "cta",
     style: "band",
     heading: "Know your date before you sign.",
-    text: "Four questions, about two minutes. If it's a fit, you'll pick a time with Jeremy and get a real start date on the first call.",
+    text: "Four questions, about two minutes. If it's a fit, you'll pick a time with our Senior Build Consultant and get a real start date on the first call.",
     button: { to: "custom", url: QUIZ, text: "See if a Papago fits" },
     smallPrint: doc(P("Or call ", { link: "tel:+14807617175", text: "(480) 761-7175" }, ".")),
   },
