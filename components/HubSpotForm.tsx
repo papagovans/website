@@ -20,22 +20,29 @@ export const SERVICE_FORM_ID = "c2d5806e-8f73-4932-a720-f10ac6dbc66a"; // 2026 -
 export const NEWSLETTER_FORM_ID = "b401718b-4c7c-4c5a-8bd7-8eaa0c46baca"; // footer signup, owner 2026-10-01
 const PORTAL = "43782575";
 
-/* Owner 2026-10-06: everyone who sends the sales form or the quiz is offered
-   Jeremy's calendar right away (it was $190K and up from 10-05). */
 type HsForm = { getFormId?: () => string; getFormFieldValues?: () => Promise<{ name: string; value: unknown }[]> };
+type Values = { name: string; value: unknown }[];
+const answer = (v: Values, prop: string) => String(v.find((f) => f.name.endsWith("/" + prop))?.value ?? "");
+
+/* Owner 2026-10-20, "Let's see if a Papago fits": the sales form and the quiz
+   offer Jeremy's calendar only to a fit. Not a fit: under $140K, needs the full
+   RV loan, or just looking. Answers that can't be read count as a fit, so a
+   glitch never turns a buyer away. */
+const NOT_A_FIT = ["Under $140K", "I'll need a 15-20 year RV loan for the full amount", "Just looking for now"];
+const isFit = (v: Values) => !NOT_A_FIT.some((no) => [answer(v, "budget_including_the_van"), answer(v, "payment_plan"), answer(v, "build_timeline")].includes(no));
 
 /* The quiz's match: the dearest tier whose price, van included, fits under
-   the top of the budget they picked. Tiers come in cheapest first.
+   the top of the budget they picked. Tiers come in cheapest first, and each
+   range since 2026-10-20 tops out just over one tier ($144K / $162K / $184K / $202K).
    ponytail: budget only, on the Sprinter allowance; add travel style or
    must-haves when the shop says which tier each one points to. */
-/* Ranges as the forms ask them since 2026-10-14; the two older ones stay so a stale form still matches. */
-const BUDGET_TOP: Record<string, number> = { "$170K - $190K": 190000, "$190K - $220K": 220000, "$220K - $240K": 240000, "$240K - $260K": 260000, "$220K - $260K": 260000, "$260K+": Infinity };
+const BUDGET_TOP: Record<string, number> = { "$140K - $160K": 160000, "$160K - $180K": 180000, "$180K - $200K": 200000, "$200K+": Infinity };
 export type QuizTier = { path: string; name: string; tagline: string; total: number };
 export const matchTier = (tiers: QuizTier[], budget: unknown) => tiers.filter((t) => t.total <= (BUDGET_TOP[String(budget)] ?? 0)).pop() ?? tiers[0];
 
 /* card: "navy" for a form styled with white text, "light" for dark text, "none" to sit on the page as-is. */
 export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion", card = "navy", tiers = [] }: { formId?: string; name?: string; card?: "navy" | "light" | "none"; tiers?: QuizTier[] }) {
-  const [calendar, setCalendar] = useState(false);
+  const [result, setResult] = useState<"fit" | "not-yet">();
   const [match, setMatch] = useState<QuizTier>();
   useEffect(() => {
     /* The current embed announces a submission with a window event; older
@@ -49,13 +56,15 @@ export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion
       if (id ? id !== formId : document.querySelectorAll(".hs-form-frame").length > 1) return;
       if (sent) return;
       sent = true;
-      if (formId === SALES_FORM_ID || formId === QUIZ_FORM_ID) setCalendar(true);
       /* The lead is reported with what they typed when the form can say; a
          failed read still reports it, just without the matching data. */
-      const values = form?.getFormFieldValues?.() ?? Promise.resolve([]);
+      const values: Promise<Values> = form?.getFormFieldValues?.() ?? Promise.resolve([]);
       values.catch(() => []).then((v) => {
         trackLead(name, leadUser(v));
-        if (formId === QUIZ_FORM_ID && tiers.length) setMatch(matchTier(tiers, v.find((f) => f.name.endsWith("/budget_including_the_van"))?.value));
+        if (formId !== SALES_FORM_ID && formId !== QUIZ_FORM_ID) return;
+        const fit = isFit(v);
+        setResult(fit ? "fit" : "not-yet");
+        if (fit && formId === QUIZ_FORM_ID && tiers.length) setMatch(matchTier(tiers, answer(v, "budget_including_the_van")));
       });
     };
     /* An answer picked on the home page arrives as ?van=; tick it once the form is up. */
@@ -85,7 +94,8 @@ export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion
         <div className="hs-form-frame" data-region="na1" data-form-id={formId} data-portal-id={PORTAL} />
       </div>
       {match && <QuizMatch t={match} />}
-      {calendar && <BookJeremy scroll={!match} />}
+      {result === "fit" && <BookJeremy scroll={!match} />}
+      {result === "not-yet" && <NotYet />}
     </>
   );
 }
@@ -121,9 +131,21 @@ export function BookJeremy({ scroll = true }: { scroll?: boolean }) {
   }, [scroll]);
   return (
     <div className="book-jeremy" ref={box}>
-      <h3>Skip the Wait. Book Your Call With Jeremy.</h3>
-      <p>Jeremy is our Senior Build Consultant. Pick a time that works and he will call you to talk through your build, your budget and your timing.</p>
+      <h3>Looks like a fit. Pick a time with our Senior Build Consultant.</h3>
       <div className="meetings-iframe-container" data-src={`${CALENDAR_URL}?embed=true`} />
+      <p className="book-jeremy-note">If something comes up, you can reschedule from your confirmation email.</p>
+    </div>
+  );
+}
+
+/* Owner 2026-10-20: the honest answer for anyone who isn't a fit yet. */
+function NotYet() {
+  const box = useRef<HTMLDivElement>(null);
+  useEffect(() => box.current?.scrollIntoView({ behavior: "smooth", block: "start" }), []);
+  return (
+    <div className="book-jeremy not-yet" ref={box}>
+      <h3>Thanks. Here&rsquo;s the honest answer.</h3>
+      <p>Based on what you told us, a Papago probably isn&rsquo;t the right move today. We&rsquo;d rather tell you now than six months into a wait.</p>
     </div>
   );
 }

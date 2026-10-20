@@ -21,7 +21,7 @@ export const MAP_URL =
    2026-10-05: HubSpot only, no Calendly). Bookings land on the contact in HubSpot. */
 export const CALENDAR_URL = "https://meetings.hubspot.com/jeremy-piccirillo";
 /* Every "talk to us" button lands here first: the All Purpose form asks budget,
-   timeline and financing, then offers CALENDAR_URL. Owner 2026-10-20. */
+   pay and timeline, then offers CALENDAR_URL to a fit. Owner 2026-10-20. */
 export const CONTACT_FORM_URL = "/contact-us/#contact-form";
 /* The "Which Build Fits You?" quiz page. Question one is also asked on the
    home page (Quiz Starter): ?van=<key> on the quiz page ticks the answer. The
