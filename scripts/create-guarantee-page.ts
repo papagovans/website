@@ -53,7 +53,6 @@ const sections = [
       UL("We credit your build [$500] for every week we're late.", "Your deposit becomes fully refundable, if you'd rather walk away. Your call, not ours."),
       P("We'd rather pay for our own mistakes than make you pay for them with your time."),
       H3("2. Your deposit is protected"),
-      P("Your deposit is held in [a separate escrow account / a dedicated customer deposit account] until your van goes into production. It isn't used to run the shop or to finish someone else's build."),
       P("After that, you pay in stages as the work gets done:"),
       UL(
         "**Deposit to reserve your build slot:** [$X or X%]",
