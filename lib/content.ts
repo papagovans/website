@@ -64,6 +64,18 @@ export async function getCmsPage(slug: string) {
   return docs[0] ?? null;
 }
 
+/* For the sitemap: published pages minus any ticked "Hide from Google". */
+export async function listSearchablePageSlugs(): Promise<string[]> {
+  const { docs } = await (await cms()).find({
+    collection: "pages",
+    where: { _status: { equals: "published" }, hideFromSearch: { not_equals: true } },
+    pagination: false,
+    depth: 0,
+    select: { slug: true },
+  });
+  return docs.map((d) => d.slug).filter((s): s is string => Boolean(s));
+}
+
 export async function listCmsPageSlugs(): Promise<string[]> {
   const { docs } = await (await cms()).find({
     collection: "pages",

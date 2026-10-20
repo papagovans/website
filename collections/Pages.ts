@@ -90,6 +90,12 @@ export const Pages: CollectionConfig = {
               maxLength: 320,
               admin: { description: "The grey text under the link. One or two sentences; Google cuts off around 155 characters." },
             },
+            {
+              name: "hideFromSearch",
+              label: "Hide from Google",
+              type: "checkbox",
+              admin: { description: "For a page that is live for review but not ready to be found: Google is told not to list it, and it stays out of the sitemap. Anyone with the link can still open it." },
+            },
           ],
         },
       ],

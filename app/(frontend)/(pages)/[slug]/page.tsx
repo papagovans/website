@@ -18,7 +18,11 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const p = await getCmsPage((await params).slug);
   if (!p) return {};
-  return { title: p.seoTitle || `${p.heading || p.title} | Papago Vans`, description: p.seoDescription ?? undefined };
+  return {
+    title: p.seoTitle || `${p.heading || p.title} | Papago Vans`,
+    description: p.seoDescription ?? undefined,
+    ...(p.hideFromSearch ? { robots: { index: false, follow: false } } : {}),
+  };
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {

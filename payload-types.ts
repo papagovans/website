@@ -883,6 +883,10 @@ export interface Page {
    */
   seoDescription?: string | null;
   /**
+   * For a page that is live for review but not ready to be found: Google is told not to list it, and it stays out of the sitemap. Anyone with the link can still open it.
+   */
+  hideFromSearch?: boolean | null;
+  /**
    * papagovans.com/this-part/. Filled in from the page name when you first save; "home" is the front page. Changing it after publishing breaks links people already have.
    */
   slug?: string | null;
@@ -1655,6 +1659,7 @@ export interface PagesSelect<T extends boolean = true> {
       };
   seoTitle?: T;
   seoDescription?: T;
+  hideFromSearch?: T;
   slug?: T;
   updatedAt?: T;
   createdAt?: T;
