@@ -1595,7 +1595,9 @@
     {
       "path": "/projects/the-lacovino-sprinter-camper-van/",
       "type": "projects",
-      "status": "done",
+      "status": "redirect",
+      "to": "/projects/wanderlust/",
+      "note": "Build renamed Honey Sky -> Wanderlust and given its own address, owner 2026-10-20.",
       "seo": {
         "wpId": 15235,
         "title": "Honey Sky - Papago Vans",
