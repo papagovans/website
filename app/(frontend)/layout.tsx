@@ -8,7 +8,7 @@ import { GtmBody, GtmHead, Tracking } from "@/components/Tracking";
 import { MobileMenu } from "@/components/MobileMenu";
 import {
   SALES_PHONE, EMAIL, ADDRESS_LINE1, ADDRESS_LINE2,
-  MAP_URL, CALENDAR_URL, BUILD_LINK, SOCIALS, tel,
+  MAP_URL, CONTACT_FORM_URL, BUILD_LINK, SOCIALS, tel,
 } from "@/lib/site";
 
 /*
@@ -133,9 +133,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </nav>
             <div className="header-actions">
               <a
-                href={CALENDAR_URL}
-                target="_blank"
-                rel="noopener"
+                href={CONTACT_FORM_URL}
                 className="btn btn-expert btn-sm"
               >
                 Talk To An Expert <span className="arw">&#8853;</span>
@@ -160,7 +158,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 phones={[
                   { label: "Sales & Service", number: SALES_PHONE, href: tel(SALES_PHONE) },
                 ]}
-                cta={{ label: "Talk To An Expert", href: CALENDAR_URL, external: true }}
+                cta={{ label: "Talk To An Expert", href: CONTACT_FORM_URL, external: false }}
               />
             </div>
           </div>

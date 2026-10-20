@@ -20,6 +20,9 @@ export const MAP_URL =
 /* Jeremy's HubSpot scheduling page, "Custom Van Build Consultation" (owner
    2026-10-05: HubSpot only, no Calendly). Bookings land on the contact in HubSpot. */
 export const CALENDAR_URL = "https://meetings.hubspot.com/jeremy-piccirillo";
+/* Every "talk to us" button lands here first: the All Purpose form asks budget,
+   timeline and financing, then offers CALENDAR_URL. Owner 2026-10-20. */
+export const CONTACT_FORM_URL = "/contact-us/#contact-form";
 /* The "Which Build Fits You?" quiz page. Question one is also asked on the
    home page (Quiz Starter): ?van=<key> on the quiz page ticks the answer. The
    value must be HubSpot's stored value for van_options. */
@@ -60,7 +63,7 @@ export const SOCIALS: [string, string, string][] = [
    instead of typing a phone number or calendar link, so a number that changes
    here changes on every page at once. */
 export const DESTINATIONS = {
-  calendar: { label: "Jeremy's calendar (book a call)", href: CALENDAR_URL, text: "Schedule A Call", external: true },
+  calendar: { label: "Book a call (contact form, then Jeremy's calendar)", href: CONTACT_FORM_URL, text: "Schedule A Call", external: false },
   sales: { label: "Sales phone", href: tel(SALES_PHONE), text: SALES_PHONE, external: false },
   service: { label: "Service phone", href: tel(SERVICE_PHONE), text: SERVICE_PHONE, external: false },
   email: { label: "Email", href: `mailto:${EMAIL}`, text: EMAIL, external: false },
