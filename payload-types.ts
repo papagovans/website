@@ -202,6 +202,10 @@ export interface Page {
                    * Spans both columns instead of sitting beside another card.
                    */
                   wide?: boolean | null;
+                  /**
+                   * A small logo or icon above the title, such as a lender's mark. Shown about 44 pixels tall.
+                   */
+                  logo?: (number | null) | Media;
                   id?: string | null;
                 }[]
               | null;
@@ -1276,6 +1280,7 @@ export interface PagesSelect<T extends boolean = true> {
                           text?: T;
                         };
                     wide?: T;
+                    logo?: T;
                     id?: T;
                   };
               id?: T;

@@ -354,6 +354,7 @@ function Narrow({ s, data }: { s: Section; data: PageData }) {
               const hl = resolve(c.highlight);
               return (
                 <article className={c.wide ? "card is-wide" : "card"} key={c.id}>
+                  {media(c.logo)?.url && <img className="card-logo" src={media(c.logo)!.url!} alt={media(c.logo)!.alt ?? ""} loading="lazy" />}
                   <h2>{c.title}</h2>
                   <p>{c.text}</p>
                   {hl && (

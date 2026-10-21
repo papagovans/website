@@ -44,6 +44,7 @@ const Cards: Block = {
         { name: "text", type: "textarea", required: true },
         destination("highlight", "Highlighted line (optional)"),
         { name: "wide", label: "Full width", type: "checkbox", admin: { description: "Spans both columns instead of sitting beside another card." } },
+        { name: "logo", label: "Logo (optional)", type: "upload", relationTo: "media", admin: { description: "A small logo or icon above the title, such as a lender's mark. Shown about 44 pixels tall." } },
       ],
     },
   ],
