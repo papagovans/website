@@ -25,11 +25,11 @@ type Values = { name: string; value: unknown }[];
 const answer = (v: Values, prop: string) => String(v.find((f) => f.name.endsWith("/" + prop))?.value ?? "");
 
 /* Owner 2026-10-20, "Let's see if a Papago fits": the sales form and the quiz
-   offer Jeremy's calendar only to a fit. Not a fit: under $140K, needs the full
-   RV loan, or just looking. Answers that can't be read count as a fit, so a
-   glitch never turns a buyer away. */
-const NOT_A_FIT = ["Under $140K", "I'll need a 15-20 year RV loan for the full amount", "Just looking for now"];
-const isFit = (v: Values) => !NOT_A_FIT.some((no) => [answer(v, "budget_including_the_van"), answer(v, "payment_plan"), answer(v, "build_timeline")].includes(no));
+   offer Jeremy's calendar to a fit. Owner 2026-10-21: the only answer that
+   isn't a fit is a budget under $140K (RV loan and "just looking" read as
+   offensive). Answers that can't be read count as a fit, so a glitch never
+   turns a buyer away. */
+const isFit = (v: Values) => answer(v, "budget_including_the_van") !== "Under $140K";
 
 /* The quiz's match: the dearest tier whose price, van included, fits under
    the top of the budget they picked. Tiers come in cheapest first, and each
