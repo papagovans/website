@@ -76,6 +76,16 @@ export function trackLead(form: string, user_data: LeadUser = {}) {
   (w.dataLayer ??= []).push({ event: "generate_lead", form_name: form, event_id, user_data });
 }
 
+/* Owner 2026-10-22: the lead Meta should learn from. The Meta pixel is
+   loaded by GTM, so this calls it directly rather than adding a GTM tag;
+   qualified_lead also reaches the dataLayer for a Google conversion later. */
+export function trackQualifiedLead(form: string) {
+  const w = window as unknown as { dataLayer?: Record<string, unknown>[]; fbq?: (...a: unknown[]) => void };
+  const event_id = crypto.randomUUID?.() ?? `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+  w.fbq?.("trackCustom", "QualifiedLead", { content_name: form }, { eventID: event_id });
+  (w.dataLayer ??= []).push({ event: "qualified_lead", form_name: form, event_id });
+}
+
 /* HubSpot field values ("0-1/email" and so on) as the user_data above. */
 export function leadUser(values: { name: string; value: unknown }[] = []): LeadUser {
   const get = (key: string) => String(values.find((f) => f.name.endsWith(`/${key}`))?.value ?? "").trim() || undefined;

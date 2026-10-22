@@ -11,7 +11,7 @@
  */
 import Script from "next/script";
 import { useEffect, useRef, useState } from "react";
-import { leadUser, trackLead } from "./Tracking";
+import { leadUser, trackLead, trackQualifiedLead } from "./Tracking";
 import { CALENDAR_URL, QUIZ_FORM_ID, QUIZ_VANS } from "@/lib/site";
 export { QUIZ_FORM_ID };
 
@@ -23,6 +23,14 @@ const PORTAL = "43782575";
 type HsForm = { getFormId?: () => string; getFormFieldValues?: () => Promise<{ name: string; value: unknown }[]> };
 type Values = { name: string; value: unknown }[];
 const answer = (v: Values, prop: string) => String(v.find((f) => f.name.endsWith("/" + prop))?.value ?? "");
+/* Owner 2026-10-22: a Qualified Lead for Meta to optimize on, never shown to
+   the buyer. Budget answered (every option is $140K+ now) and not paying
+   with a full RV loan; unreadable answers do not qualify. Same rule as
+   papagovans-web AdLanding.astro. */
+const isQualified = (v: Values) => {
+  const budget = answer(v, "budget_including_the_van"), pay = answer(v, "payment_plan");
+  return !!budget && budget !== "Under $140K" && !!pay && !/RV loan/i.test(pay);
+};
 
 /* The quiz's match: the dearest tier whose price, van included, fits under
    the top of the budget they picked. Tiers come in cheapest first, and each
@@ -55,6 +63,7 @@ export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion
       values.catch(() => []).then((v) => {
         trackLead(name, leadUser(v));
         if (formId !== SALES_FORM_ID && formId !== QUIZ_FORM_ID) return;
+        if (isQualified(v)) trackQualifiedLead(name);
         setDone(true);
         if (formId === QUIZ_FORM_ID && tiers.length) setMatch(matchTier(tiers, answer(v, "budget_including_the_van")));
       });
