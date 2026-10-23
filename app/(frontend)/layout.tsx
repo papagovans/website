@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   title: "Arizona Campervan Conversions | Custom Vans by Papago",
   description:
     "Rugged, high-performance camper van conversions on the Mercedes-Benz Sprinter, Ford Transit and Ram ProMaster, built by hand in Mesa, Arizona.",
-  icons: { icon: "/favicon.svg" },
+  icons: { icon: "/favicon.svg", apple: "/apple-touch-icon.png" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
