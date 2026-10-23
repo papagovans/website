@@ -471,10 +471,11 @@ function Narrow({ s, data }: { s: Section; data: PageData }) {
           <Heading text={s.heading} />
           {s.intro && <p className="page-p">{s.intro}</p>}
           {/* ponytail: preset picks the default form; a typed form id overrides it.
-              Sales forms sit on the light card (owner 2026-10-20: no white text); Service keeps navy. */}
+              Every form sits on the light card (owner 2026-10-20: no white text). Service joined
+              2026-10-23 so the same form reads right in the white customer portal too. */}
           <HubSpotForm
             formId={s.formId?.trim() || (s.preset === "service" ? SERVICE_FORM_ID : undefined)}
-            card={s.preset === "service" && !s.lightCard ? "navy" : "light"}
+            card="light"
             name={s.preset === "service" ? "contact_service" : "contact_conversion"}
           />
         </section>
