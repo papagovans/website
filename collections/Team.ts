@@ -1,14 +1,8 @@
 import type { CollectionConfig } from "payload";
 
 import { signedIn } from "./access";
+import { rebuildAll } from "./revalidate";
 
-const rebuildAll = async () => {
-  try {
-    (await import("next/cache")).revalidatePath("/", "layout");
-  } catch {
-    // Outside a Next request (an import script) there is no cache to clear.
-  }
-};
 
 /* In page order. Small departments share a line on the About page (see
    TEAM_ROWS in components/PageSections.tsx). A department added here and not

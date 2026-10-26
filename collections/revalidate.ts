@@ -38,3 +38,16 @@ export function revalidator(pathFor: (slug: string) => string, listing?: string)
   };
   return { afterChange: [afterChange], afterDelete: [afterDelete] };
 }
+
+/* Rebuilds every page on its next visit. For things that can show anywhere:
+   team members, and images, which pages point at by id, so a page never
+   changes when only its image does (owner 2026-10-26: Barbara replaced Tim's
+   headshot file and the About page kept the old one). */
+export const rebuildAll = async () => {
+  try {
+    (await import("next/cache")).revalidatePath("/", "layout");
+  } catch {
+    // Outside a Next request (an import script) there is no cache to clear.
+  }
+};
+

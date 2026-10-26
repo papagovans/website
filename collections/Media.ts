@@ -1,6 +1,7 @@
 import type { CollectionConfig } from "payload";
 
 import { signedIn } from "./access";
+import { rebuildAll } from "./revalidate";
 
 export const Media: CollectionConfig = {
   slug: "media",
@@ -15,6 +16,9 @@ export const Media: CollectionConfig = {
   access: { read: () => true, create: signedIn, update: signedIn, delete: signedIn },
   // Deleting moves an image to Trash, where it can be restored.
   trash: true,
+  // Replacing a photo's file or fixing its description changes no page, so
+  // rebuild them all; a brand-new upload shows once a page or team member uses it.
+  hooks: { afterChange: [async ({ operation }) => { if (operation === "update") await rebuildAll(); }], afterDelete: [rebuildAll] },
   /*
    * Every photo is stored at three widths, each in AVIF and WebP. Pages ask
    * for the smallest one that is still sharp where it is shown, and browsers
