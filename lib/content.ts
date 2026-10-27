@@ -164,7 +164,8 @@ export async function listTierLinks(): Promise<TierLink[]> {
 }
 
 /* The same list for the header, which every page renders. Read once and kept
-   until any page is saved (collections/revalidate.ts clears the tag). Fetched
+   until any page is saved (collections/revalidate.ts clears the tag, which
+   also rebuilds every page that showed it). Fetched
    per page, the build's ~200 pages asked all at once and Postgres ran out of
    memory, so callers that arrive while a read is running share it. */
 export const TIER_LINKS_TAG = "tier-links";

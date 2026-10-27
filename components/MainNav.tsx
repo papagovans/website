@@ -1,12 +1,8 @@
-"use client";
-/* The desktop nav. On the home page (owner 2026-10-27, home first, after
-   geotrekvans.com) Build Tiers and About open wide panels: every tier as a
-   photo card with its van-included price, and About's pages each with one
-   line on what is there. Every other page keeps the plain About drop-down
-   until the owner signs off. Panels open on hover or keyboard focus, in CSS,
-   the same way the plain drop-down always has; the top-level links still go
-   to their pages. */
-import { usePathname } from "next/navigation";
+/* The desktop nav (owner 2026-10-27, after geotrekvans.com). Build Tiers and
+   About open wide panels: every tier as a photo card with its van-included
+   price, and About's pages each with one line on what is there. Panels open
+   on hover or keyboard focus, in CSS; the top-level links still go to their
+   pages. */
 import { Photo } from "@/components/Photo";
 import type { Media } from "@/payload-types";
 import { BUILD_LINK, QUIZ_PATH } from "@/lib/site";
@@ -26,12 +22,11 @@ const usd = (n: number) => `$${n.toLocaleString("en-US")}`;
 const ext = BUILD_LINK.external ? { target: "_blank", rel: "noopener" } : {};
 
 export function MainNav({ tiers }: { tiers: NavTier[] }) {
-  const mega = usePathname() === "/";
   const caret = <span className="nav-caret" aria-hidden="true">&#9662;</span>;
 
   return (
-    <nav className={mega ? "main-nav has-mega" : "main-nav"} aria-label="Main">
-      {mega && tiers.length ? (
+    <nav className="main-nav" aria-label="Main">
+      {tiers.length ? (
         <div className="nav-drop is-mega">
           <a href={BUILD_LINK.href} aria-haspopup="true" {...ext}>{BUILD_LINK.text} {caret}</a>
           <div className="mega">
@@ -64,29 +59,19 @@ export function MainNav({ tiers }: { tiers: NavTier[] }) {
         <a href={BUILD_LINK.href} {...ext}>{BUILD_LINK.text}</a>
       )}
       <a href="/van-life-build-gallery/">Recent Builds</a>
-      {mega ? (
-        <div className="nav-drop is-mega">
-          <a href="/about-us/" aria-haspopup="true">About {caret}</a>
-          <div className="mega">
-            <div className="mega-card mega-about">
-              {ABOUT.map(([label, href, line]) => (
-                <a key={href} href={href} className="mega-link">
-                  <span className="mega-link-name">{label}</span>
-                  <span className="mega-link-line">{line}</span>
-                </a>
-              ))}
-            </div>
+      <div className="nav-drop is-mega">
+        <a href="/about-us/" aria-haspopup="true">About {caret}</a>
+        <div className="mega">
+          <div className="mega-card mega-about">
+            {ABOUT.map(([label, href, line]) => (
+              <a key={href} href={href} className="mega-link">
+                <span className="mega-link-name">{label}</span>
+                <span className="mega-link-line">{line}</span>
+              </a>
+            ))}
           </div>
         </div>
-      ) : (
-        <div className="nav-drop">
-          <a href="/about-us/" aria-haspopup="true">About {caret}</a>
-          <div className="nav-menu">
-            <a href="/our-process/">Our Process</a>
-            <a href="/about-us/#our-team">Our Team</a>
-          </div>
-        </div>
-      )}
+      </div>
       <a href="/contact-us/">Contact</a>
     </nav>
   );

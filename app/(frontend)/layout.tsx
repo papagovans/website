@@ -84,7 +84,7 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-  /* For the home page's Build Tiers panel: every tier with its photo and price.
+  /* For the Build Tiers menu panel: every tier with its photo and price.
      The header ships on every page, so each photo carries only the two small
      cuts the panel shows, not the whole Media record. */
   const tiers = (await cachedTierLinks()).map((t) => {
