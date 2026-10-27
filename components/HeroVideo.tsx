@@ -7,25 +7,40 @@
 import { useEffect, useRef, useState } from "react";
 
 const idOf = (url: string) => url.match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/)?.[1];
+/* "?t=6" (or "start=6") on the CMS link skips an opening: the video starts
+   there and loops back there, never to 0:00 (owner 2026-10-27, the About
+   video's logo intro). */
+const startOf = (url: string) => Number(url.match(/[?&](?:t|start)=(\d+)/)?.[1] ?? 0);
 
 export function HeroVideo({ url }: { url: string }) {
   const [on, setOn] = useState(false);
   const [shown, setShown] = useState(false);
   const ref = useRef<HTMLIFrameElement>(null);
   useEffect(() => setOn(!window.matchMedia("(prefers-reduced-motion: reduce)").matches), []);
+  const start = startOf(url);
   useEffect(() => {
+    let duration = 0;
+    const seek = () => ref.current?.contentWindow?.postMessage(JSON.stringify({ event: "command", func: "seekTo", args: [start, true], id: 1, channel: "widget" }), "*");
     const onMessage = (e: MessageEvent) => {
       if (e.source !== ref.current?.contentWindow) return;
       try {
-        if (JSON.parse(e.data)?.info?.playerState === 1) setShown(true);
+        const info = JSON.parse(e.data)?.info;
+        if (!info) return;
+        if (info.duration) duration = info.duration;
+        const t = info.currentTime;
+        if (start && typeof t === "number") {
+          // Back to the start point just before the end, and if YouTube's own loop got to 0:00 first.
+          if ((duration && t > duration - 0.7) || t < start - 1) seek();
+          else if (info.playerState === 1 || t >= start) setShown(true);
+        } else if (info.playerState === 1) setShown(true);
       } catch {}
     };
     window.addEventListener("message", onMessage);
     return () => window.removeEventListener("message", onMessage);
-  }, []);
+  }, [start]);
   const id = idOf(url);
   if (!id || !on) return null;
-  const q = `autoplay=1&mute=1&loop=1&playlist=${id}&controls=0&modestbranding=1&rel=0&playsinline=1&disablekb=1&iv_load_policy=3&enablejsapi=1`;
+  const q = `autoplay=1&mute=1&loop=1&playlist=${id}&controls=0&modestbranding=1&rel=0&playsinline=1&disablekb=1&iv_load_policy=3&enablejsapi=1${start ? `&start=${start}` : ""}`;
   return (
     <iframe
       className={shown ? "hero-video is-on" : "hero-video"}
