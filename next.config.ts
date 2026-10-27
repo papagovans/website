@@ -59,6 +59,8 @@ const nextConfig: NextConfig = {
         // No reason to make anyone wonder.
         statusCode: 301,
       })),
+      // Any other old build-category page (the five above were in Search Console) goes to the gallery.
+      { source: "/project_categories/:path*", destination: "/van-life-build-gallery/", statusCode: 301 },
     ];
   },
 

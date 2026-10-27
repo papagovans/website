@@ -2271,6 +2271,48 @@
       "status": "redirect",
       "to": "/about-us/",
       "note": "A Google Ads sitelink (Competitors campaign) points here; 404'd on the new site. Found 2026-10-05."
+    },
+    {
+      "path": "/project_categories/zion/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/zion/",
+      "note": "Old WordPress build-category page Google still requests (404 in Search Console, 2026-10-27). Mammoth is now McKinley; Rainier was removed."
+    },
+    {
+      "path": "/project_categories/mammoth/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/mckinley/",
+      "note": "Old WordPress build-category page Google still requests (404 in Search Console, 2026-10-27). Mammoth is now McKinley; Rainier was removed."
+    },
+    {
+      "path": "/project_categories/mckinley/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/mckinley/",
+      "note": "Old WordPress build-category page Google still requests (404 in Search Console, 2026-10-27). Mammoth is now McKinley; Rainier was removed."
+    },
+    {
+      "path": "/project_categories/olympus/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/olympus/",
+      "note": "Old WordPress build-category page Google still requests (404 in Search Console, 2026-10-27). Mammoth is now McKinley; Rainier was removed."
+    },
+    {
+      "path": "/project_categories/el-capitan/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/el-capitan-luxury-van-build/",
+      "note": "Old WordPress build-category page Google still requests (404 in Search Console, 2026-10-27). Mammoth is now McKinley; Rainier was removed."
+    },
+    {
+      "path": "/project_categories/rainier/",
+      "type": "page",
+      "status": "redirect",
+      "to": "/van-conversion-build-tiers/",
+      "note": "Old WordPress build-category page Google still requests (404 in Search Console, 2026-10-27). Mammoth is now McKinley; Rainier was removed."
     }
   ],
   "enriched": "2026-09-24"
