@@ -6,6 +6,9 @@ import { LoadedFlag } from "@/components/LoadedFlag";
 import { ScrolledFlag } from "@/components/ScrolledFlag";
 import { GtmBody, GtmHead, Tracking } from "@/components/Tracking";
 import { MobileMenu } from "@/components/MobileMenu";
+import { MainNav } from "@/components/MainNav";
+import { cachedTierLinks } from "@/lib/content";
+import type { Media } from "@/payload-types";
 import {
   SALES_PHONE, EMAIL, ADDRESS_LINE1, ADDRESS_LINE2,
   MAP_URL, CONTACT_FORM_URL, BUILD_LINK, SOCIALS, SITE_URL, tel,
@@ -80,7 +83,15 @@ export const metadata: Metadata = {
   icons: { icon: "/favicon.svg", apple: "/apple-touch-icon.png" },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  /* For the home page's Build Tiers panel: every tier with its photo and price.
+     The header ships on every page, so each photo carries only the two small
+     cuts the panel shows, not the whole Media record. */
+  const tiers = (await cachedTierLinks()).map((t) => {
+    const p = t.photo;
+    const cut = (k: "thumb" | "card" | "thumbAvif" | "cardAvif") => p?.sizes?.[k] && { url: p.sizes[k].url, width: p.sizes[k].width };
+    return { ...t, photo: p && ({ url: p.url, width: p.width, alt: p.alt, sizes: { thumb: cut("thumb"), card: cut("card"), thumbAvif: cut("thumbAvif"), cardAvif: cut("cardAvif") } } as unknown as Media) };
+  });
   return (
     <html lang="en" className={`${inter.variable} ${prompt.variable}`}>
       <head>
@@ -126,19 +137,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <a href="/" className="logo" aria-label="Papago Vans home">
               <img src="/home/Group-278.svg" alt="Papago Vans" width="174" height="27" />
             </a>
-            <nav className="main-nav" aria-label="Main">
-              <a href={BUILD_LINK.href} {...(BUILD_LINK.external && { target: "_blank", rel: "noopener" })}>{BUILD_LINK.text}</a>
-              <a href="/van-life-build-gallery/">Recent Builds</a>
-              {/* Opens on hover or keyboard focus; About itself still goes to the page. */}
-              <div className="nav-drop">
-                <a href="/about-us/" aria-haspopup="true">About <span className="nav-caret" aria-hidden="true">&#9662;</span></a>
-                <div className="nav-menu">
-                  <a href="/our-process/">Our Process</a>
-                  <a href="/about-us/#our-team">Our Team</a>
-                </div>
-              </div>
-              <a href="/contact-us/">Contact</a>
-            </nav>
+            <MainNav tiers={tiers} />
             <div className="header-actions">
               <a
                 href={CONTACT_FORM_URL}

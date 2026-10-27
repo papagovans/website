@@ -20,7 +20,9 @@ export const fillSlug: FieldHook = ({ value, data }) =>
 export function revalidator(pathFor: (slug: string) => string, listing?: string) {
   const run = async (doc: { slug?: string | null }, prev?: { slug?: string | null }) => {
     try {
-      const { revalidatePath } = await import("next/cache");
+      const { revalidatePath, revalidateTag } = await import("next/cache");
+      // The header's tier menu; see cachedTierLinks in lib/content.
+      revalidateTag("tier-links", { expire: 0 });
       if (listing) revalidatePath(listing);
       if (doc.slug) revalidatePath(pathFor(doc.slug));
       if (prev?.slug && prev.slug !== doc.slug) revalidatePath(pathFor(prev.slug));
@@ -45,7 +47,9 @@ export function revalidator(pathFor: (slug: string) => string, listing?: string)
    headshot file and the About page kept the old one). */
 export const rebuildAll = async () => {
   try {
-    (await import("next/cache")).revalidatePath("/", "layout");
+    const { revalidatePath, revalidateTag } = await import("next/cache");
+    revalidateTag("tier-links", { expire: 0 });
+    revalidatePath("/", "layout");
   } catch {
     // Outside a Next request (an import script) there is no cache to clear.
   }

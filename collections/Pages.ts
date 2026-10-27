@@ -28,7 +28,9 @@ export const Pages: CollectionConfig = {
   trash: true,
   versions: { drafts: { autosave: { interval: 2000 } }, maxPerDoc: 50 },
   defaultSort: "title",
-  hooks: revalidator(pagePath),
+  /* "/" too: the home page's Build Tiers menu shows every tier's name, photo
+     and price, so a tier page edit has to reach it. */
+  hooks: revalidator(pagePath, "/"),
   fields: [
     {
       type: "tabs",

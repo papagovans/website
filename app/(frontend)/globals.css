@@ -98,6 +98,44 @@ ul { margin: 0; padding: 0; list-style: none; }
 .nav-menu a:first-child { margin-top: 6px; }
 .nav-menu a:last-child { margin-bottom: 6px; }
 .nav-drop:hover .nav-menu, .nav-drop:focus-within .nav-menu { opacity: 1; visibility: visible; transform: none; }
+/* The home page's wide panels (components/MainNav). They hang off the header
+   row rather than the link, so they span the page width. margin-top pulls the
+   panel's clear top edge up over the header's own padding, so the pointer
+   never leaves the menu on its way down. */
+.header-inner { position: relative; }
+.nav-drop.is-mega { position: static; }
+.mega {
+	position: absolute; left: 0; right: 0; top: 100%; margin-top: -18px; padding-top: 22px;
+	opacity: 0; visibility: hidden; transform: translateY(-6px); transition: 0.18s ease;
+}
+.nav-drop.is-mega:hover .mega, .nav-drop.is-mega:focus-within .mega { opacity: 1; visibility: visible; transform: none; }
+.mega-card { background: #fff; border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: 0 18px 40px rgba(31,33,36,0.16); padding: 14px; }
+.mega-tiers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+/* Photo on top, words underneath on white: over the photo, the price sat on
+   the van itself and could not be read. */
+.mega-tier { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; background: #fff; transition: border-color 0.15s ease; }
+.mega-tier:hover { border-color: var(--gold); }
+.mega-tier picture { display: block; aspect-ratio: 16 / 10; overflow: hidden; background: var(--soft); }
+.mega-tier-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.mega-tier:hover .mega-tier-img { transform: scale(1.04); }
+.mega-tier-text { display: grid; gap: 2px; padding: 12px 14px 0; }
+.mega-tier-name { font-family: var(--font-prompt), Prompt, sans-serif; font-weight: 700; font-size: 18px; text-transform: uppercase; letter-spacing: 0.02em; color: var(--footer); }
+.mega-tier-tag { font-size: 13px; color: var(--muted); }
+.mega-tier-price { font-size: 14px; font-weight: 600; color: var(--ink); margin-top: 6px; }
+.mega-tier-go { align-self: flex-start; margin: 10px 14px 14px; font-size: 13px; font-weight: 600; color: var(--ink); border-bottom: 2px solid var(--gold); }
+.mega-strip { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 12px; padding: 10px 12px 10px 16px; background: var(--soft); border-radius: var(--r-md); }
+.mega-strip-links { display: flex; font-size: 14px; font-weight: 600; }
+.mega-strip-links a + a { border-left: 1px solid var(--line); }
+.mega-strip-links a { padding: 0 14px; }
+.mega-about { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.mega-link { display: grid; gap: 3px; padding: 14px 16px; border-radius: var(--r-sm); transition: background-color 0.15s ease; }
+.mega-link:hover { background: var(--soft); }
+.mega-link-name { font-family: var(--font-prompt), Prompt, sans-serif; font-weight: 600; font-size: 16px; color: var(--footer); }
+.mega-link-line { font-size: 13px; font-weight: 400; color: var(--muted); }
+/* The panels are white cards, so their links stay dark over the photo hero. */
+.main-nav .mega a, .main-nav .mega a:hover,
+body:has(.hero-full) .site-header .main-nav .mega a,
+body:has(.hero-full) .site-header .main-nav .mega a:hover { color: var(--ink); }
 .header-actions { display: flex; align-items: center; gap: 16px; }
 /* Hidden until the nav collapses, so the two never show at once. The width it
    appears at is the same 1000px the nav disappears at, below. */

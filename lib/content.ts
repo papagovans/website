@@ -5,6 +5,7 @@
  * Payload directly.
  */
 import "server-only";
+import { unstable_cache } from "next/cache";
 import { draftMode } from "next/headers";
 import { getPayload } from "payload";
 import config from "@payload-config";
@@ -161,3 +162,12 @@ export async function listTierLinks(): Promise<TierLink[]> {
     })
     .sort((a, b) => a.total - b.total);
 }
+
+/* The same list for the header, which every page renders. Read once and kept
+   until any page is saved (collections/revalidate.ts clears the tag). Fetched
+   per page, the build's ~200 pages asked all at once and Postgres ran out of
+   memory, so callers that arrive while a read is running share it. */
+export const TIER_LINKS_TAG = "tier-links";
+const tierLinksCache = unstable_cache(listTierLinks, [TIER_LINKS_TAG], { tags: [TIER_LINKS_TAG] });
+let tierLinksRead: Promise<TierLink[]> | null = null;
+export const cachedTierLinks = () => (tierLinksRead ??= tierLinksCache().finally(() => (tierLinksRead = null)));
