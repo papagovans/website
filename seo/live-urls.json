@@ -1,10 +1,10 @@
 {
   "source": "https://papagovans.com",
   "generated": "2026-09-24",
-  "total": 208,
+  "total": 217,
   "counts": {
     "done": 157,
-    "redirect": 39,
+    "redirect": 40,
     "drop": 12
   },
   "urls": [
@@ -2313,6 +2313,13 @@
       "status": "redirect",
       "to": "/van-conversion-build-tiers/",
       "note": "Old WordPress build-category page Google still requests (404 in Search Console, 2026-10-27). Mammoth is now McKinley; Rainier was removed."
+    },
+    {
+      "path": "/projects/lucies-olympus-build/",
+      "type": "projects",
+      "status": "redirect",
+      "note": "Duplicate of The Sapphire Sojourner: same 31 photos and text on WordPress too. Owner 2026-10-28.",
+      "to": "/projects/the-sapphire-sojourner/"
     }
   ],
   "enriched": "2026-09-24"
