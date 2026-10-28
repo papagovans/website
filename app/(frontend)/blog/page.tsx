@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { seo } from "@/lib/seo";
 import { listPosts } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: "Van Life Guides | Papago Vans",
-  description:
-    "What we have learned building hundreds of camper vans: costs, layouts, power systems, insurance and where to park.",
-};
+export const metadata: Metadata = seo(
+  "/blog/",
+  "Van Life Guides | Papago Vans",
+  "What we have learned building hundreds of camper vans: costs, layouts, power systems, insurance and where to park.",
+);
 
 export default async function BlogIndex() {
   const posts = await listPosts();

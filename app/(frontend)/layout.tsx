@@ -9,6 +9,7 @@ import { MobileMenu } from "@/components/MobileMenu";
 import { MainNav } from "@/components/MainNav";
 import { cachedTierLinks } from "@/lib/content";
 import type { Media } from "@/payload-types";
+import { DEFAULT_DESCRIPTION, DEFAULT_TITLE, seo } from "@/lib/seo";
 import {
   SALES_PHONE, EMAIL, ADDRESS_LINE1, ADDRESS_LINE2,
   MAP_URL, CONTACT_FORM_URL, BUILD_LINK, SOCIALS, SITE_URL, tel,
@@ -77,9 +78,10 @@ const footerCols = [
 ];
 
 export const metadata: Metadata = {
-  title: "Arizona Campervan Conversions | Custom Vans by Papago",
-  description:
-    "Rugged, high-performance camper van conversions on the Mercedes-Benz Sprinter, Ford Transit and Ram ProMaster, built by hand in Mesa, Arizona.",
+  metadataBase: new URL(SITE_URL),
+  ...seo("/", DEFAULT_TITLE, DEFAULT_DESCRIPTION),
+  /* A page that sets no canonical of its own (the 404) must not claim to be the home page. */
+  alternates: undefined,
   icons: { icon: "/favicon.svg", apple: "/apple-touch-icon.png" },
 };
 

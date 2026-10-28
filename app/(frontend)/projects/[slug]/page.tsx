@@ -5,6 +5,7 @@ import { Lightbox } from "@/components/Lightbox";
 import { Photo } from "@/components/Photo";
 import { RichText } from "@/components/RichText";
 import { getBuild, listBuildSlugs } from "@/lib/content";
+import { seo } from "@/lib/seo";
 import type { Media } from "@/payload-types";
 import { BUILDER_LIVE, BUILD_LINK } from "@/lib/site";
 
@@ -15,7 +16,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const b = await getBuild((await params).slug);
   if (!b) return {};
-  return { title: `${b.title} | Papago Vans`, description: b.summary };
+  const hero = (b.photos ?? []).find((m): m is Media => typeof m === "object" && m !== null);
+  return seo(`/projects/${b.slug}/`, `${b.title} | Papago Vans`, b.summary, hero);
 }
 
 export default async function BuildPage({ params }: { params: Promise<{ slug: string }> }) {

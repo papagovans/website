@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { RichText } from "@/components/RichText";
 import { getPost, listPosts } from "@/lib/content";
 import type { Media } from "@/payload-types";
+import { seo } from "@/lib/seo";
 
 export async function generateStaticParams() {
   return (await listPosts()).map((p) => ({ slug: p.slug }));
@@ -14,7 +15,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!p) return {};
   /* Imported posts keep Yoast's title verbatim, because that is the string
    * already earning the click in the results page. */
-  return { title: p.seoTitle || `${p.title} | Papago Vans`, description: p.summary };
+  const hero = typeof p.featuredImage === "object" ? (p.featuredImage as Media | null) : null;
+  return seo(`/blog/${p.slug}/`, p.seoTitle || `${p.title} | Papago Vans`, p.summary, hero);
 }
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {

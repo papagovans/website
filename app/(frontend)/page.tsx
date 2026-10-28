@@ -2,16 +2,14 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CmsPage } from "@/components/CmsPage";
 import { getCmsPage } from "@/lib/content";
+import { DEFAULT_DESCRIPTION, DEFAULT_TITLE, firstPhoto, seo } from "@/lib/seo";
 
 /* The front page is the CMS page whose address is "home". */
 
 export async function generateMetadata(): Promise<Metadata> {
   const p = await getCmsPage("home");
   if (!p) return {};
-  return {
-    ...(p.seoTitle ? { title: p.seoTitle } : {}),
-    ...(p.seoDescription ? { description: p.seoDescription } : {}),
-  };
+  return seo("/", p.seoTitle || DEFAULT_TITLE, p.seoDescription || DEFAULT_DESCRIPTION, firstPhoto(p.sections));
 }
 
 export default async function Home() {

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { CmsPage } from "@/components/CmsPage";
 import { getCmsPage, listCmsPageSlugs } from "@/lib/content";
+import { firstPhoto, seo } from "@/lib/seo";
 
 /*
  * Every page edited in the CMS (Pages, at /admin) except the front page, at
@@ -16,11 +17,11 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const p = await getCmsPage((await params).slug);
+  const slug = (await params).slug;
+  const p = await getCmsPage(slug);
   if (!p) return {};
   return {
-    title: p.seoTitle || `${p.heading || p.title} | Papago Vans`,
-    description: p.seoDescription ?? undefined,
+    ...seo(`/${slug}/`, p.seoTitle || `${p.heading || p.title} | Papago Vans`, p.seoDescription, firstPhoto(p.sections)),
     ...(p.hideFromSearch ? { robots: { index: false, follow: false } } : {}),
   };
 }
