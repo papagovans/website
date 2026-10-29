@@ -17,9 +17,10 @@ export const ADDRESS_LINE1 = "751 N Country Club Dr";
 export const ADDRESS_LINE2 = "Mesa, AZ 85201";
 export const MAP_URL =
   "https://maps.google.com/?q=751+N+Country+Club+Dr,+Mesa,+AZ+85201";
-/* Jeremy's HubSpot scheduling page, "Custom Van Build Consultation" (owner
-   2026-10-05: HubSpot only, no Calendly). Bookings land on the contact in HubSpot. */
-export const CALENDAR_URL = "https://meetings.hubspot.com/jeremy-piccirillo";
+/* Rachel's HubSpot scheduling page (Client Advisor). The first call is hers so
+   she qualifies every lead before the Senior Build Consultant books them (sales
+   manager, 2026-10-29). Bookings land on the contact in HubSpot. */
+export const CALENDAR_URL = "https://meetings.hubspot.com/rachel-handzlik";
 /* Every "talk to us" button lands here first: the All Purpose form asks budget,
    pay and timeline, then offers CALENDAR_URL to everyone (no fit check since
    2026-10-22). */
@@ -64,7 +65,7 @@ export const SOCIALS: [string, string, string][] = [
    instead of typing a phone number or calendar link, so a number that changes
    here changes on every page at once. */
 export const DESTINATIONS = {
-  calendar: { label: "Book a call (contact form, then Jeremy's calendar)", href: CONTACT_FORM_URL, text: "Schedule A Call", external: false },
+  calendar: { label: "Book a call (contact form, then the Client Advisor's calendar)", href: CONTACT_FORM_URL, text: "Schedule A Call", external: false },
   sales: { label: "Sales phone", href: tel(SALES_PHONE), text: SALES_PHONE, external: false },
   service: { label: "Service phone", href: tel(SERVICE_PHONE), text: SERVICE_PHONE, external: false },
   email: { label: "Email", href: `mailto:${EMAIL}`, text: EMAIL, external: false },

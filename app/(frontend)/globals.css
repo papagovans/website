@@ -1438,7 +1438,7 @@ video.hero-file { top: 0; left: 0; width: 100%; height: 100%; transform: none; o
 	.logo-strip img { height: calc(var(--h) * 0.7); }
 }
 
-/* Jeremy's calendar after the sales form and the quiz (HubSpotForm.tsx). No fit check since 2026-10-22. */
+/* The Client Advisor's calendar (lib/site.ts CALENDAR_URL) after the sales form and the quiz (HubSpotForm.tsx). No fit check since 2026-10-22. */
 .book-jeremy { margin-top: 28px; padding: 26px 24px 8px; background: #fff; border: 1px solid var(--line); border-radius: var(--r-md); scroll-margin-top: 90px; }
 .book-jeremy h3 { margin: 0 0 8px; }
 .book-jeremy p { margin: 0 0 12px; color: var(--muted); }

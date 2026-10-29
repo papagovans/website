@@ -131,7 +131,7 @@ export function BookJeremy({ scroll = true }: { scroll?: boolean }) {
   }, [scroll]);
   return (
     <div className="book-jeremy" ref={box}>
-      <h3>Pick a time with our Senior Build Consultant.</h3>
+      <h3>Pick a time with our Client Advisor.</h3>
       <div className="meetings-iframe-container" data-src={`${CALENDAR_URL}?embed=true`} />
       <p className="book-jeremy-note">If something comes up, you can reschedule from your confirmation email.</p>
     </div>
