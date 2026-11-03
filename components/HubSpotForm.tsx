@@ -149,7 +149,6 @@ function Answers({ topics, onTalk }: { topics: string[]; onTalk: () => void }) {
   return (
     <div className="book-jeremy answers" ref={box}>
       <h3>Here are the answers most people want first.</h3>
-      <p>We&rsquo;ll send them to your inbox too.</p>
       <ul>{list.map(([t, q, href]) => <li key={t}><a href={href}>{q} <span className="arw">&#8853;</span></a></li>)}</ul>
       <p className="answers-talk">Ready sooner than you thought? <button type="button" className="btn btn-outline" onClick={onTalk}>Talk to a Client Advisor</button></p>
     </div>
