@@ -61,7 +61,8 @@ const footerCols = [
     links: [
       ["About Us", "/about-us/"],
       ["Service Department", "/service-department/"],
-      ["Owner Support", "/support/"],
+      // Straight to the help center, so it opens in a new tab like the other off-site links; /support/ still redirects for calls.
+      ["Owner Support", "https://help.papagovans.com/help"],
       ["Financing", "/financing/"],
       ["FAQ", "/faq/"],
       ["Careers", "/work-at-papago-vans/"],
