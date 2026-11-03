@@ -21,9 +21,9 @@ export const MAP_URL =
    she qualifies every lead before the Senior Build Consultant books them (sales
    manager, 2026-10-29). Bookings land on the contact in HubSpot. */
 export const CALENDAR_URL = "https://meetings.hubspot.com/rachel-handzlik";
-/* Every "talk to us" button lands here first: the All Purpose form asks budget,
-   pay and timeline, then offers CALENDAR_URL to everyone (no fit check since
-   2026-10-22). */
+/* Every "talk to us" button lands here first: the All Purpose form asks where
+   they are in their van journey. Buyers answer budget, pay and timeline and get
+   CALENDAR_URL; researchers get answers instead (HubSpotForm.tsx, 2026-11-03). */
 export const CONTACT_FORM_URL = "/contact-us/#contact-form";
 /* The "Which Build Fits You?" quiz page. Question one is also asked on the
    home page (Quiz Starter): ?van=<key> on the quiz page ticks the answer. The

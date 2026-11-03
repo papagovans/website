@@ -32,6 +32,28 @@ const isQualified = (v: Values) => {
   return !!budget && budget !== "Under $140K" && !!pay && !/RV loan/i.test(pay);
 };
 
+/* Owner 2026-11-03: the sales forms open with "Where are you in your van
+   journey?". Early, or ready but not driving within a year, is research: the
+   answers below instead of Rachel's calendar, and no SDR task in HubSpot.
+   A form without the question (the quiz) books everyone, as before. */
+const isResearch = (v: Values) => {
+  const stage = answer(v, "van_journey_stage");
+  return !!stage && (stage === "early_questions" || !/^(Within 6 months|6 to 12 months)$/.test(answer(v, "build_timeline")));
+};
+const topicsOf = (v: Values) => {
+  const t = v.find((f) => f.name.endsWith("/research_topics"))?.value;
+  return (Array.isArray(t) ? t : String(t ?? "").split(/[;,]/)).map(String).filter(Boolean);
+};
+/* Topic values are research_topics' internal values; the topics they ticked come first. */
+const ANSWERS: [topic: string, question: string, href: string][] = [
+  ["cost", "What does a Papago build cost?", "/van-conversion-build-tiers/"],
+  ["build_time", "How long does a build take?", "/our-process/"],
+  ["floor_plan", "Which build fits me?", "/which-build-fits-you/"],
+  ["financing", "Can I finance a build?", "/financing/"],
+  ["see_a_van", "What do finished builds look like?", "/van-life-build-gallery/"],
+  ["other", "Everything else people ask", "/faq/"],
+];
+
 /* The quiz's match: the dearest tier whose price, van included, fits under
    the top of the budget they picked. Tiers come in cheapest first, and each
    range since 2026-10-20 tops out just over one tier ($144K / $162K / $184K / $202K).
@@ -45,6 +67,7 @@ export const matchTier = (tiers: QuizTier[], budget: unknown) => tiers.filter((t
 export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion", card = "navy", tiers = [] }: { formId?: string; name?: string; card?: "navy" | "light" | "none"; tiers?: QuizTier[] }) {
   const [done, setDone] = useState(false);
   const [match, setMatch] = useState<QuizTier>();
+  const [research, setResearch] = useState<string[]>();
   useEffect(() => {
     /* The current embed announces a submission with a window event; older
        ones post a message. Either one counts once, and only for this form:
@@ -64,6 +87,7 @@ export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion
         trackLead(name, leadUser(v));
         if (formId !== SALES_FORM_ID && formId !== QUIZ_FORM_ID) return;
         if (isQualified(v)) trackQualifiedLead(name);
+        if (formId === SALES_FORM_ID && isResearch(v)) return setResearch(topicsOf(v));
         setDone(true);
         if (formId === QUIZ_FORM_ID && tiers.length) setMatch(matchTier(tiers, answer(v, "budget_including_the_van")));
       });
@@ -95,6 +119,7 @@ export function HubSpotForm({ formId = SALES_FORM_ID, name = "contact_conversion
         <div className="hs-form-frame" data-region="na1" data-form-id={formId} data-portal-id={PORTAL} />
       </div>
       {match && <QuizMatch t={match} />}
+      {research && !done && <Answers topics={research} onTalk={() => setDone(true)} />}
       {done && <BookJeremy scroll={!match} />}
     </>
   );
@@ -113,6 +138,20 @@ function QuizMatch({ t }: { t: QuizTier }) {
         <a href={t.path} className="btn btn-gold">See the {t.name} <span className="arw">&#8853;</span></a>
         <a href="/van-conversion-build-tiers/" className="btn btn-outline">Compare All Tiers</a>
       </div>
+    </div>
+  );
+}
+
+function Answers({ topics, onTalk }: { topics: string[]; onTalk: () => void }) {
+  const box = useRef<HTMLDivElement>(null);
+  useEffect(() => box.current?.scrollIntoView({ behavior: "smooth", block: "start" }), []);
+  const list = [...ANSWERS].sort((a, b) => Number(topics.includes(b[0])) - Number(topics.includes(a[0])));
+  return (
+    <div className="book-jeremy answers" ref={box}>
+      <h3>Here are the answers most people want first.</h3>
+      <p>We&rsquo;ll send them to your inbox too.</p>
+      <ul>{list.map(([t, q, href]) => <li key={t}><a href={href}>{q} <span className="arw">&#8853;</span></a></li>)}</ul>
+      <p className="answers-talk">Ready sooner than you thought? <button type="button" className="btn btn-outline" onClick={onTalk}>Talk to a Client Advisor</button></p>
     </div>
   );
 }
