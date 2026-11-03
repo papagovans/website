@@ -61,6 +61,7 @@ const footerCols = [
     links: [
       ["About Us", "/about-us/"],
       ["Service Department", "/service-department/"],
+      ["Owner Support", "/support/"],
       ["Financing", "/financing/"],
       ["FAQ", "/faq/"],
       ["Careers", "/work-at-papago-vans/"],

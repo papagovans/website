@@ -61,6 +61,9 @@ const nextConfig: NextConfig = {
       })),
       // Any other old build-category page (the five above were in Search Console) goes to the gallery.
       { source: "/project_categories/:path*", destination: "/van-life-build-gallery/", statusCode: 301 },
+      // The address to say on a call: owners' Knowledge Base and support bot live in HubSpot.
+      // 302 so a real /support/ page can replace it later without browsers having cached the hop.
+      { source: "/support", destination: "https://help.papagovans.com/help", statusCode: 302 },
     ];
   },
 
