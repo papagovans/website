@@ -5,7 +5,7 @@
    <section class="page-body">. Full-width sections draw their own. */
 import ExploreTheVan from "@/components/ExploreTheVan";
 import { WIDE } from "@/collections/blocks";
-import { DEPARTMENTS } from "@/collections/Team";
+import { DEPARTMENTS, DEPT_LABELS } from "@/collections/Team";
 import type { ProjectCard, TierLink } from "@/lib/content";
 import { DESTINATIONS, type Destination } from "@/lib/site";
 import type { Media, Page, Team } from "@/payload-types";
@@ -277,12 +277,12 @@ export function PageSections({ sections, data }: { sections: Page["sections"]; d
 /* Small departments share a line: a row each would be headings over
    near-empty grids. Each column is sized by headcount, so a portrait is the
    same size whichever row it lands in. */
-const TEAM_ROWS = [["Administration", "Finance"], ["Sales", "Marketing"], ["Inventory", "CNC Specialists"]];
+const TEAM_ROWS = [["Administration", "Finance"], ["Inventory", "CNC Specialists"]];
 
 function TeamGroup({ dept, people, eager }: { dept: string; people: Team[]; eager: boolean }) {
   return (
     <section className="team-group" aria-labelledby={`team-${dept}`}>
-      <h3 className="team-dept" id={`team-${dept}`}>{dept}</h3>
+      <h3 className="team-dept" id={`team-${dept}`}>{DEPT_LABELS[dept] ?? dept}</h3>
       <ul className="team-grid">
         {people.map((m) => {
           const p = media(m.photo);

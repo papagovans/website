@@ -12,6 +12,11 @@ export const DEPARTMENTS = [
   "Builders", "Service Department", "Painters", "Inventory", "CNC Specialists",
 ] as const;
 
+/* What the page and the admin call a department, where that differs from the
+   stored value. Sales became Client Experience (owner 2026-11-11); renaming
+   the value itself would mean an enum migration on the live database. */
+export const DEPT_LABELS: Record<string, string> = { Sales: "Client Experience" };
+
 export const Team: CollectionConfig = {
   slug: "team",
   labels: { singular: "Team Member", plural: "Team" },
@@ -42,7 +47,7 @@ export const Team: CollectionConfig = {
       name: "department",
       type: "select",
       admin: { description: "Optional. Anyone without one is shown in a Team row at the end." },
-      options: DEPARTMENTS.map((d) => ({ label: d, value: d })),
+      options: DEPARTMENTS.map((d) => ({ label: DEPT_LABELS[d] ?? d, value: d })),
     },
     {
       name: "photo",
