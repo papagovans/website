@@ -18,7 +18,7 @@ export const ADDRESS_LINE2 = "Mesa, AZ 85201";
 export const MAP_URL =
   "https://maps.google.com/?q=751+N+Country+Club+Dr,+Mesa,+AZ+85201";
 /* Rachel's HubSpot scheduling page (Client Advisor). The first call is hers so
-   she qualifies every lead before the Senior Build Consultant books them (sales
+   she qualifies every lead before the Director of Client Experience books them (sales
    manager, 2026-10-29). Bookings land on the contact in HubSpot. */
 export const CALENDAR_URL = "https://meetings.hubspot.com/rachel-handzlik";
 /* Every "talk to us" button lands here first: the All Purpose form asks where
