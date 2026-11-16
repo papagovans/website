@@ -8,6 +8,6 @@ next-env.d.ts
 .DS_Store
 
 # Installed by the Vercel Neon integration, not part of the site
-.agents/
+.agents/skills/neon*
+.claude/skills/neon*
 skills-lock.json
-.claude/
