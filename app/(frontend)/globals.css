@@ -1021,6 +1021,21 @@ figure.scene-shot { margin: 0; }
 .proj-grid .tall img { aspect-ratio: 3 / 4; }
 .proj-grid .tall { grid-row: span 1; }
 
+/* Wide screens: the write-up and spec lists on the left, photos running down
+   the right in two columns, so the specs never push the photos below the fold
+   (owner 2026-11-19). Phones keep one column: write-up, then photos. */
+@media (min-width: 1000px) {
+	.proj-main {
+		display: grid; gap: 40px; align-items: start;
+		grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+		padding-top: 20px;
+	}
+	.proj-main .proj-body { max-width: none; }
+	.proj-main .proj-grid { grid-template-columns: 1fr 1fr; padding-top: 0; }
+	/* A build with no write-up keeps the full-width photo grid. */
+	.proj-main .proj-grid:only-child { grid-column: 1 / -1; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+}
+
 /* Build page photos open large on click (components/Lightbox.tsx). */
 .proj-hero, .proj-grid button {
 	display: block; width: 100%; padding: 0; border: 0;

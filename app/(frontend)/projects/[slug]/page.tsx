@@ -48,6 +48,8 @@ export default async function BuildPage({ params }: { params: Promise<{ slug: st
         <h1 className="proj-title">{b.title}</h1>
       </header>
 
+      {/* Write-up on the left, photos down the right (owner 2026-11-19). */}
+      <div className="proj-main">
       <RichText data={b.description} className="proj-body" />
 
       {rest.length > 0 && (
@@ -61,6 +63,7 @@ export default async function BuildPage({ params }: { params: Promise<{ slug: st
           ))}
         </div>
       )}
+      </div>
       </Lightbox>
 
       <section className="proj-cta">
