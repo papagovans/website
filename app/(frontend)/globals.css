@@ -127,6 +127,18 @@ ul { margin: 0; padding: 0; list-style: none; }
 body:has(.hero-full) .site-header .main-nav .mega a,
 body:has(.hero-full) .site-header .main-nav .mega a:hover { color: var(--ink); }
 .header-actions { display: flex; align-items: center; gap: 16px; }
+/* Facebook, Instagram, TikTok (components/HeaderSocial). Wide screens only:
+   below 1180px the 110px they take wraps the nav links onto two lines
+   (measured), and phones keep them in the footer. */
+.header-social { display: flex; align-items: center; gap: 4px; }
+.header-social a {
+	width: 34px; height: 34px; display: grid; place-items: center;
+	border-radius: 999px; color: var(--ink); transition: background-color 0.15s ease;
+}
+.header-social a:hover, .header-social a:focus-visible { background: rgba(0, 0, 0, 0.07); }
+body:has(.hero-full) .site-header .header-social a { color: #fff; }
+body:has(.hero-full) .site-header .header-social a:hover { background: rgba(255, 255, 255, 0.16); }
+@media (max-width: 1179px) { .header-social { display: none; } }
 /* Hidden until the nav collapses, so the two never show at once. The width it
    appears at is the same 1000px the nav disappears at, below. */
 .hamburger { display: none; width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 50%; background: var(--paper); place-content: center; gap: 4px; cursor: pointer; }

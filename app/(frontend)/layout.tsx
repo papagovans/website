@@ -7,6 +7,7 @@ import { ScrolledFlag } from "@/components/ScrolledFlag";
 import { GtmBody, GtmHead, Tracking } from "@/components/Tracking";
 import { MobileMenu } from "@/components/MobileMenu";
 import { MainNav } from "@/components/MainNav";
+import { HeaderSocial } from "@/components/HeaderSocial";
 import { cachedTierLinks } from "@/lib/content";
 import type { Media } from "@/payload-types";
 import { DEFAULT_DESCRIPTION, DEFAULT_TITLE, seo } from "@/lib/seo";
@@ -143,6 +144,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
             </a>
             <MainNav tiers={tiers} />
             <div className="header-actions">
+              <HeaderSocial />
               <a
                 href={CONTACT_FORM_URL}
                 className="btn btn-expert btn-sm"
